@@ -1,42 +1,29 @@
-# Spotlight
+# Welcome to my personal site repo
 
-Spotlight is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+## I'm building it with Next.js 13's new project structure
 
-## Getting started
+Next.js 13 introduces the `app` directory, changing how we create pages and layouts. 
 
-To get started with this template, first install the npm dependencies:
+## Key Features
+- **Routing**: Define pages in `page.js`, and layouts in `layout.js`.
+- **Server Components**: By default, for better performance.
+- **Error and Loading States**: Managed by `error.js` and `loading.js`.
 
-```bash
-npm install
-```
+## Example Usage
+To set up a new Next.js 13 project:
 
-Next, create a `.env.local` file in the root of your project and set the `NEXT_PUBLIC_SITE_URL` variable to your site's public URL:
+1. `npx create-next-app@latest my-app`
+2. Modify `next.config.js` to enable the `app` directory.
+3. Delete `pages/index.js` to avoid conflicts.
 
-```
-NEXT_PUBLIC_SITE_URL=https://example.com
-```
+## Page and Layout
+- `app/page.js`: Defines the UI for the root route `/`.
+- `app/layout.js`: Contains shared UI like headers or sidebars.
 
-Next, run the development server:
+## Error Handling
+- `app/some-directory/error.js`: Manages errors within its directory.
 
-```bash
-npm run dev
-```
+## Data Fetching
+- Perform directly inside page components using the Fetch API.
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
-
-## Customizing
-
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
-
-## License
-
-This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
-
-## Learn more
-
-To learn more about the technologies used in this site template, see the following resources:
-
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
-- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
-- [MDX](https://mdxjs.com) - the MDX documentation
+For more detailed instructions and examples, refer to the official [Next.js documentation](https://nextjs.org/docs/routing/pages-and-layouts) and this comprehensive [DEV Community guide](https://dev.to/thesanjeevsharma/next-js-13-working-with-the-new-app-directory-4m38).
