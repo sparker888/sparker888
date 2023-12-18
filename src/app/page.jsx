@@ -266,7 +266,7 @@ export default async function Home() {
             🤙🏻 Aloha, I&apos;m Stephen Parker aka @sparker888. I enjoy 🧑🏼‍🚀 front-end development, 🚁 aerial photography, 🎨 AI imagery and 🚀
             gaming.
           </p>
-          <div className="mt-6 flex gap-6">
+          <div className="mt-6 flex gap-6 text-sky-600 dark:text-amber-500">
             <SocialLink
               href="https://twitter.com/sparker888"
               aria-label="Follow on Twitter"

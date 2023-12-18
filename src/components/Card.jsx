@@ -81,7 +81,7 @@ Card.Eyebrow = function CardEyebrow({
     <Component
       className={clsx(
         className,
-        'relative z-10 order-first mb-3 flex items-center text-sm text-slate-400 dark:text-slate-500',
+        'relative z-10 order-first mb-3 flex items-center text-sm text-sky-800 dark:text-sky-500',
         decorate && 'pl-3.5',
       )}
       {...props}
