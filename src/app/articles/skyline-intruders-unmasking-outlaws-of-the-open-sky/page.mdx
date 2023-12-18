@@ -1,0 +1,40 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import skylineInvaders from './skyline-invaders.png'
+
+export const article = {
+  author: 'Stephen Parker',
+  date: '2023-10-04',
+  title: 'Skyline Intruders: Unmasking Outlaws of the Open Sky',
+  description:
+    'The government, in a bid to curb nefarious drone activities and ensure airspace safety, are in the process of enacting a Remote ID requirement.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image src={skylineInvaders} alt="AI image of suspicious-looking man behind a menacing drone" />
+
+As a certified FAA drone pilot under the FAA's Small UAS Rule (Part 107), my journey into the vast sky isn't merely about capturing breathtaking views from above. It's about adhering to the law, ensuring safety, and promoting responsible flying among the drone community. However, rogue drone operators are tainting the industry's image, making drones appear more as intrusive gadgets rather than useful tools. It's disheartening to see such potential for good being overshadowed by a few bad apples.
+
+The government, in a bid to curb nefarious drone activities and ensure airspace safety, are in the process of enacting a Remote ID requirement. According to the FAA, the Remote ID Rule requires all drones registered with them to broadcast identification and location information in real time, which can be received by other people through a broadcast signal like radar, radio, or cellular^1^. This rule aims to improve safety and security in the national airspace, assisting other aircraft and ground personnel in being aware of drones in flight to avoid collisions. It also aids law enforcement in tracking down drones used for illegal or unsafe purposes.
+
+Though the law was slated to take effect on September 16, 2023, enforcement has been postponed to March 16, 2024, giving drone operators more time to comply^2,3,4^. The Remote ID ruling requires drones to have a sort of electronic license plate, which became a point of contention, even leading to a constitutional challenge by a drone equipment store, though the rule was upheld by a three-judge appellate panel in Washington, D.C^5^.
+
+Reactions to this rule are mixed. While it’s seen as a step towards responsible drone operation and enhanced safety, others view it as a potential infringement on privacy and an additional operational hurdle for drone pilots. Personally, as a law-abiding drone pilot, I see little issue with tracking. It's a pathway to separating the chaff from the wheat, distinguishing responsible drone operators from rogue ones.
+
+I am optimistic that this legislation will help alter the "beware of drones" narrative, steering the conversation towards the positive impact drones, and responsible drone pilots can have on various sectors including, but not limited to, agriculture, construction, real estate, and emergency response services.
+The next steps involve compliance with the Remote ID rule by the extended deadline. For fellow drone pilots and enthusiasts, it's about understanding and adapting to these regulations to continue enjoying the skies responsibly.
+
+This law is more than just a regulation; it's a step towards ensuring that the sky remains a safe and inspiring place for all.
+
+Being passionate about capturing aerial imagery, I have provided footage for various projects and look forward to contributing more in this field. If you need aerial footage for your projects, feel free to reach out for example footage and rates.
+
+1. National Law Review: [Federal Aviation Administration Remote ID Rule for Drones](https://www.natlawreview.com/article/federal-aviation-administration-remote-id-rule-drones).
+2. FAA: [FAA Extends Remote ID Enforcement Date Six Months](https://www.faa.gov/news/updates/?newsId=97524).
+3. Drone-Laws: [FAA Delays “Remote ID” for Drones to 2024](https://www.drone-laws.com/faa-delays-remote-id-for-drones-to-2024/).
+4. Bloomberg Law: [FAA Rule Requiring Remote ID of Drones Deemed Constitutional](https://news.bloomberglaw.com/privacy-and-data-security/faa-rule-requiring-remote-id-of-drones-deemed-constitutional).

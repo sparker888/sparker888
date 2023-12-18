@@ -260,11 +260,10 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
-            Solopreneur, web developer, and aerial photographer.
+            Solopreneur, web developer, and photographer.
           </h1>
-          <p className="mt-6 text-base text-slate-600 dark:text-slate-400">
-            🤙🏻 I&apos;m Stephen Parker, founder of Gravital Digital. My passions
-            include 🧑🏼‍🚀 front-end development, 🚁 aerial photography and 🚀
+          <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+            🤙🏻 Aloha, I&apos;m Stephen Parker aka @sparker888. I enjoy 🧑🏼‍🚀 front-end development, 🚁 aerial photography, 🎨 AI imagery and 🚀
             gaming.
           </p>
           <div className="mt-6 flex gap-6">
