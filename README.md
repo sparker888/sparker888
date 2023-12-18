@@ -1,6 +1,6 @@
 # Welcome to my personal site repo
 
-## I'm building it with Next.js 13's new project structure
+## I'm building it with Next.js 13's new project structure and server components
 
 Next.js 13 introduces the `app` directory, changing how we create pages and layouts. 
 

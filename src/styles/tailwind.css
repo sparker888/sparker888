@@ -2,3 +2,40 @@
 @import 'tailwindcss/components';
 @import './prism.css';
 @import 'tailwindcss/utilities';
+
+@layer base {
+    .bg-pattern {
+      @apply bg-light-pattern; /* Default light background */
+    }
+    .dark .bg-pattern {
+      @apply bg-dark-pattern; /* Dark mode background */
+    }
+  }
+  @keyframes pulse-amber {
+    0%, 100% {
+      box-shadow: 0 0 4px 2px rgba(217, 119, 6, 0.95); /* amber glow strong */
+    }
+    50% {
+      box-shadow: 0 0 4px 2px rgba(217, 119, 6, 0); /* amber glow faint */
+    }
+  }
+  
+  @keyframes pulse-sky {
+    0%, 100% {
+      box-shadow: 0 0 4px 2px rgba(56, 189, 248, 0.95); /* sky glow strong */
+    }
+    50% {
+      box-shadow: 0 0 4px 2px rgba(56, 189, 248, 0); /* sky glow faint */
+    }
+  }
+  
+  @layer utilities {
+    .dark .shadow-glow {
+      animation: pulse-amber 5s infinite;
+    }
+    .shadow-glow {
+      animation: pulse-sky 5s infinite;
+    }
+  }
+  
+  

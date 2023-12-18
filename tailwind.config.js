@@ -24,5 +24,13 @@ module.exports = {
       '9xl': ['8rem', { lineHeight: '1' }],
     },
     typography: typographyStyles,
+    extend: {
+      backgroundImage: {
+        'light-pattern': "url('/images/light-nebula-background.jpg')",
+        'dark-pattern': "url('/images/dark-nebula-background.jpg')",
+        'light-nav-pattern': "url('/images/light-nav-background.jpg')",
+        'dark-nav-pattern': "url('/images/dark-nav-background.jpg')",
+      }
+    }
   },
 }
