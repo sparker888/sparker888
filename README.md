@@ -26,4 +26,10 @@ To set up a new Next.js 13 project:
 ## Data Fetching
 - Perform directly inside page components using the Fetch API.
 
+## Newsletter Signup Feature
+- **Client-Side Component**: Used `use client` directive in `Newsletter.jsx` to handle form interactivity.
+- **Form Handling**: Utilized controlled form inputs with React state for email collection.
+- **API Integration**: Connected with Netlify functions for email subscription.
+- **User Feedback**: Implemented dynamic messaging to confirm subscription status.
+
 For more detailed instructions and examples, refer to the official [Next.js documentation](https://nextjs.org/docs/routing/pages-and-layouts) and this comprehensive [DEV Community guide](https://dev.to/thesanjeevsharma/next-js-13-working-with-the-new-app-directory-4m38).
