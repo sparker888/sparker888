@@ -30,7 +30,6 @@ const NewsletterWithNoSSR = dynamic(
   { ssr: false } // Disable server-side rendering for this component
 );
 
-
 function BriefcaseIcon(props) {
   return (
     <svg

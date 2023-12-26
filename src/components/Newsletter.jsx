@@ -1,11 +1,15 @@
-"use client";
+'use client'
+import React, { useState } from 'react';
 
 import { Button } from '@/components/Button'
 
 function Newsletter() {
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    const email = event.target.email.value;
+    event.preventDefault()
+    const email = event.target.email.value
 
     try {
       const response = await fetch('/.netlify/functions/subscribe', {
@@ -14,19 +18,19 @@ function Newsletter() {
         headers: {
           'Content-Type': 'application/json',
         },
-      });
+      })
 
       if (response.ok) {
         // Handle success
-        console.log('Subscribed successfully');
+        setMessage("You're now ninjafied!")
+        setEmail('')
       } else {
-        // Handle error
-        console.error('Subscription failed');
+        setMessage('Subscription failed. Please try again.')
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error:', error)
     }
-  };
+  }
 
   function MailIcon(props) {
     return (
@@ -58,10 +62,10 @@ function Newsletter() {
     >
       <h2 className="flex text-sm font-semibold text-slate-900 dark:text-slate-100">
         <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
+        <span className="ml-3">Join my 🥷 Ninja newsletter!</span>
       </h2>
       <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-        Get notified when I publish something new, and unsubscribe at any time.
+        As part of my Ninja Prompts for AI and the Midjourney Prompt Manager, you can stay up to date with the latest news and info.
       </p>
       <div className="mt-6 flex">
         <input
@@ -70,15 +74,18 @@ function Newsletter() {
           placeholder="Email address"
           aria-label="Email address"
           required
+          data-1p-ignore
           className="min-w-0 flex-auto appearance-none rounded-md border border-slate-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-slate-800/5 placeholder:text-slate-400 focus:border-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-500/10 dark:border-slate-700 dark:bg-slate-700/[0.15] dark:text-slate-200 dark:placeholder:text-slate-500 dark:focus:border-amber-400 dark:focus:ring-amber-400/10 sm:text-sm"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <Button type="submit" className="ml-4 flex-none">
           Join
         </Button>
       </div>
+      {message && <div className="message">{message}</div>}
     </form>
-  );
+  )
 }
 
-export default Newsletter;
-
+export default Newsletter
