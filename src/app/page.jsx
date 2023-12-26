@@ -12,6 +12,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
+import logoGravital from '@/images/logos/gravital-icon.png'
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
@@ -131,31 +132,31 @@ function Role({ role }) {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'Gravital Digital',
+      title: 'Founder and President',
+      logo: logoGravital,
+      start: '2011',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Airbnb',
+      company: 'Midjourney Prompt Manager',
       title: 'Product Designer',
       logo: logoAirbnb,
       start: '2014',
       end: '2019',
     },
     {
-      company: 'Facebook',
+      company: 'Wheel Rail Seminars',
       title: 'iOS Software Engineer',
       logo: logoFacebook,
       start: '2011',
       end: '2014',
     },
     {
-      company: 'Starbucks',
+      company: 'Wheel/Rail Interaction (WRI)',
       title: 'Shift Supervisor',
       logo: logoStarbucks,
       start: '2008',
@@ -167,7 +168,7 @@ function Resume() {
     <div className="rounded-2xl border border-slate-100 p-6 dark:border-slate-700/40">
       <h2 className="flex text-sm font-semibold text-slate-900 dark:text-slate-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
+        <span className="ml-3">Brands Managed</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
@@ -217,7 +218,7 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
-            Solopreneur, web developer, and photographer.
+            Solopreneur, digital brand manager, and photographer.
           </h1>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
             🤙🏻 Aloha, I&apos;m Stephen Parker aka @sparker888. I enjoy 🧑🏼‍🚀 front-end development, 🚁 aerial photography, 🎨 AI imagery and 🚀
