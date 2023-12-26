@@ -83,7 +83,7 @@ function Newsletter() {
           Join
         </Button>
       </div>
-      {message && <div className="message">{message}</div>}
+      {message && <div className="mt-2 text-sm text-amber-700 dark:text-amber-500">{message}</div>}
     </form>
   )
 }
