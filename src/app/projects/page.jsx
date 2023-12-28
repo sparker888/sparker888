@@ -2,47 +2,57 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoGravital from '@/images/logos/gravital-icon.png'
+import logoMidjourney from '@/images/logos/midjourney-icon.png'
+import logoWRI from '@/images/logos/wri-2024-icon.png'
+import logoWRS from '@/images/logos/wrs-icon.png'
+import logoPrestonStudios from '@/images/logos/preston-studios-icon.png'
 
 const projects = [
   {
-    name: 'Planetaria',
-    description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+    name: 'Gravital Digital',
+    description: 'Creating LIGHT. SPEED. websites and apps.',
+    link: {
+      href: 'https://gravitaldigital.com/',
+      label: 'gravitaldigital.com',
+    },
+    logo: logoGravital,
   },
   {
-    name: 'Animaginary',
-    description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+    name: 'Midjourney Prompt Manager',
+    description: 'Helping marketing pros manage Midjourney prompts and images.',
+    link: {
+      href: 'https://keypromptninja.io/',
+      label: 'midjourneypromptmanager.com',
+    },
+    logo: logoMidjourney,
   },
   {
-    name: 'HelioStream',
+    name: 'Wheel Rail Seminars',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+      'The pro team I work with that produces WRI and other rail industry events.',
+    link: {
+      href: 'https://wheel-rail-seminars.com/',
+      label: 'wheel-rail-seminars.com',
+    },
+    logo: logoWRS,
   },
   {
-    name: 'cosmOS',
+    name: 'Wheel/Rail Interaction (WRI)',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+      'The premier rail engineering event produced by Wheel Rail Seminars.',
+    link: {
+      href: 'https://wri.wheel-rail-seminars.com/',
+      label: 'wri.wheel-rail-seminars.com',
+    },
+    logo: logoWRI,
   },
   {
-    name: 'OpenShuttle',
+    name: 'Preston Studios',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'Internationally recognized stained glass art studio and long-time client.',
+    link: { href: 'https://prestonstudios.com/', label: 'prestonstudios.com' },
+    logo: logoPrestonStudios,
   },
 ]
 
@@ -59,14 +69,14 @@ function LinkIcon(props) {
 
 export const metadata = {
   title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description: "Cool people I work with and hot projects I'm working on.",
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="❄️ Cool people I work with and 🔥 hot project I'm working on."
+      intro="I’ve been operating Gravital Digital for over a decade now and I've been lucky enough to collaborate with some very cool and talented people including the team at Wheel Rail Seminars. Now, I'm building my first digital product, Midjourney Prompt Manager!"
     >
       <ul
         role="list"

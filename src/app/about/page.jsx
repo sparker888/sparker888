@@ -9,7 +9,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
+import portraitImage from '@/images/sparker-1976-portrait.png'
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
@@ -58,58 +58,107 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
+            Growing up on the Space Coast, future tech is a way of life.
           </h1>
           <div className="mt-6 space-y-7 text-base text-slate-600 dark:text-slate-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              Growing up on the Space Coast, my childhood was steeped in the
+              awe-inspiring backdrop of the Apollo missions, with my father
+              playing a role in this monumental chapter of space exploration.
+              This environment, where rockets soared into the heavens and dreams
+              were launched into reality, was the perfect incubator for a young
+              mind fascinated by the potential of future technologies.
             </p>
+
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              1979 was a pivotal year, not just because of my astronaut costume,
+              but because it was when I first experienced the magic of "Star
+              Wars" in theaters. That moment, watching starships battle across
+              the screen, was transformative. It wasn't just entertainment; it
+              was a window into a realm of limitless possibilities, a future
+              where technology and imagination merged seamlessly. This early
+              exposure to a universe so vividly brought to life by cutting-edge
+              effects fueled my passion for working with future tech.
             </p>
+
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              As a child, I often imagined myself piloting those starships, a
+              fantasy that later evolved into a love for flight in all its
+              forms. Today, as an FAA-certified drone pilot, I capture the world
+              from the skies, adding a unique perspective to my work in
+              photography and web development. This love for visual storytelling
+              is complemented by my degree in Communications from Florida State
+              University, earned in 1989, which has been instrumental in my
+              approach to digital branding and design.
             </p>
+
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              My journey into web development began in the nascent days of the
+              internet, with my first website created in 1996. This early
+              venture was the foundation for a career that led to collaborations
+              with major brands like VHA, Blue Cross and Blue Shield, and
+              Gannett, where I oversaw website and digital marketing programs.
+              These experiences have honed my skills in blending technical
+              expertise with creative storytelling.
+            </p>
+
+            <p>
+              Now, to help my clients excel in the digital space, I embrace the
+              principles of{' '}
+              <a
+                href="https://gravitaldigital.com"
+                className="text-amber-600"
+                target="blank"
+              >
+                Jamstack architecture
+              </a>
+              , which mirror the meticulous and visionary approach of the space
+              industry I grew up around. This methodology allows me to craft
+              digital experiences that are not only technologically advanced but
+              also narratively compelling.
+            </p>
+
+            <p>
+              My life's journey is a testament to the power of childhood wonder
+              and the enduring influence of early experiences. From watching
+              starships in "Star Wars" to capturing the world from above, my
+              story is about the continual pursuit of merging technology with
+              creativity, one project at a time.
             </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={TwitterIcon}>
+            <SocialLink
+              href="https://twitter.com/sparker888"
+              aria-label="Follow on Twitter"
+              icon={TwitterIcon}
+            >
               Follow on Twitter
             </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
+            <SocialLink
+              href="https://instagram.com/sparker808"
+              aria-label="Follow on Instagram"
+              icon={InstagramIcon}
+              className="mt-4"
+            >
               Follow on Instagram
             </SocialLink>
-            <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+            <SocialLink
+              href="https://github.com/sparker888"
+              aria-label="Follow on GitHub"
+              icon={GitHubIcon}
+              className="mt-4"
+            >
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
-              Follow on LinkedIn
-            </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
-              icon={MailIcon}
-              className="mt-8 border-t border-slate-100 pt-8 dark:border-slate-700/40"
+              href="https://linkedin.com/sparker888"
+              aria-label="Follow on LinkedIn"
+              icon={LinkedInIcon}
+              className="mt-4"
             >
-              spencer@planetaria.tech
+              Follow on LinkedIn
             </SocialLink>
           </ul>
         </div>

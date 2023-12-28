@@ -1,4 +1,4 @@
-import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -13,10 +13,10 @@ import {
   TwitterIcon,
 } from '@/components/SocialIcons'
 import logoGravital from '@/images/logos/gravital-icon.png'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoMidjourney from '@/images/logos/midjourney-icon.png'
+import logoWRI from '@/images/logos/wri-2024-icon.png'
+import logoWRS from '@/images/logos/wrs-icon.png'
+import logoPrestonStudios from '@/images/logos/preston-studios-icon.png'
 import image1 from '@/images/photos/image35.jpg'
 import image2 from '@/images/photos/image12.jpg'
 import image3 from '@/images/photos/image34.jpg'
@@ -28,8 +28,8 @@ import { formatDate } from '@/lib/formatDate'
 // Dynamically import Newsletter as a client-side component
 const NewsletterWithNoSSR = dynamic(
   () => import('@/components/Newsletter'),
-  { ssr: false } // Disable server-side rendering for this component
-);
+  { ssr: false }, // Disable server-side rendering for this component
+)
 
 function BriefcaseIcon(props) {
   return (
@@ -54,11 +54,11 @@ function BriefcaseIcon(props) {
   )
 }
 
-function ArrowDownIcon(props) {
+function ArrowRightIcon(props) {
   return (
     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
       <path
-        d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
+        d="M7.75 4.75L11.25 8m0 0-3.5 3.25M11.25 8H2.75"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -89,8 +89,6 @@ function SocialLink({ icon: Icon, ...props }) {
     </Link>
   )
 }
-
-
 
 function Role({ role }) {
   let startLabel =
@@ -133,7 +131,7 @@ function Resume() {
   let resume = [
     {
       company: 'Gravital Digital',
-      title: 'Founder and President',
+      title: 'Founder & President',
       logo: logoGravital,
       start: '2011',
       end: {
@@ -143,24 +141,43 @@ function Resume() {
     },
     {
       company: 'Midjourney Prompt Manager',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      title: 'Founder & Product Developer',
+      logo: logoMidjourney,
+      start: '2023',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
     },
     {
       company: 'Wheel Rail Seminars',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      title: 'Event Technologist',
+      logo: logoWRS,
+      start: '2022',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
     },
     {
       company: 'Wheel/Rail Interaction (WRI)',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      title: 'Web Developer',
+      logo: logoWRI,
+      start: '2022',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
+      company: 'Preston Studios',
+      title: 'Web Designer and Photographer',
+      logo: logoPrestonStudios,
+      start: '1989',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
     },
   ]
 
@@ -168,16 +185,20 @@ function Resume() {
     <div className="rounded-2xl border border-slate-100 p-6 dark:border-slate-700/40">
       <h2 className="flex text-sm font-semibold text-slate-900 dark:text-slate-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Brands Managed</span>
+        <span className="ml-3">Brands & Sites Managed</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-slate-400 transition group-active:stroke-slate-600 dark:group-hover:stroke-slate-50 dark:group-active:stroke-slate-50" />
+      <Button
+        href="/projects"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
+        Info and links
+        <ArrowRightIcon className="h-4 w-4 stroke-slate-400 transition group-active:stroke-slate-600 dark:group-hover:stroke-slate-50 dark:group-active:stroke-slate-50" />
       </Button>
     </div>
   )
@@ -221,7 +242,8 @@ export default async function Home() {
             Solopreneur, digital brand manager, and photographer.
           </h1>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            🤙🏻 Aloha, I&apos;m Stephen Parker aka @sparker888. I enjoy 🧑🏼‍🚀 front-end development, 🚁 aerial photography, 🎨 AI imagery and 🚀
+            🤙🏻 Aloha, I&apos;m Stephen Parker aka @sparker888. I enjoy 🧑🏼‍🚀
+            front-end development, 🚁 aerial photography, 🎨 AI imagery and 🚀
             gaming.
           </p>
           <div className="mt-6 flex gap-6 text-sky-600 dark:text-amber-500">
@@ -257,7 +279,7 @@ export default async function Home() {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-          <NewsletterWithNoSSR />
+            <NewsletterWithNoSSR />
 
             <Resume />
           </div>
