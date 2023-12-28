@@ -75,8 +75,8 @@ export const metadata = {
 export default function Projects() {
   return (
     <SimpleLayout
-      title="❄️ Cool people I work with and 🔥 hot project I'm working on."
-      intro="I’ve been operating Gravital Digital for over a decade now and I've been lucky enough to collaborate with some very cool and talented people including the team at Wheel Rail Seminars. Now, I'm building my first digital product, Midjourney Prompt Manager!"
+      title="Cool people ❄️ I work with and 🔥 hot project I'm working on."
+      intro="I’ve been operating Gravital Digital for over a decade now and I've been lucky enough to collaborate with some very cool and talented people including the team at Wheel Rail Seminars. I'm now building my first digital product, Midjourney Prompt Manager!"
     >
       <ul
         role="list"

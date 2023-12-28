@@ -63,11 +63,11 @@ export default function About() {
           <div className="mt-6 space-y-7 text-base text-slate-600 dark:text-slate-400">
             <p>
               Growing up on the Space Coast, my childhood was steeped in the
-              awe-inspiring backdrop of the Apollo missions, with my father
-              playing a role in this monumental chapter of space exploration.
-              This environment, where rockets soared into the heavens and dreams
-              were launched into reality, was the perfect incubator for a young
-              mind fascinated by the potential of future technologies.
+              awe-inspiring backdrop of the space program, with an engineer
+              father playing a supporting role in the Apollo chapter of space
+              exploration. This environment, where rockets soared to the moon
+              and dreams turned into reality, was the perfect incubator for a
+              young mind fascinated by the potential of future technologies.
             </p>
 
             <p>
