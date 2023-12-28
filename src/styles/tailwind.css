@@ -36,6 +36,11 @@
     .shadow-glow {
       animation: pulse-sky 5s infinite;
     }
+    @supports (font: -apple-system-body) and (-webkit-appearance: none) {
+      img[loading='lazy'] {
+        clip-path: inset(0.6px);
+      }
+    }
   }
   
   
