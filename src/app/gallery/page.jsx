@@ -6,7 +6,7 @@ import { SimpleLayout } from '@/components/SimpleLayout';
 import Image from 'next/image';
 import Modal from '../../components/Modal';
 import { getAllImageIdsFromFolder } from '../../../utils/cloudinaryUtils';
-import { generateCloudinaryUrl } from '../../../utils/cloudinary';
+import { generateCloudinaryUrl } from '../../../utils/cloudinaryUtils'; // Ensure this is the correct import path
 
 export default function GalleryPage() {
     const [images, setImages] = useState([]);
@@ -14,13 +14,21 @@ export default function GalleryPage() {
 
     useEffect(() => {
         async function fetchImages() {
-            const imagePublicIds = await getAllImageIdsFromFolder('sparker888');
-            const imagesWithUrls = imagePublicIds.map(imageId => {
-                const imageUrl = generateCloudinaryUrl(imageId, { width: 720, crop: 'scale' });
-                const blurDataUrl = generateCloudinaryUrl(imageId, { width: 8, quality: 70, format: 'jpg' }); // Adjust as needed
-                return { publicId: imageId, url: imageUrl, blurDataUrl };
-            });
-            setImages(imagesWithUrls);
+            try {
+                const imagePublicIds = await getAllImageIdsFromFolder('sparker888');
+                if (Array.isArray(imagePublicIds)) {
+                    const imagesWithUrls = imagePublicIds.map(imageId => {
+                        const imageUrl = generateCloudinaryUrl(imageId, { width: 720, crop: 'scale' });
+                        const blurDataUrl = generateCloudinaryUrl(imageId, { width: 8, quality: 70, format: 'jpg' });
+                        return { publicId: imageId, url: imageUrl, blurDataUrl };
+                    });
+                    setImages(imagesWithUrls);
+                } else {
+                    console.error('Image IDs not an array:', imagePublicIds);
+                }
+            } catch (error) {
+                console.error('Error fetching images:', error);
+            }
         }
 
         fetchImages();
