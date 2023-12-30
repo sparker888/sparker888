@@ -55,7 +55,7 @@ export default function Photography() {
         <GallerySection title="Surfing">
           <Gallery
             imageSrc={image2}
-            href="#"
+            href="https://surfing-image-gallery.vercel.app/"
             title="Chasing hurricane swells"
             description="On the east coast of Florida, we dream of extreme ocean swells. I'm always ready to capture the action!"
             event="Water Sports"
