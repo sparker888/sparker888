@@ -45,11 +45,11 @@ export default function Photography() {
       <GallerySection title="Art">
           <Gallery
             imageSrc={image1}
-            href="#"
+            href="https://art-image-gallery.vercel.app/"
             title="World-renown stained glass artists"
             description="I've worked with John Emery and Jerry Preston over the years to stage and shoot some of their best work."
             event="Preston Studios"
-            cta="Coming Soon"
+            cta="Visit Gallery"
           />
         </GallerySection>
         <GallerySection title="Surfing">
