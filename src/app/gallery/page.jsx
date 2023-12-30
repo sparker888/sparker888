@@ -1,8 +1,13 @@
-import { Card } from '@/components/Card'
+import { GalleryCard } from '@/components/GalleryCard'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import image1 from '@/images/photos/image35.jpg'
+import image2 from '@/images/photos/image12.jpg'
+import image3 from '@/images/photos/image36.png'
+import image4 from '@/images/photos/image31.jpg'
+import image5 from '@/images/photos/image33.jpg'
 
-function SpeakingSection({ children, ...props }) {
+function GallerySection({ children, ...props }) {
   return (
     <Section {...props}>
       <div className="space-y-16">{children}</div>
@@ -10,71 +15,84 @@ function SpeakingSection({ children, ...props }) {
   )
 }
 
-function Appearance({ title, description, event, cta, href }) {
+function Gallery({ title, description, event, cta, href, imageSrc }) { // Rename the 'image' prop to 'imageSrc'
+  console.log(imageSrc); // Log the correct prop
   return (
-    <Card as="article">
-      <Card.Title as="h3" href={href}>
+    <GalleryCard as="gallery" imageSrc={imageSrc}>
+      <GalleryCard.Title as="h3" href={href}>
         {title}
-      </Card.Title>
-      <Card.Eyebrow decorate>{event}</Card.Eyebrow>
-      <Card.Description>{description}</Card.Description>
-      <Card.Cta>{cta}</Card.Cta>
-    </Card>
+      </GalleryCard.Title>
+      <GalleryCard.Eyebrow decorate>{event}</GalleryCard.Eyebrow>
+      <GalleryCard.Description>{description}</GalleryCard.Description>
+      <GalleryCard.Cta>{cta}</GalleryCard.Cta>
+    </GalleryCard>
   )
 }
 
 export const metadata = {
-  title: 'Speaking',
+  title: 'Gallery',
   description:
-    'I’ve spoken at events all around the world and been interviewed for many podcasts.',
+    'Work of sparker888 -- Photography, aerial photography and Midjourney prompt studies.',
 }
 
-export default function Speaking() {
+export default function Photography() {
   return (
     <SimpleLayout
-      title="I’ve spoken at events all around the world and been interviewed for many podcasts."
-      intro="One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."
+      title="My work as a photographer, drone pilot and Midjourney image creator."
+      intro="Creating imagery that promotes great work, provides a different perspective or captures something truly unique and memorable is my passion."
     >
       <div className="space-y-20">
-        <SpeakingSection title="Conferences">
-          <Appearance
+      <GallerySection title="Art">
+          <Gallery
+            imageSrc={image1}
             href="#"
-            title="In space, no one can watch you stream — until now"
-            description="A technical deep-dive into HelioStream, the real-time streaming library I wrote for transmitting live video back to Earth."
-            event="SysConf 2021"
-            cta="Watch video"
+            title="World-renown stained glass artists"
+            description="I've worked with John Emery and Jerry Preston over the years to stage and shoot some of their best work."
+            event="Preston Studios"
+            cta="Coming Soon"
           />
-          <Appearance
+        </GallerySection>
+        <GallerySection title="Surfing">
+          <Gallery
+            imageSrc={image2}
             href="#"
-            title="Lessons learned from our first product recall"
-            description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
-            event="Business of Startups 2020"
-            cta="Watch video"
+            title="Chasing hurricane swells"
+            description="On the east coast of Florida, we dream of extreme ocean swells. I'm always ready to capture the action!"
+            event="Water Sports"
+            cta="Visit Gallery"
           />
-        </SpeakingSection>
-        <SpeakingSection title="Podcasts">
-          <Appearance
+        </GallerySection>
+        <GallerySection title="Midjourney">
+          <Gallery
+            imageSrc={image3}
             href="#"
-            title="Using design as a competitive advantage"
-            description="How we used world-class visual design to attract a great team, win over customers, and get more press for Planetaria."
-            event="Encoding Design, July 2022"
-            cta="Listen to podcast"
+            title="We're into v6 beta and it's stunning"
+            description="My current focus is on becoming a master at using Midjourney for digital branding and helping others along the way."
+            event="AI Imagery"
+            cta="Coming Soon"
           />
-          <Appearance
+        </GallerySection>
+      <GallerySection title="Space Coast">
+          <Gallery
+            imageSrc={image4}
             href="#"
-            title="Bootstrapping an aerospace company to $17M ARR"
-            description="The story of how we built one of the most promising space startups in the world without taking any capital from investors."
-            event="The Escape Velocity Show, March 2022"
-            cta="Listen to podcast"
+            title="Florida's East Coast is the best coast"
+            description="I'm lucky enough to live in bird photography paradise, but I capture much more on Florida's space coast."
+            event="Wildlife and Water"
+            cta="Coming Soon"
           />
-          <Appearance
+        </GallerySection>
+        <GallerySection title="Aerial">
+          <Gallery
+            imageSrc={image5}
             href="#"
-            title="Programming your company operating system"
-            description="On the importance of creating systems and processes for running your business so that everyone on the team knows how to make the right decision no matter the situation."
-            event="How They Work Radio, September 2021"
-            cta="Listen to podcast"
+            title="Breathtaking views of the earth"
+            description="I'm still blown away by the stunning vistas that we pilots capture from a small, lightweight piece of flying technology."
+            event="Drones gone Wild"
+            cta="Coming Soon"
           />
-        </SpeakingSection>
+        </GallerySection>
+        
       </div>
     </SimpleLayout>
   )

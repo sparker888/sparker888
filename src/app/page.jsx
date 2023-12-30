@@ -19,7 +19,7 @@ import logoWRS from '@/images/logos/wrs-icon.png'
 import logoPrestonStudios from '@/images/logos/preston-studios-icon.png'
 import image1 from '@/images/photos/image35.jpg'
 import image2 from '@/images/photos/image12.jpg'
-import image3 from '@/images/photos/image34.jpg'
+import image3 from '@/images/photos/image36.png'
 import image4 from '@/images/photos/image31.jpg'
 import image5 from '@/images/photos/image33.jpg'
 import { getAllArticles } from '@/lib/articles'
@@ -127,8 +127,8 @@ function Role({ role }) {
   )
 }
 
-function Resume() {
-  let resume = [
+function Projects() {
+  let projects = [
     {
       company: 'Gravital Digital',
       title: 'Founder & President',
@@ -188,7 +188,7 @@ function Resume() {
         <span className="ml-3">Brands & Sites Managed</span>
       </h2>
       <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
+        {projects.map((role, roleIndex) => (
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
@@ -220,7 +220,7 @@ function Photos() {
           >
             <Image
               src={image}
-              alt=""
+              alt="sparker888 home page images"
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
             />
@@ -243,8 +243,8 @@ export default async function Home() {
           </h1>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
             🤙🏻 Aloha, I&apos;m Stephen Parker aka @sparker888. I enjoy 🧑🏼‍🚀
-            front-end development, 🚁 aerial photography, 🎨 AI imagery and 🚀
-            gaming.
+            web development, 🚁 aerial photography, 🎨 AI imagery and 🚀
+            spaceships. Let's fly!
           </p>
           <div className="mt-6 flex gap-6 text-sky-600 dark:text-amber-500">
             <SocialLink
@@ -281,7 +281,7 @@ export default async function Home() {
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <NewsletterWithNoSSR />
 
-            <Resume />
+            <Projects />
           </div>
         </div>
       </Container>

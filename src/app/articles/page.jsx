@@ -43,8 +43,8 @@ export default async function ArticlesIndex() {
 
   return (
     <SimpleLayout
-      title="I write about AI image creation, UX design, drones, and event technology"
-      intro="All of my long-form thoughts on Web development, creating compelling AI images, capturing magnificent aerial footage, and my experiences specializing in promoting tech events."
+      title="I write about web design, drones, Midjourney image creation, and event technology"
+      intro="All of my long-form thoughts on Web development, creating compelling AI images, capturing magnificent aerial footage, and my latest venture into the world of event technology."
     >
       <div className="md:border-l md:border-slate-100 md:pl-6 md:dark:border-slate-700/40">
         <div className="flex max-w-3xl flex-col space-y-16">

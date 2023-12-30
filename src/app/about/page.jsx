@@ -58,27 +58,14 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
-            Growing up on the Space Coast, future tech is a way of life.
+            Growing up on the Space Coast, technology became a way of life.
           </h1>
           <div className="mt-6 space-y-7 text-base text-slate-600 dark:text-slate-400">
             <p>
               Growing up on the Space Coast, my childhood was steeped in the
-              awe-inspiring backdrop of the space program, with an engineer
-              father playing a supporting role in the Apollo chapter of space
-              exploration. This environment, where rockets soared to the moon
-              and dreams turned into reality, was the perfect incubator for a
-              young mind fascinated by the potential of future technologies.
-            </p>
-
-            <p>
-              1979 was a pivotal year, not just because of my astronaut costume,
-              but because it was when I first experienced the magic of "Star
-              Wars" in theaters. That moment, watching starships battle across
-              the screen, was transformative. It wasn't just entertainment; it
-              was a window into a realm of limitless possibilities, a future
-              where technology and imagination merged seamlessly. This early
-              exposure to a universe so vividly brought to life by cutting-edge
-              effects fueled my passion for working with future tech.
+              awe-inspiring backdrop of the space program, where rockets soared
+              to the moon and young minds were fascinated by the potential of
+              future technologies.
             </p>
 
             <p>
@@ -86,44 +73,40 @@ export default function About() {
               fantasy that later evolved into a love for flight in all its
               forms. Today, as an FAA-certified drone pilot, I capture the world
               from the skies, adding a unique perspective to my work in
-              photography and web development. This love for visual storytelling
-              is complemented by my degree in Communications from Florida State
-              University, earned in 1989, which has been instrumental in my
-              approach to digital branding and design.
+              photography and Midjourney image creation.
             </p>
 
             <p>
               My journey into web development began in the nascent days of the
               internet, with my first website created in 1996. This early
-              venture was the foundation for a career that led to collaborations
-              with major brands like VHA, Blue Cross and Blue Shield, and
-              Gannett, where I oversaw website and digital marketing programs.
-              These experiences have honed my skills in blending technical
-              expertise with creative storytelling.
+              venture was the foundation for a career that led to work with
+              major brands like VHA, Blue Cross and Blue Shield, and Maui Ocean
+              Center, where I oversaw digital marketing programs. These
+              experiences have honed my skills in blending technical expertise
+              with creative imagery.
             </p>
 
             <p>
-              Now, to help my clients excel in the digital space, I embrace the
-              principles of{' '}
+              Now, I help my clients excel in the digital space through my own
+              company,{' '}
               <a
                 href="https://gravitaldigital.com"
                 className="text-amber-600"
                 target="blank"
               >
-                Jamstack architecture
+                Gravital Digital
               </a>
-              , which mirror the meticulous and visionary approach of the space
-              industry I grew up around. This methodology allows me to craft
-              digital experiences that are not only technologically advanced but
-              also narratively compelling.
+              , by producing websites using the principles of Jamstack
+              architecture, which mirror the meticulous and visionary approach
+              of the space industry I grew up around. This methodology allows me
+              to craft digital experiences that are on the cutting edge of
+              technology and drive value for brands I help to manage.
             </p>
 
             <p>
               My life's journey is a testament to the power of childhood wonder
-              and the enduring influence of early experiences. From watching
-              starships in "Star Wars" to capturing the world from above, my
-              story is about the continual pursuit of merging technology with
-              creativity, one project at a time.
+              and the enduring influence of early experiences on the Space Coast
+              of Florida.
             </p>
           </div>
         </div>
