@@ -58,7 +58,7 @@ GalleryCard.Title = function GalleryCardTitle({ as, href, children }) {
   return (
     <Component className="text-base font-semibold tracking-tight text-slate-800 dark:text-slate-100">
       {href ? (
-        <GalleryCard.Link href={href}>{children}</GalleryCard.Link>
+        <GalleryCard.Link href={href} target="_blank">{children}</GalleryCard.Link>
       ) : (
         children
       )}

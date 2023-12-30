@@ -19,7 +19,7 @@ function Gallery({ title, description, event, cta, href, imageSrc }) { // Rename
   console.log(imageSrc); // Log the correct prop
   return (
     <GalleryCard as="gallery" imageSrc={imageSrc}>
-      <GalleryCard.Title as="h3" href={href}>
+      <GalleryCard.Title as="h3" href={href} target="_blank">
         {title}
       </GalleryCard.Title>
       <GalleryCard.Eyebrow decorate>{event}</GalleryCard.Eyebrow>
