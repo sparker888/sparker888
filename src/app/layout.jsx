@@ -7,7 +7,7 @@ export const metadata = {
   title: {
     template: '%s - @sparker888',
     default:
-      '@sparker888 - Steve Parker 💻 web developer & 📸 photographer sparker888@gmail.com.',
+      'Steve Parker 💻 Web developer & 📸 PPA hotographer sparker888@gmail.com.',
   },
   description:
     'I&apos;m Steve Parker aka @sparker888. I help companies build their online brands through 💻 web development and digital design. I&apos;m a PPA 📸 photographer, FAA-licensed 🚁 drone pilot and a Midjourney 🧭 AI expert.',
