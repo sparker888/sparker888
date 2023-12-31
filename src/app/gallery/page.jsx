@@ -65,7 +65,7 @@ export default function Photography() {
         <GallerySection title="Midjourney">
           <Gallery
             imageSrc={image3}
-            href="https://vercel.com/sparker888/midjourney-image-gallery/3bYSfc6my2WYpjLJ7x1Xek3VitzR"
+            href="https://midjourney-image-gallery.vercel.app/"
             title="v5 gallery. V6 gallery coming soon!"
             description="I seek to become a master with Midjourney for digital storytelling and help others along the way."
             event="AI Imagery from Midjourney"
