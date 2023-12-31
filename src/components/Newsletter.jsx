@@ -65,7 +65,7 @@ function Newsletter() {
         <span className="ml-3">Join my AI Prompt Ninja🗡️ Newsletter!</span>
       </h2>
       <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-        Key Prompt Ninja is leading the way to better prompts. Learn how marketing pros create and iterate campaign imagery using Midjourney.
+        Key Prompt Ninja is an online avatar I created to help marketing pros create and iterate campaign imagery using Midjourney. Let's go! 
       </p>
       <div className="mt-6 flex">
         <input

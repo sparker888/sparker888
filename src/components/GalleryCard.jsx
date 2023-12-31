@@ -23,7 +23,7 @@ export function GalleryCard({ as, className, children, imageSrc }) {
 
   return (
     <Component className={clsx(className, 'group relative flex items-start')}>
-      <div className="relative h-full w-1/3 min-w-[11rem] p-2 mt-4">
+      <div className="relative h-full w-1/3 min-w-[11rem] p-2 mt-4 z-10">
         <Image
           src={imageSrc}
           alt=""
