@@ -62,7 +62,7 @@ function Newsletter() {
     >
       <h2 className="flex text-sm font-semibold text-slate-900 dark:text-slate-100">
         <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Join my 🥷 Ninja newsletter!</span>
+        <span className="ml-3">Join my 🗡️Ninja newsletter!</span>
       </h2>
       <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
         As part of my Ninja Prompts for AI and the Midjourney Prompt Manager, you can stay up to date with the latest news and info.
