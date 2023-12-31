@@ -242,7 +242,7 @@ export default async function Home() {
             Solopreneur, web developer, and photographer.
           </h1>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            🤙🏻 Aloha, I&apos;m Steve aka @sparker888. I&apos;m into 💻
+            🤙🏻 Aloha, I&apos;m Steve Parker aka @sparker888. I&apos;m into 💻
             web development, 🚁 aerial photography, 🎨 AI imagery and 🚀
             gaming. Let's fly!
           </p>
