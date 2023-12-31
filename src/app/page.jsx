@@ -243,8 +243,8 @@ export default async function Home() {
           </h1>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
             🤙🏻 Aloha, I go by @sparker888. I specialize in 💻 web development
-            and digital design with 📸 photography, and 🎨 AI imagery. 🚀 Let's
-            fly!
+            and digital design. I'm a PAA 📸 photographer, FAA-licensed 🚁 drone
+            pilot, and a 🎨 Midjourney AI expert. 🚀 Let's fly!
           </p>
           <div className="mt-6 flex gap-6 text-sky-600 dark:text-amber-500">
             <SocialLink

@@ -10,7 +10,7 @@ export const metadata = {
       '@sparker888 - Steve Parker 💻 web developer & 📸 photographer sparker888@gmail.com.',
   },
   description:
-    'I&apos;m Steve Parker aka @sparker888. I help companies build their online brands through 💻 web development, 📸 photography and 🎨 AI imagery.',
+    'I&apos;m Steve Parker aka @sparker888. I help companies build their online brands through 💻 web development and digital design. I&apos;m a PPA 📸 photographer, FAA-licensed 🚁 drone pilot and a 🎨 Midjourney AI expert.',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
