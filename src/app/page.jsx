@@ -214,7 +214,7 @@ function Photos() {
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 sm:w-72 sm:rounded-2xl dark:bg-slate-800',
+              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 sm:w-72 sm:rounded-2xl',
               rotations[imageIndex % rotations.length],
             )}
           >
@@ -238,13 +238,11 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="font-display text-4xl font-extrabold italic tracking-tight text-slate-800 sm:text-5xl dark:text-slate-100">
+          <h1 className="font-display text-4xl font-extrabold italic tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
             I'm Steve. I help companies build their online brands.
           </h1>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            🤙🏻 Aloha, I go by @sparker888. I specialize in 💻 web development
-            and digital design. I'm a PPA 📸 photographer, FAA-licensed 🚁 drone
-            pilot, and Midjourney 🧭 AI expert. 🚀 Let's fly! ✨
+            🤙🏻 Aloha! I go by @sparker888. I specialize in 💻 web development and digital design. I'm a PPA 📸 photographer, FAA-licensed 🚁 drone pilot, and Midjourney 🧭 AI expert. 🚀 Let's fly! ✨
           </p>
           <div className="mt-6 flex gap-6 text-sky-600 dark:text-amber-500">
             <SocialLink
