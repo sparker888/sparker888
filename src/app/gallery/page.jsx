@@ -75,11 +75,11 @@ export default function Photography() {
       <GallerySection title="Space Coast">
           <Gallery
             imageSrc={image4}
-            href="#"
+            href="https://space-coast-image-gallery.vercel.app/"
             title="Florida's East Coast is the best coast"
             description="By water or by air I'm always on the lookout for wildlife and spectacular views on Florida's space coast."
             event="Wildlife and Aerial Adventure"
-            cta="Coming Soon"
+            cta="Visit Gallery"
           />
         </GallerySection>
         <GallerySection title="Real Estate">
