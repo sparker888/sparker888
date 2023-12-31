@@ -244,7 +244,7 @@ export default async function Home() {
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
             🤙🏻 Aloha, I&apos;m Steve aka @sparker888. I&apos;m into 💻
             web development, 🚁 aerial photography, 🎨 AI imagery and 🚀
-            spaceships. Let's fly!
+            gaming. Let's fly!
           </p>
           <div className="mt-6 flex gap-6 text-sky-600 dark:text-amber-500">
             <SocialLink
