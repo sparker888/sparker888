@@ -106,7 +106,7 @@ function Role({ role }) {
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
-        <dd className="w-full flex-none text-sm font-medium text-slate-900 dark:text-slate-100">
+        <dd className="w-full flex-none font-display text-slate-900 dark:text-slate-100">
           {role.company}
         </dd>
         <dt className="sr-only">Role</dt>
@@ -183,7 +183,7 @@ function Projects() {
 
   return (
     <div className="rounded-2xl border border-slate-100 p-6 dark:border-slate-700/40">
-      <h2 className="flex text-sm font-semibold text-slate-900 dark:text-slate-100">
+      <h2 className="flex font-display font-extrabold italic text-slate-900 dark:text-slate-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Brands & Sites Managed</span>
       </h2>
@@ -238,7 +238,7 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
+          <h1 className="text-4xl font-display font-extrabold italic tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
             Solopreneur, web developer, and photographer.
           </h1>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">

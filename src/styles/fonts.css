@@ -1,0 +1,24 @@
+
+  @font-face {
+    font-family: "Quiet Sans";
+    src: url("/fonts/QuietSans/Quiet Sans/regular/quiet-sans-regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Quiet Sans";
+    src: url("/fonts/QuietSans/Quiet Sans/semibold/quiet-sans-semi-bold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Quiet Sans";
+    src: url("/fonts/QuietSans/Quiet Sans/extrabold-italic/quiet-sans-extra-bold-italic.ttf") format("truetype");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+  }

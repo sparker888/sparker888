@@ -60,7 +60,7 @@ function Newsletter() {
       onSubmit={handleSubmit}
       className="rounded-2xl border border-slate-100 p-6 dark:border-slate-700/40"
     >
-      <h2 className="flex text-sm font-semibold text-slate-900 dark:text-slate-100">
+      <h2 className="flex font-display font-extrabold italic text-slate-900 dark:text-slate-100">
         <MailIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Join my 🗡️Ninja newsletter!</span>
       </h2>

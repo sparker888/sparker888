@@ -56,7 +56,7 @@ GalleryCard.Title = function GalleryCardTitle({ as, href, children }) {
   let Component = as ?? 'h2'
 
   return (
-    <Component className="text-base font-semibold tracking-tight text-slate-800 dark:text-slate-100">
+    <Component className="font-display font-extrabold italic tracking-tight text-slate-800 dark:text-slate-100">
       {href ? (
         <GalleryCard.Link href={href} target="_blank">{children}</GalleryCard.Link>
       ) : (

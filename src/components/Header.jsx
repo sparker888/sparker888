@@ -85,7 +85,7 @@ function MobileNavItem({ href, children }) {
 function MobileNavigation(props) {
   return (
     <Popover {...props}>
-      <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-slate-800/90 dark:text-slate-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-display font-semibold text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-slate-800/90 dark:text-slate-200 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
         <ChevronDownIcon className="ml-3 h-auto w-2 stroke-slate-500 group-hover:stroke-slate-700 dark:group-hover:stroke-slate-400" />
       </Popover.Button>
@@ -118,7 +118,7 @@ function MobileNavigation(props) {
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
                 <CloseIcon className="h-6 w-6 text-slate-500 dark:text-slate-400" />
               </Popover.Button>
-              <h2 className="text-sm font-medium text-slate-600 dark:text-slate-400">
+              <h2 className="text-sm font-display font-semibold text-slate-600 dark:text-slate-400">
                 Navigation
               </h2>
             </div>
@@ -164,7 +164,7 @@ function NavItem({ href, children }) {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <ul className="bg-light-nav-pattern dark:bg-dark-nav-pattern flex rounded-xl px-3 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:text-slate-200 dark:ring-white/10">
+      <ul className="bg-light-nav-pattern dark:bg-dark-nav-pattern flex rounded-xl px-3 font-display font-semibold text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:text-slate-200 dark:ring-white/10">
         <NavItem href="/">Home</NavItem>
         <NavItem href="/about">About</NavItem>
         <NavItem href="/articles">Articles</NavItem>

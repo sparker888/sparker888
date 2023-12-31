@@ -1,5 +1,5 @@
 const typographyPlugin = require('@tailwindcss/typography')
-
+const defaultTheme = require('tailwindcss/defaultTheme')
 const typographyStyles = require('./typography')
 
 /** @type {import('tailwindcss').Config} */
@@ -30,7 +30,10 @@ module.exports = {
         'dark-pattern': "url('/images/dark-nebula-background.jpg')",
         'light-nav-pattern': "url('/images/light-nav-background.jpg')",
         'dark-nav-pattern': "url('/images/dark-nav-background.jpg')",
-      }
+      },
+      fontFamily: {
+        display: ['Quiet Sans', ...defaultTheme.fontFamily.sans],
+      },
     }
   },
 }

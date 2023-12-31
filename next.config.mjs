@@ -1,11 +1,24 @@
-import rehypePrism from '@mapbox/rehype-prism'
-import nextMDX from '@next/mdx'
-import remarkGfm from 'remark-gfm'
+import { FontaineTransform } from 'fontaine';
+import rehypePrism from '@mapbox/rehype-prism';
+import nextMDX from '@next/mdx';
+import remarkGfm from 'remark-gfm';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
-}
+  webpack: (config, { isServer }) => {
+    // FontaineTransform setup
+    config.plugins = config.plugins || [];
+    config.plugins.push(
+      FontaineTransform.webpack({
+        fallbacks: ['Arial'],
+        resolvePath: (id) => `./public${id}`,
+      }),
+    );
+
+    return config;
+  },
+};
 
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
@@ -13,6 +26,6 @@ const withMDX = nextMDX({
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypePrism],
   },
-})
+});
 
-export default withMDX(nextConfig)
+export default withMDX(nextConfig);

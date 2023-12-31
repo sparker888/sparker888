@@ -75,7 +75,7 @@ export const metadata = {
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Cool people ❄️ I work with and 🔥 hot project I'm working on."
+      title="Cool people ❄️ I work with and hot projects 🔥 I'm working on."
       intro="I’ve been operating Gravital Digital for over a decade now and I've been lucky enough to collaborate with some very cool and talented people including the team at Wheel Rail Seminars. I'm now building my first digital product, Midjourney Prompt Manager!"
     >
       <ul
@@ -92,7 +92,7 @@ export default function Projects() {
                 unoptimized
               />
             </div>
-            <h2 className="mt-6 text-base font-semibold text-slate-800 dark:text-slate-100">
+            <h2 className="mt-6 text-base font-display font-extrabold italic text-slate-800 dark:text-slate-100">
               <Card.Link href={project.link.href}>{project.name}</Card.Link>
             </h2>
             <Card.Description>{project.description}</Card.Description>
