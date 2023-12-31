@@ -5,7 +5,7 @@ import image1 from '@/images/photos/image35.jpg'
 import image2 from '@/images/photos/image12.jpg'
 import image3 from '@/images/photos/image36.png'
 import image4 from '@/images/photos/image31.jpg'
-import image5 from '@/images/photos/image33.jpg'
+import image5 from '@/images/photos/image34.jpg'
 
 function GallerySection({ children, ...props }) {
   return (
@@ -57,19 +57,19 @@ export default function Photography() {
             imageSrc={image2}
             href="https://surfing-image-gallery.vercel.app/"
             title="Chasing hurricane swells"
-            description="On the east coast of Florida, we dream of extreme ocean swells. I'm always ready to capture the action!"
-            event="Water Sports"
+            description="On the east coast of Florida, we dream of big surf and strong wind. I'm always ready to capture the action!"
+            event="Space Coast water sports"
             cta="Visit Gallery"
           />
         </GallerySection>
         <GallerySection title="Midjourney">
           <Gallery
             imageSrc={image3}
-            href="#"
-            title="We're into v6 beta and it's stunning"
-            description="My current focus is on becoming a master at using Midjourney for digital branding and helping others along the way."
-            event="AI Imagery"
-            cta="Coming Soon"
+            href="https://vercel.com/sparker888/midjourney-image-gallery/3bYSfc6my2WYpjLJ7x1Xek3VitzR"
+            title="v5 gallery. V6 gallery coming soon!"
+            description="I seek to become a master with Midjourney for digital storytelling and help others along the way."
+            event="AI Imagery from Midjourney"
+            cta="Visit Gallery"
           />
         </GallerySection>
       <GallerySection title="Space Coast">
@@ -77,18 +77,18 @@ export default function Photography() {
             imageSrc={image4}
             href="#"
             title="Florida's East Coast is the best coast"
-            description="I'm lucky enough to live in bird photography paradise, but I capture much more on Florida's space coast."
-            event="Wildlife and Water"
+            description="By water or by air I'm always on the lookout for wildlife and spectacular views on Florida's space coast."
+            event="Wildlife and Aerial Adventure"
             cta="Coming Soon"
           />
         </GallerySection>
-        <GallerySection title="Aerial">
+        <GallerySection title="Real Estate">
           <Gallery
             imageSrc={image5}
             href="#"
-            title="Breathtaking views of the earth"
-            description="I'm still blown away by the stunning vistas that we pilots capture from a small, lightweight piece of flying technology."
-            event="Drones gone Wild"
+            title="Breathtaking Florida Homes"
+            description="Check out some pro photography of several beautiful homes found here in Central Florida."
+            event="Winter Park to Lansing Island"
             cta="Coming Soon"
           />
         </GallerySection>
