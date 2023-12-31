@@ -7,10 +7,10 @@ export const metadata = {
   title: {
     template: '%s - @sparker888',
     default:
-      '@sparker888 - Steve Parker: 💻 web developer, 🚁 aerial photographer sparker888@gmail.com.',
+      '@sparker888 - Steve Parker 💻 web developer, 📸 photographer sparker888@gmail.com.',
   },
   description:
-    'I&apos;m Steve Parker aka @sparker888 I&apos;m into 💻 web development and 🚁 aerial photography , 🎨 AI imagery and 🚀 gaming.',
+    'I&apos;m Steve Parker aka @sparker888 I&apos;m into 💻 web development, 📸 photography 🚁 drones , 🎨 AI imagery and 🚀 gaming.',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
