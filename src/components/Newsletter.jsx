@@ -65,7 +65,7 @@ function Newsletter() {
         <span className="ml-3">Join my Ninja🗡️ newsletter!</span>
       </h2>
       <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-        As part of my Ninja Prompts for AI and the Midjourney Prompt Manager, you can stay up to date with the latest news and info.
+        Key Prompt Ninja is leading the way to better prompts. Learn how marketing pros create and iterate campaign imagery using Midjourney.
       </p>
       <div className="mt-6 flex">
         <input
