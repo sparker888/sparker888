@@ -89,7 +89,7 @@ export default function Photography() {
             title="Breathtaking Florida Homes"
             description="Check out some pro photography of several beautiful homes found here in Central Florida."
             event="Winter Park to Lansing Island"
-            cta="Coming Soon"
+            cta="Visit Gallery"
           />
         </GallerySection>
         
