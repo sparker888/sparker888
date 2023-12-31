@@ -214,7 +214,7 @@ function Photos() {
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 sm:w-72 sm:rounded-2xl',
+              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 sm:w-72 sm:rounded-2xl dark:bg-slate-800',
               rotations[imageIndex % rotations.length],
             )}
           >
@@ -238,13 +238,13 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-display font-extrabold italic tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
-            Solopreneur, web developer, and photographer.
+          <h1 className="font-display text-4xl font-extrabold italic tracking-tight text-slate-800 sm:text-5xl dark:text-slate-100">
+            I'm Steve. I help companies build their online brands.
           </h1>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            🤙🏻 Aloha, I&apos;m Steve Parker aka @sparker888. I&apos;m into 💻
-            web development, 📸 photography, 🚁 drones, 🎨 AI imagery and 🚀
-            gaming. Let's fly!
+            🤙🏻 Aloha, I go by @sparker888. I specialize in 💻 web development
+            and digital design with 📸 photography, and 🎨 AI imagery. 🚀 Let's
+            fly!
           </p>
           <div className="mt-6 flex gap-6 text-sky-600 dark:text-amber-500">
             <SocialLink
