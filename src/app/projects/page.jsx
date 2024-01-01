@@ -6,6 +6,7 @@ import logoGravital from '@/images/logos/gravital-icon.png'
 import logoMidjourney from '@/images/logos/midjourney-icon.png'
 import logoWRI from '@/images/logos/wri-2024-icon.png'
 import logoWRS from '@/images/logos/wrs-icon.png'
+import logoTTC from '@/images/logos/ttc-icon.png'
 import logoPrestonStudios from '@/images/logos/preston-studios-icon.png'
 
 const projects = [
@@ -53,6 +54,13 @@ const projects = [
       'Internationally recognized stained glass art studio and long-time client.',
     link: { href: 'https://prestonstudios.com/', label: 'prestonstudios.com' },
     logo: logoPrestonStudios,
+  },
+  {
+    name: 'TTC Conference & Tour',
+    description:
+      'ENSCO Rail conference and tour of the Transportation Technology Center.',
+    link: { href: 'https://lambent-toffee-127570.netlify.app/', label: 'ttc-conference.com' },
+    logo: logoTTC,
   },
 ]
 

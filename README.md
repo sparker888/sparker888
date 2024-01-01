@@ -1,3 +1,5 @@
+![Featured Image](public/images/featured-image.jpg)
+
 # Welcome to my personal site repo
 
 ## I'm building it with Next.js 13's new project structure and server components

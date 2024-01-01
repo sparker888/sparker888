@@ -17,6 +17,10 @@ import logoMidjourney from '@/images/logos/midjourney-icon.png'
 import logoWRI from '@/images/logos/wri-2024-icon.png'
 import logoWRS from '@/images/logos/wrs-icon.png'
 import logoPrestonStudios from '@/images/logos/preston-studios-icon.png'
+import logoBenevolent from '@/images/logos/benevolent-icon.png'
+import logoTTC from '@/images/logos/TTC-icon.png'
+import logoIAAPA from '@/images/logos/IAAPA-icon.webp'
+import logoBRigby from '@/images/logos/brigby-icon.png'
 import image1 from '@/images/photos/image35.jpg'
 import image2 from '@/images/photos/image12.jpg'
 import image3 from '@/images/photos/image36.png'
@@ -161,7 +165,7 @@ function Projects() {
     },
     {
       company: 'Wheel/Rail Interaction (WRI)',
-      title: 'Web Developer',
+      title: 'Web Developer & Social Media',
       logo: logoWRI,
       start: '2022',
       end: {
@@ -174,6 +178,46 @@ function Projects() {
       title: 'Web Designer and Photographer',
       logo: logoPrestonStudios,
       start: '1989',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
+      company: 'Benevolent Senior Services',
+      title: 'Web Designer',
+      logo: logoBenevolent,
+      start: '2021',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
+      company: 'TTC Conference & Tour',
+      title: 'Web Analytics',
+      logo: logoTTC,
+      start: '2023',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
+      company: 'IAAPA',
+      title: 'Web Analytics',
+      logo: logoIAAPA,
+      start: '2023',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
+      company: 'Barry Rigby, Esq.',
+      title: 'Web Designer',
+      logo: logoBRigby,
+      start: '2023',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
@@ -214,7 +258,7 @@ function Photos() {
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 sm:w-72 sm:rounded-2xl',
+              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 sm:w-72 sm:rounded-2xl dark:bg-slate-800',
               rotations[imageIndex % rotations.length],
             )}
           >
@@ -238,11 +282,13 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="font-display text-4xl font-extrabold italic tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
+          <h1 className="font-display text-4xl font-extrabold italic tracking-tight text-slate-800 sm:text-5xl dark:text-slate-100">
             I'm Steve. I help companies build their online brands.
           </h1>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            🤙🏻 Aloha and thanks for visiting. I specialize in 💻 web development and digital design. I'm a PPA 📸 photographer, FAA-licensed 🚁 drone pilot, and Midjourney 🧭 AI expert. 🚀 Let's fly! ✨
+            🤙🏻 Aloha and thanks for visiting. I specialize in 💻 web development
+            and digital design. I'm a PPA 📸 photographer, FAA-licensed 🚁 drone
+            pilot, and Midjourney 🧭 AI expert. 🚀 Let's fly! ✨
           </p>
           <div className="mt-6 flex gap-6 text-sky-600 dark:text-amber-500">
             <SocialLink
