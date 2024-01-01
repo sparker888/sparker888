@@ -34,4 +34,8 @@ To set up a new Next.js 13 project:
 - **API Integration**: Connected with Netlify functions for email subscription.
 - **User Feedback**: Implemented dynamic messaging to confirm subscription status.
 
+## Image Gallery
+- The image galleries are built with Next.js & Cloudinary
+- You an view the repo at [surfing-image-gallery](https://github.com/sparker888/surfing-image-gallery)
+
 For more detailed instructions and examples, refer to the official [Next.js documentation](https://nextjs.org/docs/routing/pages-and-layouts) and this comprehensive [DEV Community guide](https://dev.to/thesanjeevsharma/next-js-13-working-with-the-new-app-directory-4m38).
