@@ -195,7 +195,7 @@ function Projects() {
     },
     {
       company: 'TTC Conference & Tour',
-      title: 'Web Analytics',
+      title: 'Web Developer & Social Media',
       logo: logoTTC,
       start: '2023',
       end: {
