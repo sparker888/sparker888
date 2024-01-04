@@ -1,5 +1,6 @@
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
+import PlausibleProvider from 'next-plausible'
 
 import '@/styles/tailwind.css'
 
@@ -20,14 +21,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
-      <body className="bg-pattern dark:bg-pattern flex h-full">
-        <Providers>
-          <div className="flex w-full">
-            <Layout>{children}</Layout>
-          </div>
-        </Providers>
-      </body>
-    </html>
+    <PlausibleProvider domain="sparker888.com">
+      <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+        <body className="bg-pattern dark:bg-pattern flex h-full">
+          <Providers>
+            <div className="flex w-full">
+              <Layout>{children}</Layout>
+            </div>
+          </Providers>
+        </body>
+      </html>
+    </PlausibleProvider>
   )
 }
