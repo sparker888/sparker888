@@ -9,7 +9,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/sparker-1976-portrait.png'
+import portraitImage from '@/images/sparker-1976-portrait.jpg'
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
@@ -57,7 +57,7 @@ export default function About() {
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-display font-semibold tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
+          <h1 className="font-display text-4xl font-semibold tracking-tight text-slate-800 sm:text-5xl dark:text-slate-100">
             Growing up on the Space Coast, technology became a way of life.
           </h1>
           <div className="mt-6 space-y-7 text-base text-slate-600 dark:text-slate-400">
@@ -110,7 +110,7 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="lg:pl-20 font-display">
+        <div className="font-display lg:pl-20">
           <ul role="list">
             <SocialLink
               href="https://twitter.com/sparker888"
