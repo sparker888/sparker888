@@ -62,10 +62,10 @@ function Newsletter() {
     >
       <h2 className="flex font-display font-extrabold italic text-slate-900 dark:text-slate-100">
         <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Join my AI Prompt Ninja🗡️ Newsletter!</span>
+        <span className="ml-3">Join my Key Prompt Ninja🗡️ Newsletter!</span>
       </h2>
       <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-        Key Prompt Ninja is an online avatar I created to help marketing pros create and iterate campaign imagery using Midjourney. Let's go! 
+        Key Prompt Ninja is newsletter I produce to help marketing pros create and iterate campaign imagery using Midjourney. Let's go! 
       </p>
       <div className="mt-6 flex">
         <input
