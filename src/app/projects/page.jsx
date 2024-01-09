@@ -23,7 +23,7 @@ const projects = [
     name: 'Midjourney Prompt Manager',
     description: 'Helping marketing pros manage Midjourney prompts and images.',
     link: {
-      href: 'https://keypromptninja.io/',
+      href: 'https://midjourneypromptmanager.com/',
       label: 'midjourneypromptmanager.com',
     },
     logo: logoMidjourney,
