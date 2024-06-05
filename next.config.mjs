@@ -16,6 +16,11 @@ const nextConfig = {
       }),
     );
 
+    // Add alias for react-dom/server.edge
+    if (isServer) {
+      config.resolve.alias['react-dom/server.edge'] = 'react-dom/server';
+    }
+
     return config;
   },
 };
