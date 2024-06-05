@@ -17,9 +17,11 @@ const nextConfig = {
     );
 
     // Add alias for react-dom/server.edge
-    if (isServer) {
-      config.resolve.alias['react-dom/server.edge'] = 'react-dom/server';
-    }
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'react-dom/server.edge': 'react-dom/server',
+      'react-dom$': 'react-dom/profiling', // Add this line
+    };
 
     return config;
   },
