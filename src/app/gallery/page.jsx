@@ -15,8 +15,9 @@ function GallerySection({ children, ...props }) {
   )
 }
 
-function Gallery({ title, description, event, cta, href, imageSrc }) { // Rename the 'image' prop to 'imageSrc'
-  console.log(imageSrc); // Log the correct prop
+function Gallery({ title, description, event, cta, href, imageSrc }) {
+  // Rename the 'image' prop to 'imageSrc'
+  console.log(imageSrc) // Log the correct prop
   return (
     <GalleryCard as="gallery" imageSrc={imageSrc}>
       <GalleryCard.Title as="h3" href={href} target="_blank">
@@ -42,7 +43,7 @@ export default function Photography() {
       intro="Creating imagery that promotes great work, provides a different perspective or captures something truly unique and memorable is my passion."
     >
       <div className="space-y-20">
-      <GallerySection title="Art">
+        <GallerySection title="Art">
           <Gallery
             imageSrc={image1}
             href="https://art-image-gallery.vercel.app/"
@@ -66,13 +67,13 @@ export default function Photography() {
           <Gallery
             imageSrc={image3}
             href="https://midjourney-image-gallery.vercel.app/"
-            title="Midjourney v6 gallery."
+            title="A Midjourney v6 AI image gallery"
             description="I'm working to become a master with Midjourney for digital storytelling and help others along the way."
             event="AI Imagery from Midjourney"
             cta="Visit Gallery"
           />
         </GallerySection>
-      <GallerySection title="Space Coast">
+        <GallerySection title="Space Coast">
           <Gallery
             imageSrc={image4}
             href="https://space-coast-image-gallery.vercel.app/"
@@ -92,7 +93,6 @@ export default function Photography() {
             cta="Visit Gallery"
           />
         </GallerySection>
-        
       </div>
     </SimpleLayout>
   )
