@@ -24,7 +24,7 @@ function Article({ article }) {
       <Card.Eyebrow
         as="time"
         dateTime={article.date}
-        className="mt-1 hidden md:block"
+        className="hidden mt-1 md:block"
       >
         {formatDate(article.date)}
       </Card.Eyebrow>
@@ -35,7 +35,7 @@ function Article({ article }) {
 export const metadata = {
   title: 'Articles',
   description:
-    'All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order.',
+    'All of my long-form thoughts on modern web development, event technology, drone photography and Midjourney image creation.',
 }
 
 export default async function ArticlesIndex() {
@@ -43,11 +43,11 @@ export default async function ArticlesIndex() {
 
   return (
     <SimpleLayout
-      title="I write about web design, drones, Midjourney image creation, and event technology"
+      title="I write about modern web development, event technology, drone photography and Midjourney image creation."
       intro="All of my long-form thoughts on Web development, creating compelling AI images, capturing magnificent aerial footage, and my latest venture into the world of event technology."
     >
       <div className="md:border-l md:border-slate-100 md:pl-6 md:dark:border-slate-700/40">
-        <div className="flex max-w-3xl flex-col space-y-16">
+        <div className="flex flex-col max-w-3xl space-y-16">
           {articles.map((article) => (
             <Article key={article.slug} article={article} />
           ))}
