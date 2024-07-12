@@ -1,0 +1,99 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import storyBanner from './story-banner.png'
+
+export const article = {
+  author: 'Stephen Parker',
+  date: '2024-07-12',
+  title:
+    'July Updates: New Themes and Personalization Feature',
+  description:
+    'Exciting new updates to Midjourney Prompt Manager including additional themes and personalization options.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image src={storyBanner} alt="July Updates: New Themes and Personalization Feature" />
+
+## Mid-July Updates: New Themes and Personalization Feature
+
+I'm excited to announce two significant updates to Midjourney Prompt Manager that will enhance your creative experience and provide more customization options.
+
+### 1. Additional Themes
+
+I've expanded our theme selection to offer you even more creative possibilities. Here are the new themes I've added:
+
+- Bio Art
+- Brutalism
+- Color Field Painting
+- Cosmic Horror
+- Dark Fantasy
+- Digital Art
+- Eco Art
+- Fluxus
+- Generative Art
+- Glitch Art
+- Graffiti
+- Hyperrealism
+- Kitsch
+- Light and Space
+- Lowbrow Art
+- Mannerism
+- Memphis Design
+- Metaphysical Art
+- Naive Art
+- Neo-Expressionism
+- Neon Art
+- Net Art
+- Orphism
+- Outsider Art
+- Pixel Art
+- Postminimalism
+- Psychedelic Art
+- Rayonism
+- Retro-Futurism
+- Socialist Realism
+- Solarpunk
+- Symbolism
+- Synthetism
+- Tachisme
+- Tonalism
+- Transavantgarde
+- Vaporwave
+- Vector Art
+- Vorticism
+
+These new themes have been integrated into our existing list, which has been alphabetized for easier navigation.
+
+### 2. Personalization Feature
+
+I'm thrilled to introduce a new personalization feature that allows you to tailor your Midjourney prompts to your unique style preferences. This feature is now available in the app, aligned with Midjourney Version 6.
+
+#### How it works:
+- You can now add the `--p` or `--personalize` parameter to your prompts.
+- This parameter takes into account your choices when ranking image pairs on midjourney.com.
+- By default, `--p` applies your own personalization, but you can also use other users' personalization by adding their shortcode: `--p shortcode`.
+
+#### Using Personalization in Midjourney Prompt Manager:
+- In the app, you'll find a new checkbox labeled "Add Personalization (--p)".
+- Check this box to add the `--p` tag to your prompt.
+- You also have the option to enter a specific personal shortcode in the provided field.
+
+**Important Note:** To use this feature effectively, you need to have completed enough Rank Pairs on the Midjourney website. If you haven't done so, you'll see an error message prompting you to do more ranking.
+
+### 3. Known Issue with Reference Images
+
+I want to acknowledge a known issue that some users have reported. There's currently an error with the reference images popping up when you paste the `--sref` and `--sw` parameters into the Midjourney web browser version of the app. I'm aware of this problem and am actively working on a solution. I hope to have a fix implemented over the weekend.
+
+Thank you for your patience and understanding as I work to resolve this issue. Your feedback is invaluable in helping me improve the Midjourney Prompt Manager experience.
+
+Stay tuned for more updates, and happy prompting!
+
+Check out these new features and more at [midjourneypromptmanager.com](https://midjourneypromptmanager.com).
+
+---
