@@ -1,0 +1,51 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import storyBanner from './artist-styles-added.png'
+
+export const article = {
+  author: 'Stephen Parker',
+  date: '2024-07-16',
+  title:
+    'Introducing Over 300 Artist Styles in Midjourney Prompt Manager',
+  description:
+    'Today, I am thrilled to announce a significant update to the Midjourney Prompt Manager app: the addition of over 300 artist styles to add to your key prompts.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image src={storyBanner} alt="Introducing Over 300 Artist Styles in Midjourney Prompt Manager" />
+
+## Introducing Over 300 Artist Styles in Midjourney Prompt Manager
+
+Today, I'm thrilled to announce a significant update to the Midjourney Prompt Manager app: the addition of over 300 artist styles to add to your key prompts. These styles represent a wide cross-section of artists that Midjourney has been trained to emulate, similar to Style Reference codes. On desktop, you can roll over each artist to reveal a thumbnail showcasing four Midjourney images created based on the artist style, allowing you to get a feel for the style and select your favorites. On mobile, you can select the info icon to bring up the image. Simply select your artist of choice to add the phrase "...in the style of [artist name]" to the key prompt and copy it to Midjourney in either Discord or the browser app. You can view the new feature at [https://midjourneypromptmanager.com/](https://midjourneypromptmanager.com/).
+
+### Expanding the Artistic Palette
+
+AI-generated art has unlocked new possibilities for artistic expression, allowing creators to experiment with styles and techniques in ways previously unimaginable. However, as AI technology advances, it raises critical questions about originality and intellectual property (IP) rights. I want to address these concerns head-on.
+
+### Remembering Concerts from the 2000s and Concerts Now
+
+Twenty years ago, I remember rock artists being paranoid about their likeness and sound being spread through the Internet from 'new' smartphones. They raised a big stink about it in the news and used draconian techniques at entrance gates to arenas, patting down concert-goers for recording devices in an effort to keep them out of these venues. While they had every right to control their music, eventually they gave up due to the proliferation of the technology and the difficulty of controlling it. Fast forward twenty years. Now, artists welcome the publicity and realize that the quality of recordings an average concert-goer captures isn't going to affect their high-quality, studio-mastered commercial music. I feel similarly about AI creating images that resemble an artist's style. They're typically not very good at doing so and can never match the detail and nuances of an artist's actual work.
+
+### ✨ My Stance on Ethical AI Usage
+
+Artists themselves learn and hone their skills through formal and informal training. Students of art build on the styles and techniques of their predecessors and contemporary colleagues, creating their own style in the process, typically after years of practice and training. AI must also be trained on a broad spectrum of artwork to truly understand and replicate human creativity. The problem lies in what artwork is used in such training and the argument that many individual artists consider their work their own intellectual property (IP).
+
+My stance is that it's essential that artists whose work is not in the public domain have the option to opt-out of this training process. This protection ensures that AI development respects the rights and contributions of individual artists. Midjourney is currently in legal proceedings that will determine whether its training process was legal, so while we await the outcome of this process, I will respect the wishes of any artist that does not want to be included in my list of available artist styles for building Midjourney prompts.
+
+As a photographer myself, I understand the importance of protecting one's work while also appreciating the flattery that comes from others showcasing or borrowing my style. Having spoken with dozens of artists on this topic, the feedback I've received regarding AI art is that everyone agrees that no work an artist creates should be passed off as the art of another. I do not condone passing off other artists' work as one's own, including AI artwork that borrows heavily on the style of an artist. Additionally, I hear that some artists want training to be monitored strictly, while others don't seem to mind and are flattered to be included alongside other prominent artists.
+
+### Give Artists Due Recognition
+
+While I don't know what will happen in the Midjourney legal proceedings regarding artist compensation, I will reiterate my fifth point from my mini manifesto in 2023: any AI image that uses the likeness of a specific artist such that it is recognizable should give credit to that artist for the style of the work created by the AI. As such, I'm working on an innovative feature that embeds watermarks and/or QR codes in AI-generated images that draw from the style of a particular artist. This will provide a tool to ensure that artists receive proper recognition for their artistic style and help safeguard their IP.
+
+However, I have no control over what Midjourney is trained on, nor the images that are generated using Midjourney. Therefore, it is incumbent upon each user to make their own choice on how to handle the situation. I am going to provide lists of artists that Midjourney is trained on to help my app users though. I expect some may disagree with this, but I want to make my app as usable as possible until the legal dust is settled. So if you do not agree with that and you want to have your name or style removed from Midjourney Prompt Manager, please email me at [hai@keypromptninja.com](mailto:hai@keypromptninja.com) and I will remove your name from my list.
+
+Check out this new features and more at [midjourneypromptmanager.com](https://midjourneypromptmanager.com). If you're interested in becoming a beta tester (coming soon) and receiving launch perks, sign up at [keypromptninja.io](https://midjourneypromptmanager.com).
+
+---
