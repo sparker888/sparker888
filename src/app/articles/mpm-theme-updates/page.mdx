@@ -17,7 +17,11 @@ export const metadata = {
 
 export default (props) => <ArticleLayout article={article} {...props} />
 
-<img src={storyBanner} alt="New Themes and Images in Midjourney Prompt Manager Alpha" />
+<Image
+  src={storyBanner}
+  alt="New Themes and Images in Midjourney Prompt Manager Alpha"
+  unoptimized
+/>
 
 I'm excited to announce a significant update to the Midjourney Prompt Manager app, building on the success of the recent artist styles feature. The app now includes rollover images for all themes, new themes, and improvements to numerous token keywords section. These updates are designed to provide content creators using Midjourney AI with even more creative options to write very specific prompts and streamline your Midjourney prompting process.
 
@@ -55,6 +59,7 @@ This streamlined process allows you to effortlessly incorporate specific style r
 ## Improved Image References
 
 I've fixed the problems to the Image References feature. Adding image references is now easy:
+
 - Correct appending of Image Weights (--iw) to the end of the prompt for a single image.
 - Proper implementation of the double-colon (::) syntax for multiple images to provide quick testing of different weights.
 
