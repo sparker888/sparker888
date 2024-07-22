@@ -1,0 +1,106 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import storyBanner from './mpm-theme-updates.gif'
+
+export const article = {
+  author: 'Stephen Parker',
+  date: '2024-07-22',
+  title: 'New Themes and Images in Midjourney Prompt Manager Alpha',
+  description:
+    'Exciting updates to Midjourney Prompt Manager, including new themes with visual previews, enhanced Style Reference section, and improved Image References.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image src={storyBanner} alt="New Themes and Images in Midjourney Prompt Manager Alpha" />
+
+I'm excited to announce a significant update to the Midjourney Prompt Manager app, building on the success of the recent artist styles feature. The app now includes rollover images for all themes, new themes, and improvements to numerous token keywords section. These updates are designed to provide content creators using Midjourney AI with even more creative options to write very specific prompts and streamline your Midjourney prompting process.
+
+## Expanded Themes with Visual Previews
+
+Following the popularity of rollover images for Artist Styles, I've applied the same concept to the Themes section. Now, you can visually preview Midjourney-generated images for each of the 99 themes. This feature allows you to quickly find the perfect aesthetic for your project, from Art Deco to Tachisme and everything in between.
+
+Some of the exciting new themes include:
+
+- Afrofuturism
+- Art Brut
+- Chiaroscuro
+- Cottagecore
+- Dark Academia
+- Deconstructivism
+- Fantastic Realism
+- Japonisme
+- Neo-Geo
+- New Media Art
+- Pointillism
+- Pre-Raphaelite
+
+These visual previews make it easier than ever to select a theme that aligns with your creative vision.
+
+## Enhanced Style Reference Section
+
+Due to its growing popularity, especially on social media, I've given the Style Reference section a more prominent place in the app. Using this feature is now even simpler:
+
+1. Tick the checkbox to indicate you want to use a Style Reference.
+2. Type in the number of the desired sref (there are tons of great new styles from creators coming out every day).
+3. The app automatically adds --sref and the number to the end of your prompt for quick copying and iteration.
+
+This streamlined process allows you to effortlessly incorporate specific style references into your Midjourney prompts. I find it easy to swap between two browser tabs to quickly edit a prompt and paste it into Midjourney.
+
+## Improved Image References
+
+I've fixed the problems to the Image References feature. Adding image references is now easy:
+- Correct appending of Image Weights (--iw) to the end of the prompt for a single image.
+- Proper implementation of the double-colon (::) syntax for multiple images to provide quick testing of different weights.
+
+These enhancements ensure that your image references are formatted correctly for optimal use in Midjourney.
+
+## New Selections Across Categories
+
+The app now offers expanded options in several categories to give you even more creative choices:
+
+### Emotion & Mood
+
+Fifteen new emotions and moods have been added, including:
+
+- Awed
+- Confident
+- Determined
+- Excited
+- Vulnerable
+
+### Camera Angles and Shots
+
+Ten new camera angles and shots have been added, such as:
+
+- Over-the-Shoulder Shot
+- Insert Shot
+- Cowboy Shot (American Shot)
+- Canted Angle
+
+### Cameras and Lenses
+
+Eight new specific camera and lens combinations have been included, like:
+
+- Leica M10 with Leica Summilux-M 35mm f/1.4 ASPH lens
+- Sony FX6 with Sony FE C 16-35mm T3.1 G lens
+- SIGMA fp L with SIGMA 24-70mm f/2.8 DG DN Art lens
+
+## Removal of --sref parameter with Reference Image
+
+I've removed the standalone sref parameter with the Reference Image option as I found that standard Image References with URLs and image weight (--iw) parameters work effectively for this purpose. Please let me know your thoughts on this!
+
+## Looking Forward
+
+As I continue to develop and refine Midjourney Prompt Manager, I remain committed to providing you with the most comprehensive and user-friendly tool for creating Midjourney prompts. These updates reflect my ongoing efforts to enhance your creative process and streamline your workflow.
+
+I value your feedback and am always looking for ways to improve. If you have any suggestions or comments, please don't hesitate to reach out at hai@keypromptninja.com.
+
+To stay updated on the latest features and improvements, sign up for my Ninja🗡️ Newsletter at [https://keypromptninja.io/](https://keypromptninja.io/) and follow me on Twitter at [https://twitter.com/keypromptninja](https://twitter.com/keypromptninja).
+
+Thank you for your continued support as I work to make Midjourney Prompt Manager the ultimate tool for AI-assisted image creation. Soon you will be able to save your prompts and images for future use and iteration with MPM Beta!
