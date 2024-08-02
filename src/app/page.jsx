@@ -293,7 +293,7 @@ export default async function Home() {
             >
               Gravital Digital
             </Link>
-            . My passion is producing sites and that deliver incredible value
+            . My passion is producing sites that deliver incredible value
             and delight my clients. Here's an{' '}
             <Link
               href="https://gravital-wri-case-study.netlify.app/"
