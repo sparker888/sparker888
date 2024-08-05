@@ -5,8 +5,10 @@ import storyBanner from './jamstack-1-hero.png'
 export const article = {
   author: 'Stephen Parker',
   date: '2024-08-05',
-  title: 'Light. Speed. ✨: A Modern approach to websites that deliver real results',
-  description: 'A detailed look into the Light. Speed. approach powered by Jamstack architecture, showcasing a real-world success story and benefits for businesses.',
+  title:
+    'Light. Speed. ✨: A Modern approach to building websites that deliver real results',
+  description:
+    'A detailed look into the Light. Speed. approach powered by Jamstack architecture, showcasing a real-world success story and benefits for any business with a digital presence.',
 }
 
 export const metadata = {
@@ -16,7 +18,10 @@ export const metadata = {
 
 export default (props) => <ArticleLayout article={article} {...props} />
 
-<Image src={storyBanner} alt="Light. Speed. ✨: A Modern Approach to Websites that Delivers Real Results" />
+<Image
+  src={storyBanner}
+  alt="Light. Speed. ✨: A modern approach to building websites that delivers real results"
+/>
 
 Welcome to the first installment of my Light. Speed. Series! Over the next few articles, I’ll explore a modern approach to web development that’s making a significant impact on businesses online. These articles are based on a recent case study I published, so I encourage you to check out the Wheel Rail Interaction (WRI) website redesign [case study](https://gravital-wri-case-study.netlify.app/) that demonstrates real-world results of this approach as we increased WRI 2024 website traffic by 12%, conversions by 22.5%, and attendance by a whopping 30%!
 
@@ -68,7 +73,10 @@ While not every company can benefit from this approach, many can. I will be the 
 
 The result is a faster website, higher Google search rankings, high scaling without high complexity, and you can launch your sites & apps faster (smaller teams, happier devs, and faster deployment cycles). Let's look at a real-life example of how a Jamstack website redesign delivered results for one company.
 
-<Image src={require('./jamstack-1-3.png')} alt="Real-world impact of Jamstack" />
+<Image
+  src={require('./jamstack-1-3.png')}
+  alt="Real-world impact of Jamstack"
+/>
 
 ## Real-World Impact: The WRI 2024 Success Story
 
@@ -82,7 +90,7 @@ While designing the website, it was critical to improve user satisfaction by pro
 
 The WRI 2024 Conference broke several attendance records, with two seminars achieving their highest attendance in 29 years. These numbers represent tangible business growth from the Jamstack website redesign. This success was attributed to the improved website performance, enhanced user experience, and streamlined registration process. In fact, you can see the Google Lighthouse scores at the top of the graphic above. They're not perfect, but it did the trick, and my client was extremely pleased with the result.
 
-From a technical standpoint, by serving pre-built static files directly from a CDN, page load times were significantly reduced. This speed directly impacts crucial metrics like bounce rates, time on site, and ultimately, conversions. We saw huge SEO benefits because the static nature of the WRI sites means search engine bots can easily index content, while the quicker load times contribute to better search rankings. We saw more traffic from search engines than ever before. WRI leverages CDNs for content delivery, allowing sites to handle traffic spikes efficiently. This scalability comes without the need for complex load balancing or expensive server upgrades, making it a cost-effective solution for growing businesses. 
+From a technical standpoint, by serving pre-built static files directly from a CDN, page load times were significantly reduced. This speed directly impacts crucial metrics like bounce rates, time on site, and ultimately, conversions. We saw huge SEO benefits because the static nature of the WRI sites means search engine bots can easily index content, while the quicker load times contribute to better search rankings. We saw more traffic from search engines than ever before. WRI leverages CDNs for content delivery, allowing sites to handle traffic spikes efficiently. This scalability comes without the need for complex load balancing or expensive server upgrades, making it a cost-effective solution for growing businesses.
 
 The static nature of Jamstack enhanced security by reducing reliance on server-side processes and databases, and we don't need a cookie bot because we're not using third-party cookies (we use Plausible Analytics). I could go on, but you get the idea. If you want to see more details, visit the [case study](https://gravital-wri-case-study.netlify.app/).
 
