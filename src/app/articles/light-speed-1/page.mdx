@@ -1,0 +1,110 @@
+```javascript
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import storyBanner from './jamstack-1-hero.png'
+
+export const article = {
+  author: 'Stephen Parker',
+  date: '2024-08-05',
+  title: 'Light. Speed. ✨: A Modern Approach to Websites that Delivers Real Results',
+  description: 'A detailed look into the Light. Speed. approach powered by Jamstack architecture, showcasing real-world success stories and benefits for businesses.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image src={storyBanner} alt="Light. Speed. ✨: A Modern Approach to Websites that Delivers Real Results" />
+
+## Light. Speed. ✨: A Modern Approach to Websites that Delivers Real Results
+
+[HERO IMAGE]
+
+Welcome to the first installment of my Light. Speed. Series! Over the next few articles, I’ll explore a modern approach to web development that’s making a significant impact on businesses online. These articles are based on a recent case study I published, so I encourage you to check out the Wheel Rail Interaction (WRI) website redesign case study [https://gravital-wri-case-study.netlify.app/] that demonstrates real-world results of this approach as we increased WRI 2024 website traffic by 12%, conversions by 22.5%, and attendance by a whopping 30%!
+
+## What is Light. Speed.✨?
+
+As the founder behind the “Light. Speed.” concept, I’m promoting the philosophy of keeping websites tech simple for speed, efficiency, security, and cost-effectiveness. At its core, Light - meaning lightweight code, and Speed - meaning high performance, is about developing with a modern architectural approach called Jamstack. This term is a few years old, so I’ll be covering what Jamstack solutions look like today to help business owners make intelligent decisions when considering a website redesign. I’ll help you understand the landscape and make a solid decision that will last ~10 years.
+
+<Image src={require('./jamstack-1-1.jpeg')} alt="Jamstack architecture" />
+
+Jamstack is an architectural approach that decouples the web experience layer from data and business logic, improving flexibility, scalability, performance, and maintainability. Jamstack removes the need for business logic to dictate the web experience. As such, we can develop website front ends that focus on delivering a great experience for the user. It turns out that this is incredibly valuable, particularly when trying to rank on Google!
+
+This approach prioritizes:
+
+1. Page delivery speed
+2. Higher search rankings
+3. The user experience
+4. Improved security
+5. Lower maintenance costs
+
+By leveraging Jamstack architecture, Light. Speed. delivers fast, secure, and highly efficient websites that perform well in today’s competitive digital landscape.
+
+## The Power of Jamstack
+
+Let’s get in the weeds a bit and introduce you to some important web jargon you should know as a business owner or marketing manager. The term Jamstack was coined by Mathias Biilmann, CEO of Netlify, which is a cloud platform for deploying websites and apps, based on the acronym JAM which stands for JavaScript, APIs, and Markup. This modern web development architecture separates the frontend from backend apps and databases. Freed from backend servers, the frontend can then be deployed globally, directly to a CDN or Content Delivery Network. Here are the key points:
+
+1. Jamstack provides Pre-rendering: Pages are built at deploy time, resulting in static HTML files that load quickly (the browser does less work and pages appear quickly).
+2. Jamstack promotes Decoupling: Decoupling is the process of creating a clean separation between systems or services. By decoupling the services needed to operate a site, each component part can become easier to reason about, can be independently swapped out or upgraded, and can be designated the purview of dedicated specialists either within an organization or as a third party. The separation of frontend and backend allows for greater flexibility and scalability.
+3. Jamstack supports Dynamic Functionalities: JavaScript and APIs handle interactive elements without sacrificing speed. We’ll get into this more a bit later.
+
+This architecture not only improves performance but also enhances security and scalability. By serving pre-built static files, Jamstack sites drastically reduce the attack surface, making them inherently more secure. Additionally, the use of CDNs allows for effortless scaling, ensuring your site can handle traffic spikes without additional infrastructure costs.
+
+## What Does Jamstack Deliver?
+
+<Image src={require('./jamstack-1-2.png')} alt="Jamstack benefits" />
+
+Light. Speed. is the future, and it’s powered by Jamstack architecture. While the jargon is important for a more detailed understanding and discussion of technology decisions behind any business’s website or application, what’s really important for managers to understand are the benefits Jamstack provides.
+
+The problem with the legacy web is that we’re at a point where many companies have traditional operations that depend on a web server (or many of them), that have to run complex applications all of the time. Running websites and applications like this slows things down, provides way too many opportunities for attacks, and is expensive to scale. Moreover, it’s costly in terms of needing large development teams and high maintenance costs.
+
+**The solution?**
+
+While not every company can benefit from this approach, many can. I will be the first to advocate for the right tool for the job, but I’m continually surprised at how many can benefit from a Light. Speed. solution. Simplify!
+
+- Move from web servers to CDNs - A Jamstack deployment doesn’t run on a traditional setup of origin servers. Instead, automated deployments are used to push sites directly to the Edge / CDN.
+- Prerender web pages for speed - Rather than building content at runtime for each request, content is prebuilt and optimized during a build setup using a site generator and other build tools.
+- Move from monolithic apps to APIs & Microservices - Decoupling the frontend from the backend allows for more modular development where we can take advantage of the huge ecosystem of third-party tools to provide website functionality.
+
+The result is a faster website, higher Google search rankings, high scaling without high complexity, and you can launch your sites & apps faster (smaller teams, happier devs, and faster deployment cycles). Let's look at a real-life example of how a Jamstack website redesign delivered results for one company.
+
+<Image src={require('./jamstack-1-3.png')} alt="Real-world impact of Jamstack" />
+
+## Real-World Impact: The WRI 2024 Success Story
+
+Starting in 2023, I worked with the leadership of Wheel Rail Seminars to envision a new engineering conference website based on my Light. Speed.✨ philosophy. We took a Jamstack approach to designing the new website to improve usability, streamline the registration process to attend the conference, empower editors to directly access and edit content, and implement versioning so that we could duplicate the site framework for future conferences to save on costs down the road.
+
+While designing the website, it was critical to improve user satisfaction by providing rapid page loading and enhance our reach by improving our search engine rankings. We needed it to be cost-effective, so while not everything was designed in the first phase of this year's website, we're using a platform called React that provides a composable architecture enabling us to add components to the website as we go and the budget allows. What was the result?
+
+- A 12% increase in website traffic
+- A 22.5% boost in conversions
+- A 30% rise in conference attendance
+
+The WRI 2024 Conference broke several attendance records, with two seminars achieving their highest attendance in 29 years. These numbers represent tangible business growth from the Jamstack website redesign. This success was attributed to the improved website performance, enhanced user experience, and streamlined registration process. In fact, you can see the Google Lighthouse scores here. They're not perfect, but it did the trick, and my client was extremely pleased with the result.
+
+From a technical standpoint, by serving pre-built static files directly from a CDN, page load times were significantly reduced. This speed directly impacts crucial metrics like bounce rates, time on site, and ultimately, conversions. We saw huge SEO benefits because the static nature of the WRI sites means search engine bots can easily index content, while the quicker load times contribute to better search rankings. We saw more traffic from search engines than ever before. WRI 2024 and beyond leverages CDNs for content delivery, allowing sites to handle traffic spikes efficiently. This scalability comes without the need for complex load balancing or expensive server upgrades, making it a cost-effective solution for growing businesses. The static nature of Jamstack enhanced security by reducing reliance on server-side processes and databases, and we don't need a cookie bot because we're not using third-party cookies (we use Plausible Analytics). I could go on, but you get the idea. If you want to see more details, visit the case study. [https://gravital-wri-case-study.netlify.app/]
+
+<Image src={require('./jamstack-1-4.jpeg')} alt="Jamstack for marketers" />
+
+## Jamstack websites are Perfect for Marketers
+
+As a marketer myself, I love giving editors access to tools that make their lives easier and get content to their audience quickly. Jamstack architecture empowers companies to enable marketers to use the tools they love that enable fast content updates, seamless sitewide changes, and scalable delivery — perfect for those posts and stories that go viral! And by decoupling content from presentation to expedite deployments, I can bypass the need for developer involvement in routine updates using a headless CMS, which I’ll go into in more detail in a future series article.
+
+In addition to a CMS, we can use the tech for easy A/B testing, enriching your campaign’s impact. I can easily set up different branches of a website repository as separate deployments. Netlify, the CDN service I mentioned earlier, enables you to test variations of your site in real-time, allowing for data-driven decisions. This feature is invaluable for marketers seeking to optimize user experience and conversion rates. Simplifying this kind of testing spurs on a continuous improvement process that can lead to significantly enhanced performance and user engagement. I love using it with Plausible Analytics. This is another area I’ll explore in more detail in future articles.
+
+<Image src={require('./jamstack-1-5.png')} alt="The bottom line for Jamstack" />
+
+## The Bottom Line:
+
+Light. Speed. is about creating digital experiences that drive engagement, conversions, and business growth.
+
+Using a Jamstack approach can lead to significant improvements in key performance indicators. Websites that load quickly retain visitors longer, reduce bounce rates, and encourage more extensive interaction with content, directly contributing to higher conversion rates. Jamstack sites typically see higher visibility from the search engines and, in my experience, I typically see newly redesigned sites increase their reach on a variety of platforms. In terms of overall ROI, by keeping your hosting costs down using a high-speed CDN, reducing exposure to hackers, and keeping your code base simple, websites are less expensive to operate and pay for themselves quickly. Maintenance is low for Jamstack sites in general as well.
+
+## What’s next in My Light. Speed. series?
+
+This article is just the beginning of my exploration into my Light. Speed. philosophy into modernizing websites. There's a lot of cool and interesting aspects to this topic. In the next installment, I’ll dive into the process of using APIs to connect all types of content and services that provide huge value at low cost.
+
+Feel free to reach out if you have any questions and follow me on LinkedIn and X (https://x.com/sparker888).
