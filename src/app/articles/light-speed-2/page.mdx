@@ -1,0 +1,152 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import storyBanner from './jamstack-2-hero.png'
+
+export const article = {
+  author: 'Stephen Parker',
+  date: '2024-09-10',
+  title: 'Light. Speed. ✨: Integrations - Powering Modern Websites with APIs - My Top 8',
+  description:
+    'Explore the power of API integrations in Jamstack architecture, enhancing website functionality and user experience through third-party services.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image
+  src={storyBanner}
+  alt="Light. Speed. ✨: Integrations - Powering Modern Websites with APIs - My Top 8"
+/>
+
+Welcome to the second installment of my Light. Speed. Series! In my previous article, we explored the fundamentals of the Jamstack approach and its benefits for modern web development. Today, we'll dive into one of the most exciting aspects of this architecture: integrations.
+
+## The Power of APIs in Jamstack
+
+At the heart of the Jamstack philosophy is the idea of decoupling the frontend from the backend. This separation allows us to leverage specialized services through APIs (Application Programming Interfaces) to add powerful functionality to our websites without the need for complex server-side logic.
+
+<Image src={require('./jamstack-2-1.png')} alt="APIs in Jamstack" />
+
+By integrating third-party services and APIs, we can:
+
+1. Enhance website functionality
+2. Improve user experience
+3. Streamline development processes
+4. Reduce costs and maintenance overhead
+
+Let's explore some popular integrations that are revolutionizing modern web development:
+
+## 1. Content Management Systems (CMS)
+
+A headless CMS like Storyblok can transform how we manage and deliver content. In the WRI 2024 event website redesign (see case study - add link), Storyblok empowered non-technical users to update speaker information effortlessly. Its intuitive interface and live preview feature make content creation a breeze, while its API allows seamless integration with our Jamstack site.
+
+<Image src={require('./jamstack-2-2.png')} alt="Storyblok CMS" />
+
+Key benefits:
+- Real-time content updates
+- User-friendly interface for non-developers
+- Flexible content modeling
+- Version control and content scheduling
+
+## 2. Event Management Systems
+
+For event-based websites, integrating a robust platform like Cvent can streamline the entire registration process. In the WRI 2024 project, Cvent's API allowed us to embed a customized registration form directly into our Jamstack site, providing a seamless user experience while leveraging Cvent's powerful backend functionality.
+
+<Image src={require('./jamstack-2-3.png')} alt="Cvent Integration" />
+
+Key benefits:
+- Customizable registration forms
+- Automated attendee management
+- Integration with payment gateways
+- Real-time reporting and analytics
+
+## 3. Analytics
+
+Privacy-focused analytics tools like Plausible offer valuable insights without compromising user data. By integrating Plausible into our WRI 2024 site, we gained crucial performance metrics while avoiding intrusive cookie notices.
+
+<Image src={require('./jamstack-2-4.png')} alt="Plausible Analytics" />
+
+Key benefits:
+- GDPR compliant
+- No cookies required
+- Lightweight script for faster load times
+- Simple, intuitive dashboard
+
+## 4. Authentication Services
+
+Services like Auth0 or Firebase Authentication can handle user authentication and authorization, allowing you to add secure login functionality to your Jamstack site without managing user credentials yourself.
+
+<Image src={require('./jamstack-2-5.png')} alt="Authentication Services" />
+
+Key benefits:
+- Secure, scalable authentication
+- Support for social login providers
+- Customizable login flows
+- Token-based authentication for API access
+
+## 5. E-commerce Platforms
+
+For sites requiring e-commerce functionality, platforms like Shopify or Wix offer robust APIs that can be integrated into a Jamstack site, allowing you to add shopping cart functionality without the need for a traditional e-commerce backend.
+
+<Image src={require('./jamstack-2-6.png')} alt="E-commerce Integration" />
+
+Key benefits:
+- Secure payment processing
+- Inventory management
+- Order fulfillment integration
+- Customer account management
+
+## 6. Search Functionality
+
+Implementing search in a static site can be challenging, but services like Algolia or Elasticsearch provide powerful, fast, and customizable search functionality through their APIs using the latest AI features.
+
+<Image src={require('./jamstack-2-7.jpeg')} alt="Search Functionality" />
+
+Key benefits:
+- Fast, typo-tolerant search
+- Customizable relevance
+- Analytics on search queries
+- Faceted search and filtering
+
+## 7. Form Handling
+
+Services like Formspree or Netlify Forms can handle form submissions on static sites, eliminating the need for server-side processing.
+
+<Image src={require('./jamstack-2-8.png')} alt="Form Handling" />
+
+Key benefits:
+- Spam protection
+- Email notifications
+- Integration with other services (e.g., CRM systems)
+- File upload support
+
+## 8. Comments and User-Generated Content
+
+Platforms like Disqus or CommentBox allow you to add dynamic commenting systems to your static sites, enabling user engagement without the need for backend databases.
+
+<Image src={require('./jamstack-2-9.png')} alt="Comments and User-Generated Content" />
+
+Key benefits:
+- Real-time commenting
+- Moderation tools
+- Social media integration
+- Customizable appearance
+
+## The Magic of Integration
+
+By leveraging these APIs and services, we can create feature-rich, dynamic websites while maintaining the benefits of the Jamstack architecture: speed, security, and scalability. The WRI 2024 project is a perfect example of how integrating services like Storyblok, Cvent, and Plausible Analytics can lead to a powerful, efficient, and user-friendly web experience.
+
+The key to successful integration lies in choosing the right services for your specific needs and ensuring they work seamlessly together. This is where the expertise of a seasoned developer becomes invaluable.
+
+## Conclusion
+
+Light. Speed. Integrations embody the spirit of modern web development: leveraging specialized services to create powerful, efficient websites. By embracing this approach, we can build websites that are not only fast and secure but also rich in functionality and easy to maintain.
+
+## What's next in My Light. Speed.✨ series?
+
+In my next installment, we'll explore how to choose the right tech stack for your Jamstack project, ensuring you have the perfect tools for your specific needs. Stay tuned!
+
+Feel free to reach out if you have any questions at [sparker888@gmail.com](mailto:sparker888@gmail.com) and follow me on [LinkedIn](https://www.linkedin.com/in/sparker888) and [X/Twitter](https://x.com/sparker888).
