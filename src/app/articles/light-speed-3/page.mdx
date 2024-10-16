@@ -1,0 +1,64 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import storyBanner from './light-speed-series-hero-3.png'
+
+export const article = {
+  author: 'Stephen Parker',
+  date: '2024-10-16',
+  title: 'Light. Speed. ✨: Astro - A Framework of Many Frameworks',
+  description: 'Discover how Astro empowers developers with flexibility, performance, and a “framework of frameworks” approach for building modern websites.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image
+  src={storyBanner}
+  alt="Light. Speed. ✨: Astro - A Framework of Many Frameworks"
+/>
+
+Welcome to the third installment of my Light. Speed. Series! In my [previous article](https://sparker888.com/articles/light-speed-2), we explored the fundamentals of the Jamstack approach and one of the key pillars for its success - integrations. Today, we'll dive into a fundamental aspect of this architecture: the framework used for development.
+
+## What is Astro?
+
+Astro is a modern, fast-growing framework designed to help developers build web applications with a focus on simplicity, performance, and flexibility. Its unique approach combines the best of both static site generation and dynamic frameworks, making it adaptable to various use cases. Whether you’re building a personal blog, an e-commerce platform, or a fully dynamic web app, Astro provides a foundation that supports your needs while allowing you to enhance functionality with additional tools as necessary.
+
+<Image src={require('./2-astro-logo.png')} alt="Astro Logo" />
+
+## Astro Islands
+
+One of Astro’s standout features is its *Islands Architecture*, which enables highly optimized, partially hydrated components on otherwise static pages. Unlike traditional JavaScript-heavy frameworks that ship everything to the browser, Astro allows you to render only the dynamic components—what Astro calls *islands*—and leave the rest static. This approach results in faster load times, reduced JavaScript bundles, and an overall leaner site.
+
+<Image src={require('./3-islands-architecture.png')} alt="Islands Architecture" />
+
+## Maximum Flexibility
+
+Astro offers unparalleled flexibility with a "Zero Lock-in" philosophy, meaning you can use the tools, frameworks, and libraries you already know and love. Whether you’re a fan of React, Vue, Svelte, or any other major frontend framework, Astro has you covered. You can integrate your favorite components into Astro’s system with ease, without needing to rebuild everything from scratch. This flexibility allows you to retain existing codebases while still benefiting from Astro’s performance enhancements.
+
+<Image src={require('./4-zero-lock-in.png')} alt="Zero Lock-in" />
+
+## Fully Featured
+
+Astro comes out of the box with everything you need to build a modern website. From routing and built-in markdown support to dynamic imports and out-of-the-box TypeScript support, Astro’s comprehensive feature set provides everything a developer needs to get started quickly. And if you need additional functionality, Astro’s ecosystem of integrations, including support for CMSs, e-commerce platforms, and analytics tools, makes it easy to extend the framework’s capabilities.
+
+<Image src={require('./5-astronaut.png')} alt="Astro Astronaut" />
+
+## Many Themes
+
+To help developers get started even faster, Astro provides a growing library of pre-built themes that cater to a variety of use cases. Whether you’re building a blog, a portfolio, or an e-commerce site, there’s likely an Astro theme that fits your needs. These themes save time by offering a well-designed, functional starting point that developers can customize to match their vision. 
+
+<Image src={require('./6-astro-themes.png')} alt="Astro Themes" />
+
+## Summary
+
+Astro stands out as a “framework of frameworks” with its flexible architecture, powerful integrations, and performance-first approach. By adopting Astro, developers gain the best of both static and dynamic site generation, making it an ideal choice for modern web projects of any size. Whether you need highly dynamic features or a simple, fast-loading static site, Astro has the tools to deliver a tailored solution.
+
+## What’s Next in the Light. Speed.✨ Series?
+
+In the next installment of my Light. Speed. Series, we’ll explore how to optimize your web development workflow using Astro’s built-in tools and third-party integrations. From streamlining the build process to automating deployment and scaling, we’ll cover everything you need to take your Astro project from local development to production efficiently.
+
+Feel free to reach out if you have any questions at [sparker888@gmail.com](mailto:sparker888@gmail.com), visit my [Gravital Digital](https://gravitaldigital.com/) business site and follow me on [LinkedIn](https://www.linkedin.com/in/sparker888) and [X/Twitter](https://x.com/sparker888).
