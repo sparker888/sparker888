@@ -23,7 +23,7 @@ export default (props) => <ArticleLayout article={article} {...props} />
 
 Welcome to the fourth installment of my **Light. Speed. Series!** In the [previous article](https://sparker888.com/articles/light-speed-3), we explored Astro, a framework designed for simplicity, performance, and flexibility. Today, we’ll focus on **Astro’s development workflow**, from setting up your first project to deploying and managing changes with ease.
 
-## Getting Started with Astro
+## Setting up Astro Locally
 
 Setting up Astro is incredibly straightforward. With its intuitive structure and built-in features, you can go from zero to a working site in minutes. Here’s how:
 
@@ -41,13 +41,13 @@ Choose a template that fits your needs, such as a blog or portfolio, and navigat
 cd your-project-name
 ```
 
+<Image src={require('./1-astro-install.jpg')} alt="Installing Astro" />
+
 Then install the dependencies:
 
 ```
 npm install
 ```
-
-<Image src={require('./1-astro-install.jpg')} alt="Installing Astro" />
 
 ### Start the Development Server
 
@@ -68,7 +68,7 @@ Visit `http://localhost:4321` in your browser, and you’ll see your new Astro s
 Astro’s clean file structure keeps things simple:
 
 - **`src/pages/`**: Create pages here. For example, `src/pages/about.astro` will render at `/about`.
-- **`src/components/`**: Store reusable components like headers or footers.
+- **`src/components/`**: Store reusable components like headers or footers, or in this case you see Cards.astro.
 - **`public/`**: Serve static assets, like images or fonts, from this directory.
 
 Astro combines server-side logic and HTML within `.astro` files. The result? Clean, efficient code that’s easy to maintain.
@@ -77,7 +77,7 @@ Astro combines server-side logic and HTML within `.astro` files. The result? Cle
 
 ## Pro Tip! Integrating Tailwind CSS
 
-Want powerful, responsive styles? This is jumping slightly ahead to my next topic, but it's a good idea to add Tailwind CSS to your Astro project with one command:
+Want powerful, responsive styles? This is jumping slightly ahead to my next topic, but it's a good idea to add [Tailwind CSS](https://tailwindcss.com/) to your Astro project with one command:
 
 ```
 npx astro add tailwind
@@ -99,23 +99,25 @@ Tailwind’s Preflight styles reset browser defaults, giving you a clean slate f
 
 Astro’s deployment process with Netlify is seamless:
 
-1. **Initialize Git (you can skip this if you did this during the install above)**:
+1. **Initialize Git (you can skip this if you selected this option during the Astro installation above)**:
    ```
    git init
    git add .
    git commit -m "Initial commit"
    ```
 
-2. **Push to GitHub**:
+2. **Push to your GitHub repository**:
    ```
    git remote add origin `<your-repo-url>`
    git push -u origin main
    ```
 
+Your [GitHub](https://github.com/) repository will now show up:
+
    <Image src={require('./6-project-on-github.png')} alt="The Astro Starter as it appears on GitHub" />
 
 3. **Connect to Netlify**:  
-   Log in to [Netlify](https://www.netlify.com/), select New Site and then choose your GitHub repository from the selections.  
+   Log in to [Netlify](https://www.netlify.com/), and set up a free account if necessary. Select New Site and then choose your GitHub repository from the selections.  
 
    <Image src={require('./7-netlify-deploy-selections.png')} alt="Choose to deploy from GitHub" />
 
@@ -148,7 +150,7 @@ git checkout -b feature/your-feature-name
 
 Preview changes live with the development server (`npm run dev`). Test and refine before pushing your code.
 
-### Push to a Development Branch
+### Push to your named Development Branch
 
 Once satisfied, push to the remote development branch:
 
@@ -156,13 +158,15 @@ Once satisfied, push to the remote development branch:
 git push origin feature/your-feature-name
 ```
 
-Netlify can automatically deploy this branch to a staging environment (e.g., `dev-your-site.netlify.app`). Share the staging site with clients for feedback.
+Netlify can automatically deploy this branch to a staging environment (e.g., `dev-your-site.netlify.app`). See the Netlify docs for more on [Branch Deploys](https://docs.netlify.com/site-deploys/overview/#branch-deploy-controls).
+
+Share the staging site with clients for feedback!
 
 <Image src={require('./10-draft-dev-deploy.png')} alt="Example Draft Deploy" />
 
 ### Merge to Production
 
-After client approval, merge your branch into `main`:
+After making your changes and getting client approval, merge your branch into `main`:
 
 ```
 git checkout main
@@ -170,11 +174,11 @@ git merge feature/your-feature-name
 git push origin main
 ```
 
-Netlify automatically updates your production site—no manual intervention required.
+Netlify automatically updates your production site—no manual intervention required. Voila!
 
 <Image src={require('./11-final-deploy.png')} alt="Example Final Deploy" />
 
-This workflow emphasizes simplicity: work locally, review on staging, and deploy to production—all while maintaining speed and quality.
+This workflow emphasizes simplicity: work locally, review on staging (a branch deploy using Netlify), and merge your changes to deploy to production—promoting speed in your development process.
 
 ## Summary
 
