@@ -1,0 +1,187 @@
+```jsx
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import storyBanner from './light-speed-series-hero-4.png'
+
+export const article = {
+  author: 'Stephen Parker',
+  date: '2024-11-26',
+  title: 'Light. Speed. ✨: Astro - Development Workflow',
+  description: 'Explore Astro’s streamlined development workflow, from local setup to Netlify deployment, and learn how to efficiently manage day-to-day development.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image
+  src={storyBanner}
+  alt="Light. Speed. ✨: Astro - Development Workflow"
+/>
+
+Welcome to the fourth installment of my **Light. Speed. Series!** In the [previous article](https://sparker888.com/articles/light-speed-3), we explored Astro, a framework designed for simplicity, performance, and flexibility. Today, we’ll focus on **Astro’s development workflow**, from setting up your first project to deploying and managing changes with ease.
+
+## Getting Started with Astro
+
+Setting up Astro is incredibly straightforward. With its intuitive structure and built-in features, you can go from zero to a working site in minutes. Here’s how:
+
+### Install Astro
+
+Run this command in your terminal to initialize a new Astro project:
+
+```
+npm create astro@latest
+```
+
+Choose a template that fits your needs, such as a blog or portfolio, and navigate to your project folder:
+
+```
+cd your-project-name
+```
+
+Then install the dependencies:
+
+```
+npm install
+```
+
+### Start the Development Server
+
+To preview your project locally, run:
+
+```
+npm run dev
+```
+
+Visit `http://localhost:3000` in your browser, and you’ll see your new Astro site live and ready for customization.
+
+<Image src={require('./image-1.png')} alt="Default Astro Starter Page" />
+
+## Understanding Astro’s File Structure
+
+Astro’s clean file structure keeps things simple:
+
+- **`src/pages/`**: Create pages here. For example, `src/pages/about.astro` will render at `/about`.
+- **`src/components/`**: Store reusable components like headers or footers.
+- **`public/`**: Serve static assets, like images or fonts, from this directory.
+
+Astro combines server-side logic and HTML within `.astro` files. The result? Clean, efficient code that’s easy to maintain.
+
+<Image src={require('./image-2.png')} alt="Astro File Structure Diagram" />
+
+## Integrating Tailwind CSS
+
+Want powerful, responsive styles? Add Tailwind CSS to your Astro project with one command:
+
+```
+npx astro add tailwind
+```
+
+Restart your server with:
+
+```
+npm run dev
+```
+
+Tailwind’s Preflight styles reset browser defaults, giving you a clean slate for styling. Use Tailwind classes in your `.astro` files to rapidly create modern designs.
+
+<Image src={require('./image-3.png')} alt="Tailwind CSS Integration Example" />
+
+## Deploying to Netlify
+
+Astro’s deployment process with Netlify is seamless:
+
+1. **Initialize Git**:
+   ```
+   git init
+   git add .
+   git commit -m "Initial commit"
+   ```
+
+2. **Push to GitHub**:
+   ```
+   git remote add origin `<your-repo-url>`
+   git push -u origin main
+   ```
+
+3. **Connect to Netlify**:  
+   Log in to [Netlify](https://www.netlify.com/) and link your GitHub repository.  
+
+4. **Set Build Settings**:  
+   - Build Command: `npm run build`
+   - Publish Directory: `dist`
+
+5. **Deploy**:  
+   Click **Deploy Site**, and your site will be live!
+
+Netlify supports branch-specific deployments, making it easy to manage staging environments.
+
+<Image src={require('./image-4.png')} alt="Netlify Deployment Dashboard" />
+
+## Debugging Tips
+
+Use browser DevTools to inspect Astro-generated HTML. The **Network** tab reveals how Astro minimizes JavaScript, keeping your site lightweight and fast.
+
+For Netlify-specific issues, consult their [Astro documentation](https://docs.netlify.com/frameworks/astro/#app).
+
+<Image src={require('./image-5.png')} alt="Astro HTML in DevTools" />
+
+## Development Workflow
+
+Astro’s true power shines in its daily workflow. Here’s how I manage projects:
+
+### Create a Development Branch
+
+For new features or fixes, start a new branch:
+
+```
+git checkout -b feature/your-feature-name
+```
+
+### Work Locally
+
+Preview changes live with the development server (`npm run dev`). Test and refine before pushing your code.
+
+### Push to a Development Branch
+
+Once satisfied, push to the remote development branch:
+
+```
+git push origin feature/your-feature-name
+```
+
+Netlify can automatically deploy this branch to a staging environment (e.g., `dev-your-site.netlify.app`). Share the staging site with clients for feedback.
+
+### Merge to Production
+
+After client approval, merge your branch into `main`:
+
+```
+git checkout main
+git merge feature/your-feature-name
+git push origin main
+```
+
+Netlify automatically updates your production site—no manual intervention required.
+
+<Image src={require('./image-6.png')} alt="Development Workflow Diagram" />
+
+This workflow emphasizes simplicity: work locally, review on staging, and deploy to production—all while maintaining speed and quality.
+
+## Summary
+
+Astro and Netlify together create an unparalleled developer experience. Whether you’re just starting or managing daily iterations, their tools simplify every aspect of modern web development.
+
+## What’s Next in the Light. Speed.✨ Series?
+
+Next, we’ll explore **Tailwind CSS with Astro** and show how to create stunning, responsive designs without compromising performance.
+
+Feel free to reach out at [sparker888@gmail.com](mailto:sparker888@gmail.com), visit my [Gravital Digital](https://gravitaldigital.com/) business site, and follow me on [LinkedIn](https://www.linkedin.com/in/sparker888) and [X/Twitter](https://x.com/sparker888).
+```
+
+In the next installment of my Light. Speed. Series, we’ll explore how to optimize your web development workflow using Astro’s built-in tools and third-party integrations. From streamlining the build process to automating deployment and scaling, we’ll cover everything you need to take your Astro project from local development to production efficiently.
+
+Feel free to reach out if you have any questions at [sparker888@gmail.com](mailto:sparker888@gmail.com), visit my [Gravital Digital](https://gravitaldigital.com/) business site and follow me on [LinkedIn](https://www.linkedin.com/in/sparker888) and [X/Twitter](https://x.com/sparker888).
