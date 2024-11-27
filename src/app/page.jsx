@@ -94,6 +94,18 @@ function SocialLink({ icon: Icon, ...props }) {
   )
 }
 
+// Define the YouTubeIcon component
+function YouTubeIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        fillRule="evenodd"
+        d="M21.8 8s-.2-1.4-.8-2c-.7-.8-1.5-.8-1.9-.9C16.6 5 12 5 12 5h-.1s-4.6 0-6.9.2c-.4 0-1.2.1-1.9.9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.6C2 14.4 2.2 16 2.2 16s.2 1.4.8 2c.7.8 1.6.8 2 .9 1.5.1 6.7.2 6.7.2s4.6 0 6.9-.2c.4 0 1.2-.1 1.9-.9.6-.6.8-2.8.8-2.8s.2-1.6.2-3.2V11.2c0-1.6-.2-3.2-.2-3.2zM9.8 13.2V9l4.8 2.1L9.8 13.2z"
+      />
+    </svg>
+  )
+}
+
 function Role({ role }) {
   let startLabel =
     typeof role.start === 'string' ? role.start : role.start.label
@@ -106,7 +118,7 @@ function Role({ role }) {
   return (
     <li className="flex gap-4">
       <div className="relative flex items-center justify-center flex-none w-10 h-10 mt-1 rounded-full shadow-md shadow-slate-800/5 ring-1 ring-slate-900/5 dark:border dark:border-slate-700/50 dark:bg-slate-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+        <Image src={role.logo} alt="" className="w-7 h-7" unoptimized />
       </div>
       <dl className="flex flex-wrap flex-auto gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -301,7 +313,14 @@ export default async function Home() {
             >
               example case study
             </Link>
-            . I also support 🧭 Midjourney AI image creators with an app called{' '}
+            . I also help other solopreneurs who wish to work remotely on my{' '}
+            <Link
+              href="https://gravital-wri-case-study.netlify.app/"
+              className="text-amber-500 hover:underline"
+            >
+              YouTube channel
+            </Link>
+            , and support 🧭 Midjourney AI image creators with an app called{' '}
             <Link
               href="https://midjourneypromptmanager.com/"
               className="text-amber-500 hover:underline"
@@ -331,6 +350,11 @@ export default async function Home() {
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
+            <SocialLink
+              href="https://www.youtube.com/@remote-solopreneur"
+              aria-label="Subscribe on YouTube"
+              icon={YouTubeIcon}
+            />
           </div>
         </div>
       </Container>
@@ -344,7 +368,6 @@ export default async function Home() {
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <NewsletterWithNoSSR />
-
             <Projects />
           </div>
         </div>

@@ -16,9 +16,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="group flex text-sm font-medium text-slate-800 transition hover:text-amber-500 dark:text-slate-200 dark:hover:text-amber-500"
+        className="flex text-sm font-medium transition group text-slate-800 hover:text-amber-500 dark:text-slate-200 dark:hover:text-amber-500"
       >
-        <Icon className="h-6 w-6 flex-none fill-slate-500 transition group-hover:fill-amber-500" />
+        <Icon className="flex-none w-6 h-6 transition fill-slate-500 group-hover:fill-amber-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -31,6 +31,18 @@ function MailIcon(props) {
       <path
         fillRule="evenodd"
         d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
+      />
+    </svg>
+  )
+}
+
+// Add the YouTubeIcon component
+function YouTubeIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        fillRule="evenodd"
+        d="M21.8 8.001s-.2-1.4-.8-2c-.7-.8-1.5-.8-1.9-.9C16.6 4.9 12 4.9 12 4.9h-.1s-4.6 0-6.9.2c-.4 0-1.2.1-1.9.9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.6c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.7.8 1.6.8 2 .9 1.5.1 6.7.2 6.7.2s4.6 0 6.9-.2c.4 0 1.2-.1 1.9-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.6c0-1.6-.2-3.2-.2-3.2zm-12 5.2V9l4.8 2.1L9.8 13.2z"
       />
     </svg>
   )
@@ -52,15 +64,15 @@ export default function About() {
               src={portraitImage}
               alt=""
               sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square rotate-3 rounded-2xl bg-slate-100 object-cover dark:bg-slate-800"
+              className="object-cover aspect-square rotate-3 rounded-2xl bg-slate-100 dark:bg-slate-800"
             />
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="font-display text-4xl font-semibold tracking-tight text-slate-800 sm:text-5xl dark:text-slate-100">
+          <h1 className="text-4xl font-semibold tracking-tight font-display text-slate-800 sm:text-5xl dark:text-slate-100">
             Growing up on the Space Coast, technology became a way of life.
           </h1>
-          <div className="mt-6 space-y-7 text-base text-slate-600 dark:text-slate-400">
+          <div className="mt-6 text-base space-y-7 text-slate-600 dark:text-slate-400">
             <p>
               Growing up on the Space Coast, my childhood was steeped in the
               awe-inspiring backdrop of the space program, where rockets soared
@@ -142,6 +154,15 @@ export default function About() {
               className="mt-4"
             >
               Follow on LinkedIn
+            </SocialLink>
+            {/* Add the YouTube SocialLink here */}
+            <SocialLink
+              href="https://www.youtube.com/@remote-solopreneur"
+              aria-label="Subscribe on YouTube"
+              icon={YouTubeIcon}
+              className="mt-4"
+            >
+              Subscribe on YouTube
             </SocialLink>
           </ul>
         </div>
