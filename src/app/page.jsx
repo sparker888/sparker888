@@ -315,7 +315,7 @@ export default async function Home() {
             </Link>
             . I also help other solopreneurs who wish to work remotely on my{' '}
             <Link
-              href="https://gravital-wri-case-study.netlify.app/"
+              href="https://www.youtube.com/@remote-solopreneur"
               className="text-amber-500 hover:underline"
             >
               YouTube channel
