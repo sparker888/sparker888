@@ -1,0 +1,214 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import storyBanner from './light-speed-series-hero-5.png'
+
+export const article = {
+  author: 'Stephen Parker',
+  date: '2024-11-26',
+  title: 'Light. Speed. ✨: In Action',
+  description:
+    'See how I created a landing page with perfect Google Lighthouse scores in under 100 hours.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image src={storyBanner} alt="Light. Speed. ✨: In Action" />
+
+Welcome to the fifth installment of my **Light. Speed. Series!** In the [previous article](https://sparker888.com/articles/light-speed-4), we explored Astro—a framework known for simplicity, performance, and a Jamstack-friendly design. Now in **Astro 5.x**, development is even more streamlined, with updated features that make building high-performance sites easier than ever.
+
+This new Gravital Digital landing page harnesses:
+
+- **Astro’s 5.x version**—with partial hydration and server-side rendering improvements, perfect for a Jamstack workflow.  
+- **Tailwind CSS 4.x**—bundled with Astro 5.x by default, featuring updated utilities and color palettes for lightning-fast styling.  
+- **Optimized AI videos** (originally made with **Kling AI 1.6**), compressed via HandBrake to keep page load times minuscule.  
+- **Multiple call-to-action components** that display background videos and images handled by Astro’s `<Image>` pipeline for on-the-fly optimization.  
+- **Plausible Analytics**—no cookies, no GDPR headaches, just minimal overhead.
+
+These elements come together for **perfect 100s in Google Lighthouse**—Performance, Accessibility, Best Practices, and SEO.
+
+<Image src={require('./01-gravital-landing-home.png')} alt="Gravital Digital Landing Page with Light. Speed. hero" />
+
+---
+
+## High-Level Overview of Astro 5.x
+
+Astro prides itself on bridging SSR (server-side rendering) capabilities with a Jamstack approach—where static files can be quickly deployed on CDNs. In **Astro 5.x**, you get:
+
+- **Improved Partial Hydration**—send minimal JavaScript to the browser, so pages remain lightweight.  
+- **Better Developer Experience**—fewer configuration hurdles, modern CLI, and integration with UI libraries.  
+- **Jamstack Ease**—still ideal for building content-focused sites that deploy anywhere, from Netlify to Vercel, with minimal friction.
+
+All this keeps your site zippy, especially important for a marketing page or online brand presence.
+
+---
+
+## Tailwind CSS 4.x Updates
+
+Since Astro 5.x now includes a Tailwind integration by default, you don’t need extra steps for installation. Tailwind 4.x brings:
+
+- **Enhanced Color Palette**—fresh gradient utilities and color stops.  
+- **Faster Compile Times**—less waiting, more building.  
+- **Utility Class Improvements**—like improved container queries and better layout classes.  
+
+Together, Astro’s partial hydration plus Tailwind’s minimal overhead let you produce polished, modern layouts without bloat.
+
+<Image src={require('./02-tailwind-4x-setup.png')} alt="Tailwind 4.x features" />
+
+---
+
+## AI-Driven Hero with “Light. Speed.” Animation
+
+For the main hero, I created a dynamic text effect—**“Light. Speed.”**—using **Kling AI 1.6**. The raw output was a hefty MP4. I then used HandBrake to reduce bitrate, resulting in a file under ~1 MB. Placed in the hero via Astro:
+
+```html
+<video
+  class="object-contain w-full max-w-[768px] sm:h-[150px] sm:max-w-[768px] xl:h-[400px]"
+  autoplay
+  loop
+  muted
+  playsinline
+  preload="auto"
+  poster="/videos/light-speed-poster.jpeg"
+>
+  <source src="/videos/OPTIMIZED-768x150-light-speed.mp4" type="video/mp4" />
+</video>
+```
+
+Compact, visually engaging, and crucial for that 100 in Lighthouse Performance.
+
+<Image src={require('./03-light-speed-hero.png')} alt="Light. Speed. AI video in the hero section" />
+
+## Multiple Call-to-Action Components, Optimized Media
+
+I used multiple .astro components for reliability, speed, and flexibility sections—each showing a short looped MP4 with a .webp fallback for the poster image. For instance:
+
+```html
+
+---
+import { Image } from 'astro:assets';
+import tvBkgndTall from '../assets/tv-bkgnd-tall-1280.webp';
+---
+
+<div class="relative overflow-hidden">
+  <Image
+    src={tvBkgndTall}
+    alt="AI background image"
+    class="absolute inset-0 object-cover w-full h-full"
+    loading="eager"
+  />
+  <video
+    class="absolute top-[20%] left-[12%] w-[80%] h-[25%]"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="auto"
+    poster="/videos/reliability-poster.jpeg"
+  >
+    <source src="/videos/OPTIMIZED-960x540-reliability.mp4" type="video/mp4" />
+  </video>
+</div>
+```
+
+Each video is compressed to a few hundred kilobytes, ensuring the page loads swiftly.
+
+<Image src={require('./04-cta-video-section.png')} alt="A call-to-action section with background video" />
+
+## Astro’s `<Image>` for Extra Graphics
+
+One highlight is the security/data flow illustration. Instead of a giant PNG, I used a WebP and Astro’s ```<Image>```:
+
+```html
+---
+import { Image } from 'astro:assets';
+import jamstackSecurity from '../assets/jamstack-security.webp';
+---
+
+<Image
+  src={jamstackSecurity}
+  alt="Security illustration"
+  class="h-[min(152px,40cqw)] object-cover"
+  loading="eager"
+  decoding="auto"
+/>
+```
+
+Astro optimizes .webp automatically, producing a small, efficient file with no user intervention.
+
+<Image src={require('./05-astro-image.png')} alt="Astro’s  usage for security illustration" />
+
+## Plausible Analytics for a Cookie-Free Experience
+
+For analytics, I embedded Plausible in my Layout.astro. It’s cookie-free and ultra-lightweight, perfect for a privacy-focused Jamstack site:
+
+```html
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const {
+  title = "Gravital Digital",
+  description = "Unlock the full potential of Jamstack with Gravital Digital"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ... meta tags ... -->
+    <!-- Plausible script here -->
+    <script
+      defer
+      data-domain="gravital-2025.netlify.app"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body class="bg-black text-white min-h-screen relative bg-[url('/asphalt-background-256x256.png')] bg-repeat">
+    <Header />
+    <main class="px-6 py-12 mx-auto max-w-8xl">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+```
+
+No tracking cookies, no GDPR issues—and negligible performance impact.
+
+<Image src={require('./06-plausible-layout.png')} alt="Plausible script integrated in the site layout" />
+
+## Final Deploy & 100/100 Scores
+
+Deployed on Netlify, each commit triggers an automatic rebuild. The final site boasts:
+	•	Performance: 100
+	•	Accessibility: 100
+	•	Best Practices: 100
+	•	SEO: 100
+
+All with AI-driven visuals, multiple CTA components, and no cookies.
+
+<Image src={require('./07-lighthouse-perfect.png')} alt="Google Lighthouse showing perfect 100s across the board" />
+
+## Summary
+
+By pairing Astro 5.x with Tailwind CSS 4.x and carefully optimizing each video/image, I built a slick, fast Jamstack page. Even advanced animations remain sub-1 MB after compression, preserving performance and user delight.
+
+Key Takeaways:
+	•	Astro 5.x → partial hydration, SSR for Jamstack, easy deployment.
+	•	Tailwind CSS 4.x → new gradient utilities, updated color palettes, minimal overhead.
+	•	AI-based visuals → shrink them via HandBrake to maintain speed.
+	•	Astro ```<Image>``` → automatic image optimization for near-instant loads.
+	•	Plausible → cookie-free analytics, minimal overhead, full privacy compliance.
+
+
+## What’s Next in the Light. Speed.✨ Series?
+
+Stay tuned for more in the Light. Speed. series—where I dig further into advanced AI assets, multi-environment Netlify deploys, and more tips on building polished, high-performing Astro sites!
+
+Feel free to reach out at [sparker888@gmail.com](mailto:sparker888@gmail.com), visit my [Gravital Digital](https://gravitaldigital.com/) business site, and follow me on [LinkedIn](https://www.linkedin.com/in/sparker888) and [X/Twitter](https://x.com/sparker888).
