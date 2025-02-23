@@ -179,7 +179,174 @@ This straightforward approach ensures Overpass 900 is loaded and recognized on t
 
 <Image src={require('./06-fontsource.png')} alt="Astro’s  usage for security illustration" />
 
-## 6. Plausible Analytics for a Cookie-Free Experience
+## 6. Using Astro Islands to Inject React
+
+Astro’s Partial Hydration (“Islands”) lets you pick where React (or any other framework) is mounted, while still generating static HTML for everything else. In this project, we use Headless UI to create slick dialog popups for more details about our projects, embedded as React components. The snippet below shows how we define our `<ProjectsSection>` in React, and then inject it with client:load in Astro for truly dynamic behavior only where needed.
+```html
+<!-- Some Astro page or layout: -->
+---
+import Projects from '../components/Projects.jsx';
+---
+
+<!-- This injects the React component on the client side -->
+<Projects client:load />
+```
+And here’s the Projects.jsx file:
+```html
+import React, { Fragment, useState } from 'react';
+import { Dialog, Transition } from '@headlessui/react';
+
+export default function ProjectsSection() {
+  const pageTitle = 'Projects';
+  const pageSubtitle = "I'm very fortunate to work on some fantastic projects with my clients.";
+  
+  // Hardcoded data (or wire up a CMS later if you like)
+  const projects = [
+    /* ...your project objects... */
+  ];
+  
+  const [openIndex, setOpenIndex] = useState(null);
+
+  function openModal(i) { setOpenIndex(i); }
+  function closeModal() { setOpenIndex(null); }
+
+  function handleWebsiteLink(link) {
+    if (link && link !== '#') {
+      window.open(link, '_blank');
+    }
+  }
+
+  return (
+    <div className="py-8 sm:py-0" id="projects">
+      {/* Title & Subtitle */}
+      <div className="px-6 mx-auto max-w-7xl lg:px-8">
+        <div className="max-w-2xl mx-auto lg:mx-0">
+          <h2 className="text-4xl tracking-tight font-overpass text-amber-600 sm:text-5xl">
+            {pageTitle}
+          </h2>
+          <p className="mt-6 text-gray-200 text-lg/8">{pageSubtitle}</p>
+        </div>
+
+        {/* Projects Grid */}
+        <ul
+          role="list"
+          className="grid max-w-2xl grid-cols-1 mx-auto mt-20 gap-x-8 gap-y-16
+                     sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+        >
+          {projects.map((project, i) => (
+            <li key={i}>
+              <img
+                className="object-cover w-full aspect-3/2 rounded-2xl"
+                src={project.thumbnail}
+                alt={project.title}
+              />
+              <h3 className="mt-6 tracking-tight text-amber-300 font-overpass text-lg/8">
+                {project.title}
+              </h3>
+              <p className="text-gray-200 font-merriweather text-base/7">
+                {project.subtitle}
+              </p>
+
+              <ul role="list" className="flex mt-6 gap-x-6">
+                <li>
+                  <button
+                    type="button"
+                    className="px-3 py-1 text-sm font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-500"
+                    onClick={() => handleWebsiteLink(project.link)}
+                  >
+                    {i === 0 ? 'View Website' : 'Visit Website'}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className="px-3 py-1 text-sm font-semibold text-white bg-orange-700 rounded-md hover:bg-orange-600"
+                    onClick={() => openModal(i)}
+                  >
+                    Details
+                  </button>
+                </li>
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Headless UI Modal */}
+      <Transition appear show={openIndex !== null} as={Fragment}>
+        <Dialog as="div" className="relative z-50" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            {/* Backdrop */}
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex items-center justify-center min-h-full p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-2xl p-6 overflow-hidden text-left align-middle transition-all transform bg-gray-800 shadow-xl rounded-2xl">
+                  {openIndex !== null && (
+                    <>
+                      <Dialog.Title
+                        as="h3"
+                        className="text-lg font-medium leading-6 text-amber-400"
+                      >
+                        {projects[openIndex].title}
+                      </Dialog.Title>
+                      <div className="mt-2 text-gray-200">
+                        <p>{projects[openIndex].subtitle}</p>
+                      </div>
+                      <div className="mt-4">
+                        <img
+                          src={projects[openIndex].image}
+                          alt={projects[openIndex].title}
+                          className="border border-gray-600 rounded-md"
+                        />
+                      </div>
+                      <div className="mt-4 text-sm text-gray-300 font-merriweather">
+                        <p>{projects[openIndex].bodyCopy}</p>
+                      </div>
+                    </>
+                  )}
+                  <div className="flex justify-end mt-6">
+                    <button
+                      type="button"
+                      className="px-4 py-2 text-sm font-semibold text-white rounded-md bg-sky-600 hover:bg-sky-500"
+                      onClick={closeModal}
+                    >
+                      Close
+                    </button>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+    </div>
+  );
+}
+```
+Astro Islands ensures you only load React where necessary, keeping the rest of your site statically rendered and fast. Our plan is to keep data local for now, but we can switch to a CMS later if we want. This Headless UI–powered approach means we get interactive dialogs with minimal overhead.
+
+<Image src={require('./07-headlessui.png')} alt="Headless UI home page. A great place for templates that provide page functionality." />
+
+## 7. Plausible Analytics for a Cookie-Free Experience
 
 For analytics, I embedded Plausible in my Layout.astro. It’s cookie-free and ultra-lightweight, perfect for a privacy-focused Jamstack site:
 ```html
@@ -192,7 +359,7 @@ For analytics, I embedded Plausible in my Layout.astro. It’s cookie-free and u
 ```
 No tracking cookies, no GDPR issues—and negligible performance impact. I then configured Plausible to provide traffic and campaign reports directly to my inbox every Monday.
 
-<Image src={require('./07-plausible-layout.png')} alt="Plausible script integrated in the site layout" />
+<Image src={require('./08-plausible-layout.png')} alt="Plausible script integrated in the site layout" />
 
 I then optimized all assets and deployed the project from GitHub to Netlify. From this point on, each commit triggers an automatic rebuild.
 
@@ -205,7 +372,7 @@ Running a Google Lighthouse report for desktop on the final site revealed:
 
 Google Lighthouse showing perfect 100s across the board as you can see! ✨
 
-<Image src={require('./08-lighthouse-perfect.png')} alt="Google Lighthouse showing perfect 100s across the board" />
+<Image src={require('./09-lighthouse-perfect.png')} alt="Google Lighthouse showing perfect 100s across the board" />
 
 ## Summary
 
