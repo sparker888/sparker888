@@ -7,7 +7,7 @@ export const article = {
   date: '2025-02-21',
   title: 'Light. Speed. ✨: In Action',
   description:
-    'See how I created a landing page with perfect Google Lighthouse scores in under 100 hours. Check out my new Gravital Digital landing page with AI images and video build on the Asatro platform with the new Tailwindcss 4.x',
+    'See how I created a landing page with perfect Google Lighthouse scores in under 100 hours. Check out my new Gravital Digital landing page with AI images and video built on the Astro platform and the new Tailwindcss 4.x',
 }
 
 export const metadata = {
@@ -19,76 +19,84 @@ export default (props) => <ArticleLayout article={article} {...props} />
 
 <Image src={storyBanner} alt="Light. Speed. ✨: In Action" />
 
-Welcome to the fifth installment of my **Light. Speed. Series!** In the [previous article](https://sparker888.com/articles/light-speed-4), we explored Astro—a framework known for simplicity, performance, and a Jamstack-friendly design. Now in **Astro 5.x**, development is even more streamlined, with updated features that make building high-performance sites easier than ever.
+# Light. Speed.: In Action
 
-This new Gravital Digital landing page harnesses:
+Welcome to the fifth installment of my **Light. Speed. Series!** In the [previous article](https://sparker888.com/articles/light-speed-4), we explored Astro—a framework known for simplicity and performance—as a perfect marketing site build tool that fits neatly inside Jamstack architecture. Now with the launch of Astro 5, development is even more streamlined, with updated features that make building high-performance sites easier than ever. On top of that, Tailwind just launched their new version 4. Let's check out how I redesigned my Gravital Digital landing page with them!
 
-- **Astro’s 5.x version**—with partial hydration and server-side rendering improvements, perfect for a Jamstack workflow.  
-- **Tailwind CSS 4.x**—bundled with Astro 5.x by default, featuring updated utilities and color palettes for lightning-fast styling.  
-- **Optimized AI videos** (originally made with **Kling AI 1.6**), compressed via HandBrake to keep page load times minuscule.  
-- **Multiple call-to-action components** that display background videos and images handled by Astro’s `<Image>` pipeline for on-the-fly optimization.  
-- **Plausible Analytics**—no cookies, no GDPR headaches, just minimal overhead.
+### In need of an update, I rebuilt the [Gravital Digital](https://gravitaldigital.com/) landing page to harness:
 
-These elements come together for **perfect 100s in Google Lighthouse**—Performance, Accessibility, Best Practices, and SEO.
+**Astro’s version 5**—with partial hydration and server-side rendering improvements, perfect for high performance sites.
 
-<Image src={require('./01-gravital-landing-home.png')} alt="Gravital Digital Landing Page with Light. Speed. hero" />
+**Tailwind CSS version 4**—bundled with Astro 5 by default, featuring updated utilities and color palettes, perfect for modern styling and clean, maintainable code bases.
+
+**Optimized AI videos** for inexpensive website visuals (originally generated with Sora and Kling AI 1.6), and compressed via HandBrake to keep page load times as low as possible.
+
+**Multiple TailwindUI composable components** that include both card background images and standard images handled by Astro’s `<Image>` pipeline for on-the-fly optimization of assets for top performance scores.
+
+**Plausible Analytics**—no cookies, no GDPR headaches, and minimal overhead. I've set up automated traffic and campaign data reporting to my inbox weekly.
+
+These tools and the latest technology came together to build a new Gravital Digital site that has perfect 100s in Google Lighthouse—Performance, Accessibility, Best Practices, and SEO.
+
+<Image src={require('./01-gravital-landing-home.png')} alt="Light. Speed. AI video in the hero section" />
 
 ---
 
-## High-Level Overview of Astro 5.x
+## 1. Gravital Digital turns to Astro 5
 
-Astro prides itself on bridging SSR (server-side rendering) capabilities with a Jamstack approach—where static files can be quickly deployed on CDNs. In **Astro 5.x**, you get:
+Astro prides itself on bridging SSR (server-side rendering) capabilities with a Jamstack approach—where static files can be quickly deployed on CDNs. In Astro 5.x, you get:
 
-- **Improved Partial Hydration**—send minimal JavaScript to the browser, so pages remain lightweight.  
-- **Better Developer Experience**—fewer configuration hurdles, modern CLI, and integration with UI libraries.  
+- **Improved Partial Hydration**—send minimal JavaScript to the browser, so pages remain lightweight.
+- **Better Developer Experience**—fewer configuration hurdles, modern CLI, and integration with UI libraries.
 - **Jamstack Ease**—still ideal for building content-focused sites that deploy anywhere, from Netlify to Vercel, with minimal friction.
 
 All this keeps your site zippy, especially important for a marketing page or online brand presence.
 
----
-
-## Tailwind CSS 4.x Updates
-
-Since Astro 5.x now includes a Tailwind integration by default, you don’t need extra steps for installation. Tailwind 4.x brings:
-
-- **Enhanced Color Palette**—fresh gradient utilities and color stops.  
-- **Faster Compile Times**—less waiting, more building.  
-- **Utility Class Improvements**—like improved container queries and better layout classes.  
-
-Together, Astro’s partial hydration plus Tailwind’s minimal overhead let you produce polished, modern layouts without bloat.
-
-<Image src={require('./02-tailwind-4x-setup.png')} alt="Tailwind 4.x features" />
+<Image src={require('./02-astro-5.png')} alt="Astro 5 is the latest major update from the platform" />
 
 ---
 
-## AI-Driven Hero with “Light. Speed.” Animation
+## 2. A Huge Tailwind CSS 4 Update
 
-For the main hero, I created a dynamic text effect—**“Light. Speed.”**—using **Kling AI 1.6**. The raw output was a hefty MP4. I then used HandBrake to reduce bitrate, resulting in a file under ~1 MB. Placed in the hero via Astro:
+Since Astro 5 now includes a Tailwind integration by default, you don’t need extra steps for installation.
 
+Tailwind 4.x brings:
+
+- **Enhanced Color Palette**—fresh gradient utilities and color stops used in the card backgrounds.
+- **Faster Compile Times**—less waiting, faster building.
+- **Utility Class Improvements**—like improved container queries and better layout classes.
+
+Together, Astro’s partial hydration plus Tailwind’s minimal overhead let us produce polished, modern layouts without bloat.
+
+<Image src={require('./03-tailwind-4.png')} alt="Astro 5 is the latest major update from the platform" />
+
+---
+
+## 3. AI-generated video headline “Light. Speed.”
+
+For the headline graphic, I created a dynamic text effect for my “Light. Speed.” brand tagline. After using several standard image-to-video AI generators, I found that the best results for animated text came from OpenAIs Sora. The raw output was a hefty MP4 though as you have limited controls for size. So, I used HandBrake to reduce bitrate, resulting in a file of 578KB. I could probably go smaller, but I didn't want to stomp the quality into the ground.
+
+Placed in the hero area via Astro:
 ```html
 <video
-  class="object-contain w-full max-w-[768px] sm:h-[150px] sm:max-w-[768px] xl:h-[400px]"
-  autoplay
-  loop
-  muted
-  playsinline
-  preload="auto"
-  poster="/videos/light-speed-poster.jpeg"
->
-  <source src="/videos/OPTIMIZED-768x150-light-speed.mp4" type="video/mp4" />
+src=”/videos/light-speed.mp4”
+autoplay
+loop
+muted
+playsinline
+preload=“auto”
+poster=”/videos/light-speed-poster.jpeg”>
 </video>
 ```
+It’s compact, visually engaging, and crucial for that 100 in Lighthouse Performance. Note that this was further optimized later with multiple size videos. I did try to generate smaller .webm videos, but they ended up the same size as the MP4 variety, so I just eliminated them. MP4 (H.264) alone is sufficient for the vast majority of modern browsers and devices.
 
-Compact, visually engaging, and crucial for that 100 in Lighthouse Performance.
+<Image src={require('./04-light-speed-hero.png')} alt="Light. Speed. AI video in the hero section" />
 
-<Image src={require('./03-light-speed-hero.png')} alt="Light. Speed. AI video in the hero section" />
+## 4. Saving time with Tailwind UI templates and Optimizing Media
 
-## Multiple Call-to-Action Components, Optimized Media
+TailwindUI has a set of HTML, React, and Vue pre-built components and snippets that are battle-tested for responsive behavior across a large number of devices. This is the main reason for the project being kept under 100 hours—it saves countless hours of testing and tweaking code across numerous devices.
 
-I used multiple .astro components for reliability, speed, and flexibility sections—each showing a short looped MP4 with a .webp fallback for the poster image. For instance:
-
+After copying UI template code into our components, I then heavily customized them for content and some styling to keep to corporate styles, colors, and fonts. Tailwindcss updated their UI library recently with the launch of version 4, and I particularly love the new bento boxes. So I used them! As an example—for the Reliability, Speed, and Flexibility boxes—I chose to show a short looped MP4 video with a .webp image fallback for the poster image:
 ```html
-
 ---
 import { Image } from 'astro:assets';
 import tvBkgndTall from '../assets/tv-bkgnd-tall-1280.webp';
@@ -102,6 +110,7 @@ import tvBkgndTall from '../assets/tv-bkgnd-tall-1280.webp';
     loading="eager"
   />
   <video
+    src="/videos/reliability.mp4"
     class="absolute top-[20%] left-[12%] w-[80%] h-[25%]"
     autoplay
     loop
@@ -109,106 +118,109 @@ import tvBkgndTall from '../assets/tv-bkgnd-tall-1280.webp';
     playsinline
     preload="auto"
     poster="/videos/reliability-poster.jpeg"
-  >
-    <source src="/videos/OPTIMIZED-960x540-reliability.mp4" type="video/mp4" />
-  </video>
+  />
 </div>
 ```
+Note that we’re using Astro’s `<Image>` for the background graphics and give them the loading="eager" config so that this first component on the website will load quickly. Astro optimizes .webp automatically, producing a small, efficient file with no user intervention.
 
-Each video is compressed to a few hundred kilobytes, ensuring the page loads swiftly.
+<Image src={require('./05-cta-video-section.png')} alt="A picture of different versions of the Light. Speed. AI-rendered video" />
 
-<Image src={require('./04-cta-video-section.png')} alt="A call-to-action section with background video" />
+## 5. Integrating Fontsource Custom Fonts
 
-## Astro’s `<Image>` for Extra Graphics
+Another new addition to this landing page is Fontsource, which simplifies installing and loading fonts directly from npm. Here’s a quick example of how I configured the project to use the Overpass Black (900) weight:
 
-One highlight is the security/data flow illustration. Instead of a giant PNG, I used a WebP and Astro’s ```<Image>```:
+a. Install the Fontsource Package
 
-```html
----
-import { Image } from 'astro:assets';
-import jamstackSecurity from '../assets/jamstack-security.webp';
----
+`npm install @fontsource/overpass`
 
-<Image
-  src={jamstackSecurity}
-  alt="Security illustration"
-  class="h-[min(152px,40cqw)] object-cover"
-  loading="eager"
-  decoding="auto"
-/>
+This gives us all weights for Overpass, but we only need the 900 weight for our bold titles.
+
+b. Import the Desired Weight
+
+In our global CSS file, we added:
 ```
+@import "tailwindcss";
+@import "@fontsource/overpass/900.css";
 
-Astro optimizes .webp automatically, producing a small, efficient file with no user intervention.
+@theme {
+  --font-overpass: 'Overpass', 'sans-serif';
+}
+```
+This single import includes the “Overpass 900” font file. If you want multiple weights (400, 700, etc.), just import each (@fontsource/overpass/400.css, etc.).
 
-<Image src={require('./05-astro-image.png')} alt="Astro’s  usage for security illustration" />
+c. Import in Layout for Reliability (Optional?)
 
-## Plausible Analytics for a Cookie-Free Experience
+In my case, the bundler couldn’t properly resolve the font files, so I was required to import the same Fontsource line inside my main Layout.astro file to get it to work properly. Depending on your setup, you might only need it once in global.css. But if that fails, also importing it in the layout ensures the @font-face rules are definitely included site-wide:
+```
+---
+import '@fontsource/overpass/900.css';
+---
+<html> … </html>
+```
+d. Use the Custom Font
+
+In our Tailwind config, we mapped an alias to that variable:
+```
+// tailwind.config.js
+theme: {
+  fontFamily: {
+    overpass: 'var(--font-overpass)',
+  },
+  // ...
+}
+```
+Now any element with class="font-overpass" or a custom utility referencing font-overpass picks up the Overpass Black weight.
+
+Note: We don’t necessarily need Fontsource integrated into Tailwind. Just importing the .css in global.css (and optionally in the layout) is enough for Overpass to load at build time. Tailwind then references the font name or a CSS variable the same as any locally hosted font.
+
+This straightforward approach ensures Overpass 900 is loaded and recognized on the final page—without manually creating @font-face rules or copying font files. We just pick the weight we want (900.css), import it, and let Fontsource handle the rest!
+
+
+<Image src={require('./06-fontsource.png')} alt="Astro’s  usage for security illustration" />
+
+## 6. Plausible Analytics for a Cookie-Free Experience
 
 For analytics, I embedded Plausible in my Layout.astro. It’s cookie-free and ultra-lightweight, perfect for a privacy-focused Jamstack site:
-
 ```html
----
-import "../styles/global.css";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-
-const {
-  title = "Gravital Digital",
-  description = "Unlock the full potential of Jamstack with Gravital Digital"
-} = Astro.props;
----
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- ... meta tags ... -->
-    <!-- Plausible script here -->
-    <script
-      defer
-      data-domain="gravital-2025.netlify.app"
-      src="https://plausible.io/js/script.js"
-    ></script>
-  </head>
-  <body class="bg-black text-white min-h-screen relative bg-[url('/asphalt-background-256x256.png')] bg-repeat">
-    <Header />
-    <main class="px-6 py-12 mx-auto max-w-8xl">
-      <slot />
-    </main>
-    <Footer />
-  </body>
-</html>
+<!-- Plausible script -->
+<script
+  defer
+  data-domain="gravitaldigital.com"
+  src="https://plausible.io/js/script.js"
+></script>
 ```
+No tracking cookies, no GDPR issues—and negligible performance impact. I then configured Plausible to provide traffic and campaign reports directly to my inbox every Monday.
 
-No tracking cookies, no GDPR issues—and negligible performance impact.
+<Image src={require('./07-plausible-layout.png')} alt="Plausible script integrated in the site layout" />
 
-<Image src={require('./06-plausible-layout.png')} alt="Plausible script integrated in the site layout" />
+I then optimized all assets and deployed the project from GitHub to Netlify. From this point on, each commit triggers an automatic rebuild.
 
-## Final Deploy & 100/100 Scores
-
-Deployed on Netlify, each commit triggers an automatic rebuild. The final site boasts:
+Running a Google Lighthouse report for desktop on the final site revealed:
 	•	Performance: 100
 	•	Accessibility: 100
 	•	Best Practices: 100
 	•	SEO: 100
 
-All with AI-driven visuals, multiple CTA components, and no cookies.
+Google Lighthouse showing perfect 100s across the board as you can see! ✨
 
-<Image src={require('./07-lighthouse-perfect.png')} alt="Google Lighthouse showing perfect 100s across the board" />
+<Image src={require('./08-lighthouse-perfect.png')} alt="Google Lighthouse showing perfect 100s across the board" />
 
 ## Summary
 
-By pairing Astro 5.x with Tailwind CSS 4.x and carefully optimizing each video/image, I built a slick, fast Jamstack page. Even advanced animations remain sub-1 MB after compression, preserving performance and user delight.
+By pairing Astro 5 with Tailwindcss 4 and carefully optimizing each video/image, I built a visually appealing, informative, fast Jamstack landing page in under 100 hours that scored perfectly in Google Lighthouse tests!
 
 Key Takeaways:
-	•	Astro 5.x → partial hydration, SSR for Jamstack, easy deployment.
-	•	Tailwind CSS 4.x → new gradient utilities, updated color palettes, minimal overhead.
-	•	AI-based visuals → shrink them via HandBrake to maintain speed.
-	•	Astro ```<Image>``` → automatic image optimization for near-instant loads.
-	•	Plausible → cookie-free analytics, minimal overhead, full privacy compliance.
+	•	Astro 5 → Great dev experience, partial hydration, SSR for speed, easy deployment.
+	•	Tailwind CSS 4 → New gradient utilities, updated color palettes, faster builds.
+	•	AI-based visuals → Use AI to save time and shrink videos via HandBrake to maintain speed.
+	•	Tailwind UI templates → Speed up dev with pre-built, responsive layouts, then customize.
+	•	Astro `<Image>` → Automatic image optimization for near-instant loads on any device.
+	•	Fonts from Fontsource → Simple NPM import for Overpass 900, no manual `@font-face` needed.
+	•	Plausible → Cookie-free analytics, minimal overhead, full privacy compliance.
 
 
 ## What’s Next in the Light. Speed.✨ Series?
 
-Stay tuned for more in the Light. Speed. series—where I dig further into advanced AI assets, multi-environment Netlify deploys, and more tips on building polished, high-performing Astro sites!
+Stay tuned for more in the Light. Speed. series—where I dig further into creating content with AI and more tips on building polished, high-performing Astro applications!
 
 Feel free to reach out at [sparker888@gmail.com](mailto:sparker888@gmail.com), visit my [Gravital Digital](https://gravitaldigital.com/) business site, and follow me on [LinkedIn](https://www.linkedin.com/in/sparker888) and [X/Twitter](https://x.com/sparker888).
