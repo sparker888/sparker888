@@ -33,6 +33,8 @@ Welcome to the fifth installment of my **Light. Speed. Series!** In the [previou
 
 **Multiple TailwindUI composable components** that include both card background images and standard images handled by Astro’s `<Image>` pipeline for on-the-fly optimization of assets for top performance scores.
 
+**AStro Islands** Load React only where needed, e.g., Headless UI dialogs with client:load.
+
 **Plausible Analytics**—no cookies, no GDPR headaches, and minimal overhead. I've set up automated traffic and campaign data reporting to my inbox weekly.
 
 These tools and the latest technology came together to build a new Gravital Digital site that has perfect 100s in Google Lighthouse—Performance, Accessibility, Best Practices, and SEO.
@@ -183,7 +185,7 @@ This straightforward approach ensures Overpass 900 is loaded and recognized on t
 
 Astro’s Partial Hydration (“Islands”) lets you pick where React (or any other framework) is mounted, while still generating static HTML for everything else. In this project, we use Headless UI to create slick dialog popups for more details about our projects, embedded as React components. The snippet below shows how we define our `<ProjectsSection>` in React, and then inject it with client:load in Astro for truly dynamic behavior only where needed.
 ```html
-<!-- Some Astro page or layout: -->
+<!-- Astro index page: -->
 ---
 import Projects from '../components/Projects.jsx';
 ---
@@ -346,6 +348,102 @@ Astro Islands ensures you only load React where necessary, keeping the rest of y
 
 <Image src={require('./07-headlessui.png')} alt="Headless UI home page. A great place for templates that provide page functionality." />
 
+## 8. Set up a Contact Form with Netlify Forms
+
+Netlify makes it incredibly easy to handle form submissions without running your own backend code. By adding a few attributes to a simple HTML `<form>`, Netlify will detect submissions and store them under your site’s “Forms” tab in the Netlify dashboard.
+
+Here’s an example of a basic contact form in an Astro component or page:
+
+```html
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="py-8 text-gray-100 bg-gray-900">
+    <div class="container px-4 mx-auto sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-overpass text-amber-400">Contact Us</h2>
+      <p class="mt-4 mb-8 text-gray-300">
+        Have a project in mind or need more info? Drop us a line!
+      </p>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="max-w-lg space-y-4"
+      >
+        <!-- Hidden field for Netlify bot detection -->
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you're human:
+            <input name="bot-field" />
+          </label>
+        </p>
+
+        <div>
+          <label for="name" class="block mb-1">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="w-full px-3 py-2 text-gray-100 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400"
+          />
+        </div>
+        <div>
+          <label for="email" class="block mb-1">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="w-full px-3 py-2 text-gray-100 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400"
+          />
+        </div>
+        <div>
+          <label for="message" class="block mb-1">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            class="w-full px-3 py-2 text-gray-100 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="px-4 py-2 font-semibold text-white rounded-md bg-amber-600 hover:bg-amber-500"
+        >
+          Send
+        </button>
+      </form>
+    </div>
+  </section>
+</Layout>
+```
+What Happens Next?
+
+**a. Form Submission**
+
+When a user fills out this form and hits “Send,” Netlify catches it and logs the submission in your site’s Forms section on Netlify.
+
+**b. Confirmation Pages or Messages**
+
+You can redirect users to a thank-you page or provide an inline success message. Simply add:
+
+`<form name="contact" method="POST" action="/thank-you" data-netlify="true">`
+
+Netlify will redirect them to /thank-you after submission.
+
+**c. Email Notifications**
+
+In your Netlify dashboard (Site Settings → Forms → Form Settings), you can set up email notifications or integrate Slack, Zapier, etc., for real-time submission alerts.
+
+This “no-backend” approach is quick, reliable, and secure—perfect for Jamstack sites where you want to avoid spinning up your own server infrastructure just for contact forms.
+
+<Image src={require('./08-contact-form.png')} alt="The contact form powered by Netlify forms on the Gravital Digital website." />
+
 ## 7. Plausible Analytics for a Cookie-Free Experience
 
 For analytics, I embedded Plausible in my Layout.astro. It’s cookie-free and ultra-lightweight, perfect for a privacy-focused Jamstack site:
@@ -359,7 +457,7 @@ For analytics, I embedded Plausible in my Layout.astro. It’s cookie-free and u
 ```
 No tracking cookies, no GDPR issues—and negligible performance impact. I then configured Plausible to provide traffic and campaign reports directly to my inbox every Monday.
 
-<Image src={require('./08-plausible-layout.png')} alt="Plausible script integrated in the site layout" />
+<Image src={require('./09-plausible-layout.png')} alt="Plausible script integrated in the site layout" />
 
 I then optimized all assets and deployed the project from GitHub to Netlify. From this point on, each commit triggers an automatic rebuild.
 
@@ -385,6 +483,8 @@ Key Takeaways:
 -	**Tailwind UI templates** → Speed up dev with pre-built, responsive layouts, then customize.
 -	Astro `<Image>` → Automatic image optimization for near-instant loads on any device.
 -	**Fonts from Fontsource** → Simple NPM import for Overpass 900, no manual `@font-face` needed.
+- **Astro Islands** → Load React only where needed, e.g., Headless UI dialogs with client:load.
+- **GitHub Repo & Netlify CDN** → Store the code for easy editing on GitHub and auto deploys to Netlify.
 -	**Plausible** → Cookie-free analytics, minimal overhead, full privacy compliance.
 
 
