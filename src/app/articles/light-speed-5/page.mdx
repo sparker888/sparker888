@@ -41,15 +41,17 @@ These tools and the latest technology came together to build a new Gravital Digi
 
 ---
 
-## 1. Gravital Digital turns to Astro 5
+## 1. Astro keeps improving with 5
 
-Astro prides itself on bridging SSR (server-side rendering) capabilities with a Jamstack approach—where static files can be quickly deployed on CDNs. In Astro 5.x, you get:
+Astro prides itself on bridging SSR (server-side rendering) capabilities with a Jamstack approach—where static files can be quickly deployed on CDNs. 
+
+In Astro 5.x, you get:
 
 - **Improved Partial Hydration**—send minimal JavaScript to the browser, so pages remain lightweight.
-- **Better Developer Experience**—fewer configuration hurdles, modern CLI, and integration with UI libraries.
-- **Jamstack Ease**—still ideal for building content-focused sites that deploy anywhere, from Netlify to Vercel, with minimal friction.
+- **Better Developer Experience**—fewer configuration hurdles, modern CLI-based tool, and tight integration with UI libraries.
+- **Jamstack Ready**—still ideal for building high-performance content-focused sites that deploy anywhere via CDN with minimal friction and ability to scale quickly.
 
-All this keeps your site zippy, especially important for a marketing page or online brand presence.
+All this keeps your site zippy, especially important for a marketing page or online brand presence. Astro is the platform that helped me get perfect Google Lighthouse scores!
 
 <Image src={require('./02-astro-5.png')} alt="Astro 5 is the latest major update from the platform" />
 
@@ -59,7 +61,7 @@ All this keeps your site zippy, especially important for a marketing page or onl
 
 Since Astro 5 now includes a Tailwind integration by default, you don’t need extra steps for installation.
 
-Tailwind 4.x brings:
+With Tailwind 4.x, you get:
 
 - **Enhanced Color Palette**—fresh gradient utilities and color stops used in the card backgrounds.
 - **Faster Compile Times**—less waiting, faster building.
@@ -174,7 +176,6 @@ Now any element with class="font-overpass" or a custom utility referencing font-
 Note: We don’t necessarily need Fontsource integrated into Tailwind. Just importing the .css in global.css (and optionally in the layout) is enough for Overpass to load at build time. Tailwind then references the font name or a CSS variable the same as any locally hosted font.
 
 This straightforward approach ensures Overpass 900 is loaded and recognized on the final page—without manually creating @font-face rules or copying font files. We just pick the weight we want (900.css), import it, and let Fontsource handle the rest!
-
 
 <Image src={require('./06-fontsource.png')} alt="Astro’s  usage for security illustration" />
 
