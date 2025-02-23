@@ -27,7 +27,7 @@ Welcome to the fifth installment of my **Light. Speed. Series!** In the [previou
 
 **Astro’s version 5**—with partial hydration and server-side rendering improvements, perfect for high performance sites.
 
-**Tailwind CSS version 4**—bundled with Astro 5 by default, featuring updated utilities and color palettes, perfect for modern styling and clean, maintainable code bases.
+**Tailwind CSS version 4**—bundled with Astro 5 by default, featuring updated utilities and color palettes, perfect for modern styling and clean, maintainable codebases.
 
 **Optimized AI videos** for inexpensive website visuals (originally generated with Sora and Kling AI 1.6), and compressed via HandBrake to keep page load times as low as possible.
 
@@ -129,13 +129,13 @@ Note that we’re using Astro’s `<Image>` for the background graphics and give
 
 Another new addition to this landing page is Fontsource, which simplifies installing and loading fonts directly from npm. Here’s a quick example of how I configured the project to use the Overpass Black (900) weight:
 
-a. Install the Fontsource Package
+**a. Install the Fontsource Package**
 
 `npm install @fontsource/overpass`
 
 This gives us all weights for Overpass, but we only need the 900 weight for our bold titles.
 
-b. Import the Desired Weight
+**b. Import the Desired Weight**
 
 In our global CSS file, we added:
 ```
@@ -148,7 +148,7 @@ In our global CSS file, we added:
 ```
 This single import includes the “Overpass 900” font file. If you want multiple weights (400, 700, etc.), just import each (@fontsource/overpass/400.css, etc.).
 
-c. Import in Layout for Reliability (Optional?)
+**c. Import in Layout for Reliability (Optional?)**
 
 In my case, the bundler couldn’t properly resolve the font files, so I was required to import the same Fontsource line inside my main Layout.astro file to get it to work properly. Depending on your setup, you might only need it once in global.css. But if that fails, also importing it in the layout ensures the @font-face rules are definitely included site-wide:
 ```
@@ -157,7 +157,7 @@ import '@fontsource/overpass/900.css';
 ---
 <html> … </html>
 ```
-d. Use the Custom Font
+**d. Use the Custom Font**
 
 In our Tailwind config, we mapped an alias to that variable:
 ```
@@ -196,10 +196,10 @@ No tracking cookies, no GDPR issues—and negligible performance impact. I then 
 I then optimized all assets and deployed the project from GitHub to Netlify. From this point on, each commit triggers an automatic rebuild.
 
 Running a Google Lighthouse report for desktop on the final site revealed:
-	•	Performance: 100
-	•	Accessibility: 100
-	•	Best Practices: 100
-	•	SEO: 100
+-	•	Performance: 100
+-	•	Accessibility: 100
+-	•	Best Practices: 100
+-	•	SEO: 100
 
 Google Lighthouse showing perfect 100s across the board as you can see! ✨
 
@@ -210,13 +210,13 @@ Google Lighthouse showing perfect 100s across the board as you can see! ✨
 By pairing Astro 5 with Tailwindcss 4 and carefully optimizing each video/image, I built a visually appealing, informative, fast Jamstack landing page in under 100 hours that scored perfectly in Google Lighthouse tests!
 
 Key Takeaways:
-	•	Astro 5 → Great dev experience, partial hydration, SSR for speed, easy deployment.
-	•	Tailwind CSS 4 → New gradient utilities, updated color palettes, faster builds.
-	•	AI-based visuals → Use AI to save time and shrink videos via HandBrake to maintain speed.
-	•	Tailwind UI templates → Speed up dev with pre-built, responsive layouts, then customize.
-	•	Astro `<Image>` → Automatic image optimization for near-instant loads on any device.
-	•	Fonts from Fontsource → Simple NPM import for Overpass 900, no manual `@font-face` needed.
-	•	Plausible → Cookie-free analytics, minimal overhead, full privacy compliance.
+-	•	Astro 5 → Great dev experience, partial hydration, SSR for speed, easy deployment.
+-	•	Tailwind CSS 4 → New gradient utilities, updated color palettes, faster builds.
+-	•	AI-based visuals → Use AI to save time and shrink videos via HandBrake to maintain speed.
+-	•	Tailwind UI templates → Speed up dev with pre-built, responsive layouts, then customize.
+-	•	Astro `<Image>` → Automatic image optimization for near-instant loads on any device.
+-	•	Fonts from Fontsource → Simple NPM import for Overpass 900, no manual `@font-face` needed.
+-	•	Plausible → Cookie-free analytics, minimal overhead, full privacy compliance.
 
 
 ## What’s Next in the Light. Speed.✨ Series?
