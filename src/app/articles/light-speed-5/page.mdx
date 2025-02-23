@@ -69,7 +69,7 @@ With Tailwind 4, you get:
 
 Together, Astro’s partial hydration plus Tailwind’s minimal overhead let us produce polished, modern layouts without bloat.
 
-<Image src={require('./03-tailwind-4.png')} alt="Astro 5 is the latest major update from the platform" />
+<Image src={require('./03-tailwind-4.png')} alt="Tailwind 4 is the latest major update from the CSS utility project" />
 
 ---
 
@@ -91,7 +91,7 @@ poster=”/videos/light-speed-poster.jpeg”>
 ```
 It’s compact, visually engaging, and crucial for that 100 in Lighthouse Performance. Note that this was further optimized later with multiple size videos. I did try to generate smaller .webm videos, but they ended up the same size as the MP4 variety, so I just eliminated them. MP4 (H.264) alone is sufficient for the vast majority of modern browsers and devices.
 
-<Image src={require('./04-light-speed-hero.png')} alt="Light. Speed. AI video in the hero section" />
+<Image src={require('./04-light-speed-hero.png')} alt="Light. Speed. AI video options as seen inside of Sora from ChatGPT" />
 
 ## 4. Saving time with Tailwind UI templates and Optimizing Media
 
@@ -125,7 +125,7 @@ import tvBkgndTall from '../assets/tv-bkgnd-tall-1280.webp';
 ```
 Note that we’re using Astro’s `<Image>` for the background graphics and give them the loading="eager" config so that this first component on the website will load quickly. Astro optimizes .webp automatically, producing a small, efficient file with no user intervention.
 
-<Image src={require('./05-cta-video-section.png')} alt="A picture of different versions of the Light. Speed. AI-rendered video" />
+<Image src={require('./05-cta-video-section.png')} alt="A picture of different screen resolutions to show how the site is responsive." />
 
 ## 5. Integrating Fontsource Custom Fonts
 
@@ -177,7 +177,7 @@ Note: We don’t necessarily need Fontsource integrated into Tailwind. Just impo
 
 This straightforward approach ensures Overpass 900 is loaded and recognized on the final page—without manually creating @font-face rules or copying font files. We just pick the weight we want (900.css), import it, and let Fontsource handle the rest!
 
-<Image src={require('./06-fontsource.png')} alt="Astro’s  usage for security illustration" />
+<Image src={require('./06-fontsource.png')} alt="An image of the Fontsource font Overpass page." />
 
 ## 6. Using Astro Islands to Inject React
 
@@ -457,7 +457,7 @@ For analytics, I embedded Plausible in my Layout.astro. It’s cookie-free and u
 ```
 No tracking cookies, no GDPR issues—and negligible performance impact. I then configured Plausible to provide traffic and campaign reports directly to my inbox every Monday.
 
-<Image src={require('./09-plausible-layout.png')} alt="Plausible script integrated in the site layout" />
+<Image src={require('./09-plausible-layout.png')} alt="The Services section of the Gravital Digital website including the Analytics section featuring Plausible." />
 
 I then optimized all assets and deployed the project from GitHub to Netlify. From this point on, each commit triggers an automatic rebuild.
 
@@ -470,7 +470,7 @@ Running a Google Lighthouse report for desktop on the final site revealed:
 
 Google Lighthouse showing perfect 100s across the board as you can see! ✨
 
-<Image src={require('./10-lighthouse-perfect.png')} alt="Google Lighthouse showing perfect 100s across the board" />
+<Image src={require('./10-lighthouse-perfect.png')} alt="Google Lighthouse showing perfect 100s across the board for Performance, Accessibility, Best Practices and SEO!" />
 
 ## Summary
 
