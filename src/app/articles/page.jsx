@@ -44,7 +44,7 @@ export default async function ArticlesIndex() {
   return (
     <SimpleLayout
       title="I write about modern web development, photography and Midjourney AI image creation."
-      intro="All of my long-form thoughts on Web development, creating compelling AI images, capturing magnificent aerial footage, and my latest venture into the world of event technology."
+      intro="All of my long-form thoughts on Web development, creating compelling AI images, capturing magnificent aerial footage, and my latest venture with my Midjourney Prompt Manager app."
     >
       <div className="md:border-l md:border-slate-100 md:pl-6 md:dark:border-slate-700/40">
         <div className="flex flex-col max-w-3xl space-y-16">
