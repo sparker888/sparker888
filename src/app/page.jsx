@@ -325,7 +325,7 @@ export default async function Home() {
             </Link>
             , write articles about my Light. Speed.✨ philosophy like{' '}
             <Link
-              href="https://midjourneypromptmanager.com/"
+              href="/articles/light-speed-5"
               className="text-amber-500 hover:underline"
             >
               Building a Landing Page with Perfect 100 Scores in 100 Hours
