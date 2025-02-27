@@ -306,19 +306,29 @@ export default async function Home() {
               Gravital Digital
             </Link>
             . My passion is producing sites that deliver incredible value
-            and delight my clients. Here's an{' '}
+            and delight my clients. Here's a{' '}
             <Link
               href="https://gravital-wri-case-study.netlify.app/"
               className="text-amber-500 hover:underline"
             >
-              example case study
+            Jamstack redesign case study{' '}
             </Link>
-            . I also help other solopreneurs who wish to work remotely on my{' '}
+            that helped WRI 2024 attract 30% more attendees!
+            </p>
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
+            I help other solopreneurs working abroad on my{' '}
             <Link
               href="https://www.youtube.com/@remote-solopreneur"
               className="text-amber-500 hover:underline"
             >
               YouTube channel
+            </Link>
+            , write articles about my Light. Speed.✨ philosophy like{' '}
+            <Link
+              href="https://midjourneypromptmanager.com/"
+              className="text-amber-500 hover:underline"
+            >
+              Building a Landing Page with Perfect 100 Scores in 100 Hours
             </Link>
             , and support 🧭 Midjourney AI image creators with an app called{' '}
             <Link
