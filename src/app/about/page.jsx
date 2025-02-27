@@ -7,7 +7,8 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
-  TwitterIcon,
+  XIcon,
+  YTIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/sparker-1976-portrait.jpg'
 
@@ -16,9 +17,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="flex text-sm font-medium transition group text-slate-800 hover:text-amber-500 dark:text-slate-200 dark:hover:text-amber-500"
+        className="flex text-sm font-medium transition group text-sky-500 hover:text-sky-600 dark:text-amber-500 dark:hover:text-amber-600"
       >
-        <Icon className="flex-none w-6 h-6 transition fill-slate-500 group-hover:fill-amber-500" />
+        <Icon className="flex-none w-6 h-6 transition fill-sky-500 group-hover:fill-sky-600 dark:fill-amber-500 dark:group-hover:fill-amber-600" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -31,18 +32,6 @@ function MailIcon(props) {
       <path
         fillRule="evenodd"
         d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
-      />
-    </svg>
-  )
-}
-
-// Add the YouTubeIcon component
-function YouTubeIcon(props) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M21.8 8.001s-.2-1.4-.8-2c-.7-.8-1.5-.8-1.9-.9C16.6 4.9 12 4.9 12 4.9h-.1s-4.6 0-6.9.2c-.4 0-1.2.1-1.9.9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.6c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.7.8 1.6.8 2 .9 1.5.1 6.7.2 6.7.2s4.6 0 6.9-.2c.4 0 1.2-.1 1.9-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.6c0-1.6-.2-3.2-.2-3.2zm-12 5.2V9l4.8 2.1L9.8 13.2z"
       />
     </svg>
   )
@@ -124,28 +113,13 @@ export default function About() {
         </div>
         <div className="font-display lg:pl-20">
           <ul role="list">
-            <SocialLink
-              href="https://twitter.com/sparker888"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            >
-              Follow on Twitter
-            </SocialLink>
-            <SocialLink
+          <SocialLink
               href="https://instagram.com/sparker808"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
               className="mt-4"
             >
               Follow on Instagram
-            </SocialLink>
-            <SocialLink
-              href="https://github.com/sparker888"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-              className="mt-4"
-            >
-              Follow on GitHub
             </SocialLink>
             <SocialLink
               href="https://linkedin.com/sparker888"
@@ -155,11 +129,27 @@ export default function About() {
             >
               Follow on LinkedIn
             </SocialLink>
-            {/* Add the YouTube SocialLink here */}
+            <SocialLink
+              href="https://x.com/sparker888"
+              aria-label="Follow on X"
+              icon={XIcon}
+              className="mt-4"
+            >
+              Follow on X
+            </SocialLink>
+            
+            <SocialLink
+              href="https://github.com/sparker888"
+              aria-label="Follow on GitHub"
+              icon={GitHubIcon}
+              className="mt-4"
+            >
+              Follow on GitHub
+            </SocialLink>
             <SocialLink
               href="https://www.youtube.com/@remote-solopreneur"
               aria-label="Subscribe on YouTube"
-              icon={YouTubeIcon}
+              icon={YTIcon}
               className="mt-4"
             >
               Subscribe on YouTube
