@@ -95,18 +95,6 @@ function SocialLink({ icon: Icon, ...props }) {
   )
 }
 
-// Define the YouTubeIcon component
-function YouTubeIcon(props) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M21.8 8s-.2-1.4-.8-2c-.7-.8-1.5-.8-1.9-.9C16.6 5 12 5 12 5h-.1s-4.6 0-6.9.2c-.4 0-1.2.1-1.9.9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.6C2 14.4 2.2 16 2.2 16s.2 1.4.8 2c.7.8 1.6.8 2 .9 1.5.1 6.7.2 6.7.2s4.6 0 6.9-.2c.4 0 1.2-.1 1.9-.9.6-.6.8-2.8.8-2.8s.2-1.6.2-3.2V11.2c0-1.6-.2-3.2-.2-3.2zM9.8 13.2V9l4.8 2.1L9.8 13.2z"
-      />
-    </svg>
-  )
-}
-
 function Role({ role }) {
   let startLabel =
     typeof role.start === 'string' ? role.start : role.start.label

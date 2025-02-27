@@ -85,9 +85,9 @@ function MobileNavItem({ href, children }) {
 function MobileNavigation(props) {
   return (
     <Popover {...props}>
-      <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 font-display text-sm font-semibold text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-slate-800/90 dark:text-slate-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <Popover.Button className="flex items-center px-4 py-2 text-sm font-semibold rounded-full shadow-lg group bg-white/90 font-display text-slate-800 shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-slate-800/90 dark:text-slate-200 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
-        <ChevronDownIcon className="ml-3 h-auto w-2 stroke-slate-500 group-hover:stroke-slate-700 dark:group-hover:stroke-slate-400" />
+        <ChevronDownIcon className="w-2 h-auto ml-3 stroke-slate-500 group-hover:stroke-slate-700 dark:group-hover:stroke-slate-400" />
       </Popover.Button>
       <Transition.Root>
         <Transition.Child
@@ -112,18 +112,18 @@ function MobileNavigation(props) {
         >
           <Popover.Panel
             focus
-            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-slate-900/5 dark:bg-slate-900 dark:ring-slate-800"
+            className="fixed z-50 p-8 origin-top bg-white inset-x-4 top-8 rounded-3xl ring-1 ring-slate-900/5 dark:bg-slate-900 dark:ring-slate-800"
           >
             <div className="flex flex-row-reverse items-center justify-between">
-              <Popover.Button aria-label="Close menu" className="-m-1 p-1">
-                <CloseIcon className="h-6 w-6 text-slate-500 dark:text-slate-400" />
+              <Popover.Button aria-label="Close menu" className="p-1 -m-1">
+                <CloseIcon className="w-6 h-6 text-slate-500 dark:text-slate-400" />
               </Popover.Button>
-              <h2 className="font-display text-sm font-semibold text-slate-600 dark:text-slate-400">
+              <h2 className="text-sm font-semibold font-display text-slate-600 dark:text-slate-400">
                 Navigation
               </h2>
             </div>
             <nav className="mt-6">
-              <ul className="-my-2 divide-y divide-slate-100 text-base text-slate-800 dark:divide-slate-100/5 dark:text-slate-300">
+              <ul className="-my-2 text-base divide-y divide-slate-100 text-slate-800 dark:divide-slate-100/5 dark:text-slate-300">
                 <MobileNavItem href="/">Home</MobileNavItem>
                 <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/articles">Articles</MobileNavItem>
@@ -154,7 +154,7 @@ function NavItem({ href, children }) {
       >
         {children}
         {isActive && (
-          <span className="shadow-glow absolute inset-x-0 -bottom-px h-0 bg-gradient-to-r from-sky-200 via-sky-400 to-sky-600 dark:from-amber-400 dark:via-amber-400 dark:to-amber-200" />
+          <span className="absolute inset-x-0 h-0 shadow-glow -bottom-px bg-gradient-to-r from-sky-200 via-sky-400 to-sky-600 dark:from-amber-400 dark:via-amber-400 dark:to-amber-200" />
         )}
       </Link>
     </li>
@@ -164,7 +164,7 @@ function NavItem({ href, children }) {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <ul className="flex rounded-xl bg-light-nav-pattern px-3 font-display font-semibold text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-dark-nav-pattern dark:text-slate-200 dark:ring-white/10">
+      <ul className="flex px-3 font-semibold shadow-lg rounded-xl bg-light-nav-pattern font-display text-slate-800 shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-dark-nav-pattern dark:text-slate-200 dark:ring-white/10">
         <NavItem href="/">Home</NavItem>
         <NavItem href="/about">About</NavItem>
         <NavItem href="/articles">Articles</NavItem>
@@ -188,7 +188,7 @@ function ThemeToggle() {
     <button
       type="button"
       aria-label={mounted ? `Switch to ${otherTheme} theme` : 'Toggle theme'}
-      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur transition dark:bg-slate-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+      className="px-3 py-2 transition rounded-full shadow-lg group bg-white/90 shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-slate-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={() => setTheme(otherTheme)}
     >
       <SunIcon className="h-6 w-6 fill-slate-100 stroke-slate-500 transition group-hover:fill-slate-200 group-hover:stroke-slate-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-amber-50 [@media(prefers-color-scheme:dark)]:stroke-amber-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-amber-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-amber-600" />
@@ -302,8 +302,8 @@ export function Header() {
         return
       }
 
-      let fromScale = 1
-      let toScale = 36 / 64
+      let fromScale = 2
+      let toScale = (36/64) * 2
       let fromX = 0
       let toX = 2 / 16
 
@@ -347,7 +347,7 @@ export function Header() {
   return (
     <>
       <header
-        className="pointer-events-none relative z-50 flex flex-none flex-col"
+        className="relative z-50 flex flex-col flex-none pointer-events-none"
         style={{
           height: 'var(--header-height)',
           marginBottom: 'var(--header-mb)',
@@ -360,7 +360,7 @@ export function Header() {
               className="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"
             />
             <Container
-              className="top-0 order-last -mb-3 pt-3"
+              className="top-0 order-last pt-3 -mb-3"
               style={{
                 position: 'var(--header-position)',
               }}
@@ -373,7 +373,7 @@ export function Header() {
               >
                 <div className="relative">
                   <AvatarContainer
-                    className="absolute left-0 top-3 origin-left transition-opacity"
+                    className="absolute left-0 transition-opacity origin-left top-3"
                     style={{
                       opacity: 'var(--avatar-border-opacity, 0)',
                       transform: 'var(--avatar-border-transform)',
@@ -381,7 +381,7 @@ export function Header() {
                   />
                   <Avatar
                     large
-                    className="block h-16 w-16 origin-left"
+                    className="block w-24 h-24 origin-left"
                     style={{ transform: 'var(--avatar-image-transform)' }}
                   />
                 </div>
@@ -410,14 +410,14 @@ export function Header() {
                   </AvatarContainer>
                 )}
                 {!isHomePage && (
-                  <h2 className="font-logo ml-4 self-center text-2xl font-bold text-sky-600">
+                  <h2 className="self-center ml-4 text-2xl font-bold font-logo text-sky-600">
                     Stephen<span className="text-amber-600">Parker</span>
                   </h2>
                 )}
               </div>
-              <div className="flex flex-1 justify-end md:justify-center">
+              <div className="flex justify-end flex-1 md:justify-center">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
-                <DesktopNavigation className="pointer-events-auto hidden md:block" />
+                <DesktopNavigation className="hidden pointer-events-auto md:block" />
               </div>
               <div className="flex justify-end md:flex-1">
                 <div className="pointer-events-auto">
