@@ -10,7 +10,8 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
-  TwitterIcon,
+  XIcon,
+  YTIcon,
 } from '@/components/SocialIcons'
 import logoGravital from '@/images/logos/gravital-icon.png'
 import logoMidjourney from '@/images/logos/midjourney-icon.png'
@@ -89,7 +90,7 @@ function Article({ article }) {
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link className="p-1 -m-1 group" {...props}>
-      <Icon className="w-6 h-6 transition fill-slate-500 group-hover:fill-slate-600 dark:fill-slate-400 dark:group-hover:fill-slate-300" />
+      <Icon className="w-6 h-6 transition fill-sky-500 group-hover:fill-sky-600 dark:fill-amber-500 dark:group-hover:fill-amber-600" />
     </Link>
   )
 }
@@ -313,7 +314,7 @@ export default async function Home() {
             >
             Jamstack redesign case study{' '}
             </Link>
-            that helped WRI 2024 attract 30% more attendees!
+            showing how I helped WRI 2024 attract 30% more attendees!
             </p>
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
             I help other solopreneurs working abroad on my{' '}
@@ -340,20 +341,11 @@ export default async function Home() {
             . Let's fly! 🚀
           </p>
           <div className="flex gap-6 mt-6 text-sky-600 dark:text-amber-500">
-            <SocialLink
-              href="https://twitter.com/sparker888"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
+            
             <SocialLink
               href="https://instagram.com/sparker808"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com/sparker888"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
             />
             <SocialLink
               href="https://linkedin.com/in/sparker888"
@@ -361,9 +353,19 @@ export default async function Home() {
               icon={LinkedInIcon}
             />
             <SocialLink
+              href="https://x.com/sparker888"
+              aria-label="Follow on X"
+              icon={XIcon}
+            />
+            <SocialLink
+            href="https://github.com/sparker888"
+              aria-label="Follow on GitHub"
+              icon={GitHubIcon}
+            />
+            <SocialLink
               href="https://www.youtube.com/@remote-solopreneur"
               aria-label="Subscribe on YouTube"
-              icon={YouTubeIcon}
+              icon={YTIcon}
             />
           </div>
         </div>
