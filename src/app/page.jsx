@@ -326,7 +326,8 @@ export default async function Home() {
             >
               Midjourney Prompt Manager
             </Link>
-            . Let's fly! 🚀
+            .</p>
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">Let's fly! 🚀
           </p>
           <div className="flex gap-6 mt-6 text-sky-600 dark:text-amber-500">
             
