@@ -1,6 +1,6 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
 import Image from 'next/image'
-import storyBanner from './mar-2025-update-final.webp'
+import storyBanner from './mar-2025-update-final.png'
 
 export const article = {
   author: 'Stephen Parker',
@@ -23,116 +23,95 @@ I'm excited to share the **March 2025 update** to **Midjourney Prompt Manager**,
 
 ## Midjourney Parameters: UI Logic and Feature Improvements
 
-We've redesigned the Parameters panel to match Midjourney's own structure more closely, making it faster and more intuitive to craft powerful prompts.
+I've redesigned the Parameters panel to match Midjourney's own structure more closely, making it faster and more intuitive to craft powerful prompts.
 
 ### **1. Parameter Reordering & Grouping**
-- **Aspect Ratio** and **Mode** now appear at the top of the left column.
-- **Quality** remains left-aligned, while **Tile** has been moved to a more intuitive spot.
+- **Aspect Ratio** and **Mode** (used to be Style) now appear at the top of the left column. These selections are used more frequently than the model, so it made sense to place them up top. In addition, I've made **Standard** the default mode now, as it can be problematic for novices to use **Raw** if they don't know what they're doing.
+- **Quality** remains left-aligned, and I have kept 1 as the default but continued to highlight that Quality 2 is available for the 6.1 model.
 - **Stylization**, **Weirdness**, **Variety / Chaos (%)**, and the new **Speed** parameter are now grouped on the right.
 
 ### **2. Naming Consistency**
-- “Style” is now labeled **Mode**, offering “Standard” and “Raw.”
-- “Stylize” has been renamed **Stylization**.
-- “Weirdness” and “Chaos” are now labeled clearly across the interface as **Weirdness** and **Variety / Chaos (%)**.
+- “Style” is now labeled **Mode**, offering “Standard” and “Raw” as they appear on Midjourney.
+- “Stylize” has been renamed **Stylization**, to be consistent with Midjourney.
+- While Midjourney has changed "Chaos" to “Variety,” I have kept it as **Variety / Chaos (%)** for better clarity—at least until they decide what to do with Chaos or change the use of `--chaos` as the parameter identifier.
 
 ### **3. Expanded Tooltips**
-- Each parameter now has a helpful tooltip icon.
+- **Mode**, **Stylization**, **Weirdness**, and **Variety / Chaos (%)** now have helpful tooltip icons to assist those new to working with Midjourney in understanding their function.
 - Tooltips are now displayed to the **right of the icon** for better visibility.
-- Tooltips use a higher z-index to prevent overlap from nearby UI elements.
+- I'm looking at further improving them for the beta launch, but this works as a start.
 
 ### **4. Incremental Precision**
-- Stylization increments in steps of **50** (0–1000)
-- Weirdness increments in **100s** (0–3000)
-- Variety / Chaos now increments in **5%** steps (0–100)
-- **Speed** defaults to Fast, and `--fast` is omitted from final prompt output if selected.
+- I've changed **Stylization** to increment in steps of **50** (0–1000).
+- I've changed **Weirdness** to increment in steps of **100** (0–3000).
+- I've changed **Variety / Chaos (%)** to increment in steps of **5%** (0–100).
 
-### **5. Improved Text Fields**
-- Personalization (`--p`) and Negative Keywords (`--no`) fields now use a consistent `text-slate-900` style to ensure legibility.
+### **5. Speed Option Added**
+- I've added **Speed** to the Midjourney Parameters to give users control over this feature directly from Midjourney Prompt Manager.
+- Relax or Turbo appear in the final prompt; **Fast** does not, as it's the Midjourney default.
 
-### **6. Raw Mode Clarification**
-- A new popup explains **Raw Mode** more clearly, including its compatibility with Midjourney v5.1 and beyond.
+## **NEW Midjourney Prompt Manager Style Selections**
 
-### **7. Speed Parameter**
-- Added a selector for **Speed** with options: Fast (default), Relax, and Turbo.
-- Relax or Turbo appear in the final prompt; Fast does not.
+I've expanded the MPM style selections to help shape more specific visual storytelling:
 
-### **8. Logic Improvements**
-- Excluded `--fast` from final output if selected.
-- Added `speed` to the parameter loop to ensure correct prompt output when non-default speeds are selected.
-
----
-
-## 1. **New Themes and Emotions**
-
-We've expanded the MPM style selections to help shape more specific visual storytelling:
-
-### **New Theme:**
+### **6. Theme additions:**
 - Dark Adventure
 
-### **New Emotion & Mood Options:**
+### **7. Emotion & Mood additions:**
 - Adventurous  
 - Dramatic  
 - Majestic  
 - Space Fashion  
 
----
-
-## 2. **New Cameras & Lenses**
+## **New Cameras & Lenses**
 
 Cinematic quality just got a boost with these two high-end camera rigs:
 
-### **Cameras & Lenses:**
+### **8. Cameras & Lenses additions:**
 - Sony Venice with Zeiss Supreme Prime lens  
 - Panavision Millennium DXL2 with Panavision Primo lenses  
 
----
-
-## 3. **Lighting & Ambience Enhancements**
+## **New Lighting & Ambience Enhancements**
 
 Explore more immersive atmospheres with these lighting additions:
 
-### **Natural Lighting:**
+### **9. Natural Lighting addition:**
 - Torchlight  
 
-### **Ambiance & Styling:**
+### **10. Ambiance & Styling additions:**
 - Advanced Technology  
 - Cosmic Grandeur  
 
-### **Ambient Lighting:**
+### **11. Ambient Lighting additions:**
 - Nebular Glow  
 - Atmospheric Light  
 - City Lights  
 
-### **Lighting Effects:**
+### **12. Lighting Effects additions:**
 - Flickering Lights  
 - Dust Particles in Light Beams  
 
----
-
-## 4. **Color Treatments and Palettes**
+## **New Color Treatments and Palettes**
 
 Balance your visuals with new grounded tones and atmospheric palettes:
 
-### **Color Treatment:**
+### **13. Color Treatment additions:**
 - Earth Tones  
 - Warm Neutrals  
 
-### **Specific Colors:**
+### **14. Specific Color additions:**
 - Neon Purple  
 - Steel Blue  
 
-### **Color Palettes:**
+### **15. Color Palettes additions:**
 - Deep Space  
 - Noir  
 - Vintage Warmth  
 
----
+## **New Physical Properties & States of Matter**
 
-## 5. **Physical Properties & States of Matter**
+I've refined categorization and added exciting new entries for building richer scenes:
 
-Refined categorization and exciting new entries for building richer scenes:
-
-### **New Physical Properties:**
+### **16. New Physical Properties additions:**
 - Dust  
 - Weathered Stone  
 - Dense Foliage  
@@ -142,8 +121,6 @@ Refined categorization and exciting new entries for building richer scenes:
 - Weathered Leather  
 
 These enhancements help you craft everything from dusty temples to futuristic cityscapes with wet pavement and flickering lights.
-
----
 
 I'm also preparing to launch a **beta version** of the platform in April—complete with **saved prompts**, **image storage**, **team collaboration**, and a **public community gallery**.
 
