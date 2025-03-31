@@ -1,0 +1,152 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import storyBanner from './mar-2025-update-final.webp'
+
+export const article = {
+  author: 'Stephen Parker',
+  date: '2025-03-31',
+  title: "March Updates: Parameter Enhancements, Styling Upgrades, and New Creative Options",
+  description:
+    'Discover the March 2025 Midjourney Prompt Manager update, featuring parameter UI improvements, new camera presets, expanded moods and lighting, and deeper control over visual effects.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image src={storyBanner} alt="March Updates: Parameter Enhancements, Styling Upgrades, and New Creative Options" />
+
+I'm excited to share the **March 2025 update** to **Midjourney Prompt Manager**, focused on refining the parameter controls, improving UI consistency, and giving creators deeper control over their visuals. Let's dig into what’s new!
+
+## Midjourney Parameters: UI Logic and Feature Improvements
+
+We've redesigned the Parameters panel to match Midjourney's own structure more closely, making it faster and more intuitive to craft powerful prompts.
+
+### **1. Parameter Reordering & Grouping**
+- **Aspect Ratio** and **Mode** now appear at the top of the left column.
+- **Quality** remains left-aligned, while **Tile** has been moved to a more intuitive spot.
+- **Stylization**, **Weirdness**, **Variety / Chaos (%)**, and the new **Speed** parameter are now grouped on the right.
+
+### **2. Naming Consistency**
+- “Style” is now labeled **Mode**, offering “Standard” and “Raw.”
+- “Stylize” has been renamed **Stylization**.
+- “Weirdness” and “Chaos” are now labeled clearly across the interface as **Weirdness** and **Variety / Chaos (%)**.
+
+### **3. Expanded Tooltips**
+- Each parameter now has a helpful tooltip icon.
+- Tooltips are now displayed to the **right of the icon** for better visibility.
+- Tooltips use a higher z-index to prevent overlap from nearby UI elements.
+
+### **4. Incremental Precision**
+- Stylization increments in steps of **50** (0–1000)
+- Weirdness increments in **100s** (0–3000)
+- Variety / Chaos now increments in **5%** steps (0–100)
+- **Speed** defaults to Fast, and `--fast` is omitted from final prompt output if selected.
+
+### **5. Improved Text Fields**
+- Personalization (`--p`) and Negative Keywords (`--no`) fields now use a consistent `text-slate-900` style to ensure legibility.
+
+### **6. Raw Mode Clarification**
+- A new popup explains **Raw Mode** more clearly, including its compatibility with Midjourney v5.1 and beyond.
+
+### **7. Speed Parameter**
+- Added a selector for **Speed** with options: Fast (default), Relax, and Turbo.
+- Relax or Turbo appear in the final prompt; Fast does not.
+
+### **8. Logic Improvements**
+- Excluded `--fast` from final output if selected.
+- Added `speed` to the parameter loop to ensure correct prompt output when non-default speeds are selected.
+
+---
+
+## 1. **New Themes and Emotions**
+
+We've expanded the MPM style selections to help shape more specific visual storytelling:
+
+### **New Theme:**
+- Dark Adventure
+
+### **New Emotion & Mood Options:**
+- Adventurous  
+- Dramatic  
+- Majestic  
+- Space Fashion  
+
+---
+
+## 2. **New Cameras & Lenses**
+
+Cinematic quality just got a boost with these two high-end camera rigs:
+
+### **Cameras & Lenses:**
+- Sony Venice with Zeiss Supreme Prime lens  
+- Panavision Millennium DXL2 with Panavision Primo lenses  
+
+---
+
+## 3. **Lighting & Ambience Enhancements**
+
+Explore more immersive atmospheres with these lighting additions:
+
+### **Natural Lighting:**
+- Torchlight  
+
+### **Ambiance & Styling:**
+- Advanced Technology  
+- Cosmic Grandeur  
+
+### **Ambient Lighting:**
+- Nebular Glow  
+- Atmospheric Light  
+- City Lights  
+
+### **Lighting Effects:**
+- Flickering Lights  
+- Dust Particles in Light Beams  
+
+---
+
+## 4. **Color Treatments and Palettes**
+
+Balance your visuals with new grounded tones and atmospheric palettes:
+
+### **Color Treatment:**
+- Earth Tones  
+- Warm Neutrals  
+
+### **Specific Colors:**
+- Neon Purple  
+- Steel Blue  
+
+### **Color Palettes:**
+- Deep Space  
+- Noir  
+- Vintage Warmth  
+
+---
+
+## 5. **Physical Properties & States of Matter**
+
+Refined categorization and exciting new entries for building richer scenes:
+
+### **New Physical Properties:**
+- Dust  
+- Weathered Stone  
+- Dense Foliage  
+- Metallic  
+- Textured Stone  
+- Wet Surfaces  
+- Weathered Leather  
+
+These enhancements help you craft everything from dusty temples to futuristic cityscapes with wet pavement and flickering lights.
+
+---
+
+I'm also preparing to launch a **beta version** of the platform in April—complete with **saved prompts**, **image storage**, **team collaboration**, and a **public community gallery**.
+
+Stay tuned for future updates, and as always, I welcome your feedback at [feedback@keypromptninja.io](mailto:feedback@keypromptninja.io). Your insights are instrumental as I continue to improve this tool.
+
+To try out these new features and more, visit [midjourneypromptmanager.com](https://midjourneypromptmanager.com) today!
