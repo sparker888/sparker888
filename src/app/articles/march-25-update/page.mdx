@@ -19,11 +19,11 @@ export default (props) => <ArticleLayout article={article} {...props} />
 
 <Image src={storyBanner} alt="March Updates: Parameter Enhancements, Styling Upgrades, and New Creative Options" />
 
-I'm excited to share the **March 2025 update** to **Midjourney Prompt Manager**, focused on refining the parameter controls, improving UI consistency, and giving creators deeper control over their visuals. Let's dig into what’s new!
+## March Update: Parameter UI Enhancements, New Styling Upgrades, and Upcoming Beta Launch {{ date: '2025-03-31T00:00Z' }}
 
-## Midjourney Parameters: UI Logic and Feature Improvements
+I'm excited to share the **March 2025 update** to **Midjourney Prompt Manager**, focused on refining the Midjourney Parameter UI, and giving creators more control over their visuals with additional Style Selections.
 
-I've redesigned the Parameters panel to match Midjourney's own structure more closely, making it faster and more intuitive to craft powerful prompts.
+## First, Midjourney Parameter Selection UI Improvements
 
 ### **1. Parameter Reordering & Grouping**
 - **Aspect Ratio** and **Mode** (used to be Style) now appear at the top of the left column. These selections are used more frequently than the model, so it made sense to place them up top. In addition, I've made **Standard** the default mode now, as it can be problematic for novices to use **Raw** if they don't know what they're doing.
@@ -31,9 +31,9 @@ I've redesigned the Parameters panel to match Midjourney's own structure more cl
 - **Stylization**, **Weirdness**, **Variety / Chaos (%)**, and the new **Speed** parameter are now grouped on the right.
 
 ### **2. Naming Consistency**
-- “Style” is now labeled **Mode**, offering “Standard” and “Raw” as they appear on Midjourney.
-- “Stylize” has been renamed **Stylization**, to be consistent with Midjourney.
-- While Midjourney has changed "Chaos" to “Variety,” I have kept it as **Variety / Chaos (%)** for better clarity—at least until they decide what to do with Chaos or change the use of `--chaos` as the parameter identifier.
+ - “Style” is now labeled **Mode**, offering “Standard” and “Raw” as they appear on Midjourney.
+ - “Stylize” has been renamed **Stylization**, to be consistent with Midjourney.
+ - While Midjourney has changed "Chaos" to “Variety,” I have kept it as **Variety / Chaos (%)** for better clarity—at least until they decide what to do with Chaos or change the use of `--chaos` as the parameter identifier.
 
 ### **3. Expanded Tooltips**
 - **Mode**, **Stylization**, **Weirdness**, and **Variety / Chaos (%)** now have helpful tooltip icons to assist those new to working with Midjourney in understanding their function.
@@ -41,13 +41,13 @@ I've redesigned the Parameters panel to match Midjourney's own structure more cl
 - I'm looking at further improving them for the beta launch, but this works as a start.
 
 ### **4. Incremental Precision**
-- I've changed **Stylization** to increment in steps of **50** (0–1000).
-- I've changed **Weirdness** to increment in steps of **100** (0–3000).
-- I've changed **Variety / Chaos (%)** to increment in steps of **5%** (0–100).
+- **Stylization** was updated to increment in steps of **50** (0–1000).
+- **Weirdness** was updated to increment in steps of **100** (0–3000).
+- **Variety / Chaos (%)** was updated to increment in steps of **5%** (0–100).
 
 ### **5. Speed Option Added**
 - I've added **Speed** to the Midjourney Parameters to give users control over this feature directly from Midjourney Prompt Manager.
-- Relax or Turbo appear in the final prompt; **Fast** does not, as it's the Midjourney default.
+- Relax or Turbo appear in the final prompt if selected; Otherwise, just ignore it for **Fast**, as it's the Midjourney default.
 
 ## **NEW Midjourney Prompt Manager Style Selections**
 
@@ -64,15 +64,11 @@ I've expanded the MPM style selections to help shape more specific visual storyt
 
 ## **New Cameras & Lenses**
 
-Cinematic quality just got a boost with these two high-end camera rigs:
-
 ### **8. Cameras & Lenses additions:**
 - Sony Venice with Zeiss Supreme Prime lens  
 - Panavision Millennium DXL2 with Panavision Primo lenses  
 
 ## **New Lighting & Ambience Enhancements**
-
-Explore more immersive atmospheres with these lighting additions:
 
 ### **9. Natural Lighting addition:**
 - Torchlight  
@@ -92,8 +88,6 @@ Explore more immersive atmospheres with these lighting additions:
 
 ## **New Color Treatments and Palettes**
 
-Balance your visuals with new grounded tones and atmospheric palettes:
-
 ### **13. Color Treatment additions:**
 - Earth Tones  
 - Warm Neutrals  
@@ -109,8 +103,6 @@ Balance your visuals with new grounded tones and atmospheric palettes:
 
 ## **New Physical Properties & States of Matter**
 
-I've refined categorization and added exciting new entries for building richer scenes:
-
 ### **16. New Physical Properties additions:**
 - Dust  
 - Weathered Stone  
@@ -122,7 +114,9 @@ I've refined categorization and added exciting new entries for building richer s
 
 These enhancements help you craft everything from dusty temples to futuristic cityscapes with wet pavement and flickering lights.
 
-I'm also preparing to launch a **beta version** of the platform in April—complete with **saved prompts**, **image storage**, **team collaboration**, and a **public community gallery**.
+## Finally, the Beta will launch in April!
+
+I'm also working overtime to launch a **beta version** of the platform in April—complete with **saved prompts**, **image storage**, **team collaboration**, and a **public community gallery**.
 
 Stay tuned for future updates, and as always, I welcome your feedback at [feedback@keypromptninja.io](mailto:feedback@keypromptninja.io). Your insights are instrumental as I continue to improve this tool.
 
