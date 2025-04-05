@@ -33,7 +33,7 @@ I embarked on a series of experiments to compare prompts:
 - **Original, unstructured keyword lists** – quick lists of styles, angles, and colors.
 - **New descriptive approach** – weaving user inputs into a short, coherent sentence or two.
 
-I tested each approach against **Midjourney v7** (and sometimes v6.1) using various parameters like `--ar`, `--stylize`, `--c`, and `--q`. Our primary goals were **realism**, **visual consistency**, and **clarity of style**.
+I tested each approach against **Midjourney v7** (and sometimes v6.1) using various parameters like `--ar`, `--stylize`, `--c`, and `--q`. My primary goals were **realism**, **visual consistency**, and **clarity of style**.
 
 ### Key Observations
 
@@ -43,7 +43,7 @@ I tested each approach against **Midjourney v7** (and sometimes v6.1) using vari
 
 ## **2. The New Strategy**
 
-After poring over test images and user feedback, I’ve **updated the prompt creation logic** inside Midjourney Prompt Manager:
+After poring over test images and ChatGPT o1 pro feedback, I’ve **updated the prompt creation logic** inside Midjourney Prompt Manager:
 
 1. **Start with the user’s base prompt** (the most important piece).
 2. **Merge all style selections** (theme, mood, camera, colors, lighting) into **one descriptive phrase**.  
@@ -58,22 +58,22 @@ This approach still clarifies user choices but **presents** them to Midjourney i
 
 ## **3. Example Prompt**
 
-Here’s a condensed sample I used in one test:
+Here’s a sample Midjourney Prompt Manager output I used in one test (notice it's more natural language throughout compared to older prompts the app produced prior to the v7 alpha launch):
 
-A hidden valley inhabited by ethereal creatures. The environment has a whimsical, otherworldly ambiance, with vibrant alien flora. Soft morning light at dawn casts subtle glimmers, while a surreal dreamlike aura envelops the entire scene. in a magical realism, ethereal style, viewed from a low angle shot, shot on canon eos 5d mark iv, dawn lighting, at sunrise, with a fantasy vibe, accented by holographic glow, god rays, featuring vibrant colors, polychromatic, emerald green, gold, mint, teal, pastel colors, with flowing fabric, translucent, chromatic aberration, bioluminescence, phosphorescence effects –v 7 –ar 16:9 –c 30 –s 500
+A hidden valley inhabited by ethereal creatures. The environment has a whimsical, otherworldly ambiance, with vibrant alien flora. Soft morning light at dawn casts subtle glimmers, while a surreal dreamlike aura envelops the entire scene in a magical realism, ethereal style, viewed from a low angle shot, shot on canon eos 5d mark iv, dawn lighting, at sunrise, with a fantasy vibe, accented by holographic glow, god rays, featuring vibrant colors, polychromatic, emerald green, gold, mint, teal, pastel colors, with flowing fabric, translucent, chromatic aberration, bioluminescence, phosphorescence effects –v 7 –ar 16:9 –c 30 –s 500
 
 **In short**, it’s the same attributes as a bullet list, but rephrased into a coherent sentence.
 
 Here's a more **human** readable output that's geared to assist in parameter selections and category selections as you may have seen:
 
-<h3>Start with a base prompt</h3>
+<h3>1. Start with a base prompt</h3>
 <p>
   A futuristic cityscape filled with flying cars. The environment has a cinematic
   and mysterious flair, showcasing bold street art. Overcast skies during twilight
   lend a dramatic atmosphere, while neon glows and reflections emphasize the
   advanced cyberpunk aesthetic.
 </p>
-<h3>Select Midjourney Configuration Selections</h3>
+<h3>2. Choose your Midjourney Parameters</h3>
 <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
   <li>‣ Version: 7</li>
   <li>‣ Aspect Ratio: 1:1</li>
@@ -83,7 +83,7 @@ Here's a more **human** readable output that's geared to assist in parameter sel
   <li>‣ Style: raw</li>
   <li>‣ Stylize: 100</li>
 </ul>
-<h3>Select Midjourney Prompt Manager Style Selections</h3>
+<h3>Choose your Midjourney Prompt Manager Style Selections</h3>
 <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
   <li>‣ Theme: Cyberpunk</li>
   <li>‣ Emotion &amp; Mood: Mysterious</li>
