@@ -25,9 +25,7 @@ export default (props) => <ArticleLayout article={article} {...props} />
 ## April Update: Research-Driven Prompt Strategy & Midjourney v7 Improvements  
 _Updated: April 7, 2025_
 
-We’re thrilled to announce our latest **Midjourney Prompt Manager** update! Over the past month, we’ve conducted in-depth **research** and **A/B testing** to see how different prompt structures (short keyword lists vs. flowing descriptive sentences) impact results in **Midjourney v7**. Below, we’ll share our findings, outline our **new strategy** for prompt generation, and show you examples from three different tests.
-
----
+I'm thrilled to announce our latest **Midjourney Prompt Manager** update! Since Midjourney v7 launched late last week, I've conducted in-depth **research** and **A/B testing** with ChatGPt o1 pro to see how different prompt structures (short keyword lists vs. flowing descriptive sentences) impact results in **Midjourney v7**. Below, I’ll share my findings, outline my **new strategy** for Midjourney v7 prompt generation, and show you examples from three different tests.
 
 ## **1. Research & Testing**
 
@@ -43,11 +41,9 @@ We tested each approach against **Midjourney v7** (and sometimes v6.1) using var
 2. **Keyword-Style Prompts** can yield **bold, uniform** styling or color emphasis, especially at higher `--stylize` or `--c`.
 3. **No Single Format** is *always* best. Each approach might be more suitable depending on your creative vision. 
 
----
-
 ## **2. The New Strategy**
 
-After poring over test images and user feedback, we’ve **updated our prompt creation logic** inside Midjourney Prompt Manager:
+After poring over test images and user feedback, I’ve **updated the prompt creation logic** inside Midjourney Prompt Manager:
 
 1. **Start with the user’s base prompt** (the most important piece).
 2. **Merge all style selections** (theme, mood, camera, colors, lighting) into **one descriptive phrase**.  
@@ -60,8 +56,6 @@ After poring over test images and user feedback, we’ve **updated our prompt cr
 
 This approach still clarifies user choices but **presents** them to Midjourney in a succinct, natural way.
 
----
-
 ## **3. Example Prompt**
 
 Here’s a condensed sample we used in one test:
@@ -70,73 +64,105 @@ A hidden valley inhabited by ethereal creatures. The environment has a whimsical
 
 **In short**, it’s the same attributes as a bullet list, but rephrased into a coherent sentence.
 
----
+Here's a more **human** readable output that's geared to assist in parameter selections and category selections as you may have seen:
+
+### Start with a base prompt
+
+A futuristic cityscape filled with flying cars. The environment has a cinematic and mysterious flair, showcasing bold street art. Overcast skies during twilight lend a dramatic atmosphere, while neon glows and reflections emphasize the advanced cyberpunk aesthetic.
+
+### Select Midjourney Configuration Selections
+
+‣ Version: 7
+‣ Aspect Ratio: 1:1
+‣ Quality: 2
+‣ Variety / Chaos (%): 50
+‣ Weirdness: 250
+‣ Style: raw
+‣ Stylize: 100
+
+### Select Midjourney Prompt Manager Style Selections
+
+‣ Theme: Cyberpunk
+‣ Emotion & Mood: Mysterious
+‣ Camera Angle & Shot Types: Bird’s Eye View Shot
+‣ Cameras & Lenses: IMAX Digital Camera with 50mm anamorphic lens
+‣ Natural Lighting: Overcast
+‣ Time of the Day: Twilight
+‣ Ambiance & Styling: Street Art
+‣ Ambient Lighting: Neon Glow
+‣ Lighting Effects: Specular Highlights
+‣ Color Treatment: Vibrant Colors
+‣ Number of Colors: Octachromatic
+‣ Specific Colors: Deep Pink, Electric Yellow, Fiery Orange, Neon Purple, Silver
+‣ Color Palettes: Twilight Scheme
+‣ Physical Properties & States of Matter: Metallic
+‣ Reflections & Refractions: Iridescent
+‣ Chromism & Luminescence: Electroluminescence, Metallochromism
+‣ Artist Style: (None specified)
 
 ## **4. Test Results**
 
-To illustrate, we’ll show three sets of images where we applied **original** vs. **new** strategies. Each set contains two images: **(a)** and **(b)**. We recommend embedding them at these points in the article, so readers can see each comparison side by side.
+To illustrate, I’ll show three sets of images where we applied **original** vs. **new** strategies. Each set contains two images: **(a)** and **(b)**. We recommend embedding them at these points in the article, so readers can see each comparison side by side.
 
----
+## **4. Test Results**
+
+We labeled the images so that **(a)** = **Original Prompt (Test A)** and **(b)** = **New Descriptive (Test B)**. Below are three sets, each illustrating how the two approaches can differ. We recently received files for Test 2 as well; images for Test 3 are still to come.
 
 ### **Test 1**
-Right after discussing how color interpretation differs. Perfect place to insert your first image pair:
 
 <Image
   src="/images/test-1a.webp"
-  alt="Test 1 - Top selection using new descriptive strategy"
+  alt="Test 1a - Original Prompt Strategy"
   width={800}
   height={450}
 />
 <Image
   src="/images/test-1b.webp"
-  alt="Test 1 - Bottom selection with original approach"
+  alt="Test 1b - New Descriptive Approach"
   width={800}
   height={450}
 />
 
-We found that the **(a)** images had more subtle transitions, while **(b)** looked slightly more uniform in color. Both were lovely; personal preference may vary.
-
----
+	•	1a (original) shows strong color uniformity—pinks and oranges are very bold.
+	•	1b (new) has subtler transitions among hues, giving the sky and reflections a softer blend.
 
 ### **Test 2**
-After describing how camera angle or lens details affect composition, insert the second comparison:
 
 <Image
   src="/images/test-2a.webp"
-  alt="Test 2 - Top selection using new descriptive strategy"
+  alt="Test 2a - Original Prompt Strategy"
   width={800}
   height={450}
 />
 <Image
   src="/images/test-2b.webp"
-  alt="Test 2 - Bottom selection with original approach"
+  alt="Test 2b - New Descriptive Approach"
   width={800}
   height={450}
 />
 
-Here, version (a) emphasized moody, cinematic depth, while (b) had sharper contrasts and fewer shadow gradients.
-
----
+	•	2a (original) feels direct and bright: the environment is crisp, with a simpler color scheme focusing on pink/purple.
+	•	2b (new) conveys a more atmospheric, layered effect—notice the subtle bokeh and depth, plus additional color shifts in the flowers and lighting.
 
 ### **Test 3**
-Before concluding or summarizing best practices, place the final pair:
 
 <Image
   src="/images/test-3a.webp"
-  alt="Test 3 - Top selection using new descriptive strategy"
+  alt="Test 3a - Original Prompt Strategy"
   width={800}
   height={450}
 />
 <Image
   src="/images/test-3b.webp"
-  alt="Test 3 - Bottom selection with original approach"
+  alt="Test 3b - New Descriptive Approach"
   width={800}
   height={450}
 />
 
-In this final test, we noticed the new approach introduced some extra color variety in the sky, but the original approach had bolder lighting around focal points.
+	•	3a (original) showcases a strong, warm palette, with shimmering crystals bathed in intense sunset tones. The highlights lean more uniform, emphasizing bright oranges and pinkish reflections.
+	•	3b (new) allows for a more multi-hued effect across each crystal, revealing subtle shifts from peach to mint and lavender. It feels slightly more “luminous,” with softer transitions in the sky and water.
 
----
+Overall, the original prompt in 3a pushes a saturated, single‐dominant hue, while the descriptive style in 3b embraces a wider range of shimmering pastel variations. Which you prefer might depend on whether you want a focused, dramatic scene or a more ethereal, prismatic atmosphere.
 
 ## **5. Conclusions & Next Steps**
 
