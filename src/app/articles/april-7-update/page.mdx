@@ -1,0 +1,159 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import storyBanner from './mar-2025-update-final.webp'
+
+export const article = {
+  author: 'Stephen Parker',
+  date: '2025-04-07',
+  title: 'April Update: Research-Driven Prompt Strategy & Midjourney v7 Improvements',
+  description:
+    'Learn how our new research-based prompt strategy can transform your Midjourney v7 images and see our side-by-side tests comparing different approaches.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image
+  src={storyBanner}
+  alt="April Update: Research-Driven Prompt Strategy & Midjourney v7 Improvements"
+/>
+
+## April Update: Research-Driven Prompt Strategy & Midjourney v7 Improvements  
+_Updated: April 7, 2025_
+
+We’re thrilled to announce our latest **Midjourney Prompt Manager** update! Over the past month, we’ve conducted in-depth **research** and **A/B testing** to see how different prompt structures (short keyword lists vs. flowing descriptive sentences) impact results in **Midjourney v7**. Below, we’ll share our findings, outline our **new strategy** for prompt generation, and show you examples from three different tests.
+
+---
+
+## **1. Research & Testing**
+
+We embarked on a series of experiments to compare prompts:
+- **Original, unstructured keyword lists** – quick lists of styles, angles, and colors.
+- **New descriptive approach** – weaving user inputs into a short, coherent sentence or two.
+
+We tested each approach against **Midjourney v7** (and sometimes v6.1) using various parameters like `--ar`, `--stylize`, `--c`, and `--q`. Our primary goals were **realism**, **visual consistency**, and **clarity of style**.
+
+### Key Observations
+
+1. **Flowing Descriptions** sometimes produce **more diverse** color palettes and smoother transitions.
+2. **Keyword-Style Prompts** can yield **bold, uniform** styling or color emphasis, especially at higher `--stylize` or `--c`.
+3. **No Single Format** is *always* best. Each approach might be more suitable depending on your creative vision. 
+
+---
+
+## **2. The New Strategy**
+
+After poring over test images and user feedback, we’ve **updated our prompt creation logic** inside Midjourney Prompt Manager:
+
+1. **Start with the user’s base prompt** (the most important piece).
+2. **Merge all style selections** (theme, mood, camera, colors, lighting) into **one descriptive phrase**.  
+   - Example:  
+     ```
+     in a futuristic, cinematic style, viewed from a top-down angle, shot on IMAX...
+     ```
+3. **Append** any special **Midjourney parameters** at the end (e.g., `--v 7 --ar 1:1`), ensuring no duplicates.
+4. **Avoid over-labeling** (like “Theme: …” or “Mood: …”) which can sometimes dilute emphasis.
+
+This approach still clarifies user choices but **presents** them to Midjourney in a succinct, natural way.
+
+---
+
+## **3. Example Prompt**
+
+Here’s a condensed sample we used in one test:
+
+A hidden valley inhabited by ethereal creatures. The environment has a whimsical, otherworldly ambiance, with vibrant alien flora. Soft morning light at dawn casts subtle glimmers, while a surreal dreamlike aura envelops the entire scene. in a magical realism, ethereal style, viewed from a low angle shot, shot on canon eos 5d mark iv, dawn lighting, at sunrise, with a fantasy vibe, accented by holographic glow, god rays, featuring vibrant colors, polychromatic, emerald green, gold, mint, teal, pastel colors, with flowing fabric, translucent, chromatic aberration, bioluminescence, phosphorescence effects –v 7 –ar 16:9 –c 30 –s 500
+
+**In short**, it’s the same attributes as a bullet list, but rephrased into a coherent sentence.
+
+---
+
+## **4. Test Results**
+
+To illustrate, we’ll show three sets of images where we applied **original** vs. **new** strategies. Each set contains two images: **(a)** and **(b)**. We recommend embedding them at these points in the article, so readers can see each comparison side by side.
+
+---
+
+### **Test 1**
+Right after discussing how color interpretation differs. Perfect place to insert your first image pair:
+
+<Image
+  src="/images/test-1a.webp"
+  alt="Test 1 - Top selection using new descriptive strategy"
+  width={800}
+  height={450}
+/>
+<Image
+  src="/images/test-1b.webp"
+  alt="Test 1 - Bottom selection with original approach"
+  width={800}
+  height={450}
+/>
+
+We found that the **(a)** images had more subtle transitions, while **(b)** looked slightly more uniform in color. Both were lovely; personal preference may vary.
+
+---
+
+### **Test 2**
+After describing how camera angle or lens details affect composition, insert the second comparison:
+
+<Image
+  src="/images/test-2a.webp"
+  alt="Test 2 - Top selection using new descriptive strategy"
+  width={800}
+  height={450}
+/>
+<Image
+  src="/images/test-2b.webp"
+  alt="Test 2 - Bottom selection with original approach"
+  width={800}
+  height={450}
+/>
+
+Here, version (a) emphasized moody, cinematic depth, while (b) had sharper contrasts and fewer shadow gradients.
+
+---
+
+### **Test 3**
+Before concluding or summarizing best practices, place the final pair:
+
+<Image
+  src="/images/test-3a.webp"
+  alt="Test 3 - Top selection using new descriptive strategy"
+  width={800}
+  height={450}
+/>
+<Image
+  src="/images/test-3b.webp"
+  alt="Test 3 - Bottom selection with original approach"
+  width={800}
+  height={450}
+/>
+
+In this final test, we noticed the new approach introduced some extra color variety in the sky, but the original approach had bolder lighting around focal points.
+
+---
+
+## **5. Conclusions & Next Steps**
+
+- **Prompt Variation Matters**: The smallest tweak—whether rearranging words or removing extra labels—can shift Midjourney’s interpretation.
+- **Hybrid Approaches**: Sometimes mixing short, direct style keywords into a semi-descriptive phrase yields the strongest synergy.
+- **Ongoing Refinement**: We plan to keep testing with upcoming Midjourney updates. Our user interface will likely evolve further to let you choose how verbose or minimal you want your final prompt phrasing.
+
+### Looking Ahead
+We remain committed to providing the best user experience for **Midjourney v7** (and beyond). Keep an eye out for:
+- **Beta collaboration tools** (shared prompt boards).
+- More advanced **negative prompt** handling.
+- Continued expansions of themes, moods, and color sets.
+
+In the meantime, let us know your thoughts:  
+[feedback@keypromptninja.io](mailto:feedback@keypromptninja.io)
+
+**Happy prompting!**
+
+Visit [midjourneypromptmanager.com](https://midjourneypromptmanager.com) today to try out the new prompt strategy for yourself!
+
