@@ -25,25 +25,25 @@ export default (props) => <ArticleLayout article={article} {...props} />
 ## April Update: Research-Driven Prompt Strategy & Midjourney v7 Improvements  
 _Updated: April 7, 2025_
 
-I'm thrilled to announce our latest **Midjourney Prompt Manager** update! Since Midjourney v7 launched late last week, I've conducted in-depth **research** and **A/B testing** with ChatGPt o1 pro to see how different prompt structures (short keyword lists vs. flowing descriptive sentences) impact results in **Midjourney v7**. Below, I’ll share my findings, outline my **new strategy** for Midjourney v7 prompt generation, and show you examples from three different tests.
+I'm thrilled to announce our latest **Midjourney Prompt Manager** update! Since Midjourney v7 launched late last week, I've conducted in-depth **research** and **A/B testing** with ChatGPt o1 pro to see how different prompt structures (short keyword lists vs. flowing descriptive sentences) impact results in **Midjourney v7**. Below, I’ll share my findings, outline my **new strategy** for Midjourney v7 prompt generation, and show you examples from four different tests.
 
 ## **1. Research & Testing**
 
 I embarked on a series of experiments to compare prompts:
-- **Original, unstructured keyword lists** – quick lists of styles, angles, and colors.
-- **New descriptive approach** – weaving user inputs into a short, coherent sentence or two.
+- **Original, unstructured keyword lists** – base prompt with simple, comma-separated keywords (no content).
+- **New descriptive approach** – weaving user inputs into a short, coherent sentence or two after the base prompt (followed by parameters).
 
-I tested each approach against **Midjourney v7** (and sometimes v6.1) using various parameters like `--ar`, `--stylize`, `--c`, and `--q`. My primary goals were **realism**, **visual consistency**, and **clarity of style**.
+I tested each approach against **Midjourney v7** (and sometimes v6.1) using various parameters like `--ar`, `--stylize`, `--c`, and `--q`. My primary goals were **realism**, **visual consistency**, and **clarity of style** and an overall final pleasing image.
 
 ### Key Observations
 
 1. **Flowing Descriptions** sometimes produce **more diverse** color palettes and smoother transitions.
 2. **Keyword-Style Prompts** can yield **bold, uniform** styling or color emphasis, especially at higher `--stylize` or `--c`.
-3. **No Single Format** is *always* best. Each approach might be more suitable depending on your creative vision. 
+3. **No Single Format** is *always* best. Each approach might be more suitable depending on your creative vision. However, in general, I found that **flowing descriptions** produced more desirable results.
 
 ## **2. The New Strategy**
 
-After poring over test images and ChatGPT o1 pro feedback, I’ve **updated the prompt creation logic** inside Midjourney Prompt Manager:
+After poring over test images and ChatGPT o1 pro feedback, I’ve **updated the prompt creation logic** inside Midjourney Prompt Manager slightly to enable more **flowing descriptions**:
 
 1. **Start with the user’s base prompt** (the most important piece).
 2. **Merge all style selections** (theme, mood, camera, colors, lighting) into **one descriptive phrase**.  
@@ -52,9 +52,9 @@ After poring over test images and ChatGPT o1 pro feedback, I’ve **updated the 
      in a futuristic, cinematic style, viewed from a top-down angle, shot on IMAX...
      ```
 3. **Append** any special **Midjourney parameters** at the end (e.g., `--v 7 --ar 1:1`), ensuring no duplicates.
-4. **Avoid over-labeling** (like “Theme: …” or “Mood: …”) which can sometimes dilute emphasis.
+4. **Avoid over-labeling** (like “Theme: …” or “Mood: …”) which can sometimes dilute emphasis (one strategy I tested).
 
-This approach still clarifies user choices but **presents** them to Midjourney in a succinct, natural way.
+This approach still clarifies user choices but **presents** them to Midjourney in a succinct, natural way that helps speed up prompt creation and future iteration to maintain image consistency. This is particularly important now that Midjourney v7 does not support srefs.
 
 ## **3. Example Prompt**
 
@@ -62,7 +62,7 @@ Here’s a sample Midjourney Prompt Manager output I used in one test (notice it
 
 A hidden valley inhabited by ethereal creatures. The environment has a whimsical, otherworldly ambiance, with vibrant alien flora. Soft morning light at dawn casts subtle glimmers, while a surreal dreamlike aura envelops the entire scene in a magical realism, ethereal style, viewed from a low angle shot, shot on canon eos 5d mark iv, dawn lighting, at sunrise, with a fantasy vibe, accented by holographic glow, god rays, featuring vibrant colors, polychromatic, emerald green, gold, mint, teal, pastel colors, with flowing fabric, translucent, chromatic aberration, bioluminescence, phosphorescence effects –v 7 –ar 16:9 –c 30 –s 500
 
-**In short**, it’s the same attributes as a bullet list, but rephrased into a coherent sentence.
+**In short**, it’s the same attributes as the short comma-separated list of keywords that I originally used, but rephrased into a coherent sentence.
 
 ## **4. Test Results**
 
@@ -258,6 +258,8 @@ Here's a more **human** readable output that's geared to assist in parameter sel
 
 Input this or your own base prompt, select the Midjourney parameters, and go through the categories and choose the style keywords you want for your image. Then copy the Key Prompt and input it into Midjourney. That's it!
 
+Visit [midjourneypromptmanager.com](https://midjourneypromptmanager.com) today to try out the new prompt strategy for yourself!
+
 ### Looking Ahead
 I remain committed to providing the best user experience for **Midjourney v7** (and beyond). Keep an eye out for the upcoming beta launch this month! I'm adding the ability to save prompts and images for easy organization and iteration of your content and campaign images.
 
@@ -266,5 +268,5 @@ In the meantime, let us know your thoughts:
 
 **Happy prompting!**
 
-Visit [midjourneypromptmanager.com](https://midjourneypromptmanager.com) today to try out the new prompt strategy for yourself!
+
 
