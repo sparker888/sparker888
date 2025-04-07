@@ -33,12 +33,12 @@ I embarked on a series of experiments to compare prompts:
 - **Original, unstructured keyword lists** – base prompt with simple, comma-separated keywords (minimal context).
 - **New descriptive approach** – weaving user inputs into a short, coherent sentence or two after the base prompt (followed by parameters).
 
-I tested each approach against **Midjourney v7** (and sometimes v6.1) using the exact same parameters like `--stylize` and `--chaos` (note that v7 doesn't allow `--werird`). My primary goals were **realism**, **visual consistency**, **clarity of style** and an overall final pleasing image.
+I tested each approach against **Midjourney v7** (and sometimes v6.1) using the exact same parameters like `--stylize` and `--chaos` (note that v7 doesn't allow `--weird`). My primary goals were **realism**, **visual consistency**, **clarity of style** and an overall final pleasing image.
 
 ### Key Observations
 
 1. **Flowing Descriptions** sometimes produce **more diverse** color palettes and smoother transitions.
-2. **Keyword-Style Prompts** can yield **bold, uniform** styling or color emphasis, especially at higher `--stylize` or `--c`.
+2. **Keyword-Style Prompts** can yield **bold, uniform** styling or color emphasis, especially at higher `--stylize` or `--chaos`.
 3. **No Single Format** is *always* best. Each approach might be more suitable depending on your creative vision. However, in general, I found that **flowing descriptions** produced more desirable results.
 
 ## **2. The New Strategy**
@@ -52,7 +52,7 @@ After poring over test images and ChatGPT o1 pro feedback, I’ve **updated the 
      in a futuristic, cinematic style, viewed from a top-down angle, shot on IMAX...
      ```
 3. **Append** any special **Midjourney parameters** at the end (e.g., `--v 7 --ar 1:1`), ensuring no duplicates.
-4. **Avoid over-labeling** (like “Theme: …” or “Mood: …”) which can sometimes dilute emphasis (one strategy I tested).
+4. **Avoid over-labeling** (like “Theme: …” or “Mood: …”) which can sometimes dilute emphasis (another prompt strategy I tested).
 
 This approach still clarifies user choices but **presents** them to Midjourney in a succinct, natural way that helps speed up prompt creation and future iteration to maintain image consistency. This is particularly important now that Midjourney v7 does not support srefs.
 
@@ -60,9 +60,9 @@ This approach still clarifies user choices but **presents** them to Midjourney i
 
 Here’s a sample Midjourney Prompt Manager output I used in one test (notice it's more natural language throughout compared to older prompts the app produced prior to the v7 alpha launch):
 
-A hidden valley inhabited by ethereal creatures. The environment has a whimsical, otherworldly ambiance, with vibrant alien flora. Soft morning light at dawn casts subtle glimmers, while a surreal dreamlike aura envelops the entire scene in a magical realism, ethereal style, viewed from a low angle shot, shot on canon eos 5d mark iv, dawn lighting, at sunrise, with a fantasy vibe, accented by holographic glow, god rays, featuring vibrant colors, polychromatic, emerald green, gold, mint, teal, pastel colors, with flowing fabric, translucent, chromatic aberration, bioluminescence, phosphorescence effects –v 7 –ar 16:9 –c 30 –s 500
+A hidden valley inhabited by ethereal creatures. The environment has a whimsical, otherworldly ambiance, with vibrant alien flora. Soft morning light at dawn casts subtle glimmers, while a surreal dreamlike aura envelops the entire scene in a magical realism, ethereal style, viewed from a low angle shot, shot on canon eos 5d mark iv, dawn lighting, at sunrise, with a fantasy vibe, accented by holographic glow, god rays, featuring vibrant colors, polychromatic, emerald green, gold, mint, teal, pastel colors, with flowing fabric, translucent, chromatic aberration, bioluminescence, phosphorescence effects -–ar 16:9 -–v 7 -–s 500 -–c 30 
 
-**In short**, it’s the same attributes as the short comma-separated list of keywords that I originally used, but rephrased into a coherent sentence.
+**In short**, it’s the same attributes as the short comma-separated list of keywords that was originally used, but rephrased into a coherent sentence. Let's take a look at some examples.
 
 ## **4. Test Results**
 
