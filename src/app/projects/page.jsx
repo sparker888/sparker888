@@ -3,8 +3,9 @@ import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoGravital from '@/images/logos/gravital-icon.png'
-import logoMidjourney from '@/images/logos/midjourney-icon.png'
-import logoWRI from '@/images/logos/wri-2024-icon.png'
+import logoMidjourney from '@/images/logos/key-prompt-ninja-avatar-250round-trans.png'
+import logoWRI2025HH from '@/images/logos/WRI25HH-icon.png'
+import logoWRI2025RT from '@/images/logos/WRI25RT-icon.png'
 import logoWRS from '@/images/logos/wrs-icon.png'
 import logoTTC from '@/images/logos/ttc-icon.png'
 import logoPrestonStudios from '@/images/logos/preston-studios-icon.png'
@@ -12,7 +13,7 @@ import logoPrestonStudios from '@/images/logos/preston-studios-icon.png'
 const projects = [
   {
     name: 'Gravital Digital',
-    description: 'Creating LIGHT. SPEED. websites and apps.',
+    description: 'Creating Light. Speed.✨ websites and apps.',
     link: {
       href: 'https://gravitaldigital.com/',
       label: 'gravitaldigital.com',
@@ -21,7 +22,7 @@ const projects = [
   },
   {
     name: 'Midjourney Prompt Manager',
-    description: 'Helping marketing pros manage Midjourney prompts and images.',
+    description: 'Helping marketing pros create and manage Midjourney prompts and images.',
     link: {
       href: 'https://midjourneypromptmanager.com/',
       label: 'midjourneypromptmanager.com',
@@ -31,7 +32,7 @@ const projects = [
   {
     name: 'Wheel Rail Seminars',
     description:
-      'The pro team I work with that produces WRI and other rail industry events.',
+      'The team I work with that produces WRI and other rail industry events.',
     link: {
       href: 'https://wheel-rail-seminars.com/',
       label: 'wheel-rail-seminars.com',
@@ -39,14 +40,24 @@ const projects = [
     logo: logoWRS,
   },
   {
-    name: 'Wheel/Rail Interaction (WRI)',
+    name: 'WRI 2025 Heavy Haul / Kansas City',
     description:
-      'The premier rail engineering event produced by Wheel Rail Seminars.',
+      'The premier heavy haul rail engineering event produced by Wheel Rail Seminars.',
     link: {
-      href: 'https://wri.wheel-rail-seminars.com/',
-      label: 'wri.wheel-rail-seminars.com',
+      href: 'https://wri2025hh.wheel-rail-seminars.com/',
+      label: 'wri2025hh.wheel-rail-seminars.com',
     },
-    logo: logoWRI,
+    logo: logoWRI2025HH,
+  },
+   {
+    name: 'WRI 2025 Rail Transit / Seattle',
+    description:
+      'The premier rail transit engineering event produced by Wheel Rail Seminars.',
+    link: {
+      href: 'https://wri2025hh.wheel-rail-seminars.com/',
+      label: 'wri2025hh.wheel-rail-seminars.com',
+    },
+    logo: logoWRI2025RT,
   },
   {
     name: 'Preston Studios',
@@ -54,13 +65,6 @@ const projects = [
       'Internationally recognized stained glass art studio and long-time client.',
     link: { href: 'https://prestonstudios.com/', label: 'prestonstudios.com' },
     logo: logoPrestonStudios,
-  },
-  {
-    name: 'TTC Conference & Tour',
-    description:
-      'ENSCO Rail conference and tour of the Transportation Technology Center.',
-    link: { href: 'https://lambent-toffee-127570.netlify.app/', label: 'ttc-conference.com' },
-    logo: logoTTC,
   },
 ]
 
@@ -92,20 +96,20 @@ export default function Projects() {
       >
         {projects.map((project) => (
           <Card as="li" key={project.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-slate-800/5 ring-1 ring-slate-900/5 dark:border dark:border-slate-700/50 dark:bg-slate-800 dark:ring-0">
+            <div className="relative z-10 flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md shadow-slate-800/5 ring-1 ring-slate-900/5 dark:border dark:border-slate-700/50 dark:bg-slate-800 dark:ring-0">
               <Image
                 src={project.logo}
                 alt=""
-                className="h-8 w-8"
+                className="w-8 h-8"
                 unoptimized
               />
             </div>
-            <h2 className="mt-6 text-base font-display font-extrabold italic text-slate-800 dark:text-slate-100">
+            <h2 className="mt-6 text-base italic font-extrabold font-display text-slate-800 dark:text-slate-100">
               <Card.Link href={project.link.href}>{project.name}</Card.Link>
             </h2>
             <Card.Description>{project.description}</Card.Description>
-            <p className="relative z-10 mt-6 flex text-sm font-medium text-slate-400 transition group-hover:text-amber-500 dark:text-slate-200">
-              <LinkIcon className="h-6 w-6 flex-none" />
+            <p className="relative z-10 flex mt-6 text-sm font-medium transition text-slate-400 group-hover:text-amber-500 dark:text-slate-200">
+              <LinkIcon className="flex-none w-6 h-6" />
               <span className="ml-2">{project.link.label}</span>
             </p>
           </Card>

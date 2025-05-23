@@ -26,8 +26,8 @@ module.exports = {
     typography: typographyStyles,
     extend: {
       backgroundImage: {
-        'light-pattern': "url('/images/light-nebula-background.jpg')",
-        'dark-pattern': "url('/images/dark-nebula-background.jpg')",
+        'light-pattern': "url('/images/light-background.png')",
+        'dark-pattern': "url('/images/dark-background.png')",
         'light-nav-pattern': "url('/images/light-nav-background.jpg')",
         'dark-nav-pattern': "url('/images/dark-nav-background.jpg')",
       },
