@@ -62,7 +62,7 @@ The heart of MPM is its prompt editor. What started as a simple prompt builder f
 ### Custom Accordion System with Style Badges
 Claude helped transform standard HTML checkboxes and radio buttons into an elegant accordion-based interface:
 
-```astro
+```jsx
 <!-- Before: Basic checkboxes -->
 <input type="checkbox" id="cyberpunk" name="theme" value="cyberpunk">
 <label for="cyberpunk">Cyberpunk</label>
@@ -109,7 +109,7 @@ The style system includes:
 One of Astro's most powerful features is View Transitions, which create smooth, app-like navigation without full page reloads. Claude helped implement these transitions specifically for the gallery system, creating an exceptionally polished user experience.
 
 ### Gallery-to-Detail Transition Implementation
-```astro
+```jsx
 <!-- Gallery card with transition names -->
 <a href={`/public/prompts/${prompt.id}`} 
    transition:name={`prompt-${prompt.id}`}
@@ -151,7 +151,7 @@ document.addEventListener('astro:after-swap', () => {
 ```
 
 **Issue #2: State Persistence**
-```astro
+```jsx
 <!-- Problem: Form state lost during navigation -->
 <!-- Claude's Solution: Use transition:persist -->
 <div transition:persist="gallery-filters">
@@ -241,7 +241,7 @@ Claude helped design this complex schema by understanding the requirements and g
 ### Component Architecture Evolution
 Working with Claude, we transformed simple list components into sophisticated gallery systems:
 
-```astro
+```jsx
 <!-- Before: Basic task list -->
 <div class="task-list">
   {tasks.map(task => (
@@ -402,7 +402,7 @@ export async function handleStripeWebhook(event: Stripe.Event) {
 Working with Claude, we optimized for performance from day one:
 
 **Image Optimization Strategy:**
-```astro
+```jsx
 <!-- Optimized image loading with Claude's guidance -->
 <picture>
   <source
@@ -425,7 +425,7 @@ Working with Claude, we optimized for performance from day one:
 ```
 
 **Astro View Transitions:**
-```astro
+```jsx
 <!-- Smooth gallery navigation with Claude's implementation -->
 <a href={`/public/prompts/${prompt.id}`} 
    transition:name={`prompt-${prompt.id}`}
