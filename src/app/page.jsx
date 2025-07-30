@@ -314,10 +314,10 @@ export default async function Home() {
             </Link>
             , write articles about my Light. Speed.✨ philosophy like{' '}
             <Link
-              href="/articles/light-speed-5"
+              href="/articles/light-speed-6"
               className="text-amber-500 hover:underline"
             >
-              Building a Landing Page with Perfect 100 Scores in 100 Hours
+              A Full-featured Application in 30-days with Claude AI
             </Link>
             , and support 🧭 Midjourney AI image creators with an app called{' '}
             <Link
