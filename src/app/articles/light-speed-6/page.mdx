@@ -31,18 +31,18 @@ Today, I'm sharing something extraordinary: how I built a sophisticated web appl
 
 What started as a simple online prompt editor in 2023 evolved into my dream project—**Midjourney Prompt Manager (MPM)**—a sophisticated SaaS platform for creating, managing, and sharing Midjourney AI image generation prompts. This wasn't just a feature addition; it was a complete online systems architecture requiring:
 
-- **Database Schema** with 11 PocketBase collections
+- **Database Schema** with 11 collections and complex relationships
 - **UI/UX Design System** from prompt editor to project & team management to galleries
 - **Rich User Features** from basic prompt management to advanced team collaboration
 - **Payment Integration** with 5-tier Stripe subscription model and discount codes
-- **Public Gallery System** with rating, filtering, and user profiles
+- **Public Gallery System** with rating, filtering, and user profiles & galleries
 
 And, of course, to make it as fast as possible, it had to use a lightweight framework. Again, I reached for some of the fastest and lightest tools for the job:
 
-- **Astro** delivers the best of both worlds—lightning-fast static sites with interactive islands that hydrate only when needed
-- **htmx** provides AJAX, CSS Transitions, and WebSockets—it completes HTML as a hypertext  
+- **Astro** delivers the best of both worlds—lightning-fast static sites with interactive islands that hydrate only when needed (more than just for static content)
+- **htmx** provides AJAX, CSS Transitions, and WebSockets—it completes HTML as a hypertext  (this library truly has super powers)
 - **Alpine.js** a rugged, minimal tool for composing behavior directly in markup
-- **Tailwind CSS** - I couldn't really go without mentioning another serious tool in the arsenal: utility-first styling that makes design systems scale without the CSS bloat
+- **Tailwind CSS** - I couldn't really go without mentioning another serious tool in the arsenal not in my graphic below: utility-first styling that makes design systems scale without the CSS bloat
 
 <Image src={require('./02-astro-htmx-alpine.png')} alt="Astro, HTMX, and Alpine.js logos - the powerful trio for modern web development" />
 
