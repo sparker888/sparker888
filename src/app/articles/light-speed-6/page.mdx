@@ -17,23 +17,30 @@ export const metadata = {
 
 export default (props) => <ArticleLayout article={article} {...props} />
 
-<Image src={storyBanner} alt="Light. Speed.✨: Claude AI Development in Action" />
+<Image src={storyBanner} alt="Light. Speed.✨: Claude AI Development in Action (Part 1)" />
 
-## Light. Speed.✨: Claude AI Development in Action
+## Light. Speed.✨: Claude AI Development in Action (Part 1 of 2)
 
 Welcome to the sixth installment of my **Light. Speed. Series!** 
 
-In [previous articles](https://sparker888.com/articles/light-speed-5), we've explored high-performance web development with Astro, Tailwind CSS 4, and modern deployment strategies. Today, I'm sharing something extraordinary: how I built a fairly sophisticated web application in just 30 days using Claude AI as my development partner.
+In [previous articles](https://sparker888.com/articles/light-speed-5), we've explored high-performance web development with Astro, Tailwind CSS 4, and modern deployment libraries and serving strategies. Today, I'm sharing something extraordinary: how I built a sophisticated web application in just 30 days using Claude AI as my development partner.
 
-### The Challenge: Complete Application Transformation
+### The Challenge: A Complete Light. Speed.✨ Application in 30 Days
 
-What started as a simple online prompt editor became the **Midjourney Prompt Manager (MPM)**—a sophisticated SaaS platform for creating, managing, and sharing Midjourney AI image generation prompts. This wasn't just a feature addition; it was a complete architectural transformation requiring:
+What started as a simple online prompt editor in 2023 evolved into my dream project—**Midjourney Prompt Manager (MPM)**—a sophisticated SaaS platform for creating, managing, and sharing Midjourney AI image generation prompts. This wasn't just a feature addition; it was a complete online systems architecture requiring:
 
-- **Database schema redesign** with 11 PocketBase collections
-- **UI/UX overhaul** from prompt projects to visual prompt galleries  
-- **Feature expansion** from basic CRUD to advanced team collaboration
-- **Payment integration** with 5-tier Stripe subscription model
-- **Public gallery system** with rating, search, and artist profiles
+- **Database Schema** with 11 PocketBase collections
+- **UI/UX Design System** from prompt editor to project & team management to galleries
+- **Rich User Features** from basic prompt management to advanced team collaboration
+- **Payment Integration** with 5-tier Stripe subscription model and discount codes
+- **Public Gallery System** with rating, filtering, and user profiles
+
+And, of course, to make it as fast as possible, it had to use a lightweight framework. Again, I reached for some of the fastest and lightest tools for the job:
+
+- **Astro** delivers the best of both worlds—lightning-fast static sites with interactive islands that hydrate only when needed
+- **htmx** provides AJAX, CSS Transitions, and WebSockets—it completes HTML as a hypertext  
+- **Alpine.js** a rugged, minimal tool for composing behavior directly in markup
+- **Tailwind CSS** - I couldn't really go without mentioning another serious tool in the arsenal: utility-first styling that makes design systems scale without the CSS bloat
 
 <Image src={require('./02-astro-htmx-alpine.png')} alt="Astro, HTMX, and Alpine.js logos - the powerful trio for modern web development" />
 
@@ -49,25 +56,34 @@ Working with Claude AI fundamentally changed my development approach. Instead of
 
 Claude handled:
 - **Code Generation**: Components, API endpoints, database schemas
-- **Problem Solving**: Debug complex integration issues
+- **Problem Solving**: Debugging complex editor, prompt management and integration issues
 - **Pattern Recognition**: Consistent coding patterns across the codebase
-- **Documentation**: Comprehensive guides for every implementation phase
+- **Documentation**: Comprehensive guides for every implementation phase (including detailed debugging notes)
 
 <Image src={require('./02-claude-partnership.png')} alt="Screenshot of Claude AI helping with complex database schema design" />
 
-## 2. Editor Evolution: From Basic Form to Interactive Experience
+## 2. Editor Evolution: From Basic to Advanced Prompt Editor
 
-The heart of MPM is its prompt editor. What started as a simple prompt builder from 2023 needed a complete overhaul to match modern UX expectations and handle the complexity of Midjourney's extensive parameter system.
+The heart of MPM is its prompt editor. What started as a simple prompt builder from 2023 needed a complete overhaul to match modern UX expectations and handle the complexity of Midjourney Prompt Manager's intricate prompt, project and team management systems.
 
-### Custom Accordion System with Style Badges
-Claude helped transform standard HTML checkboxes and radio buttons into an elegant accordion-based interface:
+### Editor: Enhanced Midjourney Parameters
+First, Claude helped me formulate a look and feel for the application. We developed what I call "Glass Morphism"—a design language with a sophisticated color scheme much improved from the original editor styling. It's easy on the eyes (dark theme) and has an interesting animated background with many semi-transparent containers as can be seen here in the Midjourney Parameters area:
+
+<Image src={require('./parameters-area.webp')} alt="Screenshot of the Midjourney Parameters area with Glass Morphism Design" />
+
+In addition to the theme, improvements to the UX were made such as adding a graphic that changes to represent the outline of the aspect ratio of the image (square here).
+
+### Editor: Custom Accordion System with Style Badges
+Claude helped transform standard HTML checkboxes and radio buttons into an elegant accordion-based interface. The initial editor didn't hide the style areas, and it was a UX issue as users had a lot of scrolling to do. Here, you can see that same glass morphism design combined with the full range color palette that matches the colors of the sidebar icons that enable users to quickly go to the section that they need:
+
+<Image src={require('./cyberpunk-accordions.webp')} alt="Screenshot of the Midjourney Parameters area with Glass Morphism Design" />
 
 ```jsx
-<!-- Before: Basic checkboxes -->
-<input type="checkbox" id="cyberpunk" name="theme" value="cyberpunk">
+{/* Before: Basic checkboxes */}
+<input type="checkbox" id="cyberpunk" name="theme" value="cyberpunk" />
 <label for="cyberpunk">Cyberpunk</label>
 
-<!-- After: Custom accordion with style badges -->
+{/* After: Custom accordion with style badges */}
 <div class="accordion-section" data-category="theme">
   <button class="accordion-trigger glass-morphism" 
           onclick="toggleAccordion(this)">
@@ -80,16 +96,21 @@ Claude helped transform standard HTML checkboxes and radio buttons into an elega
     <svg class="accordion-icon">...</svg>
   </button>
   <div class="accordion-content">
-    <!-- Interactive style grid -->
+    {/* Interactive style grid */}
   </div>
 </div>
 ```
 
-The new system features:
-- **Glass morphism design** with backdrop blur and transparency
+### Editor: Built-in Team and Project Management Tools
+Claude helped integrate a Prompt Management panel at the top of the new in-app editor, enabling team selection, dynamic project selection and on-the-fly project creation in a sleek glass morphism interface (with a pulsing background effect to bring it to life):
+
+<Image src={require('./prompt-control-panel.webp')} alt="Screenshot of the Midjourney Parameters area with Glass Morphism Design" />
+
+The enhanced system features:
+- **Glass morphism design** with backdrop blur and transparency effects
 - **Visual style badges** showing selected options at the top of each accordion
-- **Smooth animations** powered by Alpine.js for expand/collapse
-- **Intuitive organization** with 17 style categories and 1,300+ options
+- **Smooth animations** powered by Alpine.js for expand/collapse interactions
+- **Intuitive organization** with 17 style categories and 1,300+ style options
 
 <Image src={require('./03-editor-upgrade.png')} alt="Modern prompt editor with custom accordions and glass morphism design" />
 
@@ -108,9 +129,16 @@ The style system includes:
 
 One of Astro's most powerful features is View Transitions, which create smooth, app-like navigation without full page reloads. Claude helped implement these transitions specifically for the gallery system, creating an exceptionally polished user experience.
 
+<Image src={require('./04-gallery-new.webp')} alt="Gallery view showing grid of AI-generated prompt images" />
+
+### Midjourney Prompt Detail Pages
+When users click from the gallery to a prompt detail page, the transition focuses on the image, creating a zoom-like effect that maintains visual continuity:
+
+<Image src={require('./page-transitions.webp')} alt="Prompt detail page showing large image with smooth transition animation" />
+
 ### Gallery-to-Detail Transition Implementation
 ```jsx
-<!-- Gallery card with transition names -->
+{/* Gallery card with transition names */}
 <a href={`/public/prompts/${prompt.id}`} 
    transition:name={`prompt-${prompt.id}`}
    class="gallery-card">
@@ -126,481 +154,114 @@ One of Astro's most powerful features is View Transitions, which create smooth, 
 </a>
 ```
 
-<Image src={require('./04-gallery.jpeg')} alt="Gallery view showing grid of AI-generated prompt images" />
+## 4. Development Time: 4 Months Compressed into 30 Days
 
-### Image-Focused Detail Pages
-When users click from the gallery to a prompt detail page, the transition focuses on the image, creating a zoom-like effect that maintains visual continuity:
+What would normally be a 4-month project was compressed into 30 days due to several key factors. Claude AI was by far the biggest contributor, primarily due to the AI's ability to add troubleshooting code in place and iterate through different solutions much faster than a human developer could. This was multiplied by following a proven tool stack that minimized architectural complexity.
 
-<Image src={require('./04-public-prompts.jpeg')} alt="Prompt detail page showing large image with smooth transition animation" />
+Finally, there was the human element. I had been planning this project for months and prepared general architecture notes, example code, had a version 1.0 editor built, and pre-produced images and marketing content in advance. I worked every day of those 30 days, with several sessions burning the midnight oil.
 
-### Troubleshooting Transition Issues with Claude
-Claude proved invaluable in debugging common View Transition problems that emerged during development:
-
-**Issue #1: JavaScript Event Loss**
-```typescript
-// Problem: Event listeners lost during transitions
-// Claude's Solution: Use astro:after-swap event
-document.addEventListener('astro:after-swap', () => {
-  // Reinitialize Alpine.js
-  Alpine.initTree(document.body);
-  
-  // Reinitialize custom event handlers
-  initializeGallery();
-  setupRatingStars();
-});
-```
-
-**Issue #2: State Persistence**
-```jsx
-<!-- Problem: Form state lost during navigation -->
-<!-- Claude's Solution: Use transition:persist -->
-<div transition:persist="gallery-filters">
-  <select id="sort-filter">
-    <option value="recent">Most Recent</option>
-    <option value="rated">Top Rated</option>
-  </select>
-</div>
-```
-
-**Issue #3: Animation Conflicts**
-Claude helped identify and resolve CSS animation conflicts between View Transitions and custom animations, ensuring smooth performance across all browsers.
-
-## 4. Phase-Based Development: 12 Major Transformations
+<Image src={require('./03-development-phases.webp')} alt="Visual timeline showing 12 development phases over 30 days" />
 
 The 30-day development cycle was organized into 12 distinct phases, each documented and completed with Claude's assistance:
 
 ### Phase 1-3: Foundation (Days 1-7)
 **Database Schema & Authentication**
-- Converted task management to prompt management schema
+- Created the entire project database schema
 - Implemented Google OAuth 2.0 integration  
 - Created user profile system with portfolio features
 
 ### Phase 4-6: Core Features (Days 8-15)  
 **Prompt Management & Image System**
 - Built dual editor system (free homepage + premium app)
-- Implemented multi-image upload with S3 integration
-- Created responsive gallery system with Astro View Transitions
+- Implemented prompt management pages with multi-image S3 upload and Amazon CloudFront integration
+- Created responsive gallery system with Astro View Transitions & 5-star ratings
 
 ### Phase 7-9: Advanced Features (Days 16-23)
 **Team Collaboration & Search**
-- Team management with role-based permissions
+- Team management with activity tracking
 - Advanced search with Fuse.js implementation
-- Project organization with hashtag support
+- Project organization with hashtag support and search filters
 
 ### Phase 10-12: Polish & Launch Prep (Days 24-30)
 **Payment Integration & Performance**
 - Stripe subscription system with usage tracking
-- Public gallery with rating system and artist profiles  
-- Performance optimization achieving great Lighthouse scores
+- Integrated dub.co shortlinks with social meta tags & UTM tracking  
+- Performance optimization achieving 83/94/100/100 Lighthouse scores
 
-<Image src={require('./03-development-phases.png')} alt="Visual timeline showing 12 development phases over 30 days" />
+## 5. What This Means for Your Business
 
-## 5. Key Technical Achievements with Claude
+AI tools like Claude aren't perfect yet—just like Midjourney's AI images—but they're remarkably effective. Smart developers will leverage these tools to save you both time and money.
 
-### Database Architecture Transformation
-```typescript
-// Before: Simple task management
-interface Task {
-  id: string;
-  title: string;
-  status: 'todo' | 'done';
-  project: string;
-}
+<Image src={require('./omg-amazzing.webp')} alt="Visual timeline showing 12 development phases over 30 days" />
 
-// After: Complex prompt management with Claude's help
-interface Prompt {
-  id: string;
-  user: string;
-  team?: string;
-  project: string;
-  title: string;
-  base_prompt: string;
-  full_prompt: string;
-  parameters: {
-    aspect_ratio: string;
-    version: string;
-    quality: number;
-    stylize: number;
-    // ... 15+ Midjourney parameters
-  };
-  style_selections: {
-    theme: string[];
-    mood: string[];
-    lighting: string[];
-    // ... 17 style categories with 1,300+ options
-  };
-  images: PromptImage[];
-  visibility: 'public' | 'private' | 'team';
-  rating: number;
-  featured: boolean;
-}
-```
+### Hire AI-Savvy Developers!
 
-Claude helped design this complex schema by understanding the requirements and generating TypeScript types, PocketBase collection rules, and data access patterns.
+Claude helped design this complex project, but understanding requirements and translating them into architecture, logic, and UX requires a skilled professional. However, many tasks are perfect for AI LLMs—Claude Opus 4 is specifically trained for these challenges. In my case, Claude excelled at generating TypeScript types, defining PocketBase collection rules, and creating data access patterns. It saved me dozens of hours on coding and debugging throughout the Midjourney Prompt Manager development.
 
-### Component Architecture Evolution
-Working with Claude, we transformed simple list components into sophisticated gallery systems:
+### What Claude Means for Your Budget
+Working with Claude, I'm already seeing significant benefits from using AI for complex tasks. While it's not always faster than a human familiar with the codebase for basic content updates, Claude Opus 4 has become a major tool in my arsenal. I reach for it increasingly often as AI improves at coding—there's simply no reason not to. I estimate my output was 2x on this project compared to coding and debugging by hand (I can argue up to a 4x improvement in some areas though). That's substantial productivity gain that translates to competitive pricing for clients.
 
-```jsx
-<!-- Before: Basic task list -->
-<div class="task-list">
-  {tasks.map(task => (
-    <div class="task-item">
-      <h3>{task.title}</h3>
-      <button>Mark Done</button>
-    </div>
-  ))}
-</div>
+### What Claude Isn't (Yet)—I'll Be Real
+While I was amazed daily by Claude's capabilities, there were many unnecessary hours spent on code that Claude attempted to implement poorly. Sometimes it would create two systems handling the same logic. Occasionally it would modify component parts I didn't request, forcing me to backtrack.
 
-<!-- After: Advanced prompt gallery with Claude's assistance -->
-<div class="gallery-grid">
-  {prompts.map(prompt => (
-    <div class="prompt-card" transition:name={`prompt-${prompt.id}`}>
-      <div class="image-container">
-        <img src={getOptimizedImageUrl(prompt.thumbnail)} 
-             alt={prompt.title}
-             loading="lazy" />
-        <div class="rating-overlay">
-          <StarRating rating={prompt.rating} promptId={prompt.id} />
-        </div>
-      </div>
-      <div class="prompt-details">
-        <h3>{prompt.title}</h3>
-        <p class="author">by {prompt.user.name}</p>
-        <div class="parameters">
-          {prompt.parameters.aspect_ratio && (
-            <span class="param">--ar {prompt.parameters.aspect_ratio}</span>
-          )}
-        </div>
-      </div>
-    </div>
-  ))}
-</div>
-```
+More often than I care to admit, I felt like a babysitter watching a brilliant but impulsive child who couldn't stay focused. There were numerous times it would randomly switch contexts and start troubleshooting on the wrong branch (whoops!).
 
-<Image src={require('./04-component-evolution.png')} alt="Side-by-side comparison of task list vs. prompt gallery interface" />
+I'm not exaggerating. So yes, for now you still need a skilled web developer who knows the ropes. That said, web developers will become increasingly productive in the coming years (or months!).
 
-## 6. Advanced Features Built with Claude AI
-
-### Smart Image Management System
-Claude helped implement a sophisticated image system combining PocketBase and AWS S3:
-
-```typescript
-// Image optimization pipeline designed with Claude
-export async function uploadPromptImage(
-  file: File, 
-  promptId: string, 
-  isReference: boolean = false
-): Promise<PromptImage> {
-  // 1. Upload to PocketBase for quick access
-  const record = await pb.collection('prompt_images').create({
-    prompt: promptId,
-    is_reference: isReference,
-    // ... other fields
-  }, { file });
-
-  // 2. Background upload to S3 for optimization
-  await uploadToS3({
-    file,
-    key: `prompts/${promptId}/${record.id}`,
-    bucket: 'mpm-images',
-    transforms: {
-      thumbnail: '400x400',
-      medium: '800x800', 
-      large: '1200x1200'
-    }
-  });
-
-  return record;
-}
-```
-
-### Real-time Search with Fuse.js
-Claude implemented advanced search functionality that indexes prompt content, style selections, and metadata:
-
-```typescript
-// Search system designed with Claude's assistance
-const searchOptions = {
-  includeScore: true,
-  threshold: 0.3,
-  keys: [
-    { name: 'title', weight: 0.3 },
-    { name: 'base_prompt', weight: 0.4 },
-    { name: 'style_selections.theme', weight: 0.2 },
-    { name: 'parameters.tags', weight: 0.1 }
-  ]
-};
-
-const fuse = new Fuse(prompts, searchOptions);
-const results = fuse.search(query);
-```
-
-<Image src={require('./05-advanced-features.png')} alt="Screenshot of advanced search interface with filters and results" />
-
-## 7. Stripe Integration & Subscription System
-
-Working with Claude, we implemented a sophisticated 5-tier subscription system:
-
-### Subscription Tiers with Usage Tracking
-```typescript
-// Subscription system designed with Claude
-const PLANS = {
-  FREE: {
-    name: 'Starter',
-    price: 0,
-    limits: { prompts: 25, storage: '1GB', projects: 3 }
-  },
-  BASIC: {
-    name: 'Basic',
-    price: 9,
-    limits: { prompts: 100, storage: '5GB', projects: 10 }
-  },
-  PRO: {
-    name: 'Pro', 
-    price: 19,
-    limits: { prompts: 500, storage: '25GB', projects: 50 }
-  },
-  TEAM: {
-    name: 'Team',
-    price: 39,
-    limits: { prompts: 1000, storage: '100GB', projects: 100 }
-  },
-  ENTERPRISE: {
-    name: 'Enterprise',
-    price: 99,
-    limits: { prompts: -1, storage: '500GB', projects: -1 }
-  }
-};
-```
-
-### Automatic Billing and Upgrades
-Claude helped implement webhook handling for subscription management:
-
-```typescript
-// Stripe webhook handler with Claude's assistance
-export async function handleStripeWebhook(event: Stripe.Event) {
-  switch (event.type) {
-    case 'customer.subscription.created':
-    case 'customer.subscription.updated':
-      await updateTeamSubscription(event.data.object);
-      break;
-    case 'invoice.payment_succeeded':
-      await trackPaymentSuccess(event.data.object);
-      break;
-    case 'customer.subscription.deleted':
-      await handleSubscriptionCancellation(event.data.object);
-      break;
-  }
-}
-```
-
-<Image src={require('./06-subscription-system.png')} alt="Subscription pricing tiers and billing dashboard interface" />
-
-## 8. Performance Optimization & Deployment
-
-### Perfect Lighthouse Scores Achievement
-Working with Claude, we optimized for performance from day one:
-
-**Image Optimization Strategy:**
-```jsx
-<!-- Optimized image loading with Claude's guidance -->
-<picture>
-  <source
-    srcset={getCloudFrontUrl(image, { format: 'webp', width: 400 })}
-    type="image/webp"
-    media="(max-width: 640px)"
-  />
-  <source
-    srcset={getCloudFrontUrl(image, { format: 'webp', width: 800 })}
-    type="image/webp"
-    media="(max-width: 1024px)"
-  />
-  <img
-    src={getCloudFrontUrl(image, { format: 'jpeg', width: 800 })}
-    alt={prompt.title}
-    loading="lazy"
-    class="w-full h-auto"
-  />
-</picture>
-```
-
-**Astro View Transitions:**
-```jsx
-<!-- Smooth gallery navigation with Claude's implementation -->
-<a href={`/public/prompts/${prompt.id}`} 
-   transition:name={`prompt-${prompt.id}`}
-   class="prompt-link">
-  <img transition:name={`image-${prompt.id}`} 
-       src={prompt.thumbnail} 
-       alt={prompt.title} />
-</a>
-```
-
-### Production Deployment Architecture
-Claude helped design a robust deployment strategy:
-
-- **Frontend**: Netlify with automatic GitHub deployments
-- **Backend**: PocketHost for PocketBase hosting  
-- **Images**: AWS S3 + CloudFront for global CDN
-- **Payments**: Stripe with webhook validation
-- **Monitoring**: Error tracking and performance monitoring
-
-<Image src={require('./07-performance-lighthouse.png')} alt="Google Lighthouse perfect 100 scores across all metrics" />
-
-## 9. Documentation & Knowledge Transfer
-
-### Real-time Documentation Generation
-One of Claude's standout features was generating comprehensive documentation as we built:
-
-**Architecture Documentation:**
-- Database schema with relationships
-- API endpoint specifications
-- Component library documentation
-- Deployment and environment setup guides
-
-**Development Guides:**
-- Setup instructions for new developers
-- Testing strategies and workflows
-- Performance optimization techniques
-- Security best practices
-
-**User Documentation:**
-- Feature usage guides
-- Subscription management
-- Team collaboration workflows
-- Troubleshooting common issues
-
-### Living Codebase Knowledge
-Claude maintained context across the entire 30-day development cycle, remembering architectural decisions, implementation patterns, and ongoing challenges. This created a "living knowledge base" that could:
-
-- Explain complex architectural decisions
-- Suggest improvements based on established patterns
-- Identify potential issues before they became problems
-- Provide consistent code quality across all features
-
-<Image src={require('./08-documentation-system.png')} alt="Comprehensive documentation structure generated by Claude AI" />
-
-## 10. Development Velocity & Quality Metrics
-
-### Productivity Achievements
-Working with Claude AI dramatically increased development velocity:
-
-**Code Generation Speed:**
-- **Component Creation**: 10x faster than manual development
-- **API Endpoints**: Generated with proper error handling and validation
-- **Database Operations**: Complex queries written and optimized automatically
-- **TypeScript Types**: Perfect type safety across the entire application
-
-**Quality Improvements:**
-- **Consistent Patterns**: Claude maintained coding standards across all files
-- **Error Handling**: Comprehensive error management built-in
-- **Security**: Best practices implemented by default
-- **Performance**: Optimization techniques applied consistently
-
-**Traditional Development Estimate:** 3-4 months  
-**Actual Development Time:** 30 days  
-**Velocity Improvement:** 300-400%
-
-### Code Quality Metrics
-```typescript
-// Example of Claude's consistent error handling pattern
-export async function createPrompt(data: CreatePromptData): Promise<Prompt> {
-  try {
-    const prompt = await pb.collection('prompts').create(data);
-    
-    // Auto-generate activity log
-    await logActivity({
-      type: 'prompt_created',
-      user: data.user,
-      team: data.team,
-      details: { promptId: prompt.id, title: data.title }
-    });
-    
-    return prompt;
-  } catch (error) {
-    console.error('Failed to create prompt:', error);
-    throw new Error('Unable to create prompt. Please try again.');
-  }
-}
-```
-
-<Image src={require('./09-velocity-metrics.png')} alt="Development velocity comparison: traditional vs Claude AI assisted development" />
-
-## 11. Lessons Learned & Best Practices
-
-### Working Effectively with Claude AI
-
-**1. Clear Communication is Essential**
-- Provide detailed context and requirements
-- Be specific about architectural constraints
-- Explain business logic and user experience goals
-
-**2. Iterative Development Works Best**
-- Start with MVP implementations
-- Refine based on testing and feedback
-- Build complexity gradually
-
-**3. Maintain Human Oversight**
-- Review all generated code for business logic accuracy
-- Test thoroughly, especially edge cases
-- Validate security and performance implications
-
-**4. Leverage Claude's Strengths**
-- Code generation and boilerplate elimination
-- Pattern recognition and consistency
-- Documentation and explanation
-- Problem-solving and debugging assistance
-
-### What Claude Excels At
-- **Rapid prototyping** and MVP development
-- **Code consistency** across large codebases
-- **Complex integrations** (Stripe, AWS, authentication)
-- **Documentation generation** and knowledge transfer
-- **Debugging assistance** and error resolution
-
-### Where Human Expertise Remains Critical
-- **Product strategy** and user experience design
-- **Business logic validation** and edge case handling
-- **Performance monitoring** and optimization decisions
-- **Security review** and compliance requirements
-- **Final testing** and quality assurance
-
-<Image src={require('./10-best-practices.png')} alt="Best practices diagram for human-AI collaboration in software development" />
+<Image src={require('./hire-a-pro.webp')} alt="Side-by-side comparison of task list vs. prompt gallery interface" />
 
 ## Summary
 
-Building the Midjourney Prompt Manager with Claude AI demonstrated the transformative potential of human-AI collaboration in software development. In just 30 days, we achieved what would traditionally take 3-4 months, while maintaining high code quality and implementing sophisticated features.
+Building Midjourney Prompt Manager in just 30 days with Claude AI was an extraordinary journey that demonstrated the transformative power of human-AI collaboration. This first part covered the foundation: the development partnership, the evolution from basic to advanced editor features, and the remarkable development velocity achieved.
 
-### Key Takeaways:
+### Key Highlights from Part 1:
 
-- **AI as Development Partner**: Claude AI excels as a coding partner, not a replacement for human expertise
-- **Accelerated Development**: 300-400% velocity improvement with maintained quality
-- **Comprehensive Solutions**: Complex integrations (Stripe, AWS, authentication) built efficiently
-- **Living Documentation**: Real-time documentation generation and maintenance
-- **Pattern Consistency**: Automatic adherence to coding standards across large codebases
-- **Quality Maintenance**: Proper error handling and security practices built-in by default
+**The Partnership Model:**
+- Claude AI served as a sophisticated development partner, not just a code generator
+- Strategic planning by humans, implementation partnership with AI
+- Real-time documentation and continuous feedback loops
 
-### Technical Achievements:
-- **11 PocketBase Collections** with complex relationships
-- **5-Tier Subscription System** with Stripe integration
-- **Advanced Gallery System** with search, rating, and team collaboration
-- **AWS S3 + CloudFront** image optimization pipeline
-- **Perfect Lighthouse Scores** (100/100/100/100)
-- **Mobile-Responsive Design** with Astro View Transitions
+**Editor Evolution:**
+- Transformed a basic 2023 prompt builder into a modern, feature-rich editor
+- Glass morphism design system with custom accordions
+- 17 style categories with 1,343+ options elegantly organized
+- Integrated team and project management tools
 
-### Business Impact:
-- **Reduced Development Costs** by 60-70%
-- **Faster Time-to-Market** from months to weeks
-- **Higher Code Quality** through consistent patterns
-- **Comprehensive Documentation** for team knowledge transfer
-- **Scalable Architecture** ready for production deployment
+**Development Acceleration:**
+- Compressed 4 months of work into 30 days
+- 12 development phases systematically executed
+- Maintained high code quality while achieving up to 4x productivity
+
+**Technical Foundation:**
+- Astro + htmx + Alpine.js + Tailwind CSS for lightning-fast performance
+- Sophisticated view transitions for app-like user experience
+- PocketBase backend with 11 collections
+- AWS S3 + CloudFront for image optimization
 
 ## What's Next in the Light. Speed.✨ Series?
 
-The next article will explore **AI-Enhanced User Experience Design**, where I'll show how to use Claude AI for creating intuitive interfaces, user journey optimization, and conversion rate improvements.
+In part two of this article (launching next month), I'll dive deep into:
 
-The future of web development isn't about AI replacing developers—it's about developers partnering with AI to build better software faster than ever before.
+**Advanced Features & Implementation Details:**
+- The complete image management system with AWS S3 and CloudFront
+- Real-time search implementation with Fuse.js
+- Stripe subscription system with 5 tiers and webhook handling
+- Team collaboration features and activity tracking
+
+**Production Performance & Metrics:**
+- How I achieved 79/96/100/100 Lighthouse scores (still optimizing)
+- Deployment architecture across Netlify, PocketHost, and AWS
+- Performance optimization strategies that deliver sub-200ms response times
+- Real-world usage metrics and scalability considerations
+
+**Lessons Learned & Best Practices:**
+- What Claude AI excels at (and where human expertise remains critical)
+- Development velocity metrics showing massive output improvement
+- Code quality patterns that emerged from AI collaboration
+- Documentation strategies for AI-assisted development
+
+Don't miss the technical deep dive that shows exactly how I built production-ready features with Claude AI as a development partner!
 
 Feel free to reach out at [sparker888@gmail.com](mailto:sparker888@gmail.com), visit the live [Midjourney Prompt Manager](https://2025-mpm.netlify.app), and follow me on [LinkedIn](https://www.linkedin.com/in/sparker888) and [X/Twitter](https://x.com/sparker888).
 
-*Ready to transform your development workflow with AI? The future is here—and it's incredibly fast.* ✨
+*Ready to transform your web presence with AI? The future is here—and it's incredibly fast.* ✨
