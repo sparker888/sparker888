@@ -338,16 +338,20 @@ export default async function Home() {
             <Link
               href="https://gravitaldigital.com/"
               className="text-amber-500 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Gravital Digital
             </Link>
-            , specializing in AI-assisted development that compresses traditional timelines. My passion is delivering incredible value that delights clients.{' '}
+            . My passion is delivering incredible value that delights clients.{' '}
             </p>
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
             <em>Recent win:</em>  Here's a{' '}
             <Link
               href="https://gravital-wri-case-study.netlify.app/"
               className="text-amber-500 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Jamstack redesign case study{' '}
             </Link>
@@ -365,6 +369,8 @@ export default async function Home() {
             <Link
               href="https://midjourneypromptmanager.com/"
               className="text-amber-500 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Midjourney Prompt Manager{' '}
             </Link>
@@ -376,11 +382,12 @@ export default async function Home() {
             <Link
               href="https://www.youtube.com/@remote-solopreneur"
               className="text-amber-500 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               YouTube channel{' '}
             </Link>
-            and join in on a more relaxed (and better on the budget)
-            lifestyle outside the U.S.
+            .
           </p>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
             Ready to build something fast?{' '}
