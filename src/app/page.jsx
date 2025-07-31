@@ -107,7 +107,7 @@ function Role({ role }) {
   return (
     <li className="flex gap-4">
       <div className="relative flex items-center justify-center flex-none w-10 h-10 mt-1 rounded-full shadow-md shadow-slate-800/5 ring-1 ring-slate-900/5 dark:border dark:border-slate-700/50 dark:bg-slate-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="w-7 h-7" unoptimized />
+        <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
       </div>
       <dl className="flex flex-wrap flex-auto gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -284,7 +284,7 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl italic font-extrabold tracking-tight font-display text-slate-800 sm:text-5xl dark:text-slate-100">
-            I'm Steve. I help companies build their online brands.
+            I'm Steve. I'm a marketing guy that likes to build fast websites.
           </h1>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
             I produce Light. Speed.✨ websites & apps as the Founder of{' '}
@@ -294,43 +294,59 @@ export default async function Home() {
             >
               Gravital Digital
             </Link>
-            . My passion is producing sites that deliver incredible value
-            and delight my clients. Here's a{' '}
+            , specializing in AI-assisted development that compresses traditional timelines. My passion is delivering incredible value that delights clients.{' '}
+            </p>
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+            <em>Recent win:</em>  Here's a{' '}
             <Link
               href="https://gravital-wri-case-study.netlify.app/"
               className="text-amber-500 hover:underline"
             >
-            Jamstack redesign case study{' '}
+              Jamstack redesign case study{' '}
             </Link>
-            showing how I helped WRI 2024 attract 30% more attendees!
-            </p>
-            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
-            I help other solopreneurs working abroad on my{' '}
-            <Link
-              href="https://www.youtube.com/@remote-solopreneur"
-              className="text-amber-500 hover:underline"
-            >
-              YouTube channel
-            </Link>
-            , write articles about my Light. Speed.✨ philosophy like{' '}
+            showing how its new, modern website helped WRI 2024 attract 30% more
+            attendees!
+          </p>
+          <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+            Read about my latest Light. Speed.✨ project:{' '}
             <Link
               href="/articles/light-speed-6"
               className="text-amber-500 hover:underline"
             >
               A Full-featured Application in 30-days with Claude AI
             </Link>
-            , and support 🧭 Midjourney AI image creators with an app called{' '}
+            , featuring{' '}
             <Link
               href="https://midjourneypromptmanager.com/"
               className="text-amber-500 hover:underline"
             >
-              Midjourney Prompt Manager
+              Midjourney Prompt Manager{' '}
             </Link>
-            .</p>
-            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">Let's fly! 🚀
+            for the AI image creation community.
+          </p>
+          <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+            <em>Fellow solopreneur?</em> Check out my video series on working abroad
+            in Latin America on my{' '}
+            <Link
+              href="https://www.youtube.com/@remote-solopreneur"
+              className="text-amber-500 hover:underline"
+            >
+              YouTube channel{' '}
+            </Link>
+            and join in on a more relaxed lifestyle (and better on the budget)
+            outside the U.S.
+          </p>
+          <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+            Ready to build something fast?{' '}
+            <Link
+              href="/contact"
+              className="text-amber-500 hover:underline"
+            >
+            Let's connect! {' '}
+            </Link>
+            🚀
           </p>
           <div className="flex gap-6 mt-6 text-sky-600 dark:text-amber-500">
-            
             <SocialLink
               href="https://instagram.com/sparker808"
               aria-label="Follow on Instagram"
@@ -347,7 +363,7 @@ export default async function Home() {
               icon={XIcon}
             />
             <SocialLink
-            href="https://github.com/sparker888"
+              href="https://github.com/sparker888"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
