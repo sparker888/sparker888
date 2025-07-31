@@ -27,9 +27,15 @@ function ContactForm() {
           setStatus('success')
           e.target.reset()
         } else {
-          setStatus('error')
+          // If we get 405, it might mean Netlify hasn't detected the form yet
+          if (response.status === 405) {
+            setStatus('netlify-error')
+          } else {
+            setStatus('error')
+          }
         }
       } catch (error) {
+        console.error('Form submission error:', error)
         setStatus('error')
       }
     } else {
@@ -144,6 +150,12 @@ function ContactForm() {
       {status === 'local' && (
         <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200 rounded-md">
           Local development mode: Form submission logged to console. Deploy to Netlify to enable form submissions.
+        </div>
+      )}
+      
+      {status === 'netlify-error' && (
+        <div className="mt-4 p-4 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 rounded-md">
+          The form is not yet configured on Netlify. Please redeploy the site for the form to work properly.
         </div>
       )}
     </>
