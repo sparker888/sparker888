@@ -14,19 +14,20 @@ import {
   YTIcon,
 } from '@/components/SocialIcons'
 import logoGravital from '@/images/logos/gravital-icon.png'
-import logoMidjourney from '@/images/logos/midjourney-icon.png'
-import logoWRI from '@/images/logos/wri-2024-icon.png'
+import logoMidjourney from '@/images/logos/key-prompt-ninja-avatar.png'
+import logoWRI25HH from '@/images/logos/WRI25HH-icon.png'
+import logoWRI25RT from '@/images/logos/WRI25RT-icon.png'
 import logoWRS from '@/images/logos/wrs-icon.png'
 import logoPrestonStudios from '@/images/logos/preston-studios-icon.png'
 import logoBenevolent from '@/images/logos/benevolent-icon.png'
 import logoTTC from '@/images/logos/ttc-icon.png'
 import logoIAAPA from '@/images/logos/IAAPA-icon.webp'
 import logoBRigby from '@/images/logos/brigby-icon.png'
-import image1 from '@/images/photos/image35.jpg'
-import image2 from '@/images/photos/image12.jpg'
-import image3 from '@/images/photos/image36.png'
-import image4 from '@/images/photos/image31.jpg'
-import image5 from '@/images/photos/image33.jpg'
+import image1 from '@/images/photos/gravital.png'
+import image2 from '@/images/photos/wri25hh.png'
+import image3 from '@/images/photos/mpm.webp'
+import image4 from '@/images/photos/wri25rt.png'
+import image5 from '@/images/photos/image35.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
@@ -146,7 +147,7 @@ function Projects() {
     },
     {
       company: 'Midjourney Prompt Manager',
-      title: 'Founder & Product Developer',
+      title: 'Founder & President',
       logo: logoMidjourney,
       start: '2023',
       end: {
@@ -165,10 +166,20 @@ function Projects() {
       },
     },
     {
-      company: 'Wheel/Rail Interaction (WRI)',
-      title: 'Web Developer & Social Media',
-      logo: logoWRI,
-      start: '2022',
+      company: 'WRI 2025 HH Kansas City',
+      title: 'Web Developer & Cvent Tech',
+      logo: logoWRI25HH,
+      start: '2024',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
+      company: 'WRI 2025 RT Seattle',
+      title: 'Web Developer & Cvent Tech',
+      logo: logoWRI25RT,
+      start: '2024',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
@@ -196,7 +207,7 @@ function Projects() {
     },
     {
       company: 'TTC Conference & Tour',
-      title: 'Web Developer & Social Media',
+      title: 'Web Developer and Designer',
       logo: logoTTC,
       start: '2023',
       end: {
@@ -249,27 +260,63 @@ function Projects() {
   )
 }
 
+function ExternalLinkIcon(props) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+      <polyline points="15 3 21 3 21 9" />
+      <line x1="10" y1="14" x2="21" y2="3" />
+    </svg>
+  )
+}
+
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+  
+  // Project data with placeholder URLs - update these with your actual project URLs
+  const projects = [
+    { image: image1, url: 'https://gravitaldigital.com', title: 'Project 1' },
+    { image: image2, url: 'https://wri2025hh.wheel-rail-seminars.com', title: 'Project 2' },
+    { image: image3, url: 'https://midjourneypromptmanager.com', title: 'Project 3' },
+    { image: image4, url: 'https://wri2025rt.wheel-rail-seminars.com', title: 'Project 4' },
+    { image: image5, url: 'https://prestonstudios.com', title: 'Project 5' },
+  ]
 
   return (
     <div className="mt-16 sm:mt-20">
       <div className="flex justify-center gap-5 py-4 -my-4 overflow-hidden sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
-          <div
-            key={image.src}
+        {projects.map((project, projectIndex) => (
+          <Link
+            key={project.url}
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 sm:w-72 sm:rounded-2xl dark:bg-slate-800',
-              rotations[imageIndex % rotations.length],
+              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 sm:w-72 sm:rounded-2xl dark:bg-slate-800 group transition-transform duration-300 hover:scale-105',
+              rotations[projectIndex % rotations.length],
             )}
           >
             <Image
-              src={image}
-              alt="sparker888 home page images"
+              src={project.image}
+              alt={project.title}
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 object-cover w-full h-full"
             />
-          </div>
+            {/* Overlay with external link icon */}
+            <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:opacity-100">
+              <div className="absolute bottom-4 right-4">
+                <ExternalLinkIcon className="w-6 h-6 stroke-white" />
+              </div>
+            </div>
+          </Link>
         ))}
       </div>
     </div>
