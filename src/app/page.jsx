@@ -304,8 +304,7 @@ export default async function Home() {
             >
               Jamstack redesign case study{' '}
             </Link>
-            showing how its new, modern website helped WRI 2024 attract 30% more
-            attendees!
+            showing how its new, modern website helped WRI 2024 attract 22.5% more site traffic and 30% more conference attendees!
           </p>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
             Read about my latest Light. Speed.✨ project:{' '}
@@ -326,15 +325,15 @@ export default async function Home() {
           </p>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
             <em>Fellow solopreneur?</em> Check out my video series on working abroad
-            in Latin America on my{' '}
+            and my recent six-months stay in Cuenca, Ecuador on my{' '}
             <Link
               href="https://www.youtube.com/@remote-solopreneur"
               className="text-amber-500 hover:underline"
             >
               YouTube channel{' '}
             </Link>
-            and join in on a more relaxed lifestyle (and better on the budget)
-            outside the U.S.
+            and join in on a more relaxed (and better on the budget)
+            lifestyle outside the U.S.
           </p>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
             Ready to build something fast?{' '}
