@@ -343,7 +343,7 @@ export default async function Home() {
             >
               Gravital Digital
             </Link>
-            . My passion is delivering incredible value that delights clients.{' '}
+            . My passion is delivering incredible value for my clients.{' '}
             </p>
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
             <em>Recent win:</em>  Here's a{' '}
