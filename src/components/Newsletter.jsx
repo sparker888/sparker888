@@ -22,7 +22,7 @@ function Newsletter() {
 
       if (response.ok) {
         // Handle success
-        setMessage("You're now ninjafied!")
+        setMessage("Thanks. You're now subscribed!")
         setEmail('')
       } else {
         setMessage('Subscription failed. Please try again.')
@@ -58,16 +58,16 @@ function Newsletter() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-2xl border border-slate-100 p-6 dark:border-slate-700/40"
+      className="p-6 border rounded-2xl border-slate-100 dark:border-slate-700/40"
     >
-      <h2 className="flex font-display font-extrabold italic text-slate-900 dark:text-slate-100">
-        <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Join my Key Prompt Ninja🗡️ Newsletter!</span>
+      <h2 className="flex italic font-extrabold font-display text-slate-900 dark:text-slate-100">
+        <MailIcon className="flex-none w-6 h-6" />
+        <span className="ml-3">Join my Light. Speed.✨ Newsletter!</span>
       </h2>
       <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-        Key Prompt Ninja is newsletter I produce to help marketing pros create and iterate campaign imagery using Midjourney. Let's go! 
+        Join my newsletter for curated insights, behind-the-scenes stories, and practical tips you won't find anywhere else. No spam, just value!
       </p>
-      <div className="mt-6 flex">
+      <div className="flex mt-6">
         <input
           name="email"
           type="email"
@@ -79,7 +79,7 @@ function Newsletter() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <Button type="submit" className="ml-4 flex-none">
+        <Button type="submit" className="flex-none ml-4">
           Join
         </Button>
       </div>

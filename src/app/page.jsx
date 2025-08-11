@@ -331,7 +331,7 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl italic font-extrabold tracking-tight font-display text-slate-800 sm:text-5xl dark:text-slate-100">
-            I'm Steve. I'm a marketing guy that likes to build fast websites.
+            Hi, I'm Steve. I'm a marketing guy that builds fast websites.
           </h1>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
             I produce Light. Speed.✨ websites & apps as the Founder of{' '}
@@ -401,11 +401,6 @@ export default async function Home() {
           </p>
           <div className="flex gap-6 mt-6 text-sky-600 dark:text-amber-500">
             <SocialLink
-              href="https://instagram.com/sparker808"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
               href="https://linkedin.com/in/sparker888"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
@@ -424,6 +419,11 @@ export default async function Home() {
               href="https://www.youtube.com/@remote-solopreneur"
               aria-label="Subscribe on YouTube"
               icon={YTIcon}
+            />
+            <SocialLink
+              href="https://instagram.com/sparker808"
+              aria-label="Follow on Instagram"
+              icon={InstagramIcon}
             />
           </div>
         </div>
