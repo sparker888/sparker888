@@ -3,6 +3,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
+import AnimateIn from '@/components/AnimateIn'
 import {
   GitHubIcon,
   InstagramIcon,
@@ -47,21 +48,26 @@ export default function About() {
   return (
     <Container className="mt-16 sm:mt-32">
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-        <div className="lg:pl-20">
-          <div className="max-w-xs px-2.5 lg:max-w-none">
-            <Image
-              src={portraitImage}
-              alt=""
-              sizes="(min-width: 1024px) 32rem, 20rem"
-              className="object-cover aspect-square rotate-3 rounded-2xl bg-slate-100 dark:bg-slate-800"
-            />
+        <AnimateIn direction="right" delay={0.3}>
+          <div className="lg:pl-20">
+            <div className="max-w-xs px-2.5 lg:max-w-none">
+              <Image
+                src={portraitImage}
+                alt=""
+                sizes="(min-width: 1024px) 32rem, 20rem"
+                className="object-cover aspect-square rotate-3 rounded-2xl bg-slate-100 dark:bg-slate-800"
+              />
+            </div>
           </div>
-        </div>
+        </AnimateIn>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-semibold tracking-tight font-display text-slate-800 sm:text-5xl dark:text-slate-100">
-            Growing up on the Space Coast, technology became a way of life.
-          </h1>
-          <div className="mt-6 text-base space-y-7 text-slate-600 dark:text-slate-400">
+          <AnimateIn delay={0.1}>
+            <h1 className="text-4xl font-semibold tracking-tight font-display text-slate-800 sm:text-5xl dark:text-slate-100">
+              Growing up on the Space Coast, technology became a way of life.
+            </h1>
+          </AnimateIn>
+          <AnimateIn delay={0.2}>
+            <div className="mt-6 text-base space-y-7 text-slate-600 dark:text-slate-400">
             <p>
               Growing up on the Space Coast, my childhood was steeped in the
               awe-inspiring backdrop of the space program, where rockets soared
@@ -109,10 +115,12 @@ export default function About() {
               and the enduring influence of early experiences on the Space Coast
               of Florida.
             </p>
-          </div>
+            </div>
+          </AnimateIn>
         </div>
-        <div className="font-display lg:pl-20">
-          <ul role="list">
+        <AnimateIn direction="right" delay={0.4}>
+          <div className="font-display lg:pl-20">
+            <ul role="list">
           <SocialLink
               href="https://instagram.com/sparker808"
               aria-label="Follow on Instagram"
@@ -154,8 +162,9 @@ export default function About() {
             >
               Subscribe on YouTube
             </SocialLink>
-          </ul>
-        </div>
+            </ul>
+          </div>
+        </AnimateIn>
       </div>
     </Container>
   )

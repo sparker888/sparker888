@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
+import AnimateIn from '@/components/AnimateIn'
 import {
   GitHubIcon,
   InstagramIcon,
@@ -75,16 +76,18 @@ function ArrowRightIcon(props) {
 
 function Article({ article }) {
   return (
-    <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
-      </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
-    </Card>
+    <AnimateIn>
+      <Card as="article">
+        <Card.Title href={`/articles/${article.slug}`}>
+          {article.title}
+        </Card.Title>
+        <Card.Eyebrow as="time" dateTime={article.date} decorate>
+          {formatDate(article.date)}
+        </Card.Eyebrow>
+        <Card.Description>{article.description}</Card.Description>
+        <Card.Cta>Read article</Card.Cta>
+      </Card>
+    </AnimateIn>
   )
 }
 
@@ -238,25 +241,27 @@ function Projects() {
   ]
 
   return (
-    <div className="p-6 border rounded-2xl border-slate-100 dark:border-slate-700/40">
-      <h2 className="flex italic font-extrabold font-display text-slate-900 dark:text-slate-100">
-        <BriefcaseIcon className="flex-none w-6 h-6" />
-        <span className="ml-3">Brands & Sites Managed</span>
-      </h2>
-      <ol className="mt-6 space-y-4">
-        {projects.map((role, roleIndex) => (
-          <Role key={roleIndex} role={role} />
-        ))}
-      </ol>
-      <Button
-        href="/projects"
-        variant="secondary"
-        className="w-full mt-6 group"
-      >
-        Info and links
-        <ArrowRightIcon className="w-4 h-4 transition stroke-slate-400 group-active:stroke-slate-600 dark:group-hover:stroke-slate-50 dark:group-active:stroke-slate-50" />
-      </Button>
-    </div>
+    <AnimateIn delay={0.2}>
+      <div className="p-6 border rounded-2xl border-slate-100 dark:border-slate-700/40">
+        <h2 className="flex italic font-extrabold font-display text-slate-900 dark:text-slate-100">
+          <BriefcaseIcon className="flex-none w-6 h-6" />
+          <span className="ml-3">Brands & Sites Managed</span>
+        </h2>
+        <ol className="mt-6 space-y-4">
+          {projects.map((role, roleIndex) => (
+            <Role key={roleIndex} role={role} />
+          ))}
+        </ol>
+        <Button
+          href="/projects"
+          variant="secondary"
+          className="w-full mt-6 group"
+        >
+          Info and links
+          <ArrowRightIcon className="w-4 h-4 transition stroke-slate-400 group-active:stroke-slate-600 dark:group-hover:stroke-slate-50 dark:group-active:stroke-slate-50" />
+        </Button>
+      </div>
+    </AnimateIn>
   )
 }
 
@@ -291,35 +296,37 @@ function Photos() {
   ]
 
   return (
-    <div className="mt-16 sm:mt-20">
-      <div className="flex justify-center gap-5 py-4 -my-4 overflow-hidden sm:gap-8">
-        {projects.map((project, projectIndex) => (
-          <Link
-            key={project.url}
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 sm:w-72 sm:rounded-2xl dark:bg-slate-800 group transition-transform duration-300 hover:scale-105',
-              rotations[projectIndex % rotations.length],
-            )}
-          >
-            <Image
-              src={project.image}
-              alt={project.title}
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 object-cover w-full h-full"
-            />
-            {/* Overlay with external link icon */}
-            <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:opacity-100">
-              <div className="absolute bottom-4 right-4">
-                <ExternalLinkIcon className="w-6 h-6 stroke-white" />
+    <AnimateIn delay={0.3}>
+      <div className="mt-16 sm:mt-20">
+        <div className="flex justify-center gap-5 py-4 -my-4 overflow-hidden sm:gap-8">
+          {projects.map((project, projectIndex) => (
+            <Link
+              key={project.url}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={clsx(
+                'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 sm:w-72 sm:rounded-2xl dark:bg-slate-800 group transition-transform duration-300 hover:scale-105',
+                rotations[projectIndex % rotations.length],
+              )}
+            >
+              <Image
+                src={project.image}
+                alt={project.title}
+                sizes="(min-width: 640px) 18rem, 11rem"
+                className="absolute inset-0 object-cover w-full h-full"
+              />
+              {/* Overlay with external link icon */}
+              <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:opacity-100">
+                <div className="absolute bottom-4 right-4">
+                  <ExternalLinkIcon className="w-6 h-6 stroke-white" />
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </AnimateIn>
   )
 }
 
@@ -329,97 +336,101 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-9">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl italic font-extrabold tracking-tight font-display text-slate-800 sm:text-5xl dark:text-slate-100">
-            I'm Steve. I'm a remote solopreneur. Let's fly! 🚀
-          </h1>
-          <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            I produce Light. Speed.✨ websites & apps as the Founder of{' '}
-            <Link
-              href="https://gravitaldigital.com/"
-              className="text-amber-500 hover:underline"
-            >
-              Gravital Digital
-            </Link>
-            .
-            </p>
-            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
-            Interested in creating income with no boss, no employees and no limits? Need a healthier pace of life with living expenses one-third of those in the U.S.? (I just spent 6 months in Ecuador while growing my business.)
-            </p>
-            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
-            <em>Join our community!</em> I'm helping fellow solopreneurs work in Latin America on my{' '}
-            <Link
-              href="https://www.youtube.com/@remote-solopreneur"
-              className="text-amber-500 hover:underline"
-            >
-              Remote Solopreneur YouTube channel
-            </Link>
-            , with resources for living in Latin America's top-rated city, building sites with modern dev tools and AI.
-            </p>
+        <AnimateIn delay={0.1}>
+          <div className="max-w-2xl">
+            <h1 className="text-4xl italic font-extrabold tracking-tight font-display text-slate-800 sm:text-5xl dark:text-slate-100">
+              I'm Steve. I'm a remote solopreneur. Let's fly! 🚀
+            </h1>
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+              I produce Light. Speed.✨ websites & apps as the Founder of{' '}
+              <Link
+                href="https://gravitaldigital.com/"
+                className="text-amber-500 hover:underline"
+              >
+                Gravital Digital
+              </Link>
+              .
+              </p>
+              <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
+              Interested in creating income with no boss, no employees and no limits? Need a healthier pace of life with living expenses one-third of those in the U.S.? (I just spent 6 months in Ecuador while growing my business.)
+              </p>
+              <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
+              <em>Join our community!</em> I'm helping fellow solopreneurs work in Latin America on my{' '}
+              <Link
+                href="https://www.youtube.com/@remote-solopreneur"
+                className="text-amber-500 hover:underline"
+              >
+                Remote Solopreneur YouTube channel
+              </Link>
+              , with resources for living in Latin America's top-rated city, building sites with modern dev tools and AI.
+              </p>
 
-            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            <em>It's not difficult!</em> Get started with{' '}
-            <Link
-              href="#"
-              className="text-amber-500 hover:underline"
-            >
-              these resources{' '}
-            </Link>and articles like{' '}
-            <Link
-              href="/articles/light-speed-6"
-              className="text-amber-500 hover:underline"
-            >
-              Vibe Coding with Claude Code
-            </Link>
-            , to create websites & apps that provide income like my{' '}
-            <Link
-              href="https://midjourneypromptmanager.com/"
-              className="text-amber-500 hover:underline"
-            >
-              Midjourney Prompt Manager
-            </Link>
-            {' '}application.</p>
-            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            Let's fly! 🚀</p>
-          <div className="flex gap-6 mt-6 text-sky-600 dark:text-amber-500">
-            <SocialLink
-              href="https://linkedin.com/in/sparker888"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
-            <SocialLink
-              href="https://x.com/sparker888"
-              aria-label="Follow on X"
-              icon={XIcon}
-            />
-            <SocialLink
-              href="https://github.com/sparker888"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://www.youtube.com/@remote-solopreneur"
-              aria-label="Subscribe on YouTube"
-              icon={YTIcon}
-            />
-            <SocialLink
-              href="https://instagram.com/sparker808"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
+              <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+              <em>It's not difficult!</em> Get started with{' '}
+              <Link
+                href="#"
+                className="text-amber-500 hover:underline"
+              >
+                these resources{' '}
+              </Link>and articles like{' '}
+              <Link
+                href="/articles/light-speed-6"
+                className="text-amber-500 hover:underline"
+              >
+                Vibe Coding with Claude Code
+              </Link>
+              , to create websites & apps that provide income like my{' '}
+              <Link
+                href="https://midjourneypromptmanager.com/"
+                className="text-amber-500 hover:underline"
+              >
+                Midjourney Prompt Manager
+              </Link>
+              {' '}application.</p>
+              <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+              Let's fly! 🚀</p>
+            <div className="flex gap-6 mt-6 text-sky-600 dark:text-amber-500">
+              <SocialLink
+                href="https://linkedin.com/in/sparker888"
+                aria-label="Follow on LinkedIn"
+                icon={LinkedInIcon}
+              />
+              <SocialLink
+                href="https://x.com/sparker888"
+                aria-label="Follow on X"
+                icon={XIcon}
+              />
+              <SocialLink
+                href="https://github.com/sparker888"
+                aria-label="Follow on GitHub"
+                icon={GitHubIcon}
+              />
+              <SocialLink
+                href="https://www.youtube.com/@remote-solopreneur"
+                aria-label="Subscribe on YouTube"
+                icon={YTIcon}
+              />
+              <SocialLink
+                href="https://instagram.com/sparker808"
+                aria-label="Follow on Instagram"
+                icon={InstagramIcon}
+              />
+            </div>
           </div>
-        </div>
+        </AnimateIn>
       </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="grid max-w-xl grid-cols-1 mx-auto gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
-            {articles.map((article) => (
+            {articles.map((article, index) => (
               <Article key={article.slug} article={article} />
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <NewsletterWithNoSSR />
+            <AnimateIn delay={0.1}>
+              <NewsletterWithNoSSR />
+            </AnimateIn>
             <Projects />
           </div>
         </div>

@@ -125,10 +125,12 @@ function MobileNavigation(props) {
             <nav className="mt-6">
               <ul className="-my-2 text-base divide-y divide-slate-100 text-slate-800 dark:divide-slate-100/5 dark:text-slate-300">
                 <MobileNavItem href="/">Home</MobileNavItem>
-                <MobileNavItem href="/about">About</MobileNavItem>
+                <MobileNavItem href="/videos">Videos</MobileNavItem>
+                <MobileNavItem href="/resources">Resources</MobileNavItem>
+                <MobileNavItem href="/light-speed-prototypes">Light. Speed. Prototypes</MobileNavItem>
                 <MobileNavItem href="/articles">Articles</MobileNavItem>
-                <MobileNavItem href="/projects">Projects</MobileNavItem>
-                <MobileNavItem href="/gallery">Gallery</MobileNavItem>
+                <MobileNavItem href="/about">About</MobileNavItem>
+                <MobileNavItem href="/contact">Contact</MobileNavItem>
               </ul>
             </nav>
           </Popover.Panel>
@@ -166,10 +168,12 @@ function DesktopNavigation(props) {
     <nav {...props}>
       <ul className="flex px-3 font-semibold shadow-lg rounded-xl bg-light-nav-pattern font-display text-slate-800 shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-dark-nav-pattern dark:text-slate-200 dark:ring-white/10">
         <NavItem href="/">Home</NavItem>
-        <NavItem href="/about">About</NavItem>
+        <NavItem href="/videos">Videos</NavItem>
+        <NavItem href="/resources">Resources</NavItem>
+        <NavItem href="/light-speed-prototypes">Light. Speed. Prototypes</NavItem>
         <NavItem href="/articles">Articles</NavItem>
-        <NavItem href="/projects">Projects</NavItem>
-        <NavItem href="/gallery">Gallery</NavItem>
+        <NavItem href="/about">About</NavItem>
+        <NavItem href="/contact">Contact</NavItem>
       </ul>
     </nav>
   )
