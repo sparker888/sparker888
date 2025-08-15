@@ -65,7 +65,7 @@ function Newsletter() {
         <span className="ml-3">Join my Light. Speed.✨ Newsletter!</span>
       </h2>
       <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-        Join my newsletter for curated insights, behind-the-scenes stories, and practical tips you won't find anywhere else. No spam, just value!
+        Join my newsletter for insights on how to become a remote solopreneur working abroad in 2025-6. I work hard on producing quality content. No spam, just value!
       </p>
       <div className="flex mt-6">
         <input

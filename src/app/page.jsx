@@ -331,74 +331,56 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl italic font-extrabold tracking-tight font-display text-slate-800 sm:text-5xl dark:text-slate-100">
-            Hi, I'm Steve. I'm a marketing guy that builds fast websites.
+            I'm Steve. I'm a remote solopreneur. Let's fly! 🚀
           </h1>
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
             I produce Light. Speed.✨ websites & apps as the Founder of{' '}
             <Link
               href="https://gravitaldigital.com/"
               className="text-amber-500 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Gravital Digital
             </Link>
-            . My passion is delivering incredible value for my clients.{' '}
+            .
             </p>
-            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            <em>Recent win:</em>  Here's a{' '}
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
+            Interested in creating income with no boss, no employees and no limits? Need a healthier pace of life with living expenses one-third of those in the U.S.? (I just spent 6 months in Ecuador while growing my business.)
+            </p>
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
+            <em>Join our community!</em> I'm helping fellow solopreneurs work in Latin America on my{' '}
             <Link
-              href="https://gravital-wri-case-study.netlify.app/"
+              href="https://www.youtube.com/@remote-solopreneur"
               className="text-amber-500 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
             >
-              Jamstack redesign case study{' '}
+              Remote Solopreneur YouTube channel
             </Link>
-            showing how its new, modern website helped WRI 2024 attract 22.5% more site traffic and 30% more conference attendees!
-          </p>
-          <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            Read about my latest Light. Speed.✨ project:{' '}
+            , with resources for living in Latin America's top-rated city, building sites with modern dev tools and AI.
+            </p>
+
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+            <em>It's not difficult!</em> Get started with{' '}
+            <Link
+              href="#"
+              className="text-amber-500 hover:underline"
+            >
+              these resources{' '}
+            </Link>and articles like{' '}
             <Link
               href="/articles/light-speed-6"
               className="text-amber-500 hover:underline"
             >
-              A Full-featured Application in 30-days with Claude AI
+              Vibe Coding with Claude Code
             </Link>
-            , featuring{' '}
+            , to create websites & apps that provide income like my{' '}
             <Link
               href="https://midjourneypromptmanager.com/"
               className="text-amber-500 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
             >
-              Midjourney Prompt Manager{' '}
+              Midjourney Prompt Manager
             </Link>
-            for the AI image creation community.
-          </p>
-          <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            <em>Fellow solopreneur?</em> Check out my video series on working abroad
-            and my recent six-months stay in Cuenca, Ecuador on my{' '}
-            <Link
-              href="https://www.youtube.com/@remote-solopreneur"
-              className="text-amber-500 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              YouTube channel{' '}
-            </Link>
-            .
-          </p>
-          <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            Ready to build something fast?{' '}
-            <Link
-              href="/contact"
-              className="text-amber-500 hover:underline"
-            >
-            Let's connect! {' '}
-            </Link>
-            🚀
-          </p>
+            {' '}application.</p>
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+            Let's fly! 🚀</p>
           <div className="flex gap-6 mt-6 text-sky-600 dark:text-amber-500">
             <SocialLink
               href="https://linkedin.com/in/sparker888"
