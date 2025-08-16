@@ -352,41 +352,44 @@ export default async function Home() {
               .
               </p>
               <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
-              Interested in creating income with no boss, no employees and no limits? Need a healthier pace of life with living expenses one-third of those in the U.S.? (I just spent 6 months in Ecuador while growing my business.)
+              The community I discovered is learning to create income with no boss, no employees, and live a healthier pace of life (at reduced expenses!). 
               </p>
               <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
-              <em>Join our community!</em> I'm helping fellow solopreneurs work in Latin America on my{' '}
+              For 6 months, I explored Ecuador as a place for founders to work remotely.
+              </p>
+              <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
+              <em>Join our community!</em> I'm helping fellow solopreneurs explore Latin America on my{' '}
               <Link
-                href="https://www.youtube.com/@remote-solopreneur"
+                href="/app/videos"
                 className="text-amber-500 hover:underline"
               >
                 Remote Solopreneur YouTube channel
               </Link>
-              , with resources for living in Latin America's top-rated city, building sites with modern dev tools and AI.
+              , with resources for living in Latin America's top-rated city, Cuenca.
               </p>
 
               <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              <em>It's not difficult!</em> Get started with{' '}
+              Get started with{' '}
               <Link
                 href="#"
                 className="text-amber-500 hover:underline"
               >
                 these resources{' '}
-              </Link>and articles like{' '}
+              </Link>and check out articles like this one on{' '}
               <Link
                 href="/articles/light-speed-6"
                 className="text-amber-500 hover:underline"
               >
                 Vibe Coding with Claude Code
               </Link>
-              , to create websites & apps that provide income like my{' '}
+              . I used it to create {' '}
               <Link
                 href="https://midjourneypromptmanager.com/"
                 className="text-amber-500 hover:underline"
               >
                 Midjourney Prompt Manager
               </Link>
-              {' '}application.</p>
+              {' '}in 30 days. Learn how to leverage AI to change your game.</p>
               <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
               Let's fly! 🚀</p>
             <div className="flex gap-6 mt-6 text-sky-600 dark:text-amber-500">
