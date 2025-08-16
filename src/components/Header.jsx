@@ -125,9 +125,20 @@ function MobileNavigation(props) {
             <nav className="mt-6">
               <ul className="-my-2 text-base divide-y divide-slate-100 text-slate-800 dark:divide-slate-100/5 dark:text-slate-300">
                 <MobileNavItem href="/">Home</MobileNavItem>
-                <MobileNavItem href="/videos">Videos</MobileNavItem>
-                <MobileNavItem href="/resources">Resources</MobileNavItem>
-                <MobileNavItem href="/light-speed-prototypes">Light. Speed. Prototypes</MobileNavItem>
+                <li className="py-2">
+                  <div className="font-semibold text-slate-900 dark:text-slate-100">Resources</div>
+                  <div className="mt-2 ml-4 space-y-2">
+                    <Popover.Button as={Link} href="/resources" className="block text-sm">
+                      My Essential Stack
+                    </Popover.Button>
+                    <Popover.Button as={Link} href="/videos" className="block text-sm">
+                      Videos
+                    </Popover.Button>
+                    <Popover.Button as={Link} href="/light-speed-prototypes" className="block text-sm">
+                      AI Prototypes
+                    </Popover.Button>
+                  </div>
+                </li>
                 <MobileNavItem href="/articles">Articles</MobileNavItem>
                 <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/contact">Contact</MobileNavItem>
@@ -163,14 +174,70 @@ function NavItem({ href, children }) {
   )
 }
 
+function ResourcesDropdown() {
+  let pathname = usePathname()
+  let isActive = pathname === '/resources' || pathname === '/videos' || pathname === '/light-speed-prototypes'
+
+  return (
+    <li>
+      <Popover className="relative">
+        <Popover.Button
+          className={clsx(
+            'relative flex items-center px-3 py-2 transition',
+            isActive
+              ? 'text-amber-800 dark:text-amber-300'
+              : 'hover:text-amber-600 dark:hover:text-amber-500',
+          )}
+        >
+          Resources
+          <ChevronDownIcon className="w-2 h-auto ml-1 stroke-current" />
+          {isActive && (
+            <span className="absolute inset-x-0 h-0 shadow-glow -bottom-px bg-gradient-to-r from-sky-200 via-sky-400 to-sky-600 dark:from-amber-400 dark:via-amber-400 dark:to-amber-200" />
+          )}
+        </Popover.Button>
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-200"
+          enterFrom="opacity-0 translate-y-1"
+          enterTo="opacity-100 translate-y-0"
+          leave="transition ease-in duration-150"
+          leaveFrom="opacity-100 translate-y-0"
+          leaveTo="opacity-0 translate-y-1"
+        >
+          <Popover.Panel className="absolute left-0 z-10 mt-2 w-56 bg-light-nav-pattern backdrop-blur-sm rounded-xl shadow-lg ring-1 ring-slate-900/5 dark:bg-dark-nav-pattern dark:ring-white/10">
+            <div className="py-2">
+              <Link
+                href="/resources"
+                className="block px-4 py-2 text-sm transition hover:bg-slate-100 dark:hover:bg-slate-700/50"
+              >
+                My Essential Stack
+              </Link>
+              <Link
+                href="/videos"
+                className="block px-4 py-2 text-sm transition hover:bg-slate-100 dark:hover:bg-slate-700/50"
+              >
+                Videos
+              </Link>
+              <Link
+                href="/light-speed-prototypes"
+                className="block px-4 py-2 text-sm transition hover:bg-slate-100 dark:hover:bg-slate-700/50"
+              >
+                AI Prototypes
+              </Link>
+            </div>
+          </Popover.Panel>
+        </Transition>
+      </Popover>
+    </li>
+  )
+}
+
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
       <ul className="flex px-3 font-semibold shadow-lg rounded-xl bg-light-nav-pattern font-display text-slate-800 shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-dark-nav-pattern dark:text-slate-200 dark:ring-white/10">
         <NavItem href="/">Home</NavItem>
-        <NavItem href="/videos">Videos</NavItem>
-        <NavItem href="/resources">Resources</NavItem>
-        <NavItem href="/light-speed-prototypes">Light. Speed. Prototypes</NavItem>
+        <ResourcesDropdown />
         <NavItem href="/articles">Articles</NavItem>
         <NavItem href="/about">About</NavItem>
         <NavItem href="/contact">Contact</NavItem>

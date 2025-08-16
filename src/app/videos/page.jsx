@@ -21,124 +21,50 @@ function ExternalLinkIcon(props) {
   )
 }
 
-// Note: You'll need to add actual video thumbnails to your /public/images/ directory
-// For now, these are placeholder paths that you should replace with actual images
 
 const featuredVideo = {
   id: 'featured',
-  title: 'Living in Ecuador as a Remote Solopreneur: 6-Month Journey',
-  description: 'Join me as I share the complete experience of spending 6 months in Cuenca, Ecuador while growing my business. From cost of living to digital nomad life, this is everything you need to know.',
-  thumbnail: '/images/ecuador-featured-video.jpg', // Add this image
-  videoId: 'YOUR_YOUTUBE_VIDEO_ID', // Replace with actual YouTube video ID
+  title: 'WRI 2024 Jamstack Redesign Case Study: We broke attendance records! 🥳',
+  description: 'See how modern web development and strategic design helped break attendance records for this major industry conference. A complete case study of the redesign process.',
+  thumbnail: `https://img.youtube.com/vi/lD7s5XimtYM/maxresdefault.jpg`,
+  videoId: 'lD7s5XimtYM',
   duration: '15:32',
-  views: '2.1K',
-  publishedAt: '2 weeks ago',
-  category: 'Ecuador Living'
+  views: '1,115',
+  publishedAt: '5 months ago',
+  category: 'Case Study'
 }
 
 const videoCategories = [
   {
-    name: 'Ecuador Living',
-    description: 'Life in Latin America\'s top-rated expat destination',
+    name: 'Working in Ecuador',
+    description: 'Real experiences from 6+ months in Latin America\'s top expat destination',
     videos: [
       {
         id: '1',
-        title: 'Cost of Living in Cuenca Ecuador: Real Numbers',
-        thumbnail: '/images/ecuador-cost-living.jpg', // Add this image
-        videoId: 'YOUTUBE_ID_1', // Replace with actual YouTube video ID
-        duration: '12:45',
-        views: '1.8K',
-        publishedAt: '1 week ago'
+        title: 'First 90 Days in Cuenca, Ecuador – Visas, Accommodations, Food & More in 2025!',
+        thumbnail: `https://img.youtube.com/vi/ysVAayjb3xQ/maxresdefault.jpg`,
+        videoId: 'ysVAayjb3xQ',
+        duration: '18:45',
+        views: '7.1K',
+        publishedAt: '6 months ago'
       },
       {
-        id: '2', 
-        title: 'Digital Nomad Setup: My Ecuador Workspace Tour',
-        thumbnail: '/images/ecuador-workspace.jpg', // Add this image
-        videoId: 'YOUTUBE_ID_2', // Replace with actual YouTube video ID
-        duration: '8:23',
-        views: '987',
-        publishedAt: '3 weeks ago'
+        id: '2',
+        title: 'WRI 2024 Jamstack Redesign Case Study: We broke attendance records! 🥳',
+        thumbnail: `https://img.youtube.com/vi/lD7s5XimtYM/maxresdefault.jpg`,
+        videoId: 'lD7s5XimtYM',
+        duration: '15:32',
+        views: '1,115',
+        publishedAt: '5 months ago'
       },
       {
-        id: '3',
-        title: 'Visa Process: How I Got My Ecuador Tourist Visa',
-        thumbnail: '/images/ecuador-visa.jpg', // Add this image
-        videoId: 'YOUTUBE_ID_3', // Replace with actual YouTube video ID
-        duration: '10:15',
-        views: '1.2K',
-        publishedAt: '1 month ago'
-      }
-    ]
-  },
-  {
-    name: 'Remote Work Tips',
-    description: 'Productivity and systems for location independence',
-    videos: [
-      {
-        id: '4',
-        title: 'Claude Code: AI Development That Changed My Business',
-        thumbnail: '/images/claude-code-video.jpg', // Add this image
-        videoId: 'YOUTUBE_ID_4', // Replace with actual YouTube video ID
-        duration: '18:42',
-        views: '3.4K',
-        publishedAt: '2 weeks ago'
-      },
-      {
-        id: '5',
-        title: 'Remote Client Management: Tools & Systems',
-        thumbnail: '/images/remote-client-management.jpg', // Add this image
-        videoId: 'YOUTUBE_ID_5', // Replace with actual YouTube video ID
-        duration: '14:18',
-        views: '1.9K',
-        publishedAt: '3 weeks ago'
-      }
-    ]
-  },
-  {
-    name: 'Business Building',
-    description: 'From idea to income as a solopreneur',
-    videos: [
-      {
-        id: '6',
-        title: 'Building Midjourney Prompt Manager: 30-Day Timeline',
-        thumbnail: '/images/mpm-build-video.jpg', // Add this image
-        videoId: 'YOUTUBE_ID_6', // Replace with actual YouTube video ID
-        duration: '22:15',
-        views: '2.8K',
-        publishedAt: '1 month ago'
-      },
-      {
-        id: '7',
-        title: 'Solopreneur Income Streams: What Actually Works',
-        thumbnail: '/images/income-streams.jpg', // Add this image
-        videoId: 'YOUTUBE_ID_7', // Replace with actual YouTube video ID
-        duration: '16:33',
-        views: '4.1K',
-        publishedAt: '2 months ago'
-      }
-    ]
-  },
-  {
-    name: 'Travel & Lifestyle',
-    description: 'Adventures and insights from living abroad',
-    videos: [
-      {
-        id: '8',
-        title: 'Best Neighborhoods in Cuenca for Digital Nomads',
-        thumbnail: '/images/cuenca-neighborhoods.jpg', // Add this image
-        videoId: 'YOUTUBE_ID_8', // Replace with actual YouTube video ID
-        duration: '11:28',
-        views: '1.5K',
-        publishedAt: '2 weeks ago'
-      },
-      {
-        id: '9',
-        title: 'Ecuador Food Tour: What I Eat in a Week',
-        thumbnail: '/images/ecuador-food-tour.jpg', // Add this image
-        videoId: 'YOUTUBE_ID_9', // Replace with actual YouTube video ID
-        duration: '13:45',
-        views: '892',
-        publishedAt: '1 month ago'
+        id: '3', 
+        title: 'Top 10 Reasons to Move to Ecuador – My Experience in Cuenca!',
+        thumbnail: `https://img.youtube.com/vi/5tLRmdCbUN8/maxresdefault.jpg`,
+        videoId: '5tLRmdCbUN8',
+        duration: '22:18',
+        views: '5.5K',
+        publishedAt: '8 months ago'
       }
     ]
   }
@@ -234,13 +160,13 @@ export default function Videos() {
   return (
     <SimpleLayout
       title="Remote Solopreneur Journey 🎬"
-      intro="Follow my 6-month journey living and working in Ecuador while building digital products. From cost of living breakdowns to business growth strategies, I'm sharing everything about the remote solopreneur lifestyle."
+      intro="Real experiences from building digital products and living abroad as a solopreneur. Case studies, Ecuador living insights, and practical advice for location-independent entrepreneurs."
     >
       {/* Featured Video Section */}
       <div className="mb-16">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-            Featured: Ecuador Experience
+            Featured: Light. Speed.✨ Website Redesign Case Study
           </h2>
           <Link
             href="https://www.youtube.com/@remote-solopreneur"
