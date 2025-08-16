@@ -371,7 +371,7 @@ export default async function Home() {
               <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
               Get started with{' '}
               <Link
-                href="#"
+                href="/resources"
                 className="text-amber-500 hover:underline"
               >
                 these resources{' '}
