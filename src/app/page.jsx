@@ -360,7 +360,7 @@ export default async function Home() {
               <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
               <em>Join our community!</em> I'm helping fellow solopreneurs explore Latin America on my{' '}
               <Link
-                href="/app/videos"
+                href="/videos"
                 className="text-amber-500 hover:underline"
               >
                 Remote Solopreneur YouTube channel
