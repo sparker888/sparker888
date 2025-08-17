@@ -13,6 +13,7 @@ const documentationSections = [
       { title: 'Documentation Overview', href: '/portal/documentation' },
       { title: 'Installation Guide', href: '/portal/documentation/setup/installation' },
       { title: 'Environment Setup', href: '/portal/documentation/setup/environment' },
+      { title: 'PocketHost Setup', href: '/portal/documentation/setup/pockethost' },
       { title: 'First Run Verification', href: '/portal/documentation/setup/first-run' },
     ]
   },

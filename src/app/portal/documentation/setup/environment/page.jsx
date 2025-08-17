@@ -260,13 +260,13 @@ MAILERLITE_GROUP_ID=your_group_id_here`}
         <div className="bg-gradient-to-r from-green-500 to-blue-600 rounded-lg p-6 text-white">
           <h3 className="text-xl font-bold mb-3">🎉 Environment Configuration Complete!</h3>
           <p className="mb-4 opacity-90">
-            Your Light Speed 2026 platform is now configured with all required environment variables. 
-            You can start the development server and begin using all platform features.
+            Your Light Speed 2026 platform now has all required environment variables configured. 
+            Next, we'll set up the external database to store user accounts and application data.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link href="/portal/documentation/setup/pocketbase">
+            <Link href="/portal/documentation/setup/pockethost">
               <Button className="bg-white text-green-600 hover:bg-gray-100">
-                Next: PocketBase Database Setup →
+                Next: PocketHost Database Setup →
               </Button>
             </Link>
             <Link href="/portal/documentation/customization/branding">
