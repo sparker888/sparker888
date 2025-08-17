@@ -23,7 +23,7 @@ export default function InstallationPage() {
             complete with user authentication, social media scheduling, analytics, and payment processing.
           </p>
           <p>
-            Perfect for SaaS entrepreneurs, agencies, and developers looking to launch their own social media tools.
+            Complete setup instructions to get Light-Speed 2026 running on your development machine.
           </p>
         </InfoBox>
 
@@ -33,8 +33,8 @@ export default function InstallationPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
             <div className="bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg p-4">
               <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Required Software</h4>
-              <ul className="space-y-2 text-sm text-stone-600 dark:text-stone-400">
-                <li>✅ Node.js 18.0+ (LTS recommended)</li>
+              <ul className="text-sm text-stone-600 dark:text-stone-400">
+                <li>✅ Node.js 20.3.0+ (LTS recommended)</li>
                 <li>✅ npm 9.0+ or yarn 1.22+</li>
                 <li>✅ Git 2.0+</li>
                 <li>✅ Code editor (VS Code recommended)</li>
@@ -42,8 +42,8 @@ export default function InstallationPage() {
             </div>
             
             <div className="bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg p-4">
-              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">System Specs</h4>
-              <ul className="space-y-2 text-sm text-stone-600 dark:text-stone-400">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">System Resources</h4>
+              <ul className="text-sm text-stone-600 dark:text-stone-400">
                 <li>💾 4GB+ RAM available</li>
                 <li>💽 2GB+ free disk space</li>
                 <li>🌐 Stable internet connection</li>
@@ -104,52 +104,170 @@ ls -la`}
           </div>
         </StepCard>
 
-        <StepCard step={3} title="Install Dependencies">
-          <p className="mb-4">Install all required packages for both frontend and backend:</p>
-          
-          <CodeBlock language="bash">
-{`# Install frontend dependencies
+        <StepCard step={3} title="Install Dependencies & IDE Setup">
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3">Open Project in VS Code</h4>
+              <CodeBlock language="bash">
+{`# Open project in VS Code
+code .`}
+              </CodeBlock>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3">Install Dependencies</h4>
+              <CodeBlock language="bash">
+{`# Install project dependencies
 npm install
 
-# This will install:
-# - Next.js 13+ (React framework)
-# - Tailwind CSS (styling)
-# - NextAuth.js (authentication)
-# - Stripe (payments)
-# - And 50+ other packages`}
-          </CodeBlock>
+# Verify installation
+npm run typecheck`}
+              </CodeBlock>
+            </div>
 
-          <div className="mt-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
-            <p className="text-yellow-800 dark:text-yellow-200 text-sm">
-              <strong>Note:</strong> The installation may take 2-5 minutes depending on your internet connection. 
-              You'll see a progress bar showing package downloads.
-            </p>
-          </div>
+            <div>
+              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3">Install Claude Code (Recommended)</h4>
+              <CodeBlock language="bash">
+{`# Install Claude Code globally
+npm install -g @anthropic-ai/claude-code
 
-          <div className="mt-4">
-            <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">Verify Installation</h4>
-            <CodeBlock language="bash">
-{`# Check that node_modules was created
-ls -la node_modules
+# Verify installation
+claude --version`}
+              </CodeBlock>
+            </div>
 
-# Verify key packages are installed
-npm list next react stripe
+            <div>
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Project Structure Overview</h4>
+              <p className="text-stone-600 dark:text-stone-400 text-sm mb-3">
+                Light-Speed 2026 includes a complete <code className="bg-stone-100 dark:bg-stone-800 px-1 rounded">.claude/</code> directory with:
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-stone-600 dark:text-stone-400 text-sm mb-4">
+                <li><strong>CLAUDE.md</strong> - Project memory and development guidelines</li>
+                <li><strong>.claude/commands/</strong> - Custom slash commands for common tasks</li>
+                <li><strong>.claude/docs/</strong> - Comprehensive project documentation</li>
+              </ul>
+            </div>
 
-# Should show versions without errors`}
-            </CodeBlock>
+            <div>
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Development Workflow Setup</h4>
+              <CodeBlock language="bash">
+{`# Launch Claude Code in project root (optional)
+claude
+
+# Available commands in Claude Code:
+# /init     - Analyze codebase structure
+# /help     - Show available commands  
+# /clear    - Clear conversation history`}
+              </CodeBlock>
+            </div>
+
+            <InfoBox type="warning" title="Environment Setup Required">
+              Before running the development server, you'll need to configure environment variables in the next section.
+            </InfoBox>
           </div>
         </StepCard>
 
-        <StepCard step={4} title="Environment Configuration">
-          <p className="mb-4">Set up your environment variables for development:</p>
+        <StepCard step={4} title="Prepare Environment File">
+          <p className="mb-4">Copy the environment template (configuration happens in next section):</p>
           
           <CodeBlock language="bash">
-{`# Copy the example environment file
-cp .env.example .env.local
-
-# Open in your code editor
-code .env.local`}
+{`# Copy environment template
+cp .env.example .env`}
           </CodeBlock>
+
+          <p className="text-stone-600 dark:text-stone-400 text-sm mt-4 mb-4">
+            <strong>Note:</strong> The <code className="bg-stone-100 dark:bg-stone-800 px-1 rounded">.env</code> file contains placeholder values. You'll configure actual values in the Environment Variables section next.
+          </p>
+
+          <InfoBox type="warning" title="Security Reminder">
+            Never commit your .env file to version control. It contains sensitive API keys and secrets. The .gitignore file is already configured to exclude it.
+          </InfoBox>
+        </StepCard>
+
+        <StepCard step={5} title="Initial Setup Verification">
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Verify Project Structure</h4>
+              <CodeBlock language="bash">
+{`# Verify all files are present
+ls -la
+
+# Check package.json exists
+cat package.json | grep "light-speed-2026"`}
+              </CodeBlock>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Test Build System</h4>
+              <CodeBlock language="bash">
+{`# Test TypeScript compilation
+npm run typecheck
+
+# Test build process (may fail without env vars - that's expected)
+npm run build`}
+              </CodeBlock>
+            </div>
+
+            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+              <h4 className="font-semibold text-green-800 dark:text-green-200 mb-3">Next Steps</h4>
+              <ul className="space-y-1 text-green-700 dark:text-green-300 text-sm mb-4">
+                <li>✅ <strong>Dependencies installed</strong></li>
+                <li>✅ <strong>Project structure verified</strong></li>
+                <li>✅ <strong>Environment template copied</strong></li>
+              </ul>
+              <p className="text-green-700 dark:text-green-300 text-sm mb-3">
+                <strong>🔧 Continue to Environment Setup</strong><br/>
+                The development server requires environment variables to be configured first. Proceed to the Environment Variables section to complete the setup.
+              </p>
+              <p className="text-green-700 dark:text-green-300 text-sm">
+                <strong>📝 Development Ready</strong><br/>
+                Once environment variables are configured, you'll be able to:
+              </p>
+              <ul className="list-disc list-inside mt-2 space-y-1 text-green-700 dark:text-green-300 text-sm">
+                <li>Start the development server (<code className="bg-green-100 dark:bg-green-800 px-1 rounded">npm run dev</code>)</li>
+                <li>Create user accounts</li>
+                <li>Test social media post functionality</li>
+                <li>Customize the template for your needs</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Claude Code Development Tips</h4>
+              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                <p className="text-blue-800 dark:text-blue-200 text-sm mb-3">
+                  <strong>Recommended Two-Claude Setup:</strong>
+                </p>
+                <ul className="list-disc list-inside space-y-1 text-blue-700 dark:text-blue-300 text-sm mb-4">
+                  <li><strong>Claude Code (Opus 4) in VS Code Terminal</strong> - Primary development and code generation</li>
+                  <li><strong>Claude Browser (Sonnet 4) with Project Knowledge</strong> - Code reviews and documentation</li>
+                </ul>
+                
+                <h5 className="font-semibold text-blue-800 dark:text-blue-200 text-sm mb-2">Useful Claude Code Commands:</h5>
+                <CodeBlock language="bash">
+{`# Start fresh conversation for new features
+/clear
+
+# Get project-specific help
+/help
+
+# Analyze current codebase state
+/init`}
+                </CodeBlock>
+                
+                <div className="mt-3">
+                  <h5 className="font-semibold text-blue-800 dark:text-blue-200 text-sm mb-2">Pro Tips:</h5>
+                  <ul className="list-disc list-inside space-y-1 text-blue-700 dark:text-blue-300 text-sm">
+                    <li>Always launch Claude Code from the project root directory</li>
+                    <li>Use <code className="bg-blue-100 dark:bg-blue-800 px-1 rounded">/clear</code> when starting new development tasks</li>
+                    <li>The CLAUDE.md file provides project-specific context automatically</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </StepCard>
+
+        <StepCard step={6} title="Environment Configuration">
 
           <div className="mb-4">
             <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">Basic Configuration</h4>
@@ -182,7 +300,7 @@ INSTAGRAM_CLIENT_ID=your-instagram-id`}
           </InfoBox>
         </StepCard>
 
-        <StepCard step={5} title="Launch Development Server">
+        <StepCard step={7} title="Launch Development Server">
           <p className="mb-4">Start both the frontend and backend services:</p>
           
           <CodeBlock language="bash">
@@ -218,7 +336,7 @@ npm run dev
           </div>
         </StepCard>
 
-        <StepCard step={6} title="Verify Installation">
+        <StepCard step={8} title="Verify Installation">
           <p className="mb-4">Test that everything is working correctly:</p>
           
           <div className="space-y-4">
