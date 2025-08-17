@@ -163,23 +163,7 @@ claude
           </div>
         </StepCard>
 
-        <StepCard step={4} title="Prepare Environment File">
-          <p className="mb-4">Copy the environment template (configuration happens in next section):</p>
-          <CodeBlock language="bash">
-{`# Copy environment template
-cp .env.example .env`}
-          </CodeBlock>
-
-          <p className="text-stone-600 dark:text-stone-400 text-sm mt-4 mb-4">
-            <strong>Note:</strong> The <code className="bg-stone-100 dark:bg-stone-800 px-1 rounded">.env</code> file contains placeholder values. You'll configure actual values in the Environment Variables section next.
-          </p>
-
-          <InfoBox type="warning" title="Security Reminder" compact>
-            Never commit your .env file to version control. It contains sensitive API keys and secrets. The .gitignore file is already configured to exclude it.
-          </InfoBox>
-        </StepCard>
-
-        <StepCard step={5} title="Setup Summary & Next Steps">
+        <StepCard step={4} title="Setup Summary & Next Steps">
           <div className="space-y-6">
             <div>
               <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Setup Complete</h4>
@@ -189,7 +173,6 @@ cp .env.example .env`}
               <ul className="list-disc list-inside text-stone-600 dark:text-stone-400 text-sm mb-4">
                 <li>Dependencies installed and verified</li>
                 <li>Project structure confirmed</li>
-                <li>Environment template copied</li>
                 <li>Claude Code development environment ready</li>
               </ul>
             </div>
