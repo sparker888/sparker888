@@ -245,21 +245,9 @@ cp .env.example .env`}
 
         <div className="bg-stone-100 dark:bg-stone-800 rounded-lg p-6">
           <h3 className="text-lg font-semibold text-stone-900 dark:text-stone-100 mb-4">
-            🛠️ Troubleshooting Common Issues
+            🛠️ Installation Troubleshooting
           </h3>
           <div className="space-y-4 text-sm">
-            <div>
-              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-1">Port Already in Use</h4>
-              <p className="text-stone-600 dark:text-stone-400 mb-2">If ports 3000 or 8090 are busy:</p>
-              <CodeBlock language="bash">
-{`# Kill processes using the ports
-npx kill-port 3000 8090
-
-# Or run on different ports
-npm run dev -- --port 3001`}
-              </CodeBlock>
-            </div>
-            
             <div>
               <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-1">Node Version Issues</h4>
               <p className="text-stone-600 dark:text-stone-400 mb-2">If you have Node version conflicts:</p>
@@ -282,6 +270,23 @@ rm -rf node_modules package-lock.json
 npm install`}
               </CodeBlock>
             </div>
+
+            <div>
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-1">Permission Errors</h4>
+              <p className="text-stone-600 dark:text-stone-400 mb-2">If you get permission denied errors:</p>
+              <CodeBlock language="bash">
+{`# Fix npm permissions (macOS/Linux)
+sudo chown -R $(whoami) ~/.npm
+
+# Or use nvm instead of system Node.js`}
+              </CodeBlock>
+            </div>
+          </div>
+          
+          <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded">
+            <p className="text-blue-800 dark:text-blue-200 text-sm">
+              💡 <strong>For server and development issues:</strong> See the troubleshooting section in the First Run guide after completing environment setup.
+            </p>
           </div>
         </div>
 
