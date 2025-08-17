@@ -220,7 +220,6 @@ cp .env.example .env`}
                 Complete the setup by configuring your environment variables in the next section.
               </p>
               <p className="text-green-700 dark:text-green-300 text-sm">
-                <strong>📝 Coming Up Next</strong><br/>
                 Once environment variables are configured, you'll be able to start the development server 
                 and begin customizing your social media management platform.
               </p>
