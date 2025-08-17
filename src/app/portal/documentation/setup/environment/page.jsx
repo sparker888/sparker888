@@ -5,164 +5,243 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Environment Setup - Light-Speed 2026 Documentation',
-  description: 'Configure API keys and external services for Light-Speed 2026'
+  title: 'Environment Variables Configuration - Light Speed 2026',
+  description: 'Configure environment variables that enable the platform\'s core functionality'
 }
 
 export default function EnvironmentSetupPage() {
   return (
     <DocumentationLayout 
-      title="Environment Setup" 
-      description="Configure API keys and external services to unlock all Light-Speed 2026 features"
+      title="Environment Variables Configuration" 
+      description="Before starting the development server, you need to configure environment variables that enable the platform's core functionality. This guide walks you through setting up all required API keys and service connections."
     >
       <div className="space-y-8">
         
-        <InfoBox type="warning" title="API Keys Required">
-          <p className="mb-3">
-            To use Light-Speed 2026's social media features, you'll need API credentials from various platforms. 
-            This guide walks through obtaining and configuring each service.
-          </p>
-          <p>
-            You can start with free tier accounts and upgrade as your business grows.
-          </p>
-        </InfoBox>
+        <StepCard step={1} title="Open Environment File in VS Code">
+          <p className="mb-4">First, let's set up your local environment file:</p>
+          
+          <CodeBlock language="bash" title="Copy environment template">
+{`# In VS Code, open the environment template file
+# File → Open → .env.example
 
-        <StepCard step={1} title="Social Media Platform APIs">
-          <p className="mb-4">Set up API access for social media platforms:</p>
+# Copy it to create your local environment file
+cp .env.example .env`}
+          </CodeBlock>
+          
+          <InfoBox type="warning" title="Critical Step">
+            <p>
+              Open the <code>.env</code> file in VS Code to add your actual API keys and configuration values.
+            </p>
+          </InfoBox>
+        </StepCard>
+
+        <StepCard step={2} title="Required Service Configuration">
+          <p className="mb-4">The platform requires these services to function properly:</p>
+          
+          <div className="space-y-6">
+            {/* PocketBase Database */}
+            <div className="border border-stone-200 dark:border-stone-700 rounded-lg p-4">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3 flex items-center">
+                <span className="mr-2">🔐</span>
+                PocketBase Database (Required)
+              </h4>
+              <p className="text-stone-600 dark:text-stone-400 text-sm mb-3">
+                User authentication and data storage
+              </p>
+              <CodeBlock language="bash" title="PocketBase Configuration">
+{`PUBLIC_POCKETBASE_URL=https://your-instance.pockethost.io
+POCKETBASE_URL=https://your-instance.pockethost.io
+POCKETBASE_ADMIN_EMAIL=your-admin@email.com
+POCKETBASE_ADMIN_PASSWORD=your-secure-password`}
+              </CodeBlock>
+            </div>
+
+            {/* Stripe Integration */}
+            <div className="border border-stone-200 dark:border-stone-700 rounded-lg p-4">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3 flex items-center">
+                <span className="mr-2">💳</span>
+                Stripe Integration (Required)
+              </h4>
+              <p className="text-stone-600 dark:text-stone-400 text-sm mb-3">
+                Payment processing and subscriptions
+              </p>
+              <CodeBlock language="bash" title="Stripe Configuration">
+{`STRIPE_PUBLIC_KEY=pk_test_xxxxxxxxxxxxx
+STRIPE_SECRET_KEY=sk_test_xxxxxxxxxxxxx
+STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxxxxxxx`}
+              </CodeBlock>
+            </div>
+
+            {/* AWS Services */}
+            <div className="border border-stone-200 dark:border-stone-700 rounded-lg p-4">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3 flex items-center">
+                <span className="mr-2">☁️</span>
+                AWS Services (Required)
+              </h4>
+              <p className="text-stone-600 dark:text-stone-400 text-sm mb-3">
+                File storage and CDN delivery for professional-grade image handling
+              </p>
+              <CodeBlock language="bash" title="AWS Configuration">
+{`CUSTOM_AWS_REGION=us-east-1
+CUSTOM_AWS_ACCESS_KEY=your_access_key_here
+CUSTOM_AWS_SECRET_KEY=your_secret_key_here
+CUSTOM_S3_BUCKET=your-bucket-name
+CLOUDFRONT_DISTRIBUTION_DOMAIN=your-cloudfront-domain.cloudfront.net`}
+              </CodeBlock>
+            </div>
+
+            {/* Cloudflare Turnstile */}
+            <div className="border border-stone-200 dark:border-stone-700 rounded-lg p-4">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3 flex items-center">
+                <span className="mr-2">🛡️</span>
+                Cloudflare Turnstile (Recommended)
+              </h4>
+              <p className="text-stone-600 dark:text-stone-400 text-sm mb-3">
+                Anti-spam protection for forms
+              </p>
+              <CodeBlock language="bash" title="Turnstile Configuration">
+{`TURNSTILE_SITE_KEY=0x4AAAAAxxxxxxxxxxxxx
+TURNSTILE_SITE_SECRET=0x4AAAAAxxxxxxxxxxxxx`}
+              </CodeBlock>
+            </div>
+          </div>
+        </StepCard>
+
+        <StepCard step={3} title="Social Media APIs">
+          <p className="mb-4">Required for posting features:</p>
+          
           
           <div className="space-y-6">
             {/* Twitter API */}
             <div className="border border-stone-200 dark:border-stone-700 rounded-lg p-4">
               <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3 flex items-center">
                 <span className="mr-2">🐦</span>
-                Twitter/X API Setup
+                X/Twitter API - No app review required, immediate access
               </h4>
-              <CodeBlock language="bash" title="Required Environment Variables">
+              <CodeBlock language="bash" title="Twitter Configuration">
 {`TWITTER_API_KEY=your_api_key_here
-TWITTER_API_SECRET=your_api_secret_here  
+TWITTER_API_SECRET=your_api_secret_here
 TWITTER_ACCESS_TOKEN=your_access_token_here
 TWITTER_ACCESS_TOKEN_SECRET=your_access_token_secret_here
 TWITTER_BEARER_TOKEN=your_bearer_token_here`}
               </CodeBlock>
-              <div className="mt-3 text-sm text-stone-600 dark:text-stone-400">
-                <strong>Setup:</strong> Visit{' '}
-                <a href="https://developer.twitter.com" className="text-blue-600 dark:text-blue-400 underline">
-                  developer.twitter.com
-                </a>{' '}
-                → Create App → Generate Keys
-              </div>
             </div>
 
             {/* LinkedIn API */}
             <div className="border border-stone-200 dark:border-stone-700 rounded-lg p-4">
               <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3 flex items-center">
                 <span className="mr-2">💼</span>
-                LinkedIn API Setup
+                LinkedIn API - Open permissions, no app review required
               </h4>
-              <CodeBlock language="bash" title="Required Environment Variables">
+              <CodeBlock language="bash" title="LinkedIn Configuration">
 {`LINKEDIN_CLIENT_ID=your_client_id_here
 LINKEDIN_CLIENT_SECRET=your_client_secret_here
 LINKEDIN_REDIRECT_URI=http://localhost:3000/auth/linkedin/callback`}
               </CodeBlock>
-              <div className="mt-3 text-sm text-stone-600 dark:text-stone-400">
-                <strong>Setup:</strong> Visit{' '}
-                <a href="https://www.linkedin.com/developers/" className="text-blue-600 dark:text-blue-400 underline">
-                  LinkedIn Developers
-                </a>{' '}
-                → Create App → Add OAuth 2.0
-              </div>
             </div>
 
-            {/* Instagram API */}
+          </div>
+        </StepCard>
+
+        <StepCard step={4} title="Optional Services">
+          <div className="space-y-6">
+            {/* MailerLite Integration */}
             <div className="border border-stone-200 dark:border-stone-700 rounded-lg p-4">
               <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3 flex items-center">
-                <span className="mr-2">📸</span>
-                Instagram API Setup
+                <span className="mr-2">📧</span>
+                MailerLite Integration (Required)
               </h4>
-              <CodeBlock language="bash" title="Required Environment Variables">
-{`INSTAGRAM_CLIENT_ID=your_client_id_here
-INSTAGRAM_CLIENT_SECRET=your_client_secret_here
-INSTAGRAM_REDIRECT_URI=http://localhost:3000/auth/instagram/callback`}
+              <p className="text-stone-600 dark:text-stone-400 text-sm mb-3">
+                User notifications and email communications
+              </p>
+              <CodeBlock language="bash" title="MailerLite Configuration">
+{`MAILERLITE_API_KEY=your_mailerlite_api_key_here
+MAILERLITE_GROUP_ID=your_group_id_here`}
               </CodeBlock>
-              <div className="mt-3 text-sm text-stone-600 dark:text-stone-400">
-                <strong>Setup:</strong> Visit{' '}
-                <a href="https://developers.facebook.com" className="text-blue-600 dark:text-blue-400 underline">
-                  Facebook Developers
-                </a>{' '}
-                → Create App → Add Instagram Basic Display
-              </div>
+            </div>
+
+            {/* Analytics & Monitoring */}
+            <div className="border border-stone-200 dark:border-stone-700 rounded-lg p-4">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3 flex items-center">
+                <span className="mr-2">📊</span>
+                Analytics & Monitoring (Optional)
+              </h4>
+              <CodeBlock language="bash" title="Analytics Configuration">
+{`GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
+SENTRY_DSN=https://your-sentry-dsn-here`}
+              </CodeBlock>
             </div>
           </div>
         </StepCard>
 
-        <StepCard step={2} title="Payment Processing (Stripe)">
-          <p className="mb-4">Configure Stripe for subscription billing:</p>
+        <StepCard step={5} title="Start Development Server">
+          <p className="mb-4">Once you've configured your environment variables:</p>
           
-          <CodeBlock language="bash" title="Stripe Configuration">
-{`# Stripe API Keys
-STRIPE_PUBLISHABLE_KEY=pk_test_your_publishable_key_here
-STRIPE_SECRET_KEY=sk_test_your_secret_key_here
-STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret_here
+          <CodeBlock language="bash" title="Start the development server">
+{`# Start the development server
+npm run dev
 
-# Stripe Product IDs (create these in Stripe Dashboard)
-STRIPE_STARTER_PRICE_ID=price_1234567890
-STRIPE_PRO_PRICE_ID=price_0987654321
-STRIPE_ENTERPRISE_PRICE_ID=price_1122334455`}
+# Your app will be available at:
+# http://localhost:4321`}
           </CodeBlock>
+        </StepCard>
 
-          <div className="mt-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-blue-800 dark:text-blue-200 text-sm">
-              <strong>Stripe Setup:</strong> Create a Stripe account, set up products and pricing, 
-              then configure webhook endpoints for subscription management.
-            </p>
+        <StepCard step={6} title="Service Setup Guides">
+          <p className="mb-4">Each service requires account setup and API key generation. Detailed setup guides are available for:</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-stone-50 dark:bg-stone-800 p-4 rounded-lg">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">Database & Auth</h4>
+              <ul className="space-y-1 text-sm text-stone-600 dark:text-stone-400">
+                <li>• <a href="./pocketbase-setup" className="text-blue-600 dark:text-blue-400 hover:underline">PocketBase Database Setup</a></li>
+                <li>• <a href="./stripe-setup" className="text-blue-600 dark:text-blue-400 hover:underline">Stripe Payment Configuration</a></li>
+              </ul>
+            </div>
+            <div className="bg-stone-50 dark:bg-stone-800 p-4 rounded-lg">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">Storage & CDN</h4>
+              <ul className="space-y-1 text-sm text-stone-600 dark:text-stone-400">
+                <li>• <a href="./aws-setup" className="text-blue-600 dark:text-blue-400 hover:underline">AWS S3 & CloudFront Setup</a></li>
+                <li>• <a href="./turnstile-setup" className="text-blue-600 dark:text-blue-400 hover:underline">Cloudflare Turnstile Setup</a></li>
+              </ul>
+            </div>
+            <div className="bg-stone-50 dark:bg-stone-800 p-4 rounded-lg">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">Social Media</h4>
+              <ul className="space-y-1 text-sm text-stone-600 dark:text-stone-400">
+                <li>• <a href="./social-media-setup" className="text-blue-600 dark:text-blue-400 hover:underline">Social Media API Configuration</a></li>
+              </ul>
+            </div>
+            <div className="bg-stone-50 dark:bg-stone-800 p-4 rounded-lg">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">Email</h4>
+              <ul className="space-y-1 text-sm text-stone-600 dark:text-stone-400">
+                <li>• <a href="./mailerlite-setup" className="text-blue-600 dark:text-blue-400 hover:underline">MailerLite Email Integration</a></li>
+              </ul>
+            </div>
           </div>
         </StepCard>
 
-        <StepCard step={3} title="Database Configuration">
-          <p className="mb-4">Configure PocketBase database settings:</p>
-          
-          <CodeBlock language="bash" title="Database Environment Variables">
-{`# PocketBase Configuration
-POCKETBASE_URL=http://localhost:8090
-POCKETBASE_ADMIN_EMAIL=admin@yourcompany.com
-POCKETBASE_ADMIN_PASSWORD=your_secure_password_here
-
-# Database Encryption (generate a strong key)
-PB_ENCRYPTION_KEY=your_32_character_encryption_key_here`}
-          </CodeBlock>
-
-          <InfoBox type="info" title="Security Note">
-            Use a strong encryption key in production. You can generate one using: 
-            <code>openssl rand -base64 32</code>
-          </InfoBox>
-        </StepCard>
-
-        <StepCard step={4} title="Email Service (Optional)">
-          <p className="mb-4">Configure email for notifications and user communication:</p>
-          
-          <CodeBlock language="bash" title="SMTP Configuration">
-{`# Email Service (example: Gmail SMTP)
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USERNAME=your_email@gmail.com
-SMTP_PASSWORD=your_app_password_here
-
-# Email Templates
-EMAIL_FROM_NAME=Your Company Name
-EMAIL_FROM_ADDRESS=noreply@yourcompany.com`}
-          </CodeBlock>
+        <StepCard step={7} title="Troubleshooting">
+          <div className="space-y-4">
+            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
+              <h4 className="font-semibold text-red-800 dark:text-red-200 mb-2">Common Issues</h4>
+              <ul className="space-y-2 text-sm text-red-700 dark:text-red-300">
+                <li><strong>Missing Environment Variables:</strong> If you see undefined variable errors, verify all required variables are set in your <code>.env</code> file.</li>
+                <li><strong>API Connection Failures:</strong> Check that your API keys are valid and have the correct permissions.</li>
+                <li><strong>File Upload Issues:</strong> Verify AWS credentials and bucket permissions are configured correctly.</li>
+              </ul>
+            </div>
+          </div>
         </StepCard>
 
         <div className="bg-gradient-to-r from-green-500 to-blue-600 rounded-lg p-6 text-white">
-          <h3 className="text-xl font-bold mb-3">🎉 Environment Setup Complete!</h3>
+          <h3 className="text-xl font-bold mb-3">🎉 Environment Configuration Complete!</h3>
           <p className="mb-4 opacity-90">
-            Your Light-Speed 2026 platform now has access to all external services. 
-            You can start connecting social media accounts and processing payments.
+            Your Light Speed 2026 platform is now configured with all required environment variables. 
+            You can start the development server and begin using all platform features.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link href="/portal/documentation/setup/first-run">
+            <Link href="/portal/documentation/setup/pocketbase">
               <Button className="bg-white text-green-600 hover:bg-gray-100">
-                Next: First Run Verification →
+                Next: PocketBase Database Setup →
               </Button>
             </Link>
             <Link href="/portal/documentation/customization/branding">

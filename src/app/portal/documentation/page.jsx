@@ -59,7 +59,7 @@ export default function DocumentationOverviewPage() {
               <Link href="/portal/documentation/setup/environment" className="block">
                 <div className="p-3 border border-stone-200 dark:border-stone-700 rounded-lg hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors">
                   <div className="font-medium text-stone-900 dark:text-stone-100">Environment Setup</div>
-                  <div className="text-sm text-stone-600 dark:text-stone-400">Configure API keys and external services</div>
+                  <div className="text-sm text-stone-600 dark:text-stone-400">Configure Twitter/X and LinkedIn API keys for immediate posting access</div>
                 </div>
               </Link>
               <Link href="/portal/documentation/setup/first-run" className="block">
@@ -90,7 +90,7 @@ export default function DocumentationOverviewPage() {
               <Link href="/portal/documentation/customization/platforms" className="block">
                 <div className="p-3 border border-stone-200 dark:border-stone-700 rounded-lg hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors">
                   <div className="font-medium text-stone-900 dark:text-stone-100">Platform Configuration</div>
-                  <div className="text-sm text-stone-600 dark:text-stone-400">Set up Twitter, LinkedIn, Instagram integrations</div>
+                  <div className="text-sm text-stone-600 dark:text-stone-400">Set up Twitter/X and LinkedIn (no app review required)</div>
                 </div>
               </Link>
             </div>
