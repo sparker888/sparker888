@@ -34,6 +34,29 @@ module.exports = {
       fontFamily: {
         display: ['Quiet Sans', ...defaultTheme.fontFamily.sans],
       },
+      animation: {
+        'star-field-seamless': 'starFieldSeamless 120s linear infinite',
+        'star-twinkle': 'starTwinkle 2s ease-in-out infinite',
+        'star-twinkle-slow': 'starTwinkle 3s ease-in-out infinite',
+      },
+      keyframes: {
+        starFieldSeamless: {
+          '0%': { 
+            transform: 'translateX(0) translateY(0)'
+          },
+          '100%': { 
+            transform: 'translateX(50%) translateY(50%)'
+          }
+        },
+        starTwinkle: {
+          '0%, 100%': { 
+            opacity: '0.2'
+          },
+          '50%': { 
+            opacity: '1'
+          },
+        },
+      },
     }
   },
 }

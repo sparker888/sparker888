@@ -32,8 +32,8 @@ export default function EnvironmentSetupPage() {
           
           <div className="space-y-6">
             {/* Twitter API */}
-            <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-4">
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3 flex items-center">
+            <div className="border border-stone-200 dark:border-stone-700 rounded-lg p-4">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3 flex items-center">
                 <span className="mr-2">🐦</span>
                 Twitter/X API Setup
               </h4>
@@ -44,7 +44,7 @@ TWITTER_ACCESS_TOKEN=your_access_token_here
 TWITTER_ACCESS_TOKEN_SECRET=your_access_token_secret_here
 TWITTER_BEARER_TOKEN=your_bearer_token_here`}
               </CodeBlock>
-              <div className="mt-3 text-sm text-slate-600 dark:text-slate-400">
+              <div className="mt-3 text-sm text-stone-600 dark:text-stone-400">
                 <strong>Setup:</strong> Visit{' '}
                 <a href="https://developer.twitter.com" className="text-blue-600 dark:text-blue-400 underline">
                   developer.twitter.com
@@ -54,8 +54,8 @@ TWITTER_BEARER_TOKEN=your_bearer_token_here`}
             </div>
 
             {/* LinkedIn API */}
-            <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-4">
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3 flex items-center">
+            <div className="border border-stone-200 dark:border-stone-700 rounded-lg p-4">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3 flex items-center">
                 <span className="mr-2">💼</span>
                 LinkedIn API Setup
               </h4>
@@ -64,7 +64,7 @@ TWITTER_BEARER_TOKEN=your_bearer_token_here`}
 LINKEDIN_CLIENT_SECRET=your_client_secret_here
 LINKEDIN_REDIRECT_URI=http://localhost:3000/auth/linkedin/callback`}
               </CodeBlock>
-              <div className="mt-3 text-sm text-slate-600 dark:text-slate-400">
+              <div className="mt-3 text-sm text-stone-600 dark:text-stone-400">
                 <strong>Setup:</strong> Visit{' '}
                 <a href="https://www.linkedin.com/developers/" className="text-blue-600 dark:text-blue-400 underline">
                   LinkedIn Developers
@@ -74,8 +74,8 @@ LINKEDIN_REDIRECT_URI=http://localhost:3000/auth/linkedin/callback`}
             </div>
 
             {/* Instagram API */}
-            <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-4">
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3 flex items-center">
+            <div className="border border-stone-200 dark:border-stone-700 rounded-lg p-4">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3 flex items-center">
                 <span className="mr-2">📸</span>
                 Instagram API Setup
               </h4>
@@ -84,7 +84,7 @@ LINKEDIN_REDIRECT_URI=http://localhost:3000/auth/linkedin/callback`}
 INSTAGRAM_CLIENT_SECRET=your_client_secret_here
 INSTAGRAM_REDIRECT_URI=http://localhost:3000/auth/instagram/callback`}
               </CodeBlock>
-              <div className="mt-3 text-sm text-slate-600 dark:text-slate-400">
+              <div className="mt-3 text-sm text-stone-600 dark:text-stone-400">
                 <strong>Setup:</strong> Visit{' '}
                 <a href="https://developers.facebook.com" className="text-blue-600 dark:text-blue-400 underline">
                   Facebook Developers

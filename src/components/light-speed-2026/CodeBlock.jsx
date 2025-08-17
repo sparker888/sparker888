@@ -19,17 +19,17 @@ export function CodeBlock({ children, language = 'bash', title }) {
   return (
     <div className="relative">
       {title && (
-        <div className="bg-slate-800 text-slate-300 px-4 py-2 text-sm font-medium rounded-t-lg border-b border-slate-700">
+        <div className="bg-stone-800 text-stone-300 px-4 py-2 text-sm font-medium rounded-t-lg border-b border-stone-700">
           {title}
         </div>
       )}
       <div className={clsx(
-        'relative bg-slate-900 text-slate-100 p-4 overflow-x-auto',
+        'relative bg-stone-900 text-stone-100 p-4 overflow-x-auto',
         title ? 'rounded-b-lg' : 'rounded-lg'
       )}>
         <button
           onClick={copyToClipboard}
-          className="absolute top-3 right-3 p-2 rounded text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition"
+          className="absolute top-3 right-3 p-2 rounded text-stone-400 hover:text-stone-200 hover:bg-stone-800 transition"
           title="Copy to clipboard"
         >
           {copied ? (

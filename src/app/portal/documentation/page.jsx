@@ -41,106 +41,106 @@ export default function DocumentationOverviewPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Setup Section */}
-          <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-6">
-            <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-4 flex items-center">
+          <div className="bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-xl p-6">
+            <h3 className="text-xl font-semibold text-stone-900 dark:text-stone-100 mb-4 flex items-center">
               <span className="mr-3">⚙️</span>
               Setup & Installation
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 mb-4">
+            <p className="text-stone-600 dark:text-stone-400 mb-4">
               Get your development environment ready and launch Light-Speed 2026 locally.
             </p>
             <div className="space-y-3 mb-6">
               <Link href="/portal/documentation/setup/installation" className="block">
-                <div className="p-3 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                  <div className="font-medium text-slate-900 dark:text-slate-100">Installation Guide</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Download, install dependencies, and run locally</div>
+                <div className="p-3 border border-stone-200 dark:border-stone-700 rounded-lg hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors">
+                  <div className="font-medium text-stone-900 dark:text-stone-100">Installation Guide</div>
+                  <div className="text-sm text-stone-600 dark:text-stone-400">Download, install dependencies, and run locally</div>
                 </div>
               </Link>
               <Link href="/portal/documentation/setup/environment" className="block">
-                <div className="p-3 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                  <div className="font-medium text-slate-900 dark:text-slate-100">Environment Setup</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Configure API keys and external services</div>
+                <div className="p-3 border border-stone-200 dark:border-stone-700 rounded-lg hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors">
+                  <div className="font-medium text-stone-900 dark:text-stone-100">Environment Setup</div>
+                  <div className="text-sm text-stone-600 dark:text-stone-400">Configure API keys and external services</div>
                 </div>
               </Link>
               <Link href="/portal/documentation/setup/first-run" className="block">
-                <div className="p-3 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                  <div className="font-medium text-slate-900 dark:text-slate-100">First Run Verification</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Verify your installation is working correctly</div>
+                <div className="p-3 border border-stone-200 dark:border-stone-700 rounded-lg hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors">
+                  <div className="font-medium text-stone-900 dark:text-stone-100">First Run Verification</div>
+                  <div className="text-sm text-stone-600 dark:text-stone-400">Verify your installation is working correctly</div>
                 </div>
               </Link>
             </div>
           </div>
 
           {/* Customization Section */}
-          <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-6">
-            <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-4 flex items-center">
+          <div className="bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-xl p-6">
+            <h3 className="text-xl font-semibold text-stone-900 dark:text-stone-100 mb-4 flex items-center">
               <span className="mr-3">🎨</span>
               Customization
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 mb-4">
+            <p className="text-stone-600 dark:text-stone-400 mb-4">
               Transform the template to match your brand and configure social platforms.
             </p>
             <div className="space-y-3 mb-6">
               <Link href="/portal/documentation/customization/branding" className="block">
-                <div className="p-3 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                  <div className="font-medium text-slate-900 dark:text-slate-100">Branding Guide</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Customize colors, logos, and content</div>
+                <div className="p-3 border border-stone-200 dark:border-stone-700 rounded-lg hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors">
+                  <div className="font-medium text-stone-900 dark:text-stone-100">Branding Guide</div>
+                  <div className="text-sm text-stone-600 dark:text-stone-400">Customize colors, logos, and content</div>
                 </div>
               </Link>
               <Link href="/portal/documentation/customization/platforms" className="block">
-                <div className="p-3 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                  <div className="font-medium text-slate-900 dark:text-slate-100">Platform Configuration</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Set up Twitter, LinkedIn, Instagram integrations</div>
+                <div className="p-3 border border-stone-200 dark:border-stone-700 rounded-lg hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors">
+                  <div className="font-medium text-stone-900 dark:text-stone-100">Platform Configuration</div>
+                  <div className="text-sm text-stone-600 dark:text-stone-400">Set up Twitter, LinkedIn, Instagram integrations</div>
                 </div>
               </Link>
             </div>
           </div>
 
           {/* Deployment Section */}
-          <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-6">
-            <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-4 flex items-center">
+          <div className="bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-xl p-6">
+            <h3 className="text-xl font-semibold text-stone-900 dark:text-stone-100 mb-4 flex items-center">
               <span className="mr-3">🚀</span>
               Deployment
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 mb-4">
+            <p className="text-stone-600 dark:text-stone-400 mb-4">
               Launch your platform to production with reliable hosting solutions.
             </p>
             <div className="space-y-3 mb-6">
               <Link href="/portal/documentation/deployment/pocketbase" className="block">
-                <div className="p-3 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                  <div className="font-medium text-slate-900 dark:text-slate-100">PocketBase Backend</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Deploy your database and API to production</div>
+                <div className="p-3 border border-stone-200 dark:border-stone-700 rounded-lg hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors">
+                  <div className="font-medium text-stone-900 dark:text-stone-100">PocketBase Backend</div>
+                  <div className="text-sm text-stone-600 dark:text-stone-400">Deploy your database and API to production</div>
                 </div>
               </Link>
               <Link href="/portal/documentation/deployment/frontend" className="block">
-                <div className="p-3 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                  <div className="font-medium text-slate-900 dark:text-slate-100">Frontend Deployment</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Deploy your Next.js app to Vercel, Netlify, or AWS</div>
+                <div className="p-3 border border-stone-200 dark:border-stone-700 rounded-lg hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors">
+                  <div className="font-medium text-stone-900 dark:text-stone-100">Frontend Deployment</div>
+                  <div className="text-sm text-stone-600 dark:text-stone-400">Deploy your Next.js app to Vercel, Netlify, or AWS</div>
                 </div>
               </Link>
             </div>
           </div>
 
           {/* Examples Section */}
-          <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-6">
-            <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-4 flex items-center">
+          <div className="bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-xl p-6">
+            <h3 className="text-xl font-semibold text-stone-900 dark:text-stone-100 mb-4 flex items-center">
               <span className="mr-3">💡</span>
               Industry Examples
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 mb-4">
+            <p className="text-stone-600 dark:text-stone-400 mb-4">
               See Light-Speed 2026 customized for different industries and use cases.
             </p>
             <div className="space-y-3 mb-6">
               <Link href="/portal/documentation/examples/fitness" className="block">
-                <div className="p-3 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                  <div className="font-medium text-slate-900 dark:text-slate-100">🏋️ FitLife Social (Fitness)</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Platform customized for fitness professionals</div>
+                <div className="p-3 border border-stone-200 dark:border-stone-700 rounded-lg hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors">
+                  <div className="font-medium text-stone-900 dark:text-stone-100">🏋️ FitLife Social (Fitness)</div>
+                  <div className="text-sm text-stone-600 dark:text-stone-400">Platform customized for fitness professionals</div>
                 </div>
               </Link>
               <Link href="/portal/documentation/examples/ecommerce" className="block">
-                <div className="p-3 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                  <div className="font-medium text-slate-900 dark:text-slate-100">🛍️ ProductFlow Pro (E-commerce)</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Platform optimized for online stores</div>
+                <div className="p-3 border border-stone-200 dark:border-stone-700 rounded-lg hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors">
+                  <div className="font-medium text-stone-900 dark:text-stone-100">🛍️ ProductFlow Pro (E-commerce)</div>
+                  <div className="text-sm text-stone-600 dark:text-stone-400">Platform optimized for online stores</div>
                 </div>
               </Link>
             </div>
@@ -149,8 +149,8 @@ export default function DocumentationOverviewPage() {
         </div>
 
         {/* Quick Start Path */}
-        <div className="bg-slate-100 dark:bg-slate-800 rounded-xl p-8">
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4 text-center">
+        <div className="bg-stone-100 dark:bg-stone-800 rounded-xl p-8">
+          <h2 className="text-2xl font-bold text-stone-900 dark:text-stone-100 mb-4 text-center">
             🎯 Recommended Learning Path
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -158,29 +158,29 @@ export default function DocumentationOverviewPage() {
               <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-blue-600 dark:text-blue-400 font-bold">1</span>
               </div>
-              <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">Install & Setup</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400">Get the platform running locally on your machine</p>
+              <h3 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">Install & Setup</h3>
+              <p className="text-sm text-stone-600 dark:text-stone-400">Get the platform running locally on your machine</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-purple-600 dark:text-purple-400 font-bold">2</span>
               </div>
-              <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">Customize Branding</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400">Make it yours with logos, colors, and content</p>
+              <h3 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">Customize Branding</h3>
+              <p className="text-sm text-stone-600 dark:text-stone-400">Make it yours with logos, colors, and content</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-green-600 dark:text-green-400 font-bold">3</span>
               </div>
-              <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">Configure Platforms</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400">Connect social media APIs and integrations</p>
+              <h3 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">Configure Platforms</h3>
+              <p className="text-sm text-stone-600 dark:text-stone-400">Connect social media APIs and integrations</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-orange-600 dark:text-orange-400 font-bold">4</span>
               </div>
-              <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">Deploy to Production</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400">Launch your SaaS platform for customers</p>
+              <h3 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">Deploy to Production</h3>
+              <p className="text-sm text-stone-600 dark:text-stone-400">Launch your SaaS platform for customers</p>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ export default function CustomerDashboardPage() {
     <div>
       
       {/* Dashboard Header */}
-      <div className="bg-slate-800 border-b border-slate-700">
+      <div className="bg-stone-800 border-b border-stone-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center space-x-4">
@@ -20,18 +20,18 @@ export default function CustomerDashboardPage() {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-white">Light-Speed 2026</h1>
-                <p className="text-sm text-slate-400">Social Media Management</p>
+                <p className="text-sm text-stone-400">Social Media Management</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <Button variant="secondary" className="text-sm bg-slate-700 text-white border-slate-600">
+              <Button variant="secondary" className="text-sm bg-stone-700 text-white border-stone-600">
                 📊 Analytics
               </Button>
               <Button className="text-sm bg-purple-600 hover:bg-purple-700">
                 ✨ Create Post
               </Button>
-              <div className="w-8 h-8 bg-slate-600 rounded-full flex items-center justify-center">
-                <span className="text-slate-300 text-sm">👤</span>
+              <div className="w-8 h-8 bg-stone-600 rounded-full flex items-center justify-center">
+                <span className="text-stone-300 text-sm">👤</span>
               </div>
             </div>
           </div>
@@ -66,36 +66,36 @@ export default function CustomerDashboardPage() {
 
         {/* Quick Actions */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-          <div className="bg-slate-800 border border-slate-700 rounded-lg p-6 hover:border-slate-600 transition cursor-pointer">
+          <div className="bg-stone-800 border border-stone-700 rounded-lg p-6 hover:border-stone-600 transition cursor-pointer">
             <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-4">
               <span className="text-blue-600 dark:text-blue-400 text-2xl">✍️</span>
             </div>
             <h3 className="font-semibold text-white mb-2">Create Post</h3>
-            <p className="text-slate-400 text-sm">Draft and schedule your next social media post</p>
+            <p className="text-stone-400 text-sm">Draft and schedule your next social media post</p>
           </div>
 
-          <div className="bg-slate-800 border border-slate-700 rounded-lg p-6 hover:border-slate-600 transition cursor-pointer">
+          <div className="bg-stone-800 border border-stone-700 rounded-lg p-6 hover:border-stone-600 transition cursor-pointer">
             <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mb-4">
               <span className="text-green-600 dark:text-green-400 text-2xl">📅</span>
             </div>
             <h3 className="font-semibold text-white mb-2">Content Calendar</h3>
-            <p className="text-slate-400 text-sm">View and manage your posting schedule</p>
+            <p className="text-stone-400 text-sm">View and manage your posting schedule</p>
           </div>
 
-          <div className="bg-slate-800 border border-slate-700 rounded-lg p-6 hover:border-slate-600 transition cursor-pointer">
+          <div className="bg-stone-800 border border-stone-700 rounded-lg p-6 hover:border-stone-600 transition cursor-pointer">
             <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mb-4">
               <span className="text-purple-600 dark:text-purple-400 text-2xl">📊</span>
             </div>
             <h3 className="font-semibold text-white mb-2">Analytics</h3>
-            <p className="text-slate-400 text-sm">Track performance across all platforms</p>
+            <p className="text-stone-400 text-sm">Track performance across all platforms</p>
           </div>
 
-          <div className="bg-slate-800 border border-slate-700 rounded-lg p-6 hover:border-slate-600 transition cursor-pointer">
+          <div className="bg-stone-800 border border-stone-700 rounded-lg p-6 hover:border-stone-600 transition cursor-pointer">
             <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center mb-4">
               <span className="text-orange-600 dark:text-orange-400 text-2xl">⚙️</span>
             </div>
             <h3 className="font-semibold text-white mb-2">Settings</h3>
-            <p className="text-slate-400 text-sm">Manage accounts and preferences</p>
+            <p className="text-stone-400 text-sm">Manage accounts and preferences</p>
           </div>
         </div>
 
@@ -104,23 +104,23 @@ export default function CustomerDashboardPage() {
           
           {/* Recent Activity */}
           <div className="lg:col-span-2">
-            <div className="bg-slate-800 border border-slate-700 rounded-lg p-6">
+            <div className="bg-stone-800 border border-stone-700 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-white mb-4">📈 Recent Activity</h3>
               
               <div className="space-y-4">
-                <div className="flex items-start space-x-4 p-4 bg-slate-700 rounded-lg">
+                <div className="flex items-start space-x-4 p-4 bg-stone-700 rounded-lg">
                   <div className="w-10 h-10 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
                     <span className="text-green-600 dark:text-green-400 text-sm">📸</span>
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <h4 className="font-semibold text-white">Instagram Post Published</h4>
-                      <span className="text-xs text-slate-400">2 hours ago</span>
+                      <span className="text-xs text-stone-400">2 hours ago</span>
                     </div>
-                    <p className="text-slate-400 text-sm">
+                    <p className="text-stone-400 text-sm">
                       "5 Tips for Better Morning Routine" - 234 likes, 18 comments
                     </p>
-                    <div className="flex items-center space-x-4 mt-2 text-xs text-slate-400">
+                    <div className="flex items-center space-x-4 mt-2 text-xs text-stone-400">
                       <span>❤️ 234 likes</span>
                       <span>💬 18 comments</span>
                       <span>📤 12 shares</span>
@@ -128,38 +128,38 @@ export default function CustomerDashboardPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4 p-4 bg-slate-700 rounded-lg">
+                <div className="flex items-start space-x-4 p-4 bg-stone-700 rounded-lg">
                   <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
                     <span className="text-blue-600 dark:text-blue-400 text-sm">🐦</span>
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <h4 className="font-semibold text-white">Twitter Thread Scheduled</h4>
-                      <span className="text-xs text-slate-400">4 hours ago</span>
+                      <span className="text-xs text-stone-400">4 hours ago</span>
                     </div>
-                    <p className="text-slate-400 text-sm">
+                    <p className="text-stone-400 text-sm">
                       "Productivity hacks for entrepreneurs" thread scheduled for tomorrow 9 AM
                     </p>
-                    <div className="flex items-center space-x-4 mt-2 text-xs text-slate-400">
+                    <div className="flex items-center space-x-4 mt-2 text-xs text-stone-400">
                       <span>🕘 Scheduled for 9:00 AM</span>
                       <span>📝 8 tweets</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4 p-4 bg-slate-700 rounded-lg">
+                <div className="flex items-start space-x-4 p-4 bg-stone-700 rounded-lg">
                   <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center">
                     <span className="text-purple-600 dark:text-purple-400 text-sm">💼</span>
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <h4 className="font-semibold text-white">LinkedIn Article Published</h4>
-                      <span className="text-xs text-slate-400">Yesterday</span>
+                      <span className="text-xs text-stone-400">Yesterday</span>
                     </div>
-                    <p className="text-slate-400 text-sm">
+                    <p className="text-stone-400 text-sm">
                       "The Future of Remote Work" - 89 reactions, 23 comments
                     </p>
-                    <div className="flex items-center space-x-4 mt-2 text-xs text-slate-400">
+                    <div className="flex items-center space-x-4 mt-2 text-xs text-stone-400">
                       <span>👍 89 reactions</span>
                       <span>💬 23 comments</span>
                       <span>👀 1.2K views</span>
@@ -169,7 +169,7 @@ export default function CustomerDashboardPage() {
               </div>
 
               <div className="mt-4 text-center">
-                <Button variant="secondary" className="text-sm bg-slate-700 text-white border-slate-600">
+                <Button variant="secondary" className="text-sm bg-stone-700 text-white border-stone-600">
                   View All Activity
                 </Button>
               </div>
@@ -180,7 +180,7 @@ export default function CustomerDashboardPage() {
           <div className="space-y-6">
             
             {/* Connected Accounts */}
-            <div className="bg-slate-800 border border-slate-700 rounded-lg p-6">
+            <div className="bg-stone-800 border border-stone-700 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-white mb-4">🔗 Connected Accounts</h3>
               
               <div className="space-y-3">
@@ -191,7 +191,7 @@ export default function CustomerDashboardPage() {
                     </div>
                     <div>
                       <div className="font-semibold text-white text-sm">Instagram</div>
-                      <div className="text-xs text-slate-400">@sarah_wellness</div>
+                      <div className="text-xs text-stone-400">@sarah_wellness</div>
                     </div>
                   </div>
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -204,7 +204,7 @@ export default function CustomerDashboardPage() {
                     </div>
                     <div>
                       <div className="font-semibold text-white text-sm">Twitter</div>
-                      <div className="text-xs text-slate-400">@sarah_tips</div>
+                      <div className="text-xs text-stone-400">@sarah_tips</div>
                     </div>
                   </div>
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -217,7 +217,7 @@ export default function CustomerDashboardPage() {
                     </div>
                     <div>
                       <div className="font-semibold text-white text-sm">LinkedIn</div>
-                      <div className="text-xs text-slate-400">Sarah Johnson</div>
+                      <div className="text-xs text-stone-400">Sarah Johnson</div>
                     </div>
                   </div>
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -230,10 +230,10 @@ export default function CustomerDashboardPage() {
                     </div>
                     <div>
                       <div className="font-semibold text-white text-sm">TikTok</div>
-                      <div className="text-xs text-slate-400">Not connected</div>
+                      <div className="text-xs text-stone-400">Not connected</div>
                     </div>
                   </div>
-                  <Button variant="secondary" className="text-xs px-3 py-1 bg-slate-700 text-white border-slate-600">
+                  <Button variant="secondary" className="text-xs px-3 py-1 bg-stone-700 text-white border-stone-600">
                     Connect
                   </Button>
                 </div>
@@ -241,24 +241,24 @@ export default function CustomerDashboardPage() {
             </div>
 
             {/* Quick Stats */}
-            <div className="bg-slate-800 border border-slate-700 rounded-lg p-6">
+            <div className="bg-stone-800 border border-stone-700 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-white mb-4">📊 This Week</h3>
               
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-400 text-sm">Posts Published</span>
+                  <span className="text-stone-400 text-sm">Posts Published</span>
                   <span className="font-semibold text-white">12</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-400 text-sm">Total Reach</span>
+                  <span className="text-stone-400 text-sm">Total Reach</span>
                   <span className="font-semibold text-white">24.8K</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-400 text-sm">Engagement</span>
+                  <span className="text-stone-400 text-sm">Engagement</span>
                   <span className="font-semibold text-white">1.9K</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-400 text-sm">New Followers</span>
+                  <span className="text-stone-400 text-sm">New Followers</span>
                   <span className="font-semibold text-white">+47</span>
                 </div>
               </div>
@@ -274,7 +274,7 @@ export default function CustomerDashboardPage() {
             </div>
 
             {/* Upcoming Posts */}
-            <div className="bg-slate-800 border border-slate-700 rounded-lg p-6">
+            <div className="bg-stone-800 border border-stone-700 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-white mb-4">⏰ Upcoming Posts</h3>
               
               <div className="space-y-3">
@@ -284,7 +284,7 @@ export default function CustomerDashboardPage() {
                   </div>
                   <div className="flex-1">
                     <div className="font-semibold text-white text-sm">Morning Motivation</div>
-                    <div className="text-xs text-slate-400">Today, 9:00 AM</div>
+                    <div className="text-xs text-stone-400">Today, 9:00 AM</div>
                   </div>
                 </div>
 
@@ -294,7 +294,7 @@ export default function CustomerDashboardPage() {
                   </div>
                   <div className="flex-1">
                     <div className="font-semibold text-white text-sm">Career Tips Article</div>
-                    <div className="text-xs text-slate-400">Tomorrow, 2:00 PM</div>
+                    <div className="text-xs text-stone-400">Tomorrow, 2:00 PM</div>
                   </div>
                 </div>
 
@@ -304,13 +304,13 @@ export default function CustomerDashboardPage() {
                   </div>
                   <div className="flex-1">
                     <div className="font-semibold text-white text-sm">Weekly Thread</div>
-                    <div className="text-xs text-slate-400">Friday, 11:00 AM</div>
+                    <div className="text-xs text-stone-400">Friday, 11:00 AM</div>
                   </div>
                 </div>
               </div>
 
               <div className="mt-4">
-                <Button variant="secondary" className="w-full text-sm bg-slate-700 text-white border-slate-600">
+                <Button variant="secondary" className="w-full text-sm bg-stone-700 text-white border-stone-600">
                   View Calendar
                 </Button>
               </div>
@@ -321,9 +321,9 @@ export default function CustomerDashboardPage() {
 
         {/* Back to Portal */}
         <div className="mt-12 text-center">
-          <div className="bg-slate-800 border border-slate-700 rounded-xl p-8">
+          <div className="bg-stone-800 border border-stone-700 rounded-xl p-8">
             <h2 className="text-2xl font-bold text-white mb-4">✨ This is Your Customer Experience</h2>
-            <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-stone-300 mb-6 max-w-2xl mx-auto">
               This dashboard preview shows what your customers will experience when using Light-Speed 2026. 
               The actual platform includes advanced features, real-time data, and full social media management capabilities.
             </p>
@@ -334,7 +334,7 @@ export default function CustomerDashboardPage() {
                 </Button>
               </Link>
               <Link href="/portal">
-                <Button variant="secondary" className="bg-slate-700 text-white border-slate-600">
+                <Button variant="secondary" className="bg-stone-700 text-white border-stone-600">
                   ← Back to Portal
                 </Button>
               </Link>

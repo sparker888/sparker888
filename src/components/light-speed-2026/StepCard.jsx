@@ -1,13 +1,13 @@
 export function StepCard({ step, title, children, variant = 'default' }) {
   const variants = {
-    default: 'bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700',
+    default: 'bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700',
     success: 'bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800',
     warning: 'bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800',
     info: 'bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800',
   }
 
   const stepColors = {
-    default: 'bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-200',
+    default: 'bg-stone-100 text-stone-800 dark:bg-stone-700 dark:text-stone-200',
     success: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
     warning: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200',
     info: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
@@ -20,10 +20,10 @@ export function StepCard({ step, title, children, variant = 'default' }) {
           {step}
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-3">
+          <h3 className="text-lg font-semibold text-stone-900 dark:text-stone-100 mb-3">
             {title}
           </h3>
-          <div className="prose prose-slate dark:prose-invert max-w-none">
+          <div className="prose prose-stone dark:prose-invert max-w-none">
             {children}
           </div>
         </div>

@@ -53,7 +53,7 @@ function DocumentationSidebar({ className = '' }) {
     <nav className={clsx('space-y-6', className)}>
       {documentationSections.map((section) => (
         <div key={section.title}>
-          <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">
+          <h3 className="text-sm font-semibold text-stone-900 dark:text-stone-100 mb-3">
             {section.title}
           </h3>
           <ul className="space-y-2">
@@ -67,7 +67,7 @@ function DocumentationSidebar({ className = '' }) {
                       'block text-sm px-3 py-2 rounded-lg transition',
                       isActive
                         ? 'bg-amber-100 text-amber-800 dark:bg-amber-900/20 dark:text-amber-300'
-                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-slate-300 dark:hover:bg-slate-800'
+                        : 'text-stone-600 hover:text-stone-900 hover:bg-stone-100 dark:text-stone-400 dark:hover:text-stone-300 dark:hover:bg-stone-800'
                     )}
                   >
                     {item.title}
@@ -86,7 +86,7 @@ function MobileMenuButton({ onClick, isOpen }) {
   return (
     <button
       onClick={onClick}
-      className="lg:hidden flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-300"
+      className="lg:hidden flex items-center px-3 py-2 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-300"
     >
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         {isOpen ? (
@@ -104,20 +104,20 @@ export function DocumentationLayout({ children, title, description }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-stone-50 dark:bg-stone-900">
       {/* Header */}
-      <div className="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+      <div className="bg-white dark:bg-stone-800 border-b border-stone-200 dark:border-stone-700">
         <Container>
           <div className="flex items-center justify-between py-4">
             <div>
               <Link 
                 href="/portal" 
-                className="text-xl font-bold text-slate-900 dark:text-slate-100 hover:text-amber-600 dark:hover:text-amber-400"
+                className="text-xl font-bold text-stone-900 dark:text-stone-100 hover:text-amber-600 dark:hover:text-amber-400"
               >
                 Light-Speed 2026
               </Link>
-              <span className="text-slate-400 mx-2">/</span>
-              <span className="text-slate-600 dark:text-slate-400">Documentation</span>
+              <span className="text-stone-400 mx-2">/</span>
+              <span className="text-stone-600 dark:text-stone-400">Documentation</span>
             </div>
             <MobileMenuButton 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -129,7 +129,7 @@ export function DocumentationLayout({ children, title, description }) {
 
       <div className="flex">
         {/* Desktop Sidebar */}
-        <aside className="hidden lg:block w-64 bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 min-h-screen">
+        <aside className="hidden lg:block w-64 bg-white dark:bg-stone-800 border-r border-stone-200 dark:border-stone-700 min-h-screen">
           <div className="p-6">
             <DocumentationSidebar />
           </div>
@@ -138,8 +138,8 @@ export function DocumentationLayout({ children, title, description }) {
         {/* Mobile Sidebar Overlay */}
         {isMobileMenuOpen && (
           <div className="fixed inset-0 z-50 lg:hidden">
-            <div className="fixed inset-0 bg-slate-900/50" onClick={() => setIsMobileMenuOpen(false)} />
-            <div className="fixed left-0 top-0 bottom-0 w-64 bg-white dark:bg-slate-800 p-6 overflow-y-auto">
+            <div className="fixed inset-0 bg-stone-900/50" onClick={() => setIsMobileMenuOpen(false)} />
+            <div className="fixed left-0 top-0 bottom-0 w-64 bg-white dark:bg-stone-800 p-6 overflow-y-auto">
               <DocumentationSidebar />
             </div>
           </div>
@@ -150,11 +150,11 @@ export function DocumentationLayout({ children, title, description }) {
           <div className="max-w-4xl mx-auto px-6 py-8">
             {title && (
               <header className="mb-8">
-                <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+                <h1 className="text-3xl font-bold text-stone-900 dark:text-stone-100 mb-2">
                   {title}
                 </h1>
                 {description && (
-                  <p className="text-xl text-slate-600 dark:text-slate-400">
+                  <p className="text-xl text-stone-600 dark:text-stone-400">
                     {description}
                   </p>
                 )}

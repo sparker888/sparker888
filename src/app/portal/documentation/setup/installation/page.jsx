@@ -31,9 +31,9 @@ export default function InstallationPage() {
           <p className="mb-4">Ensure your development machine meets these requirements:</p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-            <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-4">
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3">Required Software</h4>
-              <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+            <div className="bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg p-4">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Required Software</h4>
+              <ul className="space-y-2 text-sm text-stone-600 dark:text-stone-400">
                 <li>✅ Node.js 18.0+ (LTS recommended)</li>
                 <li>✅ npm 9.0+ or yarn 1.22+</li>
                 <li>✅ Git 2.0+</li>
@@ -41,9 +41,9 @@ export default function InstallationPage() {
               </ul>
             </div>
             
-            <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-4">
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3">System Specs</h4>
-              <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+            <div className="bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg p-4">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">System Specs</h4>
+              <ul className="space-y-2 text-sm text-stone-600 dark:text-stone-400">
                 <li>💾 4GB+ RAM available</li>
                 <li>💽 2GB+ free disk space</li>
                 <li>🌐 Stable internet connection</li>
@@ -71,7 +71,7 @@ git --version
           <p className="mb-4">Get access to the Light-Speed 2026 codebase:</p>
           
           <div className="mb-4">
-            <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">Option A: GitHub Repository (Recommended)</h4>
+            <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">Option A: GitHub Repository (Recommended)</h4>
             <CodeBlock language="bash">
 {`# Clone the repository
 git clone https://github.com/your-username/light-speed-2026.git
@@ -85,7 +85,7 @@ ls -la`}
           </div>
 
           <div className="mb-4">
-            <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">Option B: ZIP Download</h4>
+            <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">Option B: ZIP Download</h4>
             <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
               <p className="text-blue-800 dark:text-blue-200 text-sm mb-3">
                 <strong>Download Link:</strong> If you purchased Light-Speed 2026, you received a download link via email.
@@ -127,7 +127,7 @@ npm install
           </div>
 
           <div className="mt-4">
-            <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">Verify Installation</h4>
+            <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">Verify Installation</h4>
             <CodeBlock language="bash">
 {`# Check that node_modules was created
 ls -la node_modules
@@ -152,7 +152,7 @@ code .env.local`}
           </CodeBlock>
 
           <div className="mb-4">
-            <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">Basic Configuration</h4>
+            <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">Basic Configuration</h4>
             <CodeBlock language="bash" title=".env.local">
 {`# App Configuration
 NEXT_PUBLIC_APP_URL=http://localhost:3000
@@ -223,8 +223,8 @@ npm run dev
           
           <div className="space-y-4">
             <div>
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">1. Check Frontend</h4>
-              <ul className="list-disc list-inside space-y-1 text-slate-700 dark:text-slate-300 text-sm mb-3">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">1. Check Frontend</h4>
+              <ul className="list-disc list-inside space-y-1 text-stone-700 dark:text-stone-300 text-sm mb-3">
                 <li>Visit <a href="http://localhost:3000" className="text-blue-600 dark:text-blue-400 underline">http://localhost:3000</a></li>
                 <li>You should see the Light-Speed 2026 homepage</li>
                 <li>Try clicking "Sign Up" to test the registration flow</li>
@@ -233,8 +233,8 @@ npm run dev
             </div>
 
             <div>
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">2. Check Backend Admin</h4>
-              <ul className="list-disc list-inside space-y-1 text-slate-700 dark:text-slate-300 text-sm mb-3">
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">2. Check Backend Admin</h4>
+              <ul className="list-disc list-inside space-y-1 text-stone-700 dark:text-stone-300 text-sm mb-3">
                 <li>Visit <a href="http://localhost:8090/_/" className="text-blue-600 dark:text-blue-400 underline">http://localhost:8090/_/</a></li>
                 <li>Create an admin account when prompted</li>
                 <li>Verify you can see the database collections</li>
@@ -243,7 +243,7 @@ npm run dev
             </div>
 
             <div>
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">3. Test Database Connection</h4>
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-2">3. Test Database Connection</h4>
               <CodeBlock language="bash">
 {`# In a new terminal, test the API connection
 curl http://localhost:8090/api/health
@@ -277,14 +277,14 @@ curl http://localhost:8090/api/health
           </div>
         </div>
 
-        <div className="bg-slate-100 dark:bg-slate-800 rounded-lg p-6">
-          <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">
+        <div className="bg-stone-100 dark:bg-stone-800 rounded-lg p-6">
+          <h3 className="text-lg font-semibold text-stone-900 dark:text-stone-100 mb-4">
             🛠️ Troubleshooting Common Issues
           </h3>
           <div className="space-y-4 text-sm">
             <div>
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-1">Port Already in Use</h4>
-              <p className="text-slate-600 dark:text-slate-400 mb-2">If ports 3000 or 8090 are busy:</p>
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-1">Port Already in Use</h4>
+              <p className="text-stone-600 dark:text-stone-400 mb-2">If ports 3000 or 8090 are busy:</p>
               <CodeBlock language="bash">
 {`# Kill processes using the ports
 npx kill-port 3000 8090
@@ -295,8 +295,8 @@ npm run dev -- --port 3001`}
             </div>
             
             <div>
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-1">Node Version Issues</h4>
-              <p className="text-slate-600 dark:text-slate-400 mb-2">If you have Node version conflicts:</p>
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-1">Node Version Issues</h4>
+              <p className="text-stone-600 dark:text-stone-400 mb-2">If you have Node version conflicts:</p>
               <CodeBlock language="bash">
 {`# Use Node Version Manager (nvm)
 nvm install 18
@@ -307,8 +307,8 @@ nvm use 18
             </div>
 
             <div>
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-1">Package Installation Errors</h4>
-              <p className="text-slate-600 dark:text-slate-400 mb-2">If npm install fails:</p>
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-1">Package Installation Errors</h4>
+              <p className="text-stone-600 dark:text-stone-400 mb-2">If npm install fails:</p>
               <CodeBlock language="bash">
 {`# Clear npm cache and reinstall
 npm cache clean --force
