@@ -16,7 +16,7 @@ export default function InstallationPage() {
       description="Get Light-Speed 2026 running on your development machine in under 10 minutes"
     >
       <div className="space-y-8">
-        <InfoBox type="success" title="What You'll Build">
+        <InfoBox type="success" title="What You'll Build" compact>
           <p className="mb-3">
             By the end of this guide, you'll have a fully functional social media management platform running locally, 
             complete with user authentication, social media scheduling, analytics, and payment processing.
@@ -84,7 +84,7 @@ ls -la`}
             </CodeBlock>
           </div>
 
-          <InfoBox type="info" title="Template Updates">
+          <InfoBox type="info" title="Template Updates" compact>
             <p className="text-sm">
               When template updates are released, you'll receive an email notification with the new download link. 
               Simply download the latest version and compare with your customized code to apply updates.
@@ -157,7 +157,7 @@ claude
               </p>
             </div>
 
-            <InfoBox type="warning" title="Environment Setup Required">
+            <InfoBox type="warning" title="Environment Setup Required" compact>
               Before running the development server, you'll need to configure environment variables in the next section.
             </InfoBox>
           </div>
@@ -174,7 +174,7 @@ cp .env.example .env`}
             <strong>Note:</strong> The <code className="bg-stone-100 dark:bg-stone-800 px-1 rounded">.env</code> file contains placeholder values. You'll configure actual values in the Environment Variables section next.
           </p>
 
-          <InfoBox type="warning" title="Security Reminder">
+          <InfoBox type="warning" title="Security Reminder" compact>
             Never commit your .env file to version control. It contains sensitive API keys and secrets. The .gitignore file is already configured to exclude it.
           </InfoBox>
         </StepCard>
@@ -206,7 +206,7 @@ cp .env.example .env`}
                 <li><strong>AWS Services</strong> - File storage and CDN delivery</li>
                 <li><strong>Email Services</strong> - User notifications and communications</li>
               </ul>
-              <InfoBox type="info" title="What are Environment Variables?">
+              <InfoBox type="info" title="What are Environment Variables?" compact>
                 Environment variables are configuration settings that store sensitive information like API keys 
                 and database URLs. They're kept separate from your code for security and allow different 
                 settings for development, staging, and production environments.
