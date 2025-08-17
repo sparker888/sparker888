@@ -99,7 +99,7 @@ ls -la`}
         <StepCard step={3} title="Install Dependencies & IDE Setup">
           <div className="space-y-6">
             <div>
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3">Open Project in VS Code</h4>
+              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3">Open Project in VS Code (or your preferred editor)</h4>
               <CodeBlock language="bash">
 {`# Open project in VS Code
 code .`}
