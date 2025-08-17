@@ -32,7 +32,7 @@ export function StepCard({ step, title, children, variant = 'default' }) {
   )
 }
 
-export function InfoBox({ type = 'info', title, children }) {
+export function InfoBox({ type = 'info', title, children, compact = false }) {
   const styles = {
     info: {
       container: 'bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800',
@@ -61,10 +61,13 @@ export function InfoBox({ type = 'info', title, children }) {
   }
 
   const style = styles[type]
+  
+  // Use smaller padding for compact InfoBoxes
+  const paddingClass = compact ? 'p-4' : 'p-6'
 
   return (
-    <div className={`rounded-lg p-6 ${style.container}`}>
-      <h3 className={`font-semibold mb-2 ${style.title}`}>
+    <div className={`rounded-lg ${paddingClass} ${style.container}`}>
+      <h3 className={`font-semibold mb-2 mt-0 ${style.title}`}>
         <span className="mr-2">{style.icon}</span>
         {title}
       </h3>
