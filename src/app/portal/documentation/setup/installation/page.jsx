@@ -70,9 +70,9 @@ git --version
         <StepCard step={2} title="Download Light-Speed 2026">
           <p className="mb-4">Download the latest Light-Speed 2026 template:</p>
           
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-4">
-            <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-3">Template Download</h4>
-            <p className="text-blue-700 dark:text-blue-300 text-sm mb-3">
+          <div className="mb-4">
+            <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Template Download</h4>
+            <p className="text-stone-600 dark:text-stone-400 text-sm mb-3">
               The download link was provided in your purchase confirmation email. The ZIP file is automatically updated with the latest template version.
             </p>
             
