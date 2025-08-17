@@ -146,11 +146,20 @@ claude --version`}
 {`# Launch Claude Code in project root (optional)
 claude
 
-# Available commands in Claude Code:
-# /init     - Analyze codebase structure
-# /help     - Show available commands  
-# /clear    - Clear conversation history`}
+# Initialize project analysis if needed
+# /init - Analyze codebase structure`}
               </CodeBlock>
+              
+              <p className="text-stone-600 dark:text-stone-400 text-sm mt-4">
+                Light-Speed 2026 includes a complete <code className="bg-stone-100 dark:bg-stone-800 px-1 rounded">.claude/</code> directory with commands and documentation. 
+                For a complete list of available Claude Code commands, visit the{' '}
+                <a href="https://docs.anthropic.com/en/docs/claude-code" 
+                   className="text-blue-600 dark:text-blue-400 hover:underline"
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                  official Claude Code documentation
+                </a>.
+              </p>
             </div>
 
             <InfoBox type="warning" title="Environment Setup Required">
@@ -176,85 +185,51 @@ cp .env.example .env`}
           </InfoBox>
         </StepCard>
 
-        <StepCard step={5} title="Initial Setup Verification">
+        <StepCard step={5} title="Setup Summary & Next Steps">
           <div className="space-y-6">
             <div>
-              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Verify Project Structure</h4>
-              <CodeBlock language="bash">
-{`# Verify all files are present
-ls -la
-
-# Check package.json exists
-cat package.json | grep "light-speed-2026"`}
-              </CodeBlock>
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Setup Complete</h4>
+              <p className="text-stone-600 dark:text-stone-400 mb-4">
+                You've successfully completed the basic installation. Here's what was accomplished:
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-stone-600 dark:text-stone-400 text-sm mb-4">
+                <li>Dependencies installed and verified</li>
+                <li>Project structure confirmed</li>
+                <li>Environment template copied</li>
+                <li>Claude Code development environment ready</li>
+              </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Test Build System</h4>
-              <CodeBlock language="bash">
-{`# Test TypeScript compilation
-npm run typecheck
-
-# Test build process (may fail without env vars - that's expected)
-npm run build`}
-              </CodeBlock>
+              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Environment Variables Required</h4>
+              <p className="text-stone-600 dark:text-stone-400 mb-4">
+                The development server requires environment variables to be configured. In the next section, 
+                you'll set up API keys and database connections that enable the platform's core functionality:
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-stone-600 dark:text-stone-400 text-sm mb-4">
+                <li><strong>PocketBase Database</strong> - User authentication and data storage</li>
+                <li><strong>Stripe Integration</strong> - Payment processing and subscriptions</li>
+                <li><strong>AWS Services</strong> - File storage and CDN delivery</li>
+                <li><strong>Email Services</strong> - User notifications and communications</li>
+              </ul>
+              <InfoBox type="info" title="What are Environment Variables?">
+                Environment variables are configuration settings that store sensitive information like API keys 
+                and database URLs. They're kept separate from your code for security and allow different 
+                settings for development, staging, and production environments.
+              </InfoBox>
             </div>
 
             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
-              <h4 className="font-semibold text-green-800 dark:text-green-200 mb-3">Next Steps</h4>
-              <ul className="space-y-1 text-green-700 dark:text-green-300 text-sm mb-4">
-                <li>✅ <strong>Dependencies installed</strong></li>
-                <li>✅ <strong>Project structure verified</strong></li>
-                <li>✅ <strong>Environment template copied</strong></li>
-              </ul>
+              <h4 className="font-semibold text-green-800 dark:text-green-200 mb-3">Ready for Environment Setup</h4>
               <p className="text-green-700 dark:text-green-300 text-sm mb-3">
-                <strong>🔧 Continue to Environment Setup</strong><br/>
-                The development server requires environment variables to be configured first. Proceed to the Environment Variables section to complete the setup.
+                <strong>🔧 Continue to Environment Variables</strong><br/>
+                Complete the setup by configuring your environment variables in the next section.
               </p>
               <p className="text-green-700 dark:text-green-300 text-sm">
-                <strong>📝 Development Ready</strong><br/>
-                Once environment variables are configured, you'll be able to:
+                <strong>📝 Coming Up Next</strong><br/>
+                Once environment variables are configured, you'll be able to start the development server 
+                and begin customizing your social media management platform.
               </p>
-              <ul className="list-disc list-inside mt-2 space-y-1 text-green-700 dark:text-green-300 text-sm">
-                <li>Start the development server (<code className="bg-green-100 dark:bg-green-800 px-1 rounded">npm run dev</code>)</li>
-                <li>Create user accounts</li>
-                <li>Test social media post functionality</li>
-                <li>Customize the template for your needs</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Claude Code Development Tips</h4>
-              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-                <p className="text-blue-800 dark:text-blue-200 text-sm mb-3">
-                  <strong>Recommended Two-Claude Setup:</strong>
-                </p>
-                <ul className="list-disc list-inside space-y-1 text-blue-700 dark:text-blue-300 text-sm mb-4">
-                  <li><strong>Claude Code (Opus 4) in VS Code Terminal</strong> - Primary development and code generation</li>
-                  <li><strong>Claude Browser (Sonnet 4) with Project Knowledge</strong> - Code reviews and documentation</li>
-                </ul>
-                
-                <h5 className="font-semibold text-blue-800 dark:text-blue-200 text-sm mb-2">Useful Claude Code Commands:</h5>
-                <CodeBlock language="bash">
-{`# Start fresh conversation for new features
-/clear
-
-# Get project-specific help
-/help
-
-# Analyze current codebase state
-/init`}
-                </CodeBlock>
-                
-                <div className="mt-3">
-                  <h5 className="font-semibold text-blue-800 dark:text-blue-200 text-sm mb-2">Pro Tips:</h5>
-                  <ul className="list-disc list-inside space-y-1 text-blue-700 dark:text-blue-300 text-sm">
-                    <li>Always launch Claude Code from the project root directory</li>
-                    <li>Use <code className="bg-blue-100 dark:bg-blue-800 px-1 rounded">/clear</code> when starting new development tasks</li>
-                    <li>The CLAUDE.md file provides project-specific context automatically</li>
-                  </ul>
-                </div>
-              </div>
             </div>
           </div>
         </StepCard>
