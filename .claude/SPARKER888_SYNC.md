@@ -156,12 +156,33 @@ When Light-Speed 2026 changes, update these Sparker888 files:
 - **Marketing Team**: Maintains Sparker888 project
 - **Documentation Team**: Ensures accuracy across both projects
 
+## Template Distribution Strategy
+
+### ZIP Download Method (Current)
+- **Primary Distribution**: Direct ZIP download links
+- **Update Process**: Automated ZIP generation on repo updates  
+- **Customer Experience**: Email with download link + update notifications
+- **Advantages**: Simple, reliable, no GitHub account required
+- **Backend**: Automated system updates ZIP on every push
+
+### Repository Access (Deprecated)
+- **Previous Approach**: GitHub repository invitations
+- **Issues**: Email ≠ GitHub account, manual invitation process
+- **Status**: Removed from documentation (August 2025)
+
+### Update Workflow
+1. Developer pushes changes to Light-Speed 2026 repo
+2. Backend automatically generates new ZIP file  
+3. Customers receive email notification of updates
+4. Customers download latest ZIP and merge changes manually
+
 ## Action Items for Next Sync
 - [ ] Update Sparker888 with Phase 1A completion
 - [ ] Create new screenshots of post management interface
 - [ ] Update setup documentation with new database collections
 - [ ] Review pricing page to ensure feature list accuracy
 - [ ] Plan testimonial collection from early users
+- [x] Update installation guide to use ZIP download method only (August 2025)
 
 ---
 

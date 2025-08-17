@@ -68,22 +68,17 @@ git --version
         </StepCard>
 
         <StepCard step={2} title="Download Light-Speed 2026">
-          <p className="mb-4">Get access to the Light-Speed 2026 codebase:</p>
+          <p className="mb-4">Download the latest Light-Speed 2026 template:</p>
           
-          <div className="mb-6">
-            <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">GitHub Repository Access (Recommended)</h4>
-            <p className="text-stone-600 dark:text-stone-400 text-sm mb-4">
-              After purchase, you'll receive:
+          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-4">
+            <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-3">Template Download</h4>
+            <p className="text-blue-700 dark:text-blue-300 text-sm mb-3">
+              The download link was provided in your purchase confirmation email. The ZIP file is automatically updated with the latest template version.
             </p>
-            <ul className="list-disc list-inside space-y-1 text-stone-600 dark:text-stone-400 text-sm mb-4">
-              <li>✅ <strong>GitHub repository invitation</strong> (read-only access)</li>
-              <li>✅ <strong>Always up-to-date code</strong> (no manual downloads needed)</li>
-              <li>✅ <strong>Professional developer workflow</strong> (git pull for updates)</li>
-            </ul>
             
             <CodeBlock language="bash">
-{`# Clone the repository
-git clone https://github.com/sparker888/light-speed-2026.git
+{`# Extract the downloaded ZIP file
+unzip light-speed-2026-latest.zip
 
 # Navigate to the project directory
 cd light-speed-2026
@@ -91,40 +86,14 @@ cd light-speed-2026
 # Verify all files are present
 ls -la`}
             </CodeBlock>
-
-            <div className="mt-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
-              <h5 className="font-semibold text-green-800 dark:text-green-200 text-sm mb-2">Repository Features:</h5>
-              <ul className="list-disc list-inside space-y-1 text-green-700 dark:text-green-300 text-sm">
-                <li>🔒 <strong>Read-only access</strong> (cannot modify the template repo)</li>
-                <li>🚫 <strong>Issues/Discussions disabled</strong> (clean, professional repo)</li>
-                <li>📥 <strong>Direct updates</strong> (git pull for patches and improvements)</li>
-                <li>👥 <strong>Team access</strong> (invite your developers with same permissions)</li>
-              </ul>
-            </div>
           </div>
 
-          <div className="mb-4">
-            <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Alternative: ZIP Download</h4>
-            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-              <p className="text-blue-800 dark:text-blue-200 text-sm mb-3">
-                If you prefer traditional download:
-              </p>
-              <ul className="list-disc list-inside space-y-1 text-blue-700 dark:text-blue-300 text-sm mb-3">
-                <li>📧 <strong>Download link provided</strong> in purchase confirmation email</li>
-                <li>⚠️ <strong>Manual updates required</strong> (re-download for new versions)</li>
-              </ul>
-              <CodeBlock language="bash">
-{`# Extract the ZIP file
-unzip light-speed-2026.zip
-
-# Navigate to the extracted directory
-cd light-speed-2026
-
-# Verify all files are present
-ls -la`}
-              </CodeBlock>
-            </div>
-          </div>
+          <InfoBox type="info" title="Template Updates">
+            <p className="text-sm">
+              When template updates are released, you'll receive an email notification with the new download link. 
+              Simply download the latest version and compare with your customized code to apply updates.
+            </p>
+          </InfoBox>
         </StepCard>
 
         <StepCard step={3} title="Install Dependencies & IDE Setup">
