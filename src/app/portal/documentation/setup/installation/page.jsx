@@ -16,7 +16,6 @@ export default function InstallationPage() {
       description="Get Light-Speed 2026 running on your development machine in under 10 minutes"
     >
       <div className="space-y-8">
-        
         <InfoBox type="success" title="What You'll Build">
           <p className="mb-3">
             By the end of this guide, you'll have a fully functional social media management platform running locally, 
@@ -29,7 +28,6 @@ export default function InstallationPage() {
 
         <StepCard step={1} title="System Requirements">
           <p className="mb-4">Ensure your development machine meets these requirements:</p>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
             <div className="bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg p-4">
               <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Required Software</h4>
@@ -69,13 +67,11 @@ git --version
 
         <StepCard step={2} title="Download Light-Speed 2026">
           <p className="mb-4">Download the latest Light-Speed 2026 template:</p>
-          
           <div className="mb-4">
             <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Template Download</h4>
             <p className="text-stone-600 dark:text-stone-400 text-sm mb-3">
               The download link was provided in your purchase confirmation email. The ZIP file is automatically updated with the latest template version.
             </p>
-            
             <CodeBlock language="bash">
 {`# Extract the downloaded ZIP file
 unzip light-speed-2026-latest.zip
@@ -149,7 +145,6 @@ claude
 # Initialize project analysis if needed
 # /init - Analyze codebase structure`}
               </CodeBlock>
-              
               <p className="text-stone-600 dark:text-stone-400 text-sm mt-4">
                 Light-Speed 2026 includes a complete <code className="bg-stone-100 dark:bg-stone-800 px-1 rounded">.claude/</code> directory with commands and documentation. 
                 For a complete list of available Claude Code commands, visit the{' '}
@@ -170,7 +165,6 @@ claude
 
         <StepCard step={4} title="Prepare Environment File">
           <p className="mb-4">Copy the environment template (configuration happens in next section):</p>
-          
           <CodeBlock language="bash">
 {`# Copy environment template
 cp .env.example .env`}
