@@ -129,7 +129,7 @@ claude --version`}
               <p className="text-stone-600 dark:text-stone-400 text-sm mb-3">
                 Light-Speed 2026 includes a complete <code className="bg-stone-100 dark:bg-stone-800 px-1 rounded">.claude/</code> directory with:
               </p>
-              <ul className="list-disc list-inside space-y-1 text-stone-600 dark:text-stone-400 text-sm mb-4">
+              <ul className="list-disc list-inside text-stone-600 dark:text-stone-400 text-sm mb-4">
                 <li><strong>CLAUDE.md</strong> - Project memory and development guidelines</li>
                 <li><strong>.claude/commands/</strong> - Custom slash commands for common tasks</li>
                 <li><strong>.claude/docs/</strong> - Comprehensive project documentation</li>
@@ -186,7 +186,7 @@ cp .env.example .env`}
               <p className="text-stone-600 dark:text-stone-400 mb-4">
                 You've successfully completed the basic installation. Here's what was accomplished:
               </p>
-              <ul className="list-disc list-inside space-y-1 text-stone-600 dark:text-stone-400 text-sm mb-4">
+              <ul className="list-disc list-inside text-stone-600 dark:text-stone-400 text-sm mb-4">
                 <li>Dependencies installed and verified</li>
                 <li>Project structure confirmed</li>
                 <li>Environment template copied</li>
@@ -200,7 +200,7 @@ cp .env.example .env`}
                 The development server requires environment variables to be configured. In the next section, 
                 you'll set up API keys and database connections that enable the platform's core functionality:
               </p>
-              <ul className="list-disc list-inside space-y-1 text-stone-600 dark:text-stone-400 text-sm mb-4">
+              <ul className="list-disc list-inside text-stone-600 dark:text-stone-400 text-sm mb-4">
                 <li><strong>PocketBase Database</strong> - User authentication and data storage</li>
                 <li><strong>Stripe Integration</strong> - Payment processing and subscriptions</li>
                 <li><strong>AWS Services</strong> - File storage and CDN delivery</li>
