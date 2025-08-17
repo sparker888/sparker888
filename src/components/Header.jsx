@@ -232,6 +232,7 @@ function ResourcesDropdown() {
   )
 }
 
+
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
