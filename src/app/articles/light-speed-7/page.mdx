@@ -119,21 +119,21 @@ I chose a modern, Jamstack infrastructure that prioritizes performance and devel
 
 **Infrastructure Components:**
 - **Frontend:** Astro SSR deployed on Netlify with global edge functions
-- **Backend:** PocketBase hosted on PocketHost for realtime database operations
+- **Backend:** PocketBase on PocketHost for cost-effective validation (with migration plan for scale)
 - **CDN:** AWS CloudFront for image delivery and static asset caching
 - **Authentication:** PocketBase Auth with Google OAuth integration
 - **Payments:** Stripe with webhook handling for subscription management
 
-### Database Architecture & Optimization
+### Database Strategy: Cost-Effective Validation
 
-Performance at scale required careful database design. Claude AI helped optimize our PocketBase schema for high-throughput operations:
+Claude AI helped design a pragmatic database approach prioritizing cost-effectiveness during validation phase:
 
-**Database Optimizations:**
-- **Strategic Indexing:** Indexed queries for frequently accessed data
-- **Relational Design:** Optimized relationships for team collaboration features  
-- **Efficient Pagination:** Standard pagination for large datasets
-- **Real-time Subscriptions:** PocketBase real-time features for collaborative editing
-- **Data Integrity:** Comprehensive validation rules preventing corrupt data
+**PocketBase/PocketHost Strategy:**
+- **Cost-First Approach:** Open source PocketBase on PocketHost for minimal monthly costs
+- **Performance Monitoring:** Built tracking system for query performance and rate limits
+- **Rate limit Management:** Optimized API calls (~70% reduction) to stay within PocketHost limits
+- **Migration Planning:** Ready to scale to Railway or Supabase when performance demands require it
+- **Real-time Features:** Leveraging PocketBase's built-in real-time subscriptions for collaboration
 
 ## 3. Performance Metrics & Results
 
@@ -156,7 +156,7 @@ The numbers speak for themselves. Here's what we achieved in production with Cla
 - **Search Response:** Less than 50ms for databases with 5,000+ prompts
 - **Image Loading:** 200-400ms average with CloudFront CDN
 - **Navigation:** Less than 100ms with Astro View Transitions
-- **Database Operations:** Less than 10ms for 95% of queries
+- **Database Monitoring:** Performance tracking system with alerts for queries >2s
 
 **Reliability & Uptime:**
 - **Uptime:** 99.96% over the first 2 months
