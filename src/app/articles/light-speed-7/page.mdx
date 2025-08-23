@@ -234,7 +234,7 @@ The real magic happens when these links are shared on social media. Claude AI he
 // Dynamic OG meta tag generation for social sharing
 const generateSocialPreview = (prompt) => {
   return {
-    title: prompt.title || 'AI Art Prompt',
+    title: prompt.title || 'Key Prompt Ninja in Kyoto',
     description: truncate(prompt.text, 160),
     image: prompt.primaryImage || '/default-og-image.jpg',
     url: `https://mpm-midjourney.link/${prompt.shareCode}`,
@@ -242,7 +242,7 @@ const generateSocialPreview = (prompt) => {
     site_name: 'Midjourney Prompt Manager',
     twitter: {
       card: 'summary_large_image',
-      creator: '@midjourney_mpm'
+      creator: '@keypromptninja'
     }
   }
 }
