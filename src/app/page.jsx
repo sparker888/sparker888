@@ -363,7 +363,7 @@ export default async function Home() {
               href="/articles/light-speed-6"
               className="text-amber-500 hover:underline"
             >
-              Part 2 of Building a SaaS App in 30 Days with Claude Code
+              Part 2 of Building an App in 30 Days with Claude Code
             </Link>
             , to see how I'm creating websites & apps with AI that generate income like my{' '}
             <Link
