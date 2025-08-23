@@ -1,0 +1,24 @@
+
+
+
+
+      PocketHost                Google OAuth2                Netlify
+           │                           │                        │
+           │                           │                        │
+           └───────┐           ┌───────┼───────┐           ┌────┘
+                   │           │               │           │
+    Stripe ────────┼───────────┤               ├───────────┼──────── Cloudflare Turnstile
+                   │           │               │           │
+                   │           │  MPM CORE APP │           │
+                   │           │               │           │
+    Plausible ─────┼───────────┤               ├───────────┼──────── AWS
+                   │           │               │           │
+                   │           └───────┼───────┘           │
+           ┌───────┘                   │                   └────┐
+           │                           │                        │
+           │                           │                        │
+      MailerLite                      Dub               Amazon CloudFront 
+
+
+
+
