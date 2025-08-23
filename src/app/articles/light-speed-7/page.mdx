@@ -124,58 +124,14 @@ I chose a modern, Jamstack infrastructure that prioritizes performance and devel
 - **Authentication:** PocketBase Auth with Google OAuth integration
 - **Payments:** Stripe with webhook handling for subscription management
 
-### Deployment Pipeline & Safety Protocols
-
-Claude AI helped establish comprehensive deployment safety protocols that prevent production issues:
-
-```yaml
-# Production deployment workflow Claude helped design
-name: Deploy Production
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-
-jobs:
-  safety-checks:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run comprehensive tests
-        run: |
-          npm test
-          npm run test:integration
-          npm run test:accessibility
-          npm run lighthouse-ci
-      
-      - name: Database migration check
-        run: npm run db:check-migrations
-      
-      - name: Security audit
-        run: npm audit --audit-level high
-
-  deploy-with-monitoring:
-    needs: safety-checks
-    steps:
-      - name: Deploy to production
-        run: netlify deploy --prod
-      
-      - name: Verify deployment health
-        run: |
-          curl -f https://midjourneypromptmanager.com/health
-          npm run test:smoke-production
-      
-      - name: Monitor Core Web Vitals
-        run: npm run monitor:performance
-```
-
 ### Database Architecture & Optimization
 
 Performance at scale required careful database design. Claude AI helped optimize our PocketBase schema for high-throughput operations:
 
 **Database Optimizations:**
-- **Strategic Indexing:** Compound indexes on frequently queried field combinations
-- **Relation Management:** Optimized foreign key relationships for team collaboration
-- **Query Optimization:** Efficient pagination using cursor-based navigation
+- **Strategic Indexing:** Indexed queries for frequently accessed data
+- **Relational Design:** Optimized relationships for team collaboration features  
+- **Efficient Pagination:** Standard pagination for large datasets
 - **Real-time Subscriptions:** PocketBase real-time features for collaborative editing
 - **Data Integrity:** Comprehensive validation rules preventing corrupt data
 
@@ -185,7 +141,7 @@ The numbers speak for themselves. Here's what we achieved in production with Cla
 
 ### Lighthouse Performance Scores
 
-<Image src={require('./lighthouse-scores.webp')} alt="Lighthouse performance scores showing 88/94/96/100 across Performance, Accessibility, Best Practices, and SEO" />
+<Image src={require('./lighthouse-scores.webp')} alt="Lighthouse performance scores showing 76/94/96/100 across Performance, Accessibility, Best Practices, and SEO" />
 
 **Achievement: Professional-Grade Performance**
 - **Performance:** 76/100 (excellent for a complex SaaS application)
@@ -256,9 +212,9 @@ Claude AI helped design a subscription model that aligns user value with busines
 <Image src={require('./pricing-tiers.webp')} alt="MPM pricing tiers showing Free, Creator, Team Leader, and Founder plans" />
 
 **Subscription Tiers:**
-- **Free Forever:** 50 projects, 1GB storage, public gallery access
-- **Creator ($15/month):** Unlimited projects, 100GB storage, team creation
-- **Team Leader ($29/month):** Everything in Creator + 1TB storage + unlimited team members
+- **Free Forever:** 50 projects, 10GB storage, public gallery access
+- **Creator ($15/month):** Unlimited projects, 250GB storage, team creation up to 5 members
+- **Team Leader ($29/month):** Everything in Creator + 500GB storage + unlimited team members
 - **Founder ($199 one-time):** Lifetime Creator access + exclusive benefits
 
 ## Key Takeaways: The Claude AI Advantage
@@ -333,14 +289,12 @@ Building MPM's advanced features and scaling to production demonstrated how AI p
 **Production Excellence:**
 - Modern Jamstack infrastructure with Astro SSR on Netlify edge functions
 - PocketBase backend with optimized database schema and real-time subscriptions
-- Comprehensive CI/CD pipeline with automated testing and deployment safeguards
-- Strategic indexing and query optimization for high-throughput operations
+- Rigorous deployment safety protocols with feature flags and manual approval workflows
 
 **Performance & Scale:**
 - Lighthouse scores: 76/100 Performance, 94/100 Accessibility, 96/100 Best Practices, 100/100 SEO
 - Sub-second page loads and less than 50ms search response times
 - 99.96% uptime with less than 0.05% error rate
-- 50+ daily active users with 78% monthly retention
 
 **AI Partnership Success:**
 - 4x development velocity achieved through human-AI collaboration
