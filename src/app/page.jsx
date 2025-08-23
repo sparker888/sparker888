@@ -358,14 +358,14 @@ export default async function Home() {
             </p>
 
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            <em>It's not difficult!</em> Check out a few of my articles like{' '}
+            <em>You can do it too!</em> Check out a few of my articles like{' '}
             <Link
               href="/articles/light-speed-6"
               className="text-amber-500 hover:underline"
             >
               Part 2 of Building a SaaS App in 30 Days with Claude Code
             </Link>
-            , to see how I'm creating websites & apps that generate income like my{' '}
+            , to see how I'm creating websites & apps with AI that generate income like my{' '}
             <Link
               href="https://midjourneypromptmanager.com/"
               className="text-amber-500 hover:underline"
