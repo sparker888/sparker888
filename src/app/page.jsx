@@ -93,8 +93,8 @@ function Article({ article }) {
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
-    <Link className="p-1 -m-1 group" {...props}>
-      <Icon className="w-6 h-6 transition fill-sky-500 group-hover:fill-sky-600 dark:fill-amber-500 dark:group-hover:fill-amber-600" />
+    <Link className="group -m-1 p-1" {...props}>
+      <Icon className="h-6 w-6 fill-sky-500 transition group-hover:fill-sky-600 dark:fill-amber-500 dark:group-hover:fill-amber-600" />
     </Link>
   )
 }
@@ -110,12 +110,12 @@ function Role({ role }) {
 
   return (
     <li className="flex gap-4">
-      <div className="relative flex items-center justify-center flex-none w-10 h-10 mt-1 rounded-full shadow-md shadow-slate-800/5 ring-1 ring-slate-900/5 dark:border dark:border-slate-700/50 dark:bg-slate-800 dark:ring-0">
+      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-slate-800/5 ring-1 ring-slate-900/5 dark:border dark:border-slate-700/50 dark:bg-slate-800 dark:ring-0">
         <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
       </div>
-      <dl className="flex flex-wrap flex-auto gap-x-2">
+      <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
-        <dd className="flex-none w-full font-display text-slate-900 dark:text-slate-100">
+        <dd className="w-full flex-none font-display text-slate-900 dark:text-slate-100">
           {role.company}
         </dd>
         <dt className="sr-only">Role</dt>
@@ -242,9 +242,9 @@ function Projects() {
 
   return (
     <AnimateIn delay={0.2}>
-      <div className="p-6 border rounded-2xl border-slate-100 dark:border-slate-700/40">
-        <h2 className="flex italic font-extrabold font-display text-slate-900 dark:text-slate-100">
-          <BriefcaseIcon className="flex-none w-6 h-6" />
+      <div className="rounded-2xl border border-slate-100 p-6 dark:border-slate-700/40">
+        <h2 className="flex font-display font-extrabold italic text-slate-900 dark:text-slate-100">
+          <BriefcaseIcon className="h-6 w-6 flex-none" />
           <span className="ml-3">Brands & Sites Managed</span>
         </h2>
         <ol className="mt-6 space-y-4">
@@ -255,10 +255,10 @@ function Projects() {
         <Button
           href="/projects"
           variant="secondary"
-          className="w-full mt-6 group"
+          className="group mt-6 w-full"
         >
           Info and links
-          <ArrowRightIcon className="w-4 h-4 transition stroke-slate-400 group-active:stroke-slate-600 dark:group-hover:stroke-slate-50 dark:group-active:stroke-slate-50" />
+          <ArrowRightIcon className="h-4 w-4 stroke-slate-400 transition group-active:stroke-slate-600 dark:group-hover:stroke-slate-50 dark:group-active:stroke-slate-50" />
         </Button>
       </div>
     </AnimateIn>
@@ -285,20 +285,32 @@ function ExternalLinkIcon(props) {
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-  
+
   // Project data with placeholder URLs - update these with your actual project URLs
   const projects = [
     { image: image1, url: 'https://gravitaldigital.com', title: 'Project 1' },
-    { image: image2, url: 'https://wri2025hh.wheel-rail-seminars.com', title: 'Project 2' },
-    { image: image3, url: 'https://midjourneypromptmanager.com', title: 'Project 3' },
-    { image: image4, url: 'https://wri2025rt.wheel-rail-seminars.com', title: 'Project 4' },
+    {
+      image: image2,
+      url: 'https://wri2025hh.wheel-rail-seminars.com',
+      title: 'Project 2',
+    },
+    {
+      image: image3,
+      url: 'https://midjourneypromptmanager.com',
+      title: 'Project 3',
+    },
+    {
+      image: image4,
+      url: 'https://wri2025rt.wheel-rail-seminars.com',
+      title: 'Project 4',
+    },
     { image: image5, url: 'https://prestonstudios.com', title: 'Project 5' },
   ]
 
   return (
     <AnimateIn delay={0.3}>
       <div className="mt-16 sm:mt-20">
-        <div className="flex justify-center gap-5 py-4 -my-4 overflow-hidden sm:gap-8">
+        <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
           {projects.map((project, projectIndex) => (
             <Link
               key={project.url}
@@ -306,7 +318,7 @@ function Photos() {
               target="_blank"
               rel="noopener noreferrer"
               className={clsx(
-                'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 sm:w-72 sm:rounded-2xl dark:bg-slate-800 group transition-transform duration-300 hover:scale-105',
+                'group relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 transition-transform duration-300 hover:scale-105 dark:bg-slate-800 sm:w-72 sm:rounded-2xl',
                 rotations[projectIndex % rotations.length],
               )}
             >
@@ -314,12 +326,12 @@ function Photos() {
                 src={project.image}
                 alt={project.title}
                 sizes="(min-width: 640px) 18rem, 11rem"
-                className="absolute inset-0 object-cover w-full h-full"
+                className="absolute inset-0 h-full w-full object-cover"
               />
               {/* Overlay with external link icon */}
-              <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:opacity-100">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <div className="absolute bottom-4 right-4">
-                  <ExternalLinkIcon className="w-6 h-6 stroke-white" />
+                  <ExternalLinkIcon className="h-6 w-6 stroke-white" />
                 </div>
               </div>
             </Link>
@@ -338,11 +350,13 @@ export default async function Home() {
       <Container className="mt-9">
         <AnimateIn delay={0.1}>
           <div className="max-w-2xl">
-            <h1 className="text-4xl italic font-extrabold tracking-tight font-display text-slate-800 sm:text-5xl dark:text-slate-100">
-              I'm Steve. I'm a remote solopreneur. Let's fly! 🚀
+            <h1 className="font-display text-4xl font-extrabold italic tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
+              I'm Steve. I'm a remote solopreneur exploring the future of web
+              development. Let's fly! 🚀
             </h1>
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              I produce Light. Speed.✨ websites & apps as the Founder of{' '}
+              I produce Light. Speed.✨ websites & apps using AI-assisted
+              development as the Founder of{' '}
               <Link
                 href="https://gravitaldigital.com/"
                 className="text-amber-500 hover:underline"
@@ -350,49 +364,48 @@ export default async function Home() {
                 Gravital Digital
               </Link>
               .
-              </p>
-              <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
-              The community I discovered is learning to create income with no boss, no employees, and live a healthier pace of life (at reduced expenses!). 
-              </p>
-              <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
-              For 6 months, I explored Ecuador as a place for founders to work remotely.
-              </p>
-              <p className="mt-6 text-xl text-slate-600 dark:text-slate-400"> 
-              <em>Join our community!</em> I'm helping fellow solopreneurs explore Latin America on my{' '}
-              <Link
-                href="/videos"
-                className="text-amber-500 hover:underline"
-              >
+            </p>
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+              Want to create location-independent income with no boss, no
+              employees and no limits? Interested in a healthier pace of life
+              with living expenses one-third of those in the U.S.?{' '}
+            </p>
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+              I just spent 6 months in Ecuador as a solopreneur building my
+              business.
+            </p>
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+              <em>Join the movement!</em> I'm showing fellow solopreneurs how to
+              work remotely from Latin America on my{' '}
+              <Link href="/videos" className="text-amber-500 hover:underline">
                 Remote Solopreneur YouTube channel
               </Link>
-              , with resources for living in Latin America's top-rated city, Cuenca.
-              </p>
+              —sharing resources for living in the top-rated city in the Andes
+              while building profitable businesses with modern dev tools and AI
+              workflows.
+            </p>
 
-              <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              Get started with{' '}
-              <Link
-                href="/resources"
-                className="text-amber-500 hover:underline"
-              >
-                these resources{' '}
-              </Link>and check out articles like this one on{' '}
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+              <em>Proof it works:</em> Read my 2-part case study{' '}
               <Link
                 href="/articles/light-speed-6"
                 className="text-amber-500 hover:underline"
               >
-                Vibe Coding with Claude Code
+                A Full SaaS App in 30 Days{' '}
               </Link>
-              . I used it to create {' '}
+              to see how I built{' '}
               <Link
-                href="https://midjourneypromptmanager.com/"
+                href="https://midjourneypromptmanager.com/?utm_source=sparker888&utm_medium=website&utm_campaign=mpm_referral"
                 className="text-amber-500 hover:underline"
               >
                 Midjourney Prompt Manager
-              </Link>
-              {' '}in 30 days. Learn how to leverage AI to change your game.</p>
-              <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              Let's fly! 🚀</p>
-            <div className="flex gap-6 mt-6 text-sky-600 dark:text-amber-500">
+              </Link>{' '}
+              using Claude AI to serve the AI image creation community.
+            </p>
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+              Let's fly! 🚀
+            </p>
+            <div className="mt-6 flex gap-6 text-sky-600 dark:text-amber-500">
               <SocialLink
                 href="https://linkedin.com/in/sparker888"
                 aria-label="Follow on LinkedIn"
@@ -424,7 +437,7 @@ export default async function Home() {
       </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
-        <div className="grid max-w-xl grid-cols-1 mx-auto gap-y-20 lg:max-w-none lg:grid-cols-2">
+        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article, index) => (
               <Article key={article.slug} article={article} />
