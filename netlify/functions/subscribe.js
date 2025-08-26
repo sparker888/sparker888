@@ -3,6 +3,9 @@ const axios = require('axios')
 exports.handler = async function (event, context) {
   const { email } = JSON.parse(event.body)
   const apiKey = process.env.MAILERLITE_API_KEY
+  
+  // Group ID for "subscribers" group to trigger welcome automation
+  const subscribersGroupId = '163760209940973266'
 
   try {
     const response = await axios({
@@ -14,6 +17,7 @@ exports.handler = async function (event, context) {
       },
       data: {
         email: email,
+        groups: [subscribersGroupId], // Add subscriber to the group
       },
     })
 
@@ -22,6 +26,7 @@ exports.handler = async function (event, context) {
       body: JSON.stringify(response.data),
     }
   } catch (error) {
+    console.error('MailerLite API Error:', error.response?.data || error.message)
     return {
       statusCode: 500,
       body: JSON.stringify({ error: 'Failed to subscribe.' }),
