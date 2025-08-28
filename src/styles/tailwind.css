@@ -23,7 +23,7 @@
       background-size: 300% 300%;
       animation: holographicShift 8s ease infinite, rotate 20s linear infinite;
       filter: blur(40px) saturate(1.5);
-      opacity: 0.9;
+      opacity: 0.4;
       z-index: -2;
     }
     
