@@ -4,11 +4,10 @@ import { useState, useEffect } from 'react'
 
 export default function TypewriterText() {
   const phrases = [
-    "Let's promote!",
     "Let's design!",
-    "Let's build!",
     "Let's prompt!",
     "Let's ship!",
+    "Let's promote!",
   ]
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0)
