@@ -6,9 +6,10 @@ export default function TypewriterText() {
   const phrases = [
     "Let's design!",
     "Let's build!",
-    "Let's ship!",
     "Let's test!",
+    "Let's ship!",
     "Let's measure!",
+    "Let's iterate!",
   ]
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0)
