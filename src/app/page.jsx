@@ -384,7 +384,7 @@ export default async function Home() {
               I'm Steve. I'm a remote solopreneur exploring the future of web
               development. <TypewriterText />
             </h1>
-            <p className="mt-6 text-2xl font-medium text-slate-600 dark:text-slate-400">
+            <p className="mt-6 md:mt-12 text-2xl font-medium text-slate-600 dark:text-slate-400">
               I produce Light. Speed.✨ websites & apps using AI-assisted
               development as the Founder of{' '}
               <Link
