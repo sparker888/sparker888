@@ -28,7 +28,7 @@ function Article({ article }) {
     <article className="md:grid md:grid-cols-4 md:items-start md:gap-6">
       {shouldShowThumbnail && (
         <div className="hidden md:block">
-          <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
+          <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
             <Image
               src={thumbnailSrc}
               alt={article.title}
