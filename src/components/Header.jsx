@@ -127,7 +127,6 @@ function MobileNavigation(props) {
                 <MobileNavItem href="/">Home</MobileNavItem>
                 <MobileNavItem href="/articles">Articles</MobileNavItem>
                 <MobileNavItem href="/videos">Videos</MobileNavItem>
-                <MobileNavItem href="/projects">Projects</MobileNavItem>
                 <MobileNavItem href="/gallery">Gallery</MobileNavItem>
                 <MobileNavItem href="/contact">Contact</MobileNavItem>
               </ul>
@@ -170,7 +169,6 @@ function DesktopNavigation(props) {
           <NavItem href="/">Home</NavItem>
           <NavItem href="/articles">Articles</NavItem>
           <NavItem href="/videos">Videos</NavItem>
-          <NavItem href="/projects">Projects</NavItem>
           <NavItem href="/gallery">Gallery</NavItem>
           <NavItem href="/contact">Contact</NavItem>
           {/* Scan line elements */}
