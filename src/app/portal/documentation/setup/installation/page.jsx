@@ -28,9 +28,9 @@ export default function InstallationPage() {
 
         <StepCard step={1} title="System Requirements">
           <p className="mb-4">Ensure your development machine meets these requirements:</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-            <div className="bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg p-4">
-              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Required Software</h4>
+          <div className="grid grid-cols-1 gap-6 mb-4 md:grid-cols-2">
+            <div className="p-4 border rounded-lg bg-stone-50 dark:bg-stone-800 border-stone-200 dark:border-stone-700">
+              <h4 className="mb-3 font-semibold text-stone-900 dark:text-stone-100">Required Software</h4>
               <ul className="text-sm text-stone-600 dark:text-stone-400">
                 <li>✅ Node.js 20.3.0+ (LTS recommended)</li>
                 <li>✅ npm 9.0+ or yarn 1.22+</li>
@@ -39,8 +39,8 @@ export default function InstallationPage() {
               </ul>
             </div>
             
-            <div className="bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg p-4">
-              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">System Resources</h4>
+            <div className="p-4 border rounded-lg bg-stone-50 dark:bg-stone-800 border-stone-200 dark:border-stone-700">
+              <h4 className="mb-3 font-semibold text-stone-900 dark:text-stone-100">System Resources</h4>
               <ul className="text-sm text-stone-600 dark:text-stone-400">
                 <li>💾 4GB+ RAM available</li>
                 <li>💽 2GB+ free disk space</li>
@@ -68,8 +68,8 @@ git --version
         <StepCard step={2} title="Download Light-Speed 2026">
           <p className="mb-4">Download the latest Light-Speed 2026 template:</p>
           <div className="mb-4">
-            <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Template Download</h4>
-            <p className="text-stone-600 dark:text-stone-400 text-sm mb-3">
+            <h4 className="mb-3 font-semibold text-stone-900 dark:text-stone-100">Template Download</h4>
+            <p className="mb-3 text-sm text-stone-600 dark:text-stone-400">
               The download link was provided in your purchase confirmation email. The ZIP file is automatically updated with the latest template version.
             </p>
             <CodeBlock language="bash">
@@ -95,7 +95,7 @@ ls -la`}
         <StepCard step={3} title="Install Dependencies & IDE Setup">
           <div className="space-y-6">
             <div>
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3">Open Project in VS Code (or your preferred editor)</h4>
+              <h4 className="mb-3 font-semibold text-slate-900 dark:text-slate-100">Open Project in VS Code (or your preferred editor)</h4>
               <CodeBlock language="bash">
 {`# Open project in VS Code
 code .`}
@@ -103,7 +103,7 @@ code .`}
             </div>
 
             <div>
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3">Install Dependencies</h4>
+              <h4 className="mb-3 font-semibold text-slate-900 dark:text-slate-100">Install Dependencies</h4>
               <CodeBlock language="bash">
 {`# Install project dependencies
 npm install
@@ -114,7 +114,7 @@ npm run typecheck`}
             </div>
 
             <div>
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3">Install Claude Code (Recommended)</h4>
+              <h4 className="mb-3 font-semibold text-slate-900 dark:text-slate-100">Install Claude Code (Recommended)</h4>
               <CodeBlock language="bash">
 {`# Install Claude Code globally
 npm install -g @anthropic-ai/claude-code
@@ -125,11 +125,11 @@ claude --version`}
             </div>
 
             <div>
-              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Project Structure Overview</h4>
-              <p className="text-stone-600 dark:text-stone-400 text-sm mb-3">
-                Light-Speed 2026 includes a complete <code className="bg-stone-100 dark:bg-stone-800 px-1 rounded">.claude/</code> directory with:
+              <h4 className="mb-3 font-semibold text-stone-900 dark:text-stone-100">Project Structure Overview</h4>
+              <p className="mb-3 text-sm text-stone-600 dark:text-stone-400">
+                Light-Speed 2026 includes a complete <code className="px-1 rounded bg-stone-100 dark:bg-stone-800">.claude/</code> directory with:
               </p>
-              <ul className="list-disc list-inside text-stone-600 dark:text-stone-400 text-sm mb-4">
+              <ul className="mb-4 text-sm list-disc list-inside text-stone-600 dark:text-stone-400">
                 <li><strong>CLAUDE.md</strong> - Project memory and development guidelines</li>
                 <li><strong>.claude/commands/</strong> - Custom slash commands for common tasks</li>
                 <li><strong>.claude/docs/</strong> - Comprehensive project documentation</li>
@@ -137,7 +137,7 @@ claude --version`}
             </div>
 
             <div>
-              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Development Workflow Setup</h4>
+              <h4 className="mb-3 font-semibold text-stone-900 dark:text-stone-100">Development Workflow Setup</h4>
               <CodeBlock language="bash">
 {`# Launch Claude Code in project root (optional)
 claude
@@ -145,8 +145,8 @@ claude
 # Initialize project analysis if needed
 # /init - Analyze codebase structure`}
               </CodeBlock>
-              <p className="text-stone-600 dark:text-stone-400 text-sm mt-4">
-                Light-Speed 2026 includes a complete <code className="bg-stone-100 dark:bg-stone-800 px-1 rounded">.claude/</code> directory with commands and documentation. 
+              <p className="mt-4 text-sm text-stone-600 dark:text-stone-400">
+                Light-Speed 2026 includes a complete <code className="px-1 rounded bg-stone-100 dark:bg-stone-800">.claude/</code> directory with commands and documentation. 
                 For a complete list of available Claude Code commands, visit the{' '}
                 <a href="https://docs.anthropic.com/en/docs/claude-code" 
                    className="text-blue-600 dark:text-blue-400 hover:underline"
@@ -165,12 +165,12 @@ claude
 
         <StepCard step={4} title="Setup Summary & Next Steps">
           <div className="space-y-6">
-            <div>
-              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Setup Complete</h4>
-              <p className="text-stone-600 dark:text-stone-400 mb-4">
-                You've successfully completed the basic installation. Here's what was accomplished:
+            <di
+              <h4 className="mb-3 font-semibold text-stone-900 dark:text-stone-100">Setup Complete</h4>
+              <p className="mb-4 text-stone-600 dark:text-stone-400">  
+                You've successfully completed the ba  sic installation. Here's what was accomplished:
               </p>
-              <ul className="list-disc list-inside text-stone-600 dark:text-stone-400 text-sm mb-4">
+              <ul className="mb-4 text-sm list-disc list-inside text-stone-600 dark:text-stone-400">
                 <li>Dependencies installed and verified</li>
                 <li>Project structure confirmed</li>
                 <li>Claude Code development environment ready</li>
@@ -178,12 +178,12 @@ claude
             </div>
 
             <div>
-              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-3">Environment Variables Required</h4>
-              <p className="text-stone-600 dark:text-stone-400 mb-4">
+              <h4 className="mb-3 font-semibold text-stone-900 dark:text-stone-100">Environment Variables Required</h4>
+              <p className="mb-4 text-stone-600 dark:text-stone-400">
                 The development server requires environment variables to be configured. In the next section, 
                 you'll set up API keys and database connections that enable the platform's core functionality:
               </p>
-              <ul className="list-disc list-inside text-stone-600 dark:text-stone-400 text-sm mb-4">
+              <ul className="mb-4 text-sm list-disc list-inside text-stone-600 dark:text-stone-400">
                 <li><strong>PocketBase Database</strong> - User authentication and data storage</li>
                 <li><strong>Stripe Integration</strong> - Payment processing and subscriptions</li>
                 <li><strong>AWS Services</strong> - File storage and CDN delivery</li>
@@ -196,13 +196,13 @@ claude
               </InfoBox>
             </div>
 
-            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
-              <h4 className="font-semibold text-green-800 dark:text-green-200 mb-3">Ready for Environment Setup</h4>
-              <p className="text-green-700 dark:text-green-300 text-sm mb-3">
+            <div className="p-4 border border-green-200 rounded-lg bg-green-50 dark:bg-green-900/20 dark:border-green-800">
+              <h4 className="mb-3 font-semibold text-green-800 dark:text-green-200">Ready for Environment Setup</h4>
+              <p className="mb-3 text-sm text-green-700 dark:text-green-300">
                 <strong>🔧 Continue to Environment Variables</strong><br/>
                 Complete the setup by configuring your environment variables in the next section.
               </p>
-              <p className="text-green-700 dark:text-green-300 text-sm">
+              <p className="text-sm text-green-700 dark:text-green-300">
                 Once environment variables are configured, you'll be able to start the development server 
                 and begin customizing your social media management platform.
               </p>
@@ -210,29 +210,29 @@ claude
           </div>
         </StepCard>
 
-        <div className="bg-gradient-to-r from-blue-600 to-green-600 rounded-lg p-6 text-white">
-          <h3 className="text-xl font-bold mb-3">📦 Basic Installation Complete!</h3>
+        <div className="p-6 text-white rounded-lg bg-gradient-to-r from-blue-600 to-green-600">
+          <h3 className="mb-3 text-xl font-bold">📦 Basic Installation Complete!</h3>
           <p className="mb-4 opacity-90">
             You've successfully set up the development environment and prepared the Light-Speed 2026 codebase. 
             Next, you'll configure environment variables and database settings to complete the setup.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col gap-3 sm:flex-row">
             <Link href="/portal/documentation/setup/environment">
-              <Button className="bg-white text-blue-600 hover:bg-gray-100">
+              <Button className="text-blue-600 bg-white hover:bg-gray-100">
                 Next: Environment Variables →
               </Button>
             </Link>
           </div>
         </div>
 
-        <div className="bg-stone-100 dark:bg-stone-800 rounded-lg p-6">
-          <h3 className="text-lg font-semibold text-stone-900 dark:text-stone-100 mb-4">
+        <div className="p-6 rounded-lg bg-stone-100 dark:bg-stone-800">
+          <h3 className="mb-4 text-lg font-semibold text-stone-900 dark:text-stone-100">
             🛠️ Installation Troubleshooting
           </h3>
           <div className="space-y-4 text-sm">
             <div>
-              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-1">Node Version Issues</h4>
-              <p className="text-stone-600 dark:text-stone-400 mb-2">If you have Node version conflicts:</p>
+              <h4 className="mb-1 font-semibold text-stone-900 dark:text-stone-100">Node Version Issues</h4>
+              <p className="mb-2 text-stone-600 dark:text-stone-400">If you have Node version conflicts:</p>
               <CodeBlock language="bash">
 {`# Use Node Version Manager (nvm)
 nvm install 20
@@ -243,8 +243,8 @@ nvm use 20
             </div>
 
             <div>
-              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-1">Package Installation Errors</h4>
-              <p className="text-stone-600 dark:text-stone-400 mb-2">If npm install fails:</p>
+              <h4 className="mb-1 font-semibold text-stone-900 dark:text-stone-100">Package Installation Errors</h4>
+              <p className="mb-2 text-stone-600 dark:text-stone-400">If npm install fails:</p>
               <CodeBlock language="bash">
 {`# Clear npm cache and reinstall
 npm cache clean --force
@@ -254,8 +254,8 @@ npm install`}
             </div>
 
             <div>
-              <h4 className="font-semibold text-stone-900 dark:text-stone-100 mb-1">Permission Errors</h4>
-              <p className="text-stone-600 dark:text-stone-400 mb-2">If you get permission denied errors:</p>
+              <h4 className="mb-1 font-semibold text-stone-900 dark:text-stone-100">Permission Errors</h4>
+              <p className="mb-2 text-stone-600 dark:text-stone-400">If you get permission denied errors:</p>
               <CodeBlock language="bash">
 {`# Fix npm permissions (macOS/Linux)
 sudo chown -R $(whoami) ~/.npm
@@ -265,8 +265,8 @@ sudo chown -R $(whoami) ~/.npm
             </div>
           </div>
           
-          <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded">
-            <p className="text-blue-800 dark:text-blue-200 text-sm">
+          <div className="p-3 mt-4 border border-blue-200 rounded bg-blue-50 dark:bg-blue-900/20 dark:border-blue-800">
+            <p className="text-sm text-blue-800 dark:text-blue-200">
               💡 <strong>For server and development issues:</strong> See the troubleshooting section in the First Run guide after completing environment setup.
             </p>
           </div>
