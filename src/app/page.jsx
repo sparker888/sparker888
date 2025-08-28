@@ -381,12 +381,14 @@ export default async function Home() {
         <AnimateIn delay={0.1}>
           <div className="max-w-2xl">
             <h1 className="text-4xl italic font-extrabold tracking-tight font-display text-slate-800 dark:text-slate-100 sm:text-5xl">
-              I'm Steve. I'm a remote solopreneur exploring the future of web
-              development. <TypewriterText />
+              Hey, I'm Steve.
+              <br />
+              Your Light. Speed.✨ Developer
+              <br />
+              <TypewriterText />
             </h1>
             <p className="mt-6 md:mt-12 text-2xl font-medium text-slate-600 dark:text-slate-400">
-              I produce Light. Speed.✨ websites & apps using AI-assisted
-              development as the Founder of{' '}
+              My passion is building performant websites & apps for my clients using AI as the founder of{' '}
               <Link
                 href="https://gravitaldigital.com/"
                 target="_blank"

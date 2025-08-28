@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react'
 
 export default function TypewriterText() {
   const phrases = [
-    "Let's promote! ✨",
-    "Let's design! ✨",
-    "Let's build! ✨",
-    "Let's prompt! ✨",
-    "Let's ship! ✨",
+    "Let's promote!",
+    "Let's design!",
+    "Let's build!",
+    "Let's prompt!",
+    "Let's ship!",
   ]
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0)
@@ -67,9 +67,6 @@ export default function TypewriterText() {
           </span>
         );
       })}
-      <span className="inline-block ml-1 text-amber-500 animate-pulse">
-        |
-      </span>
       <style jsx>{`
         @keyframes fadeIn {
           from {
