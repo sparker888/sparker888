@@ -421,7 +421,7 @@ export default async function Home() {
             </p>
 
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              <span className="font-medium text-sky-600 dark:text-sky-400">What's the ROI?</span> Check out my{' '}
+              <span className="font-medium text-sky-600 dark:text-sky-400">How can I help your business?</span> Check out my{' '}
               <Link
                 href="/videos"
                 className="text-amber-500 hover:underline"
