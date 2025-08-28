@@ -411,6 +411,8 @@ export default async function Home() {
               where I built{' '}
               <Link
                 href="https://midjourneypromptmanager.com/?utm_source=sparker888&utm_medium=website&utm_campaign=mpm_referral"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-amber-500 hover:underline"
               >
                 Midjourney Prompt Manager
