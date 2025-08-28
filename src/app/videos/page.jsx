@@ -46,7 +46,7 @@ const videoCategories = [
         thumbnail: `https://img.youtube.com/vi/ysVAayjb3xQ/maxresdefault.jpg`,
         videoId: 'ysVAayjb3xQ',
         duration: '18:45',
-        views: '7.1K',
+        views: '7.5K',
         publishedAt: '6 months ago'
       },
       {
@@ -55,7 +55,7 @@ const videoCategories = [
         thumbnail: `https://img.youtube.com/vi/SMNZOwQdzxU/maxresdefault.jpg`,
         videoId: 'SMNZOwQdzxU',
         duration: '15:32',
-        views: '1,115',
+        views: '520',
         publishedAt: '5 months ago'
       },
       {
@@ -64,7 +64,7 @@ const videoCategories = [
         thumbnail: `https://img.youtube.com/vi/5tLRmdCbUN8/maxresdefault.jpg`,
         videoId: '5tLRmdCbUN8',
         duration: '22:18',
-        views: '5.5K',
+        views: '5.7K',
         publishedAt: '8 months ago'
       }
     ]
