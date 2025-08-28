@@ -377,7 +377,7 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-9">
+      <Container className="mt-16">
         <AnimateIn delay={0.1}>
           <div className="max-w-2xl">
             <h1 className="text-4xl italic font-extrabold tracking-tight font-display text-slate-800 dark:text-slate-100 sm:text-5xl">
@@ -415,7 +415,7 @@ export default async function Home() {
               >
                 Midjourney Prompt Manager
               </Link>{' '}
-              using Claude AI to serve the AI image creation community.
+              a powerful stack and artificial intelligence to serve the AI image creation community.
             </p>
 
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
