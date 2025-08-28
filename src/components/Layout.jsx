@@ -17,7 +17,7 @@ export function Layout({ children }) {
           offsetY={0}
           scale={1}
           rotation={0}
-          speed={1.3}
+          speed={0.28}
           colors={[
             "hsl(221, 100%, 94%)",
             "hsl(32, 95%, 44%)",

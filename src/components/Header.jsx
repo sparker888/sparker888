@@ -418,14 +418,14 @@ export function Header() {
             <div className="relative flex gap-4">
               <div className="flex flex-1">
                 {!isHomePage && (
-                  <AvatarContainer>
-                    <Avatar />
-                  </AvatarContainer>
+                  <Avatar />
                 )}
                 {!isHomePage && (
-                  <h2 className="self-center ml-4 text-2xl font-bold font-logo text-sky-600">
-                    Stephen<span className="text-amber-600">Parker</span>
-                  </h2>
+                  <Link href="/" className="self-center ml-4">
+                    <h2 className="text-2xl font-bold font-logo text-sky-600 hover:text-sky-700 transition-colors">
+                      Stephen<span className="text-amber-600 hover:text-amber-700">Parker</span>
+                    </h2>
+                  </Link>
                 )}
               </div>
               <div className="flex justify-end flex-1 md:justify-center">
