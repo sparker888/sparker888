@@ -401,7 +401,7 @@ export default async function Home() {
             </p>
 
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              <span className="font-medium text-sky-600 dark:text-sky-400">What does this look like?</span> Read my article{' '}
+              <span className="font-medium text-sky-600 dark:text-sky-400">What does that look like?</span> Read my article{' '}
               <Link
                 href="/articles/light-speed-6"
                 className="text-amber-500 hover:underline"
