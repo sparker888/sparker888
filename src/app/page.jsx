@@ -355,39 +355,22 @@ export default async function Home() {
               I'm Steve. I'm a remote solopreneur exploring the future of web
               development. <TypewriterText />
             </h1>
-            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+            <p className="mt-6 text-2xl font-medium text-slate-600 dark:text-slate-400">
               I produce Light. Speed.✨ websites & apps using AI-assisted
               development as the Founder of{' '}
               <Link
                 href="https://gravitaldigital.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-amber-500 hover:underline"
               >
                 Gravital Digital
               </Link>
               .
             </p>
-            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              Want to create location-independent income with no boss, no
-              employees and no limits? Interested in a healthier pace of life
-              with living expenses one-third of those in the U.S.?{' '}
-            </p>
-            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              I just spent 6 months in Ecuador as a solopreneur building my
-              business.
-            </p>
-            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              <em>Join the movement!</em> I'm showing fellow solopreneurs how to
-              work remotely from Latin America on my{' '}
-              <Link href="/videos" className="text-amber-500 hover:underline">
-                Remote Solopreneur YouTube channel
-              </Link>
-              —sharing resources for living in the top-rated city in the Andes
-              while building profitable businesses with modern dev tools and AI
-              workflows.
-            </p>
 
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              <em>Proof it works:</em> Read my 2-part case study{' '}
+              Read my 2-part case study{' '}
               <Link
                 href="/articles/light-speed-6"
                 className="text-amber-500 hover:underline"
@@ -403,7 +386,15 @@ export default async function Home() {
               </Link>{' '}
               using Claude AI to serve the AI image creation community.
             </p>
+
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+              Interested in becoming a solopreneur? Check out my{' '}
+              <Link href="/videos" className="text-amber-500 hover:underline">
+                Remote Solopreneur videos
+              </Link>{' '}
+              where I share real experiences living and vibe coding in Cuenca, Ecuador - Latin America's safest big city.
+            </p>
+            <p className="mt-6 text-xl font-semibold text-sky-600 dark:text-sky-400">
               Let's fly! 🚀
             </p>
             <div className="flex gap-6 mt-6 text-sky-600 dark:text-amber-500">

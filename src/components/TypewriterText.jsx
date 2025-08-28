@@ -49,18 +49,24 @@ export default function TypewriterText() {
 
   return (
     <span className="inline-block">
-      {displayedText.split('').map((char, index) => (
-        <span
-          key={`${currentPhraseIndex}-${index}`}
-          style={{
-            opacity: 1,
-            display: 'inline-block',
-            animation: `fadeIn 0.1s ${index * 0.03}s both`
-          }}
-        >
-          {char === ' ' ? '\u00A0' : char}
-        </span>
-      ))}
+      {displayedText.split('').map((char, index) => {
+        // Make emoji appear with the exclamation mark (no extra delay)
+        const isEmoji = char === '✨';
+        const animationDelay = isEmoji ? (index - 1) * 0.03 : index * 0.03;
+        
+        return (
+          <span
+            key={`${currentPhraseIndex}-${index}`}
+            style={{
+              opacity: 1,
+              display: 'inline-block',
+              animation: `fadeIn 0.1s ${animationDelay}s both`
+            }}
+          >
+            {char === ' ' ? '\u00A0' : char}
+          </span>
+        );
+      })}
       <span className="inline-block ml-1 text-amber-500 animate-pulse">
         |
       </span>

@@ -126,8 +126,8 @@ function MobileNavigation(props) {
               <ul className="-my-2 text-base divide-y divide-slate-100 text-slate-800 dark:divide-slate-100/5 dark:text-slate-300">
                 <MobileNavItem href="/">Home</MobileNavItem>
                 <MobileNavItem href="/articles">Articles</MobileNavItem>
+                <MobileNavItem href="/videos">Videos</MobileNavItem>
                 <MobileNavItem href="/projects">Projects</MobileNavItem>
-                <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/gallery">Gallery</MobileNavItem>
                 <MobileNavItem href="/contact">Contact</MobileNavItem>
               </ul>
@@ -169,8 +169,8 @@ function DesktopNavigation(props) {
         <ul className="relative flex px-3 font-semibold shadow-lg rounded-xl bg-light-nav-pattern font-display text-slate-800 shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-dark-nav-pattern dark:text-slate-200 dark:ring-white/10 nav-scan">
           <NavItem href="/">Home</NavItem>
           <NavItem href="/articles">Articles</NavItem>
+          <NavItem href="/videos">Videos</NavItem>
           <NavItem href="/projects">Projects</NavItem>
-          <NavItem href="/about">About</NavItem>
           <NavItem href="/gallery">Gallery</NavItem>
           <NavItem href="/contact">Contact</NavItem>
           {/* Scan line elements */}

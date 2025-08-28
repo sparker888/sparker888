@@ -34,6 +34,7 @@ export function Footer() {
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 font-display font-semibold text-slate-800 dark:text-slate-200">
                 <NavLink href="/">Home</NavLink>
                 <NavLink href="/articles">Articles</NavLink>
+                <NavLink href="/videos">Videos</NavLink>
                 <NavLink href="/projects">Projects</NavLink>
                 <NavLink href="/about">About</NavLink>
                 <NavLink href="/gallery">Gallery</NavLink>
