@@ -85,7 +85,7 @@ function MobileNavItem({ href, children }) {
 function MobileNavigation(props) {
   return (
     <Popover {...props}>
-      <Popover.Button className="flex items-center px-4 py-2 text-sm font-semibold rounded-full shadow-lg group bg-white/90 font-display text-slate-800 shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-slate-800/90 dark:text-slate-200 dark:ring-white/10 dark:hover:ring-white/20 nav-glow nav-scan">
+      <Popover.Button className="flex items-center px-4 py-2 text-sm font-semibold rounded-full shadow-lg group bg-white/90 font-display text-slate-800 shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-slate-800/90 dark:text-slate-200 dark:ring-white/10 dark:hover:ring-white/20 nav-scan">
         Menu
         <ChevronDownIcon className="w-2 h-auto ml-3 stroke-slate-500 group-hover:stroke-slate-700 dark:group-hover:stroke-slate-400" />
       </Popover.Button>
@@ -165,7 +165,7 @@ function NavItem({ href, children }) {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <div className="relative nav-glow">
+      <div className="relative">
         <ul className="relative flex px-3 font-semibold shadow-lg rounded-xl bg-light-nav-pattern font-display text-slate-800 shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-dark-nav-pattern dark:text-slate-200 dark:ring-white/10 nav-scan">
           <NavItem href="/">Home</NavItem>
           <NavItem href="/articles">Articles</NavItem>

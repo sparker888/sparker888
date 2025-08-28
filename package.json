@@ -16,6 +16,7 @@
     "@mdx-js/react": "^2.3.0",
     "@netlify/plugin-nextjs": "^5.3.2",
     "@next/mdx": "13.4.16",
+    "@paper-design/shaders-react": "^0.0.46",
     "@tailwindcss/typography": "^0.5.4",
     "autoprefixer": "^10.4.12",
     "axios": "^1.6.2",

@@ -76,15 +76,44 @@ function ArrowRightIcon(props) {
 }
 
 function Article({ article }) {
+  // Get thumbnail for article
+  const getThumbnailSrc = (slug) => {
+    const thumbnailMap = {
+      'light-speed-7': '/article-thumbnails/light-speed-7.png',
+      'light-speed-6': '/article-thumbnails/light-speed-6.png',
+      'light-speed-5': '/article-thumbnails/light-speed-5.png',
+      'light-speed-4': '/article-thumbnails/light-speed-4.png',
+      'april-7-update': '/article-thumbnails/april-7-update.webp',
+      'march-25-update': '/article-thumbnails/march-25-update.webp',
+      'jan-25-update': '/article-thumbnails/jan-25-update.png',
+      'december-update': '/article-thumbnails/december-update.png',
+      'introducing-midjourney-prompt-manager': '/article-thumbnails/introducing-midjourney-prompt-manager.png',
+    }
+    return thumbnailMap[slug] || null
+  }
+
+  const thumbnailSrc = getThumbnailSrc(article.slug)
+
   return (
     <AnimateIn>
       <Card as="article">
-        <Card.Title href={`/articles/${article.slug}`}>
-          {article.title}
-        </Card.Title>
         <Card.Eyebrow as="time" dateTime={article.date} decorate>
           {formatDate(article.date)}
         </Card.Eyebrow>
+        {thumbnailSrc && (
+          <div className="relative w-full aspect-[16/9] mt-3 mb-4 rounded-lg overflow-hidden">
+            <Image
+              src={thumbnailSrc}
+              alt={article.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+            />
+          </div>
+        )}
+        <Card.Title href={`/articles/${article.slug}`}>
+          {article.title}
+        </Card.Title>
         <Card.Description>{article.description}</Card.Description>
         <Card.Cta>Read article</Card.Cta>
       </Card>
