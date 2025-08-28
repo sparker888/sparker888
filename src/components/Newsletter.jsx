@@ -11,7 +11,19 @@ function Newsletter() {
     event.preventDefault()
     const email = event.target.email.value
 
+    // Check if we're in development mode
+    const isDevelopment = process.env.NODE_ENV === 'development'
+    
     try {
+      if (isDevelopment) {
+        // In development, simulate success after a short delay
+        setTimeout(() => {
+          setMessage("Thanks. You're now subscribed!")
+          setEmail('')
+        }, 500)
+        return
+      }
+
       const response = await fetch('/.netlify/functions/subscribe', {
         method: 'POST',
         body: JSON.stringify({ email }),
@@ -29,6 +41,7 @@ function Newsletter() {
       }
     } catch (error) {
       console.error('Error:', error)
+      setMessage('Subscription failed. Please try again.')
     }
   }
 

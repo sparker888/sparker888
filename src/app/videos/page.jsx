@@ -2,6 +2,7 @@ import { Container } from '@/components/Container'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import Link from 'next/link'
 import Image from 'next/image'
+import VideosClient from '@/components/VideosClient'
 
 function PlayIcon(props) {
   return (
@@ -88,6 +89,7 @@ function VideoCard({ video, featured = false }) {
           alt={video.title}
           fill
           className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
         />
         {/* Play button overlay */}
         <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/20 group-hover:opacity-100">
@@ -164,7 +166,7 @@ export default function Videos() {
         <>
           <p>Want to create location-independent income with no boss, no employees and no limits?</p>
           <p className="mt-4">Interested in a healthier pace of life with living expenses one-third of those in the U.S.?</p>
-          <p className="mt-4 font-bold text-sky-600 dark:text-sky-400">Join the movement!</p>
+          <p className="mt-4 font-bold text-sky-600 dark:text-sky-400"><em>Join the movement!</em></p>
           <p className="mt-4">I just spent 6 months in Ecuador as a solopreneur building my business. I'm showing fellow solopreneurs how to work remotely from Latin America on my Remote Solopreneur YouTube channel—sharing resources for living in the top-rated city in the Andes while building profitable businesses with modern dev tools and AI workflows.</p>
         </>
       }
@@ -179,17 +181,6 @@ export default function Videos() {
         
         <div className="max-w-4xl">
           <VideoCard video={featuredVideo} featured={true} />
-          <div className="mt-4">
-            <Link
-              href="https://www.youtube.com/@remote-solopreneur"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-semibold transition-colors text-amber-600 hover:text-amber-700 dark:text-amber-400 dark:hover:text-amber-300"
-            >
-              Subscribe on YouTube
-              <ExternalLinkIcon className="w-4 h-4" />
-            </Link>
-          </div>
         </div>
       </div>
 
@@ -217,12 +208,7 @@ export default function Videos() {
               Subscribe on YouTube
               <ExternalLinkIcon className="w-4 h-4" />
             </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-white transition-colors rounded-lg bg-sky-600 hover:bg-sky-700"
-            >
-              Get in Touch
-            </Link>
+            <VideosClient />
           </div>
         </div>
       </div>
