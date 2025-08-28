@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 export default function TypewriterText() {
   const phrases = [
     "Let's design!",
-    "Let's prompt!",
+    "Let's build!",
     "Let's ship!",
     "Let's promote!",
   ]

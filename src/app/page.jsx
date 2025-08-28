@@ -383,17 +383,17 @@ export default async function Home() {
             <h1 className="text-4xl italic font-extrabold tracking-tight font-display text-slate-800 dark:text-slate-100 sm:text-5xl">
               Hey, I'm Steve.
               <br />
-              Your Light. Speed.✨ Developer
+              Your Light. Speed.✨ Developer.
               <br />
               <TypewriterText />
             </h1>
-            <p className="mt-6 md:mt-12 text-2xl font-medium text-slate-600 dark:text-slate-400">
-              My passion is building performant websites & apps for my clients using AI as the founder of{' '}
+            <p className="mt-6 text-2xl font-medium md:mt-12 text-slate-600 dark:text-slate-400">
+              I help businesses and solopreneurs build fast websites and web apps without the bloat, using Jamstack architecture and AI as the founder of{' '}
               <Link
                 href="https://gravitaldigital.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-amber-500 hover:underline"
+                className="font-semibold text-amber-500 hover:underline"
               >
                 Gravital Digital
               </Link>
@@ -401,29 +401,43 @@ export default async function Home() {
             </p>
 
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              Read my 2-part case study{' '}
+              <span className="font-medium text-sky-600 dark:text-sky-400">What does this look like?</span> Read my article{' '}
               <Link
                 href="/articles/light-speed-6"
                 className="text-amber-500 hover:underline"
               >
-                A Full SaaS App in 30 Days{' '}
+                A Full-featured App in 30 Days with Claude AI{' '}
               </Link>
-              to see how I built{' '}
+              where I built{' '}
               <Link
                 href="https://midjourneypromptmanager.com/?utm_source=sparker888&utm_medium=website&utm_campaign=mpm_referral"
                 className="text-amber-500 hover:underline"
               >
                 Midjourney Prompt Manager
               </Link>{' '}
-              a powerful stack and artificial intelligence to serve the AI image creation community.
+              using a lightweight tech stack and an AI-assisted development process.
             </p>
 
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              Interested in becoming a solopreneur? Check out my{' '}
-              <Link href="/videos" className="text-amber-500 hover:underline">
+              <span className="font-medium text-sky-600 dark:text-sky-400">What's the ROI?</span> Check out my{' '}
+              <Link
+                href="/videos"
+                className="text-amber-500 hover:underline"
+              >
+                Jamstack Case Study
+              </Link>{' '}
+              where I helped WRS significantly increase traffic, conversions and attendance to their WRI 2024 engineering conference.
+            </p>
+
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+              <span className="font-medium text-sky-600 dark:text-sky-400">Want to see the solopreneur lifestyle in action?</span> Check out my{' '}
+              <Link
+                href="/videos"
+                className="text-amber-500 hover:underline"
+              >
                 Remote Solopreneur videos
               </Link>{' '}
-              where I share real experiences living and vibe coding in Cuenca, Ecuador - Latin America's safest big city.
+              where I share real experiences living and vibe coding in Cuenca, Ecuador – Latin America's safest big city.
             </p>
             <p className="mt-6 text-xl font-semibold text-sky-600 dark:text-sky-400">
               Let's fly! 🚀

@@ -19,10 +19,10 @@ export function Layout({ children }) {
           rotation={0}
           speed={0.28}
           colors={[
-            "hsl(221, 100%, 94%)",
-            "hsl(32, 95%, 44%)",
             "hsl(200, 98%, 39%)",
-            "hsl(26, 97%, 24%)"
+            "hsl(32, 95%, 44%)",
+            "hsl(221, 70%, 55%)",
+            "hsl(26, 97%, 40%)"
           ]}
         />
       </div>
