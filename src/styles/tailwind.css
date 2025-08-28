@@ -7,10 +7,80 @@
 
 @layer base {
     .bg-pattern {
-      @apply bg-light-pattern; /* Default light background */
+      position: relative;
     }
-    .dark .bg-pattern {
-      @apply bg-dark-pattern; /* Dark mode background */
+    
+    .bg-pattern::before {
+      content: '';
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: 
+        linear-gradient(45deg, 
+          #ff006e, #8338ec, #3a86ff, #06ffa5, #ffbe0b, #fb5607, #ff006e);
+      background-size: 300% 300%;
+      animation: holographicShift 8s ease infinite, rotate 20s linear infinite;
+      filter: blur(40px) saturate(1.5);
+      opacity: 0.9;
+      z-index: -2;
+    }
+    
+    .bg-pattern::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, transparent 30%, rgba(255, 255, 255, 0.3) 70%),
+        radial-gradient(circle at 80% 50%, transparent 30%, rgba(255, 255, 255, 0.3) 70%),
+        radial-gradient(circle at 50% 20%, transparent 30%, rgba(255, 255, 255, 0.2) 70%),
+        radial-gradient(circle at 50% 80%, transparent 30%, rgba(255, 255, 255, 0.2) 70%);
+      mix-blend-mode: screen;
+      animation: pulse 4s ease-in-out infinite;
+      z-index: -2;
+    }
+    
+    .dark .bg-pattern::before {
+      opacity: 0.7;
+      filter: blur(40px) saturate(1.2) brightness(0.8);
+    }
+    
+    .dark .bg-pattern::after {
+      opacity: 0.5;
+    }
+  }
+  
+  @keyframes holographicShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
     }
   }
   @keyframes pulse-amber {
@@ -31,12 +101,335 @@
     }
   }
   
+  @keyframes navGlow {
+    0%, 100% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rayRotate {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  @keyframes scanPulse {
+    0%, 80%, 100% {
+      filter: brightness(1);
+    }
+    10%, 20% {
+      filter: brightness(1.5);
+    }
+  }
+  
   @layer utilities {
     .dark .shadow-glow {
       animation: pulse-amber 5s infinite;
     }
     .shadow-glow {
       animation: pulse-sky 5s infinite;
+    }
+    
+    /* Navigation container glow effect */
+    .nav-glow {
+      position: relative;
+    }
+    
+    .nav-glow::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% + 60px);
+      height: calc(100% + 60px);
+      background: radial-gradient(ellipse at center, 
+        rgba(255, 0, 110, 0.3) 0%,
+        rgba(131, 56, 236, 0.2) 20%,
+        rgba(58, 134, 255, 0.15) 40%,
+        rgba(6, 255, 165, 0.1) 60%,
+        transparent 80%);
+      filter: blur(20px);
+      animation: navGlow 4s ease-in-out infinite, rayRotate 30s linear infinite;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    /* God rays effect */
+    .nav-glow::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150%;
+      height: 150%;
+      background: conic-gradient(from 0deg at 50% 50%,
+        transparent 0deg,
+        rgba(255, 0, 110, 0.1) 10deg,
+        transparent 20deg,
+        transparent 40deg,
+        rgba(131, 56, 236, 0.1) 50deg,
+        transparent 60deg,
+        transparent 80deg,
+        rgba(58, 134, 255, 0.1) 90deg,
+        transparent 100deg,
+        transparent 120deg,
+        rgba(6, 255, 165, 0.1) 130deg,
+        transparent 140deg,
+        transparent 160deg,
+        rgba(255, 190, 11, 0.1) 170deg,
+        transparent 180deg,
+        transparent 200deg,
+        rgba(251, 86, 7, 0.1) 210deg,
+        transparent 220deg,
+        transparent 240deg,
+        rgba(255, 0, 110, 0.1) 250deg,
+        transparent 260deg,
+        transparent 280deg,
+        rgba(131, 56, 236, 0.1) 290deg,
+        transparent 300deg,
+        transparent 320deg,
+        rgba(58, 134, 255, 0.1) 330deg,
+        transparent 340deg,
+        transparent 360deg);
+      filter: blur(30px);
+      animation: rayRotate 60s linear infinite reverse;
+      z-index: -2;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    
+    /* Dark mode adjustments */
+    .dark .nav-glow::before {
+      background: radial-gradient(ellipse at center, 
+        rgba(255, 0, 110, 0.2) 0%,
+        rgba(131, 56, 236, 0.15) 20%,
+        rgba(58, 134, 255, 0.1) 40%,
+        rgba(6, 255, 165, 0.08) 60%,
+        transparent 80%);
+      filter: blur(25px);
+    }
+    
+    .dark .nav-glow::after {
+      opacity: 0.4;
+      filter: blur(35px);
+    }
+    
+    /* Alien spaceship scan lines for nav */
+    .nav-scan {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.75rem; /* Match the rounded-xl */
+    }
+    
+    .nav-scan::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 4px,
+          rgba(255, 190, 11, 0.15) 4px,
+          rgba(255, 190, 11, 0.15) 4.5px
+        );
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    /* Individual scan lines that pulse upward */
+    .nav-scan-line-1,
+    .nav-scan-line-2,
+    .nav-scan-line-3,
+    .nav-scan-line-4,
+    .nav-scan-line-5,
+    .nav-scan-line-6,
+    .nav-scan-line-7,
+    .nav-scan-line-8 {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 0.5px;
+      background: rgba(255, 190, 11, 0.25);
+      pointer-events: none;
+      z-index: 2;
+      animation: scanPulse 4s ease-out infinite;
+    }
+    
+    .nav-scan-line-1 { bottom: 10%; animation-delay: 0s; }
+    .nav-scan-line-2 { bottom: 20%; animation-delay: 0.1s; }
+    .nav-scan-line-3 { bottom: 30%; animation-delay: 0.2s; }
+    .nav-scan-line-4 { bottom: 40%; animation-delay: 0.3s; }
+    .nav-scan-line-5 { bottom: 50%; animation-delay: 0.4s; }
+    .nav-scan-line-6 { bottom: 60%; animation-delay: 0.5s; }
+    .nav-scan-line-7 { bottom: 70%; animation-delay: 0.6s; }
+    .nav-scan-line-8 { bottom: 80%; animation-delay: 0.7s; }
+    
+    /* Dark mode adjustments */
+    .dark .nav-scan::before {
+      background-image: 
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 4px,
+          rgba(255, 190, 11, 0.1) 4px,
+          rgba(255, 190, 11, 0.1) 4.5px
+        );
+    }
+    
+    .dark .nav-scan-line-1,
+    .dark .nav-scan-line-2,
+    .dark .nav-scan-line-3,
+    .dark .nav-scan-line-4,
+    .dark .nav-scan-line-5,
+    .dark .nav-scan-line-6,
+    .dark .nav-scan-line-7,
+    .dark .nav-scan-line-8 {
+      background: rgba(255, 190, 11, 0.2);
+    }
+    
+    /* Text shadow for navigation links */
+    .text-shadow-subtle {
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    
+    .dark .text-shadow-subtle {
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Active link glow effect */
+    .nav-active-glow {
+      position: relative;
+    }
+    
+    .nav-active-glow::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% + 12px);
+      height: calc(100% + 8px);
+      background: radial-gradient(ellipse at center,
+        rgba(245, 158, 11, 0.2) 0%,
+        rgba(217, 119, 6, 0.15) 30%,
+        transparent 70%);
+      border-radius: 0.5rem;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    .dark .nav-active-glow::before {
+      background: radial-gradient(ellipse at center,
+        rgba(255, 191, 0, 0.25) 0%,
+        rgba(245, 158, 11, 0.2) 30%,
+        transparent 70%);
+    }
+    
+    /* Yellow glow for home page photo cards */
+    .photo-card-glow {
+      position: relative;
+    }
+    
+    .photo-card-glow::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      right: -8px;
+      bottom: -8px;
+      background: radial-gradient(ellipse at center,
+        rgba(234, 179, 8, 0.8) 0%,
+        rgba(250, 204, 21, 0.6) 30%,
+        rgba(234, 179, 8, 0.4) 60%,
+        transparent 80%);
+      border-radius: calc(0.75rem + 8px); /* Match rounded-xl + padding */
+      z-index: -1;
+      opacity: 0;
+      filter: blur(12px);
+      transition: all 0.4s ease;
+      animation: none;
+    }
+    
+    .photo-card-glow:hover::before {
+      opacity: 1;
+      animation: cardPulse 2s ease-in-out infinite;
+      filter: blur(16px);
+      transform: scale(1.1);
+    }
+    
+    /* Additional outer glow layer for more radiation */
+    .photo-card-glow::after {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      right: -15px;
+      bottom: -15px;
+      background: radial-gradient(ellipse at center,
+        rgba(234, 179, 8, 0.3) 0%,
+        rgba(250, 204, 21, 0.2) 40%,
+        transparent 70%);
+      border-radius: calc(0.75rem + 15px);
+      z-index: -2;
+      opacity: 0;
+      filter: blur(20px);
+      transition: all 0.4s ease 0.1s;
+    }
+    
+    .photo-card-glow:hover::after {
+      opacity: 1;
+      animation: cardRadiate 3s ease-in-out infinite;
+      transform: scale(1.2);
+    }
+    
+    @keyframes cardPulse {
+      0%, 100% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.15);
+        opacity: 0.8;
+      }
+    }
+    
+    @keyframes cardRadiate {
+      0%, 100% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.25);
+        opacity: 0.6;
+      }
+    }
+    
+    /* Dark mode adjustments */
+    .dark .photo-card-glow::before {
+      background: radial-gradient(ellipse at center,
+        rgba(251, 191, 36, 0.7) 0%,
+        rgba(252, 211, 77, 0.5) 30%,
+        rgba(251, 191, 36, 0.3) 60%,
+        transparent 80%);
+    }
+    
+    .dark .photo-card-glow::after {
+      background: radial-gradient(ellipse at center,
+        rgba(251, 191, 36, 0.25) 0%,
+        rgba(252, 211, 77, 0.15) 40%,
+        transparent 70%);
     }
   }
   

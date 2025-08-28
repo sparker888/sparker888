@@ -85,7 +85,7 @@ function MobileNavItem({ href, children }) {
 function MobileNavigation(props) {
   return (
     <Popover {...props}>
-      <Popover.Button className="flex items-center px-4 py-2 text-sm font-semibold rounded-full shadow-lg group bg-white/90 font-display text-slate-800 shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-slate-800/90 dark:text-slate-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <Popover.Button className="flex items-center px-4 py-2 text-sm font-semibold rounded-full shadow-lg group bg-white/90 font-display text-slate-800 shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-slate-800/90 dark:text-slate-200 dark:ring-white/10 dark:hover:ring-white/20 nav-glow nav-scan">
         Menu
         <ChevronDownIcon className="w-2 h-auto ml-3 stroke-slate-500 group-hover:stroke-slate-700 dark:group-hover:stroke-slate-400" />
       </Popover.Button>
@@ -125,10 +125,11 @@ function MobileNavigation(props) {
             <nav className="mt-6">
               <ul className="-my-2 text-base divide-y divide-slate-100 text-slate-800 dark:divide-slate-100/5 dark:text-slate-300">
                 <MobileNavItem href="/">Home</MobileNavItem>
-                <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/articles">Articles</MobileNavItem>
                 <MobileNavItem href="/projects">Projects</MobileNavItem>
+                <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/gallery">Gallery</MobileNavItem>
+                <MobileNavItem href="/contact">Contact</MobileNavItem>
               </ul>
             </nav>
           </Popover.Panel>
@@ -146,15 +147,15 @@ function NavItem({ href, children }) {
       <Link
         href={href}
         className={clsx(
-          'relative block px-3 py-2 transition',
+          'relative block px-3 py-2 transition text-shadow-subtle',
           isActive
-            ? 'text-amber-800 dark:text-amber-300'
+            ? 'text-yellow-500 nav-active-glow'
             : 'hover:text-amber-600 dark:hover:text-amber-500',
         )}
       >
         {children}
         {isActive && (
-          <span className="absolute inset-x-0 h-0 shadow-glow -bottom-px bg-gradient-to-r from-sky-200 via-sky-400 to-sky-600 dark:from-amber-400 dark:via-amber-400 dark:to-amber-200" />
+          <span className="absolute inset-x-0 h-0 shadow-glow -bottom-px bg-gradient-to-r from-amber-300 via-amber-500 to-amber-600 dark:from-amber-400 dark:via-amber-500 dark:to-amber-300" />
         )}
       </Link>
     </li>
@@ -164,13 +165,25 @@ function NavItem({ href, children }) {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <ul className="flex px-3 font-semibold shadow-lg rounded-xl bg-light-nav-pattern font-display text-slate-800 shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-dark-nav-pattern dark:text-slate-200 dark:ring-white/10">
-        <NavItem href="/">Home</NavItem>
-        <NavItem href="/about">About</NavItem>
-        <NavItem href="/articles">Articles</NavItem>
-        <NavItem href="/projects">Projects</NavItem>
-        <NavItem href="/gallery">Gallery</NavItem>
-      </ul>
+      <div className="relative nav-glow">
+        <ul className="relative flex px-3 font-semibold shadow-lg rounded-xl bg-light-nav-pattern font-display text-slate-800 shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-dark-nav-pattern dark:text-slate-200 dark:ring-white/10 nav-scan">
+          <NavItem href="/">Home</NavItem>
+          <NavItem href="/articles">Articles</NavItem>
+          <NavItem href="/projects">Projects</NavItem>
+          <NavItem href="/about">About</NavItem>
+          <NavItem href="/gallery">Gallery</NavItem>
+          <NavItem href="/contact">Contact</NavItem>
+          {/* Scan line elements */}
+          <div className="nav-scan-line-1" />
+          <div className="nav-scan-line-2" />
+          <div className="nav-scan-line-3" />
+          <div className="nav-scan-line-4" />
+          <div className="nav-scan-line-5" />
+          <div className="nav-scan-line-6" />
+          <div className="nav-scan-line-7" />
+          <div className="nav-scan-line-8" />
+        </ul>
+      </div>
     </nav>
   )
 }

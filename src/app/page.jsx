@@ -7,6 +7,7 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import AnimateIn from '@/components/AnimateIn'
+import TypewriterText from '@/components/TypewriterText'
 import {
   GitHubIcon,
   InstagramIcon,
@@ -318,7 +319,7 @@ function Photos() {
               target="_blank"
               rel="noopener noreferrer"
               className={clsx(
-                'group relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 transition-transform duration-300 hover:scale-105 dark:bg-slate-800 sm:w-72 sm:rounded-2xl',
+                'group relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 transition-transform duration-300 hover:scale-105 dark:bg-slate-800 sm:w-72 sm:rounded-2xl photo-card-glow',
                 rotations[projectIndex % rotations.length],
               )}
             >
@@ -352,7 +353,7 @@ export default async function Home() {
           <div className="max-w-2xl">
             <h1 className="text-4xl italic font-extrabold tracking-tight font-display text-slate-800 dark:text-slate-100 sm:text-5xl">
               I'm Steve. I'm a remote solopreneur exploring the future of web
-              development. Let's fly! 🚀
+              development. <TypewriterText />
             </h1>
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
               I produce Light. Speed.✨ websites & apps using AI-assisted
