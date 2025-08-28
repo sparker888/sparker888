@@ -7,7 +7,8 @@ export default function TypewriterText() {
     "Let's design!",
     "Let's build!",
     "Let's ship!",
-    "Let's promote!",
+    "Let's test!",
+    "Let's measure!",
   ]
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0)
