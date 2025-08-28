@@ -421,7 +421,7 @@ export function Header() {
                   <Avatar />
                 )}
                 {!isHomePage && (
-                  <Link href="/" className="self-center ml-4">
+                  <Link href="/" className="self-center ml-4 pointer-events-auto">
                     <h2 className="text-2xl font-bold font-logo text-sky-600 hover:text-sky-700 transition-colors">
                       Stephen<span className="text-amber-600 hover:text-amber-700">Parker</span>
                     </h2>

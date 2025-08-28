@@ -50,7 +50,7 @@ const videoCategories = [
       },
       {
         id: '2',
-        title: 'WRI 2024 Jamstack Redesign Case Study: We broke attendance records! 🥳',
+        title: 'My Travel Tech Kit - Equipment I Use for Videos, Vibe Coding and Zoom Calls',
         thumbnail: `https://img.youtube.com/vi/SMNZOwQdzxU/maxresdefault.jpg`,
         videoId: 'SMNZOwQdzxU',
         duration: '15:32',
