@@ -7,6 +7,23 @@ import { useEffect, useRef } from 'react'
 
 import AnimateIn from '@/components/AnimateIn'
 
+function ExternalLinkIcon(props) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <polyline points="15 3 21 3 21 9" />
+      <line x1="10" y1="14" x2="21" y2="3" />
+    </svg>
+  )
+}
+
 import image1 from '@/images/photos/gravital.png'
 import image2 from '@/images/photos/wri25hh.png'
 import image3 from '@/images/photos/mpm.webp'
@@ -77,6 +94,12 @@ export default function Photos() {
                 sizes="(min-width: 640px) 18rem, 11rem"
                 className="absolute inset-0 object-cover w-full h-full"
               />
+              {/* Overlay with external link icon */}
+              <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:opacity-100">
+                <div className="absolute bottom-4 right-4">
+                  <ExternalLinkIcon className="w-6 h-6 stroke-white" />
+                </div>
+              </div>
             </Link>
           ))}
         </div>
