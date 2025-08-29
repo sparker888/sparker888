@@ -350,7 +350,7 @@ function Photos() {
   return (
     <AnimateIn delay={0.3}>
       <div className="mt-16 sm:mt-20">
-        <div className="flex justify-center gap-5 py-4 -my-4 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory scrollbar-hide px-4 sm:gap-8 sm:overflow-hidden sm:px-0">
+        <div className="flex justify-start gap-5 py-4 -my-4 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory scrollbar-hide px-4 sm:gap-8 sm:overflow-hidden sm:px-0 sm:justify-center">
           {projects.map((project, projectIndex) => (
             <Link
               key={project.url}
