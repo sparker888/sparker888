@@ -1,7 +1,10 @@
+'use client'
+
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
+import { useEffect, useRef } from 'react'
 
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
@@ -325,6 +328,7 @@ function ExternalLinkIcon(props) {
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+  const scrollContainerRef = useRef(null)
 
   // Project data with placeholder URLs - update these with your actual project URLs
   const projects = [
@@ -347,10 +351,28 @@ function Photos() {
     { image: image5, url: 'https://prestonstudios.com', title: 'Project 5' },
   ]
 
+  // Scroll to center card on mobile load
+  useEffect(() => {
+    const scrollToCenter = () => {
+      if (scrollContainerRef.current && window.innerWidth < 640) {
+        // Calculate center position: card width (176px) + gap (20px) * 2 cards to center on 3rd card
+        const centerPosition = (176 + 20) * 2
+        scrollContainerRef.current.scrollLeft = centerPosition
+      }
+    }
+
+    // Small delay to ensure DOM is ready
+    setTimeout(scrollToCenter, 100)
+    
+    // Also scroll on resize if switching from desktop to mobile
+    window.addEventListener('resize', scrollToCenter)
+    return () => window.removeEventListener('resize', scrollToCenter)
+  }, [])
+
   return (
     <AnimateIn delay={0.3}>
       <div className="mt-16 sm:mt-20">
-        <div className="flex justify-start gap-5 py-4 -my-4 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory scrollbar-hide px-4 sm:gap-8 sm:overflow-hidden sm:px-0 sm:justify-center">
+        <div ref={scrollContainerRef} className="flex justify-start gap-5 py-4 -my-4 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory scrollbar-hide px-4 sm:gap-8 sm:overflow-hidden sm:px-0 sm:justify-center">
           {projects.map((project, projectIndex) => (
             <Link
               key={project.url}
