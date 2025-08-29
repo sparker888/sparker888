@@ -59,8 +59,9 @@ export default function Photos() {
   useEffect(() => {
     const scrollToCenter = () => {
       if (scrollContainerRef.current && window.innerWidth < 640) {
-        // Calculate center position: card width (176px) + gap (20px) * 2 cards to center on 3rd card
-        const centerPosition = (176 + 20) * 2
+        // Calculate center position: card width (176px) + gap (20px) * 1 card to center on 3rd card
+        // We need to scroll past 1 card (not 2) to center the 3rd card
+        const centerPosition = (176 + 20) * 1
         scrollContainerRef.current.scrollLeft = centerPosition
       }
     }
