@@ -106,7 +106,7 @@ function Article({ article }) {
           {formatDate(article.date)}
         </Card.Eyebrow>
         {thumbnailSrc && (
-          <div className="relative w-full aspect-[16/9] mt-3 mb-4 rounded-lg overflow-hidden">
+          <div className="relative z-10 w-full aspect-[16/9] mt-3 mb-4 rounded-lg overflow-hidden">
             <Image
               src={thumbnailSrc}
               alt={article.title}
