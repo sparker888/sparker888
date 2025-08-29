@@ -350,7 +350,7 @@ function Photos() {
   return (
     <AnimateIn delay={0.3}>
       <div className="mt-16 sm:mt-20">
-        <div className="flex justify-center gap-5 py-4 -my-4 overflow-hidden sm:gap-8">
+        <div className="flex justify-center gap-5 py-4 -my-4 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory scrollbar-hide px-4 sm:gap-8 sm:overflow-hidden sm:px-0">
           {projects.map((project, projectIndex) => (
             <Link
               key={project.url}
@@ -358,7 +358,7 @@ function Photos() {
               target="_blank"
               rel="noopener noreferrer"
               className={clsx(
-                'group relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 transition-transform duration-300 hover:scale-105 dark:bg-slate-800 sm:w-72 sm:rounded-2xl photo-card-glow',
+                'group relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-slate-100 transition-transform duration-300 hover:scale-105 dark:bg-slate-800 sm:w-72 sm:rounded-2xl photo-card-glow snap-center',
                 rotations[projectIndex % rotations.length],
               )}
             >
