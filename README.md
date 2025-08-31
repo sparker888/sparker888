@@ -1,4 +1,4 @@
-![Featured Image](public/images/featured-image-2.webp)
+![Featured Image](public/images/featured-image-3.webp)
 
 # Welcome to my personal site repo for [sparker888](https://sparker888.com)!
 
