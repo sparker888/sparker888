@@ -1,47 +1,48 @@
 'use client'
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/Button'
 
 function Newsletter() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [isClient, setIsClient] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+
+  // Ensure we're on the client side
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const email = event.target.email.value
-
-    // Check if we're in development mode
-    const isDevelopment = process.env.NODE_ENV === 'development'
+    setIsLoading(true)
+    setMessage('')
     
-    try {
-      if (isDevelopment) {
-        // In development, simulate success after a short delay
-        setTimeout(() => {
-          setMessage("Thanks. You're now subscribed!")
-          setEmail('')
-        }, 500)
-        return
-      }
+    const emailValue = event.target.email.value
 
+    try {
       const response = await fetch('/.netlify/functions/subscribe', {
         method: 'POST',
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email: emailValue }),
         headers: {
           'Content-Type': 'application/json',
         },
       })
 
+      const data = await response.json()
+
       if (response.ok) {
-        // Handle success
         setMessage("Thanks. You're now subscribed!")
         setEmail('')
       } else {
-        setMessage('Subscription failed. Please try again.')
+        console.error('Subscription error:', data)
+        setMessage(data.error || 'Subscription failed. Please try again.')
       }
     } catch (error) {
       console.error('Error:', error)
       setMessage('Subscription failed. Please try again.')
+    } finally {
+      setIsLoading(false)
     }
   }
 
@@ -68,6 +69,11 @@ function Newsletter() {
     )
   }
 
+  // Don't render until we're on the client
+  if (!isClient) {
+    return null
+  }
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -87,13 +93,14 @@ function Newsletter() {
           placeholder="Email address"
           aria-label="Email address"
           required
+          disabled={isLoading}
           data-1p-ignore
-          className="min-w-0 flex-auto appearance-none rounded-md border border-slate-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-slate-800/5 placeholder:text-slate-400 focus:border-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-500/10 dark:border-slate-700 dark:bg-slate-700/[0.15] dark:text-slate-200 dark:placeholder:text-slate-500 dark:focus:border-amber-400 dark:focus:ring-amber-400/10 sm:text-sm"
+          className="min-w-0 flex-auto appearance-none rounded-md border border-slate-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-slate-800/5 placeholder:text-slate-400 focus:border-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-500/10 dark:border-slate-700 dark:bg-slate-700/[0.15] dark:text-slate-200 dark:placeholder:text-slate-500 dark:focus:border-amber-400 dark:focus:ring-amber-400/10 sm:text-sm disabled:opacity-50"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <Button type="submit" className="flex-none ml-4">
-          Join
+        <Button type="submit" className="flex-none ml-4" disabled={isLoading}>
+          {isLoading ? 'Subscribing...' : 'Join'}
         </Button>
       </div>
       {message && <div className="mt-2 text-sm text-amber-700 dark:text-amber-500">{message}</div>}
