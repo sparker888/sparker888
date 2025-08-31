@@ -29,8 +29,8 @@ exports.handler = async function (event, context) {
     const { email } = JSON.parse(event.body)
     const apiKey = process.env.MAILERLITE_API_KEY
     
-    // Group ID for "subscribers" group to trigger welcome automation
-    const subscribersGroupId = '163760209940973266'
+    // Your "Subscriber" group ID from MailerLite
+    const subscriberGroupId = '163706038819751253'
 
     if (!email) {
       return {
@@ -49,7 +49,7 @@ exports.handler = async function (event, context) {
       }
     }
 
-    console.log('Attempting to subscribe email:', email)
+    console.log('Adding subscriber to group:', email, subscriberGroupId)
 
     const response = await axios({
       method: 'post',
@@ -60,7 +60,7 @@ exports.handler = async function (event, context) {
       },
       data: {
         email: email,
-        groups: [subscribersGroupId], // Add subscriber to the group
+        groups: [subscriberGroupId], // This assigns them to your "Subscriber" group
       },
     })
 
@@ -70,7 +70,7 @@ exports.handler = async function (event, context) {
       statusCode: 200,
       headers,
       body: JSON.stringify({ 
-        message: 'Successfully subscribed',
+        message: 'Successfully subscribed and added to group',
         data: response.data 
       }),
     }
@@ -84,30 +84,6 @@ exports.handler = async function (event, context) {
         method: error.config?.method,
       }
     })
-
-    // Handle specific MailerLite error codes
-    if (error.response?.status === 400 && error.response?.data?.error?.email) {
-      return {
-        statusCode: 400,
-        headers,
-        body: JSON.stringify({ 
-          error: 'Invalid email address',
-          details: error.response.data.error 
-        }),
-      }
-    }
-
-    if (error.response?.status === 200 || error.response?.status === 201) {
-      // Sometimes MailerLite returns success even with existing subscribers
-      return {
-        statusCode: 200,
-        headers,
-        body: JSON.stringify({ 
-          message: 'Successfully subscribed',
-          data: error.response?.data 
-        }),
-      }
-    }
 
     return {
       statusCode: error.response?.status || 500,
