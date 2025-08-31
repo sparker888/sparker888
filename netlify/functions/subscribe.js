@@ -30,7 +30,7 @@ exports.handler = async function (event, context) {
     const apiKey = process.env.MAILERLITE_API_KEY
     
     // Your "Subscriber" group ID from MailerLite
-    const subscriberGroupId = '163706038819751253'
+    const subscriberGroupId = '163760209940973266'
 
     if (!email) {
       return {
