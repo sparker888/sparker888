@@ -1,6 +1,8 @@
-![Featured Image](public/images/featured-image-3.webp)
+![Home Animation](public/home-anim.gif)
 
 # Welcome to my personal site repo for [sparker888](https://sparker888.com)!
+
+*Featuring an animated hero section showcasing the solopreneur journey from Space Coast to Ecuador.*
 
 ## I built it with Next.js 13's new project structure and server components
 
@@ -10,6 +12,7 @@ Next.js 13 introduces the `app` directory, changing how we create pages and layo
 - **Routing**: Define pages in `page.js`, and layouts in `layout.js`.
 - **Server Components**: By default, for better performance.
 - **Error and Loading States**: Managed by `error.js` and `loading.js`.
+- **Animated Hero Section**: Dynamic home animation showcasing the remote solopreneur lifestyle.
 
 ## Page and Layout
 - `app/page.js`: Defines the UI for the root route `/`.
