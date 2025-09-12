@@ -4,9 +4,9 @@
 
 *Featuring an animated hero section showcasing the solopreneur journey from Space Coast to Ecuador.*
 
-## I built it with Next.js 13's new project structure and server components
+## I built it with Next.js new(er) project structure and server components
 
-Next.js 13 introduces the `app` directory, changing how we create pages and layouts. 
+Next.js 13 introduced the `app` directory, changing how we create pages and layouts. 
 
 ## Key Features
 - **Routing**: Define pages in `page.js`, and layouts in `layout.js`.
@@ -40,7 +40,7 @@ Next.js 13 introduces the `app` directory, changing how we create pages and layo
 - You an view the repo at [surfing-image-gallery](https://github.com/sparker888/surfing-image-gallery)
 
 ## Launch Your Own Project!
-To set up a new Next.js 13 project:
+To set up a new Next.js project:
 
 1. `npx create-next-app@latest my-app`
 2. Modify `next.config.js` to enable the `app` directory.
