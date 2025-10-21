@@ -368,12 +368,12 @@ export default async function Home() {
             </p>
 
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              <span className="font-medium text-sky-600 dark:text-sky-400">How can I help your business?</span> Check out my{' '}
+              <span className="font-medium text-sky-600 dark:text-sky-400">What are the results?</span> Check out this{' '}
               <Link
                 href="/videos"
                 className="text-amber-500 hover:underline"
               >
-                Jamstack Case Study
+                Case Study
               </Link>{' '}
               where I helped WRS significantly increase traffic, conversions and attendance to their WRI 2024 engineering conference.
             </p>
