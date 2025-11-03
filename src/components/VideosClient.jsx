@@ -10,7 +10,7 @@ export default function VideosClient() {
     <>
       <button
         onClick={() => setIsNewsletterModalOpen(true)}
-        className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-white transition-colors rounded-lg bg-sky-600 hover:bg-sky-700"
+        className="inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold text-white transition-colors rounded-lg bg-sky-600 hover:bg-sky-700"
       >
         Light. Speed.✨ Newsletter
       </button>
