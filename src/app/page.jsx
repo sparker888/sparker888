@@ -335,7 +335,7 @@ export default async function Home() {
               <TypewriterText />
             </h1>
             <p className="mt-6 text-2xl font-medium md:mt-12 text-slate-600 dark:text-slate-400">
-              I help businesses and solopreneurs build fast websites and web apps without the bloat, using modern architecture and AI as the founder of{' '}
+              I help businesses and solopreneurs build fast websites and web apps that grow audiences, using modern architecture and AI as the founder of{' '}
               <Link
                 href="https://gravitaldigital.com/"
                 target="_blank"
