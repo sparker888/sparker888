@@ -203,7 +203,7 @@ export default function Videos() {
               href="https://www.youtube.com/@remote-solopreneur"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-white transition-colors bg-orange-500 rounded-lg hover:bg-orange-600"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold text-white transition-colors bg-orange-500 rounded-lg hover:bg-orange-600"
             >
               Subscribe on YouTube
               <ExternalLinkIcon className="w-4 h-4" />
