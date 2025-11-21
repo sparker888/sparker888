@@ -73,10 +73,10 @@ Here's what makes this issue strategically important: **Midjourney's comprehensi
 
 Let me show you what I mean by comparing Midjourney to its competitors:
 
-**DALL-E 3**
-- Text parameters: None for advanced features
-- Reference images: Not supported
-- Workflow: Entirely UI-dependent
+**Nano Banana Pro (Gemini 3)**
+- Text parameters: Natural language only
+- Reference images: Manual upload
+- Workflow: Conversational, not parametric
 
 **Adobe Firefly**
 - Text parameters: Limited preset system
@@ -88,15 +88,15 @@ Let me show you what I mean by comparing Midjourney to its competitors:
 - Reference images: Pre-upload required, ID-based
 - Workflow: Mixed UI/API approach
 
-**Nano Banana Pro (Gemini 3)**
-- Text parameters: Natural language only
-- Reference images: Manual upload
-- Workflow: Conversational, not parametric
-
 **Stable Diffusion Web UIs**
 - Text parameters: Model-dependent, inconsistent
 - Reference images: Extension-based, varies by interface
 - Workflow: Fragmented ecosystem
+
+**DALL-E 3**
+- Text parameters: None for advanced features
+- Reference images: Not supported
+- Workflow: Entirely UI-dependent
 
 **Only Midjourney** lets you write a complete prompt with URLs, parameters, and settings in one copyable string that works universally.
 
@@ -114,15 +114,16 @@ With comprehensive parameter support, users can leverage AI assistants to genera
 
 ```json
 {
-  "base_prompt": "ancient temple at sunrise",
+  "base_prompt": "A peaceful hobbit village nestled in rolling countryside hills, round wooden doors built into grassy mounds, winding cobblestone paths, gardens with vegetables and flowers, distant mountains, soft misty atmosphere",
   "style_reference": "https://cdn.example.com/style.jpg",
   "style_weight": 400,
   "character_reference": "https://cdn.example.com/char.jpg",
   "character_weight": 100,
   "parameters": {
-    "aspect_ratio": "16:9",
+    "aspect_ratio": "3:4",
     "version": 7,
-    "stylization": 750
+    "stylization": 700,
+    "chaos": 15
   }
 }
 ```
@@ -181,8 +182,6 @@ Midjourney has historically followed a text-first philosophy, which created its 
 ## A Request to the Midjourney Team
 
 As V8 development continues, I'd like to respectfully advocate for maintaining **feature parity between UI and text input** as a core design principle.
-
-<Image src={require('./parity-principle.png')} alt="Feature parity principle: every UI capability should have a text equivalent" />
 
 This means:
 
