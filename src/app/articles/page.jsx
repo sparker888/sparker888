@@ -8,6 +8,7 @@ function Article({ article }) {
   // Map article slugs to their thumbnail images in the public folder
   const getThumbnailSrc = (slug) => {
     const thumbnailMap = {
+      'nov-2025': '/article-thumbnails/nov-2025.png',
       'light-speed-7': '/article-thumbnails/light-speed-7.png',
       'light-speed-6': '/article-thumbnails/light-speed-6.png',
       'light-speed-5': '/article-thumbnails/light-speed-5.png',
