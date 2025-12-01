@@ -41,6 +41,7 @@ function ContactForm() {
       <form
         name="contact"
         method="POST"
+        data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
         className="mt-10 space-y-6"
       >
