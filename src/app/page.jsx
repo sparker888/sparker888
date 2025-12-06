@@ -331,7 +331,7 @@ export default async function Home() {
             <h1 className="text-4xl italic font-extrabold tracking-tight font-display text-slate-800 dark:text-slate-100 sm:text-5xl">
               Hey, I'm Steve.
               <br />
-              Your Light. Speed.✨ Developer.
+              Your Light. Speed.✨ Growth Builder.
               <br />
               <TypewriterText />
             </h1>
