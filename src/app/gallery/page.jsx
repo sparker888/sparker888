@@ -39,7 +39,7 @@ export const metadata = {
 export default function Photography() {
   return (
     <SimpleLayout
-      title="My work as a photographer, drone pilot and Midjourney image creator."
+      title="My work as a photographer, drone pilot and AI ImageGen creator."
       intro="Creating imagery that promotes great work, provides a different perspective or captures something truly unique and memorable is my passion."
     >
       <div className="space-y-20">
