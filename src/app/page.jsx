@@ -332,12 +332,12 @@ export default async function Home() {
             <h1 className="text-4xl italic font-extrabold tracking-tight font-display text-slate-800 dark:text-slate-100 sm:text-5xl">
               Hey, I'm Steve.
               <br />
-              Your Light. Speed.✨ Partner.
+              Your Light. Speed.✨ AI Partner.
               <br />
               <TypewriterText />
             </h1>
             <p className="mt-6 text-2xl font-medium md:mt-12 text-slate-600 dark:text-slate-400">
-              I help businesses and solopreneurs build fast websites and web apps that grow audiences, using modern architecture and AI as the founder of{' '}
+              I help studios and marketing teams build AI generation strategies — from evaluating models and selecting the right tools to implementing workflows and managing creative assets. I do this as the founder of{' '}
               <Link
                 href="https://gravitaldigital.com/"
                 target="_blank"
@@ -350,49 +350,64 @@ export default async function Home() {
             </p>
 
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              <span className="font-medium text-sky-600 dark:text-sky-400">What does that look like?</span> Read my article{' '}
-              <Link
-                href="/articles/light-speed-6"
-                className="text-amber-500 hover:underline"
-              >
-                A Full-featured App in 30 Days with Claude AI{' '}
-              </Link>
-              where I built{' '}
+              <span className="font-medium text-sky-600 dark:text-sky-400">I don't just advise — I build.</span> I created two platforms that solve the problems my clients face every day:
+            </p>
+
+            <p className="mt-4 text-xl text-slate-600 dark:text-slate-400">
               <Link
                 href="https://midjourneypromptmanager.com/?utm_source=sparker888&utm_medium=website&utm_campaign=mpm_referral"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-amber-500 hover:underline"
+                className="font-semibold text-amber-500 hover:underline"
               >
                 Midjourney Prompt Manager
-              </Link>{' '}
-              using a lightweight tech stack and an AI-assisted development process.
+              </Link>
+              {' '}— A professional prompt creation and asset management platform for creative teams. 22 AI models, project-based workflows, team collaboration, and a curated style library. Built in 30 days using AI-assisted development.
+            </p>
+
+            <p className="mt-4 text-xl text-slate-600 dark:text-slate-400">
+              <Link
+                href="https://keypromptninja.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-amber-500 hover:underline"
+              >
+                Key Prompt Ninja
+              </Link>
+              {' '}— AI-powered image and video creation made simple. A trained prompt agent that helps anyone get professional results in a few clicks, with a minimal mobile-friendly interface.
             </p>
 
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              <span className="font-medium text-sky-600 dark:text-sky-400">What are the results?</span> Check out this{' '}
+              <span className="font-medium text-sky-600 dark:text-sky-400">Want to see how I build at Light. Speed.?</span> Read the full story:{' '}
               <Link
-                href="/videos"
+                href="/articles/light-speed-6"
                 className="text-amber-500 hover:underline"
               >
-                Case Study
-              </Link>{' '}
-              where I helped WRS significantly increase traffic, conversions and attendance to their WRI 2024 engineering conference.
+                A Full-featured App in 30 Days with Claude AI
+              </Link>
+              {' '}— from concept to paying customers using a lightweight tech stack and AI-assisted development.
             </p>
 
-            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              <span className="font-medium text-sky-600 dark:text-sky-400">Want to see the solopreneur lifestyle in action?</span> Check out my{' '}
+            <p className="mt-6 text-lg text-slate-500 dark:text-slate-400">
+              I also share real experiences building a location-independent business from Cuenca, Ecuador on my{' '}
               <Link
-                href="/videos"
+                href="https://www.youtube.com/@remote-solopreneur"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-amber-500 hover:underline"
               >
-                Remote Solopreneur videos
-              </Link>{' '}
-              where I share real experiences living and vibe coding in Cuenca, Ecuador – Latin America's safest big city.
+                Remote Solopreneur
+              </Link>
+              {' '}channel.
             </p>
-            <p className="mt-6 text-xl font-semibold text-sky-600 dark:text-sky-400">
-              Let's fly! 🚀
-            </p>
+
+            {/* TODO: Replace /contact with /services when a dedicated services page is created */}
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 mt-6 text-lg font-semibold text-white transition-colors bg-amber-500 rounded-lg hover:bg-amber-600"
+            >
+              See how I can help →
+            </Link>
             <div className="flex gap-6 mt-6 text-sky-600 dark:text-amber-500">
               <SocialLink
                 href="https://linkedin.com/in/sparker888"
