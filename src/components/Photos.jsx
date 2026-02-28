@@ -31,7 +31,7 @@ import image4 from '@/images/photos/wri26rt.png'
 import image5 from '@/images/photos/image35.jpg'
 
 export default function Photos() {
-  let rotations = ['rotate-2', '-rotate-[5deg]', 'rotate-2', 'rotate-2', '-rotate-2']
+  let rotations = ['rotate-2', '-rotate-[5deg]', 'rotate-2', 'rotate-[11deg]', '-rotate-2']
   const scrollContainerRef = useRef(null)
 
   // Project data with placeholder URLs - update these with your actual project URLs
