@@ -1,6 +1,7 @@
 import { GalleryCard } from '@/components/GalleryCard'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import Link from 'next/link'
 import image1 from '@/images/photos/image35.jpg'
 import image2 from '@/images/photos/image12.jpg'
 import image3 from '@/images/photos/image36.png'
@@ -94,6 +95,17 @@ export default function Photography() {
           />
         </GallerySection>
       </div>
+      <p className="mt-16 text-center text-xl text-slate-600 dark:text-slate-400">
+        See all my AI images on{' '}
+        <Link
+          href="https://midjourneypromptmanager.com/gallery"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-amber-500 hover:underline"
+        >
+          midjourneypromptmanager.com/gallery
+        </Link>
+      </p>
     </SimpleLayout>
   )
 }
