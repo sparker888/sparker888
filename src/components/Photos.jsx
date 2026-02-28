@@ -25,9 +25,9 @@ function ExternalLinkIcon(props) {
 }
 
 import image1 from '@/images/photos/gravital.png'
-import image2 from '@/images/photos/wri25hh.png'
+import image2 from '@/images/photos/wri26hh.png'
 import image3 from '@/images/photos/mpm.webp'
-import image4 from '@/images/photos/wri25rt.png'
+import image4 from '@/images/photos/wri26rt.png'
 import image5 from '@/images/photos/image35.jpg'
 
 export default function Photos() {
@@ -39,7 +39,7 @@ export default function Photos() {
     { image: image1, url: 'https://gravitaldigital.com', title: 'Project 1' },
     {
       image: image2,
-      url: 'https://wri2025hh.wheel-rail-seminars.com',
+      url: 'https://wri2026hh.wheel-rail-seminars.com',
       title: 'Project 2',
     },
     {
@@ -49,7 +49,7 @@ export default function Photos() {
     },
     {
       image: image4,
-      url: 'https://wri2025rt.wheel-rail-seminars.com',
+      url: 'https://wri2026rt.wheel-rail-seminars.com',
       title: 'Project 4',
     },
     { image: image5, url: 'https://prestonstudios.com', title: 'Project 5' },
