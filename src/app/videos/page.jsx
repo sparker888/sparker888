@@ -174,7 +174,7 @@ export const metadata = {
 export default function Videos() {
   return (
     <SimpleLayout
-      title="AI Image & Video Creation 🎬"
+      title="AI Image & Video Creation Demos 🎬"
       intro={
         <>
           <p>I'm a Kling AI Elite Creator and the founder of Key Prompt Ninja — an AI-powered prompt creation and image/video generation platform supporting 20+ models.</p>
