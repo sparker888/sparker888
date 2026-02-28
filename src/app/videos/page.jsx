@@ -23,17 +23,30 @@ function ExternalLinkIcon(props) {
 }
 
 
-const featuredVideo = {
-  id: 'featured',
-  title: 'WRI 2024 Jamstack Redesign Case Study: We broke attendance records! 🥳',
-  description: 'See how modern web development and strategic design helped break attendance records for this major industry conference. A complete case study of the redesign process.',
-  thumbnail: `https://img.youtube.com/vi/lD7s5XimtYM/maxresdefault.jpg`,
-  videoId: 'lD7s5XimtYM',
-  duration: '15:32',
-  views: '1,115',
-  publishedAt: '5 months ago',
-  category: 'Case Study'
-}
+const featuredVideos = [
+  {
+    id: 'featured-1',
+    title: 'Kling 3.0 Multi-Shot Demo with Stephen Parker | Kling AI Elite Creator',
+    description: 'Using Midjourney Prompt Manager, Steve shows how to create prompts and images for five elements in this fan production.',
+    thumbnail: `https://img.youtube.com/vi/C-TLgxNM_Xo/maxresdefault.jpg`,
+    videoId: 'C-TLgxNM_Xo',
+    duration: '4:37',
+    views: '618',
+    publishedAt: 'Feb 10, 2026',
+    category: 'AI Video'
+  },
+  {
+    id: 'featured-2',
+    title: 'Kling 01 Elements Demo with Stephen Parker | Kling AI Elite Creator',
+    description: 'Using Midjourney Prompt Manager, Steve shows how to create prompts for four elements and use the AI Prompt Builder to generate videos.',
+    thumbnail: `https://img.youtube.com/vi/NRY5LZjskE0/maxresdefault.jpg`,
+    videoId: 'NRY5LZjskE0',
+    duration: '4:12',
+    views: '55',
+    publishedAt: 'Jan 29, 2026',
+    category: 'AI Video'
+  },
+]
 
 const videoCategories = [
   {
@@ -179,8 +192,10 @@ export default function Videos() {
           </h2>
         </div>
         
-        <div className="max-w-4xl">
-          <VideoCard video={featuredVideo} featured={true} />
+        <div className="grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
+          {featuredVideos.map((video) => (
+            <VideoCard key={video.id} video={video} featured={true} />
+          ))}
         </div>
       </div>
 
