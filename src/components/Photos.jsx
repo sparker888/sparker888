@@ -41,6 +41,7 @@ export default function Photos() {
       image: image2,
       url: 'https://wri2026hh.wheel-rail-seminars.com',
       title: 'Project 2',
+      contain: true,
     },
     {
       image: image3,
@@ -51,6 +52,7 @@ export default function Photos() {
       image: image4,
       url: 'https://wri2026rt.wheel-rail-seminars.com',
       title: 'Project 4',
+      contain: true,
     },
     { image: image5, url: 'https://prestonstudios.com', title: 'Project 5' },
   ]
@@ -93,7 +95,7 @@ export default function Photos() {
                 src={project.image}
                 alt={project.title}
                 sizes="(min-width: 640px) 18rem, 11rem"
-                className="absolute inset-0 object-cover w-full h-full"
+                className={`absolute inset-0 w-full h-full ${project.contain ? 'object-contain p-4' : 'object-cover'}`}
               />
               {/* Overlay with external link icon */}
               <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:opacity-100">
