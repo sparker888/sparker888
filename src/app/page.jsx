@@ -17,8 +17,8 @@ import {
 } from '@/components/SocialIcons'
 import logoGravital from '@/images/logos/gravital-icon.png'
 import logoMidjourney from '@/images/logos/key-prompt-ninja-avatar.png'
-import logoWRI25HH from '@/images/logos/WRI25HH-icon.png'
-import logoWRI25RT from '@/images/logos/WRI25RT-icon.png'
+import logoWRI26HH from '@/images/logos/WRI26HH-icon.png'
+import logoWRI26RT from '@/images/logos/WRI26RT-icon.png'
 import logoWRS from '@/images/logos/wrs-icon.png'
 import logoPrestonStudios from '@/images/logos/preston-studios-icon.png'
 import logoBenevolent from '@/images/logos/benevolent-icon.png'
@@ -74,6 +74,7 @@ function Article({ article }) {
   // Get thumbnail for article
   const getThumbnailSrc = (slug) => {
     const thumbnailMap = {
+      'nano-banana-2': '/article-thumbnails/nano-banana-2.webp',
       'nov-2025': '/article-thumbnails/nov-2025.png',
       'light-speed-7': '/article-thumbnails/light-speed-7.png',
       'light-speed-6': '/article-thumbnails/light-speed-6.png',
@@ -205,9 +206,9 @@ function Projects() {
       },
     },
     {
-      company: 'WRI 2025 HH Kansas City',
+      company: 'WRI 2026 HH Kansas City',
       title: 'Web Developer & Cvent Tech',
-      logo: logoWRI25HH,
+      logo: logoWRI26HH,
       start: '2024',
       end: {
         label: 'Present',
@@ -215,9 +216,9 @@ function Projects() {
       },
     },
     {
-      company: 'WRI 2025 RT Seattle',
+      company: 'WRI 2026 RT Seattle',
       title: 'Web Developer & Cvent Tech',
-      logo: logoWRI25RT,
+      logo: logoWRI26RT,
       start: '2024',
       end: {
         label: 'Present',
