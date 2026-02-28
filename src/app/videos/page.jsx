@@ -167,20 +167,19 @@ function CategorySection({ category }) {
 }
 
 export const metadata = {
-  title: 'Videos - Remote Solopreneur Journey',
-  description: 'Follow my remote solopreneur journey in Ecuador with tips on location independence, business building, and living abroad as a digital nomad.',
+  title: 'Videos - AI Image & Video Creation',
+  description: 'AI image and video creation demos, tutorials, and deep dives from Kling AI Elite Creator Stephen Parker. Plus remote solopreneur journey content from Ecuador.',
 }
 
 export default function Videos() {
   return (
     <SimpleLayout
-      title="My Remote Solopreneur Journey 🎬"
+      title="AI Image & Video Creation 🎬"
       intro={
         <>
-          <p>Want to create location-independent income with no boss, no employees and no limits?</p>
-          <p className="mt-4">Interested in a healthier pace of life with living expenses one-third of those in the U.S.?</p>
-          <p className="mt-4 font-bold text-sky-600 dark:text-sky-400"><em>Join the movement!</em></p>
-          <p className="mt-4">I just spent 6 months in Ecuador as a solopreneur building my business. I'm showing fellow solopreneurs how to work remotely from Latin America on my Remote Solopreneur YouTube channel—sharing resources for living in the top-rated city in the Andes while building profitable businesses with modern dev tools and AI workflows.</p>
+          <p>I'm a Kling AI Elite Creator and the founder of Key Prompt Ninja — an AI-powered prompt creation and image/video generation platform supporting 20+ models.</p>
+          <p className="mt-4">I create demos, tutorials, and deep dives showing how to get professional results from AI image and video tools. From Kling's multi-shot cinematography to Midjourney's style systems, I break down what actually works.</p>
+          <p className="mt-4">Explore my latest work below, and visit <Link href="https://keypromptninja.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-amber-600 dark:text-amber-400 hover:underline">keypromptninja.com</Link> to try the platform yourself.</p>
         </>
       }
     >
@@ -191,11 +190,25 @@ export default function Videos() {
             Featured Video
           </h2>
         </div>
-        
+
         <div className="grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
           {featuredVideos.map((video) => (
             <VideoCard key={video.id} video={video} featured={true} />
           ))}
+        </div>
+      </div>
+
+      {/* Remote Solopreneur Section */}
+      <div className="mb-16">
+        <div className="mb-8">
+          <h2 className="mb-2 text-2xl font-bold text-slate-900 dark:text-slate-100">
+            My Remote Solopreneur Journey
+          </h2>
+          <div className="text-slate-600 dark:text-slate-400">
+            <p>Want to create location-independent income with no boss, no employees and no limits?</p>
+            <p className="mt-4">Interested in a healthier pace of life with living expenses one-third of those in the U.S.?</p>
+            <p className="mt-4">I spent 6 months in Ecuador as a solopreneur building my business. I'm showing fellow solopreneurs how to work remotely from Latin America on my Remote Solopreneur YouTube channel — sharing resources for living in the top-rated city in the Andes while building profitable businesses with modern dev tools and AI workflows.</p>
+          </div>
         </div>
       </div>
 
