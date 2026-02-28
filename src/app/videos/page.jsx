@@ -185,11 +185,11 @@ export default function Videos() {
         </>
       }
     >
-      {/* Featured Video Section */}
+      {/* Featured Videos Section */}
       <div className="mb-16">
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-            Featured Video
+            Featured Videos
           </h2>
         </div>
 
