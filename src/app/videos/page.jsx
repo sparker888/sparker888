@@ -177,7 +177,7 @@ export default function Videos() {
       title="My AI Image & Video Demos 🎬"
       intro={
         <>
-          <p>I'm a Kling AI Elite Creator and the founder of Key Prompt Ninja — an AI-powered prompt creation and image/video generation platform supporting 20+ models.</p>
+          <p>I'm a Kling AI Elite Creator and the founder of Key Prompt Ninja — an AI-powered prompt creation agent researched & trained over 2.5 years using over 1,500 styles</p>
           <p className="mt-4">I create demos, tutorials, and deep dives showing how to get professional results from AI image and video tools. From Kling's multi-shot cinematography to Midjourney's style systems, I break down what actually works.</p>
           <p className="mt-4">Explore my latest work below, and visit <Link href="https://keypromptninja.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-amber-600 dark:text-amber-400 hover:underline">keypromptninja.com</Link> to try the platform yourself.</p>
           <p className="mt-4">If you're a professional creator or production studio, check out my professional AI prompt creator and image/video tool: <Link href="https://midjourneypromptmanager.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-amber-600 dark:text-amber-400 hover:underline">midjourneypromptmanager.com</Link></p>
