@@ -337,7 +337,7 @@ export default async function Home() {
               <TypewriterText />
             </h1>
             <p className="mt-6 text-2xl font-medium md:mt-12 text-slate-600 dark:text-slate-400">
-              I help studios and marketing teams build AI generation strategies — from evaluating models and selecting the right tools to implementing workflows and managing creative assets. I do this as the founder of{' '}
+              I help studios and marketing teams build AI generation strategies, from selecting the right tools to implementing workflows and managing creative assets. I do this as the founder of{' '}
               <Link
                 href="https://gravitaldigital.com/"
                 target="_blank"
@@ -350,7 +350,7 @@ export default async function Home() {
             </p>
 
             <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-              <span className="font-medium text-sky-600 dark:text-sky-400">I don't just advise — I build.</span> I created two platforms that solve the problems my clients face every day:
+              <span className="font-medium text-sky-600 dark:text-sky-400">I don't just advise. I build.</span> I created two platforms that solve the problems my clients face every day:
             </p>
 
             <p className="mt-4 text-xl text-slate-600 dark:text-slate-400">
@@ -401,9 +401,8 @@ export default async function Home() {
               {' '}channel.
             </p>
 
-            {/* TODO: Replace /contact with /services when a dedicated services page is created */}
             <Link
-              href="/contact"
+              href="/services"
               className="inline-flex items-center gap-2 px-6 py-3 mt-6 text-lg font-semibold text-white transition-colors bg-amber-500 rounded-lg hover:bg-amber-600"
             >
               See how I can help →
