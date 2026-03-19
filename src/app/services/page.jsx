@@ -10,7 +10,7 @@ function CheckIcon(props) {
   )
 }
 
-function ServiceCard({ name, price, description, deliverables, timeline, imageSrc }) {
+function ServiceCard({ name, price, description, deliverableNote, deliverables, timeline, imageSrc }) {
   return (
     <div className="flex flex-col overflow-hidden transition-all duration-300 border rounded-2xl border-slate-200 dark:border-slate-700/50 bg-slate-50 dark:bg-slate-800/50 hover:border-amber-500/50 dark:hover:border-amber-500/50">
       <div className="relative aspect-[16/9] overflow-hidden">
@@ -26,6 +26,9 @@ function ServiceCard({ name, price, description, deliverables, timeline, imageSr
         <h3 className="text-2xl font-bold text-amber-500">{name}</h3>
         <p className="mt-2 text-lg font-semibold text-slate-900 dark:text-slate-100">{price}</p>
         <p className="mt-4 text-slate-600 dark:text-slate-400">{description}</p>
+        {deliverableNote && (
+          <p className="mt-3 text-sm text-sky-500 dark:text-sky-400">{deliverableNote}</p>
+        )}
         <ul className="flex-1 mt-6 space-y-3">
           {deliverables.map((item, index) => (
             <li key={index} className="flex gap-3 text-sm text-slate-600 dark:text-slate-400">
@@ -57,7 +60,8 @@ const packages = [
     name: 'AI Creative Strategy Session',
     price: 'Starting at $2,500',
     description:
-      "A focused engagement to assess your team's current creative workflows, evaluate which AI models and tools fit your specific needs, and deliver a clear roadmap for implementation. Ideal for teams that know they need to adopt AI generation tools but aren't sure where to start or which investments will pay off.",
+      "I begin with a focused two-hour review of your current workflow and production requirements, then do the analysis and deliver a written roadmap: recommended models, prompt architecture, workflow design, and an implementation sequence prioritized by impact. Take it and run, or engage me to implement it.",
+    deliverableNote: 'Deliverable: Written strategy report + model recommendations + workflow diagram',
     deliverables: [
       'Current workflow assessment and gap analysis',
       'Model evaluation matched to your creative requirements (image, video, or both)',
@@ -66,40 +70,41 @@ const packages = [
       'Asset management strategy for AI-generated content',
       'Detailed strategy document with prioritized implementation roadmap',
     ],
-    timeline: '1-2 weeks',
+    timeline: 'Delivered within 5 business days',
     imageSrc: '/images/service-1.webp',
   },
   {
-    name: 'Implementation & Training',
+    name: 'Strategy & Implementation',
     price: 'Starting at $7,500',
     description:
-      'Hands-on setup and team enablement. I streamline your existing AI tools, fill the gaps, build your prompt libraries and style systems, establish asset management workflows, and train your team to work confidently and consistently. Your team walks away with a working system and the skills to use it independently.',
+      "I start with a strategy review of your current setup — tools, models and workflows — then design and implement a connected system around what you already have. I recommend the right models, develop a prompting strategy, and establish an asset management workflow. Your team reviews and validates the system throughout, and walks away with documentation they can use independently.",
+    deliverableNote: 'Deliverable: Configured system + prompt library + team training documentation',
     deliverables: [
-      'Tool configuration and account setup across selected AI platforms',
+      'Tool and model assessment against your current workflow',
       'Custom prompt library development tailored to your brand and creative standards',
       'Style system creation for maintaining visual consistency across projects',
       'Asset management workflow implementation (organization, tagging, retrieval)',
-      'Team training sessions (live, hands-on, recorded for future reference)',
+      'Team training and system review sessions',
       '30-day post-implementation support for questions and adjustments',
     ],
-    timeline: '4-8 weeks',
+    timeline: '2-3 weeks',
     imageSrc: '/images/service-2.webp',
   },
   {
-    name: 'Custom Solution Development',
+    name: 'Custom AI Image System Build',
     price: 'Starting at $15,000',
     description:
-      "For teams that need something built. Whether it's a custom internal tool, API integrations between your existing creative stack and AI generation platforms, or a purpose-built asset management system, I design and develop solutions tailored to your specific requirements. I built Midjourney Prompt Manager from concept to production in 30 days. I bring that same rapid development approach to your project.",
+      "I architect and build a custom AI image generation system tailored to your team's workflow — integrating your tool stack, selecting and configuring the right models, building prompt intelligence and asset pipeline infrastructure, plus team documentation and two hands-on training sessions. You own everything — and I'm available for ongoing maintenance, updates, and support as your system evolves. I built Midjourney Prompt Manager from concept to production in 30 days using this exact approach.",
+    deliverableNote: 'Deliverable: Complete AI image generation system + documentation + 2 live training sessions',
     deliverables: [
-      'Technical requirements gathering and solution architecture',
-      'Custom application development using modern web technologies',
-      'API integrations with AI generation platforms (Midjourney, Kling, Flux, and more)',
-      'Asset management and workflow automation',
-      'Deployment and hosting configuration',
-      'Documentation and team handoff',
-      '60-day post-launch support and bug fixes',
+      'Prompt agent setup and training',
+      '1,500+ style library integration',
+      'Model selection and API configuration',
+      'Asset pipeline architecture',
+      'Team workflow documentation',
+      '2 training sessions',
     ],
-    timeline: '4-12 weeks depending on scope',
+    timeline: '4-6 weeks',
     imageSrc: '/images/service-3.webp',
   },
 ]
@@ -151,7 +156,7 @@ export default function Services() {
           Platforms I Work With
         </h2>
         <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
-          I have hands-on production experience with Midjourney, Kling AI (Elite Creator), Flux, Stable Diffusion, DALL-E, Ideogram, Leonardo, and 15+ other image and video generation models. On the development side, I build with Astro, Next.js, React, Tailwind CSS, and Claude Code for AI-assisted rapid development.
+          I have hands-on production experience with Midjourney, Kling AI (Elite Creator), FLUX, Google, GPT Image, Nano Banana, Recraft, and 15+ other image and video generation models. On the development side, I build with Astro, Next.js, React, Tailwind CSS, and Claude Code for AI-assisted rapid development.
         </p>
       </div>
 
@@ -172,7 +177,7 @@ export default function Services() {
           >
             Midjourney Prompt Manager
           </Link>
-          {' '}&mdash; A professional prompt creation and asset management platform for creative teams. 22 AI generation models, Key Prompt creation agent, project-based workflows, team collaboration, copy/paste Key Prompts to all Midjourney models, and a curated library of 1,430+ professional styles. Read about the project story:{' '}
+          {' '}&mdash; A professional prompt creation and asset management platform for creative teams. 27 AI generation models, Key Prompt creation agent, project-based workflows, team collaboration, copy/paste Key Prompts to all Midjourney models, and a curated library of 1,500+ professional styles. Read about the project story:{' '}
           <Link
             href="https://keypromptninja.io"
             target="_blank"
@@ -202,7 +207,7 @@ export default function Services() {
           Let's Talk About Your AI Strategy
         </h2>
         <p className="max-w-2xl mx-auto mt-4 text-lg text-slate-600 dark:text-slate-400">
-          Every engagement starts with a conversation. Tell me about your team, your current creative workflow, and where you think AI generation could make an impact. No pitch, no pressure — just an honest assessment of whether I can help.
+          Every engagement starts with a conversation. Tell me about your team, your current creative workflow, and where you think AI generation could make an impact. No pitch, no pressure, just an honest assessment of whether I can help.
         </p>
         <Link
           href="/contact"
