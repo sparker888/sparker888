@@ -26,7 +26,7 @@ function NewsletterModal({ isOpen, onClose }) {
 
       if (response.ok) {
         setIsSuccess(true)
-        setMessage("You're in. First issue comes when there's something worth sending.")
+        setMessage("Thanks for signing up. Check your inbox for a welcome note from me.")
         setEmail('')
         setTimeout(() => {
           onClose()
